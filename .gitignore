@@ -1,0 +1,9 @@
+binary/
+binary.list
+binary.packages
+cache/
+chroot/
+config/binary
+lernstick_debian*
+logfile.txt
+.stage/
