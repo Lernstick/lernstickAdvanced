@@ -2,7 +2,8 @@
 
 if [ -x /usr/sbin/locale-gen ]
 then
-	echo "de_CH.UTF-8 UTF-8" > /etc/locale.gen
+	echo "de_AT.UTF-8 UTF-8" > /etc/locale.gen
+	echo "de_CH.UTF-8 UTF-8" >> /etc/locale.gen
 	echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 	echo "fr_CH.UTF-8 UTF-8" >> /etc/locale.gen
 	echo "it_CH.UTF-8 UTF-8" >> /etc/locale.gen
