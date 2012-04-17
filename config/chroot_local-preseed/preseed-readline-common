@@ -1,0 +1,5 @@
+#preseed-readline-common preseed-readline-common/preseed boolean false
+preseed-readline-common preseed-readline-common/preseed boolean true
+
+#preseed-readline-common preseed-readline-common/bell-style select audible
+preseed-readline-common preseed-readline-common/bell-style select none

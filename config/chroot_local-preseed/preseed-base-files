@@ -1,0 +1,7 @@
+#preseed-base-files preseed-base-files/preseed boolean false
+preseed-base-files preseed-base-files/preseed boolean true
+
+#preseed-base-files preseed-base-files/color-user-prompt select no color
+#preseed-base-files preseed-base-files/color-root-prompt select no color
+preseed-base-files preseed-base-files/color-root-prompt select light red
+#preseed-base-files preseed-base-files/host-prompt select hostname

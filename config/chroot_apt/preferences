@@ -1,0 +1,479 @@
+Package: live-initramfs
+Pin: release o=Debian
+Pin-Priority: 999
+
+Package: gnucash
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: gnucash-common
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libaqbanking33
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libaqbanking-data
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnss3-1d
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnss3-1d-dbg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnss3-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnss3-tools
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: linux-base
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: linux-image-2.6-686
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: linux-image-686-pae
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: linux-image-2.6-686-pae
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: linux-libc-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: initramfs-tools
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-atheros
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-bnx2
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-bnx2x
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-brcm80211
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-intelwimax
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-ipw2x00
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-ivtv
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-iwlwifi
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-libertas
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-linux
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-linux-nonfree
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-myricom
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-netxen
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-qlogic
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-ralink
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: firmware-realtek
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: mesa-common-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libgl1-mesa-dri
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libgl1-mesa-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libgl1-mesa-glx
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libglu1-mesa
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libglu1-mesa-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libdrm-intel1
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libdrm-radeon1
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libdrm-nouveau1a
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libdrm2
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libxfont1
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libxfont-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libxfont-dbg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xorg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-common
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xephyr
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xfbdev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-core
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-input-all
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-input-evdev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-input-synaptics
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-input-wacom
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-all
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-apm
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-ark
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-ati
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-chips
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-cirrus
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-fbdev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-i128
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-i740
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-intel
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-mach64
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-mga
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-neomagic
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-nouveau
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-openchrome
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-r128
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-radeon
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-rendition
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-s3
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-s3virge
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-savage
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-siliconmotion
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-sis
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-sisusb
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-tdfx
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-trident
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-tseng
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-vesa
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-vmware
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: xserver-xorg-video-voodoo
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-base
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-base-core
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-calc
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-common
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-core
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-draw
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-filter-mobiledev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-gnome
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-de
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-en-us
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-es
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-fr
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-it
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-pt-br
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-help-ru
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-impress
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-l10n-de
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-l10n-es
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-l10n-fr
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-l10n-it
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-l10n-pt-br
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-l10n-ru
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-kde
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-java-common
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-math
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-pdfimport
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-presenter-console
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-report-builder
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-style-galaxy
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-style-oxygen
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-style-tango
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libreoffice-writer
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: ttf-opensymbol
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: uno-libs3
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: ure
+Pin: release a=squeeze-backports
+Pin-Priority: 999
