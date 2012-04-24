@@ -57,6 +57,7 @@ lernstick-gimp-squeeze
 lernstick-gksu
 lernstick-glabels
 lernstick-gnome-menus
+lernstick-gnome-mplayer
 lernstick-gnome-orca
 lernstick-gnome-system-monitor
 lernstick-gnome-system-tools
@@ -124,6 +125,7 @@ lernstick-menu-xdg-squeeze
 lernstick-mfk
 lernstick-minibooks-squeeze
 lernstick-miro
+lernstick-mplayer
 lernstick-musescore
 lernstick-musikwissenschaften
 lernstick-mymoment
@@ -158,6 +160,7 @@ lernstick-seahorse
 lernstick-sf-wissen
 lernstick-shutter
 lernstick-sikore
+lernstick-smplayer
 lernstick-software-center
 lernstick-software-properties-gtk
 lernstick-solfege

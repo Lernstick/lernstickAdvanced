@@ -192,6 +192,7 @@ gdb
 gdebi
 gdebi-kde
 gdm
+gecko-mediaplayer
 genisoimage
 ghex
 gimp
@@ -542,6 +543,9 @@ shutter
 smb4k
 smbclient
 smbfs
+smplayer
+smplayer-themes
+smplayer-translations
 solfege
 solfege-doc
 speedcrunch
