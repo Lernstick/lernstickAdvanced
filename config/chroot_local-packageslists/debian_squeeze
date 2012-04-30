@@ -298,6 +298,7 @@ kdeartwork-theme-window
 kdebase-bin
 kdebase-data
 kde-config-cddb
+kde-config-cron
 kde-config-tablet
 kde-config-touchpad
 kdegames-card-data
