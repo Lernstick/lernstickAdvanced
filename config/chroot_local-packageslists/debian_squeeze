@@ -524,7 +524,6 @@ powertop
 #printconf
 printer-applet
 pulseaudio-utils
-python-compizconfig
 python-notify
 python-pyalsa
 python-wxgtk2.8

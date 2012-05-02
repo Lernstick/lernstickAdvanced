@@ -25,7 +25,6 @@ lernstick-celestia-gnome
 lernstick-celestia-kde
 lernstick-cheese
 lernstick-childsplay
-lernstick-compizconfig-settings-manager
 lernstick-cooldriving
 lernstick-crack-attack
 lernstick-denemo
@@ -174,6 +173,7 @@ lernstick-sun-java6-jdk-squeeze
 lernstick-sweethome3d
 lernstick-synaptic-squeeze
 lernstick-system-config-printer
+lernstick-systemsettings
 lernstick-timeline
 lernstick-tipp10
 lernstick-toporopa
