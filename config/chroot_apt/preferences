@@ -477,3 +477,51 @@ Pin-Priority: 999
 Package: ure
 Pin: release a=squeeze-backports
 Pin-Priority: 999
+
+Package: lemon
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libsqlite3-0
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libsqlite3-0-dbg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libsqlite3-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libsqlite3-tcl
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: sqlite3
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: sqlite3-doc
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnspr4
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnspr4-0d
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnspr4-0d-dbg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnspr4-dbg
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libnspr4-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
