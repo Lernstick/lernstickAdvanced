@@ -509,6 +509,7 @@ php5-curl
 php-fpdf
 pingus
 pinta
+pioneers
 #pkg-kde-archive-keyring
 plasma-desktop
 plasma-netbook
@@ -655,6 +656,7 @@ xserver-xorg-video-tseng
 xserver-xorg-video-vesa
 xserver-xorg-video-vmware
 xserver-xorg-video-voodoo
+xterm
 xtightvncviewer
 zd1211-firmware
 zip
