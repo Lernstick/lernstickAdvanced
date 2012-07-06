@@ -481,8 +481,8 @@ ntpdate
 okteta
 okular
 okular-extra-backends
-openbve
-openbve-data
+#openbve
+#openbve-data
 openclipart-libreoffice
 openprinting-ppds
 openprinting-ppds-extra
