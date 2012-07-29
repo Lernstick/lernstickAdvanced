@@ -1,4 +1,4 @@
-#include <debian-multimedia>
+#include <deb-multimedia>
 #include <debian_squeeze>
 #include <imedias-custom>
 #include <lamaresh>
