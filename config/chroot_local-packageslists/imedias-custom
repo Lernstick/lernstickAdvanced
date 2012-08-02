@@ -116,6 +116,7 @@ lernstick-live-boot
 lernstick-live-config
 lernstick-lshw-gtk
 lernstick-lyx
+lernstick-mapviewer
 lernstick-mathe-im-netz
 lernstick-mc
 lernstick-menschliche-sicherheit
@@ -156,6 +157,7 @@ lernstick-ri-li
 lernstick-rosegarden
 #lernstick-rtl8192se-2.6.39-bpo.2-686-pae
 lernstick-schatz-der-kulturen
+lernstick-schweizerweltatlas
 lernstick-scribus-squeeze
 lernstick-seahorse
 lernstick-sf-wissen
@@ -166,6 +168,7 @@ lernstick-software-center
 lernstick-software-properties-gtk
 lernstick-solfege
 lernstick-speedcrunch
+lernstick-statatlas
 lernstick-stellarium
 lernstick-step
 lernstick-sugar-emulator
