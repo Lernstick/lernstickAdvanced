@@ -35,6 +35,7 @@ lernstick-digikam
 lernstick-dolphin
 lernstick-dossizola
 lernstick-drapes
+lernstick-duden
 lernstick-eboard
 lernstick-energiespiel
 lernstick-eventmanager
@@ -62,6 +63,7 @@ lernstick-gnome-system-monitor
 lernstick-gnome-system-tools
 lernstick-gnucash
 lernstick-googledocs
+lernstick-google-translate
 lernstick-gretl
 lernstick-gtk-recordmydesktop
 lernstick-hamster-applet
@@ -104,10 +106,12 @@ lernstick-kturtle
 lernstick-kvkbd
 lernstick-kwalletmanager-squeeze
 lernstick-labbe-math
+lernstick-learningapps
 lernstick-lepion
+lernstick-lernareal
 lernstick-libreoffice-base
 lernstick-libreoffice-calc
-lernstick-libreoffice-common
+#lernstick-libreoffice-common
 lernstick-libreoffice-draw
 lernstick-libreoffice-impress
 lernstick-libreoffice-math
@@ -117,6 +121,7 @@ lernstick-live-config
 lernstick-lshw-gtk
 lernstick-lyx
 lernstick-mapviewer
+lernstick-marble
 lernstick-mathe-im-netz
 lernstick-mc
 lernstick-menschliche-sicherheit
@@ -147,6 +152,7 @@ lernstick-openthesaurus
 lernstick-openttd
 lernstick-orthografietrainer
 lernstick-palapeli
+lernstick-phet
 lernstick-phoronix-test-suite
 lernstick-physicsgames
 lernstick-pinta
@@ -219,6 +225,7 @@ live-xmoto
 omnitux
 openproj
 pauker
+processing
 rscc
 rscc-defaults-lernstick
 scratch

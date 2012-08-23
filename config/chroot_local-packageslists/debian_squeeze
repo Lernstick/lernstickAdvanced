@@ -402,6 +402,9 @@ libqt4-opengl
 libreoffice-base
 libreoffice-calc
 libreoffice-draw
+libreoffice-emailmerge
+libreoffice-evolution
+libreoffice-filter-binfilter
 libreoffice-filter-mobiledev
 libreoffice-gnome
 libreoffice-help-de
@@ -420,7 +423,9 @@ libreoffice-l10n-it
 libreoffice-l10n-pt-br
 libreoffice-l10n-ru
 libreoffice-math
+libreoffice-ogltrans
 libreoffice-pdfimport
+libreoffice-presentation-minimizer
 libreoffice-presenter-console
 libreoffice-report-builder
 libreoffice-style-crystal
@@ -483,7 +488,7 @@ okular
 okular-extra-backends
 #openbve
 #openbve-data
-openclipart-libreoffice
+#openclipart-libreoffice
 openprinting-ppds
 openprinting-ppds-extra
 openshot
@@ -623,6 +628,7 @@ wpasupplicant
 wxmaxima
 x11vnc
 xmoto
+xournal
 xsane
 xserver-xorg
 xserver-xorg-core
