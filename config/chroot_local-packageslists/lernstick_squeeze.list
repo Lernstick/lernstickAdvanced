@@ -1,6 +1,6 @@
-#include <deb-multimedia>
 #include <debian_squeeze>
+#include <deb-multimedia>
+#include <geogebra>
 #include <imedias-custom>
-#include <lamaresh>
 #include <standard-x11>
 #include <virtualbox>

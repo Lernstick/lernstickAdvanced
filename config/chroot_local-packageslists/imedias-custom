@@ -51,7 +51,6 @@ lernstick-gcompris
 lernstick-gconf-editor
 lernstick-gedit
 lernstick-geocube
-lernstick-geogebra
 lernstick-ghex
 lernstick-gimp-squeeze
 lernstick-gksu
@@ -231,4 +230,5 @@ rscc-defaults-lernstick
 scratch
 tuxmathscrabble-squeeze
 webweaverdesktop
+wine
 xlogo-ide
