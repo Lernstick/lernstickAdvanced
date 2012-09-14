@@ -99,7 +99,7 @@ build_image()
 
 	PREFIX="lernstick_debian6${ISO_SUFFIX}_${TODAY}"
 	IMAGE="${PREFIX}.iso"
-	mv binary.iso ${IMAGE}
+	mv binary-hybrid.iso ${IMAGE}
 	echo "Creating MD5 for iso..."
 	md5sum ${IMAGE} > ${IMAGE}.md5
 
