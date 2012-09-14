@@ -55,6 +55,7 @@ anacron
 apt-rdepends
 apt-xapian-index
 ardesia
+arduino
 ark
 armagetronad
 atmel-firmware
@@ -91,6 +92,7 @@ celestia-common-nonfree
 celestia-gnome
 celestia-kde
 cheese
+chemtool
 childsplay
 childsplay-alphabet-sounds-de
 childsplay-alphabet-sounds-en-gb
@@ -100,6 +102,8 @@ childsplay-alphabet-sounds-it
 childsplay-alphabet-sounds-pt
 childsplay-alphabet-sounds-ru
 clamtk
+code-saturne
+code-saturne-doc
 crack-attack
 cryptsetup
 crystalcursors
@@ -197,6 +201,7 @@ gdebi-kde
 gdm
 gecko-mediaplayer
 genisoimage
+ghemical
 ghex
 gimp
 gimp-data
@@ -228,6 +233,7 @@ gnuplot-x11
 gpart
 gramps
 graphviz
+gromacs
 grub
 gstreamer0.10-ffmpeg
 gstreamer0.10-fluendo-mp3
@@ -489,6 +495,7 @@ ntpdate
 okteta
 okular
 okular-extra-backends
+openbabel
 #openbve
 #openbve-data
 #openclipart-libreoffice
@@ -535,9 +542,13 @@ powertop
 #printconf
 printer-applet
 pulseaudio-utils
+pymol
 python-notify
 python-pyalsa
 python-wxgtk2.8
+qelectrotech
+qelectrotech-data
+qelectrotech-examples
 quassel-client-kde4
 ri-li
 rosegarden
@@ -623,6 +634,10 @@ vlc
 vmpk
 vorbis-tools
 vpnc
+v-sim
+v-sim-doc
+v-sim-plugins
+vym
 wireless-tools
 wireshark
 wmctrl
@@ -630,6 +645,7 @@ wodim
 wpasupplicant
 wxmaxima
 x11vnc
+xdrawchem
 xmoto
 xournal
 xsane
@@ -667,5 +683,6 @@ xserver-xorg-video-vmware
 xserver-xorg-video-voodoo
 xterm
 xtightvncviewer
+youtube-dl
 zd1211-firmware
 zip

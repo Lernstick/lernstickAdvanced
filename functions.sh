@@ -48,7 +48,7 @@ build_image()
 		--apt-recommends false \
 		--apt-secure false \
 		--archive-areas "main contrib non-free" \
-		--binary-images iso \
+		--binary-images iso-hybrid \
 		--distribution "squeeze" \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-packages "linux-image-3.2.0-0.bpo.2" \

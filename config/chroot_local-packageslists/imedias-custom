@@ -26,6 +26,7 @@ lernstick-cantor
 lernstick-celestia-gnome
 lernstick-celestia-kde
 lernstick-cheese
+lernstick-chemtool
 lernstick-childsplay
 lernstick-cooldriving
 lernstick-crack-attack
@@ -53,6 +54,8 @@ lernstick-gcompris
 lernstick-gconf-editor
 lernstick-gedit
 lernstick-geocube
+lernstick-geogebra-wheezy
+lernstick-ghemical
 lernstick-ghex
 lernstick-gimp-squeeze
 lernstick-gksu
@@ -160,6 +163,8 @@ lernstick-pinta
 lernstick-planet-schule
 lernstick-playonlinux
 lernstick-plymouth
+lernstick-pymol
+lernstick-qelectrotech
 lernstick-ri-li
 lernstick-rosegarden
 #lernstick-rtl8192se-2.6.39-bpo.2-686-pae
@@ -207,6 +212,7 @@ lernstick-wireshark-squeeze
 #lernstick-wl-driver-2.6.39-bpo.2-686-pae
 lernstick-wxmaxima
 lernstick-x11vnc
+lernstick-xdrawchem
 lernstick-xsane
 #lernstick-xserver-xorg-input-wacom
 lernstick-zenmap
@@ -233,4 +239,5 @@ scratch
 tuxmathscrabble-squeeze
 webweaverdesktop
 wine
+wizbee
 xlogo-ide
