@@ -150,6 +150,7 @@ fillets-ng
 fillets-ng-data
 fillets-ng-data-cs
 firmware-atheros
+firmware-b43-installer
 firmware-bnx2
 firmware-bnx2x
 firmware-brcm80211
@@ -448,7 +449,7 @@ libsvn-java
 lilypond
 #linux-headers-2.6-686
 #linux-headers-2.6-686-pae
-linux-headers-3.2.0-0.bpo.2-686-pae
+linux-headers-3.2.0-0.bpo.3-686-pae
 lshw-gtk
 lskat
 lyx
@@ -550,6 +551,14 @@ qelectrotech
 qelectrotech-data
 qelectrotech-examples
 quassel-client-kde4
+remmina
+remmina-gnome
+remmina-plugin-data
+remmina-plugin-nx
+remmina-plugin-rdp
+remmina-plugin-telepathy
+remmina-plugin-vnc
+remmina-plugin-xdmcp
 ri-li
 rosegarden
 rsync

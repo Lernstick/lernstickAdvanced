@@ -48,10 +48,10 @@ build_image()
 		--apt-recommends false \
 		--apt-secure false \
 		--archive-areas "main contrib non-free" \
-		--binary-images iso-hybrid \
+		--binary-images iso \
 		--distribution "squeeze" \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages "linux-image-3.2.0-0.bpo.2" \
+		--linux-packages "linux-image-3.2.0-0.bpo.3" \
 		--linux-flavours "686-pae" \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
@@ -99,7 +99,7 @@ build_image()
 
 	PREFIX="lernstick_debian6${ISO_SUFFIX}_${TODAY}"
 	IMAGE="${PREFIX}.iso"
-	mv binary-hybrid.iso ${IMAGE}
+	mv binary.iso ${IMAGE}
 	echo "Creating MD5 for iso..."
 	md5sum ${IMAGE} > ${IMAGE}.md5
 

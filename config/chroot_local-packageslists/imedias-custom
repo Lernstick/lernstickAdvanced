@@ -142,8 +142,7 @@ lernstick-netbeans
 lernstick-netcity
 lernstick-netla
 lernstick-notenmax
-#lernstick-nvidia-drivers-2.6.39-bpo.2-686-pae
-lernstick-nvidia-drivers-3.2.0-0.bpo.2-686-pae
+lernstick-nvidia-drivers-3.2.0-0.bpo.3-686-pae
 lernstick-okular
 lernstick-olympische-bewegung
 lernstick-omnitux
@@ -167,7 +166,6 @@ lernstick-pymol
 lernstick-qelectrotech
 lernstick-ri-li
 lernstick-rosegarden
-#lernstick-rtl8192se-2.6.39-bpo.2-686-pae
 lernstick-schatz-der-kulturen
 lernstick-schweizerweltatlas
 lernstick-scribus-squeeze
@@ -209,7 +207,6 @@ lernstick-wasser
 lernstick-weltmusik
 lernstick-wine
 lernstick-wireshark-squeeze
-#lernstick-wl-driver-2.6.39-bpo.2-686-pae
 lernstick-wxmaxima
 lernstick-x11vnc
 lernstick-xdrawchem
