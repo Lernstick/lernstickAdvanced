@@ -5,6 +5,7 @@ binary.packages
 cache/
 chroot/
 config/binary
+config/chroot
 config/source
 lernstick_debian*
 logfile.txt
