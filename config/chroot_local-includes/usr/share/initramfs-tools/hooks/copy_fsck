@@ -16,4 +16,8 @@ FILE="/sbin/fsck"
 copy_file
 FILE="/sbin/fsck.ext2"
 copy_file
+FILE="/sbin/fsck.ext3"
+copy_file
+FILE="/sbin/fsck.ext4"
+copy_file
 

@@ -51,7 +51,7 @@ build_image()
 		--binary-images iso \
 		--distribution "squeeze" \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages "linux-image-3.2.0-0.bpo.3" \
+		--linux-packages "linux-image-3.2.0-0.bpo.4" \
 		--linux-flavours "686-pae" \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \

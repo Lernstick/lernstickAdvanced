@@ -283,7 +283,6 @@ jackd
 jfractionlab
 k3b
 k3b-i18n
-#kaddressbook
 kaffeine
 kalarm
 kalgebra
@@ -352,7 +351,6 @@ klines
 klipper
 kmag
 kmahjongg
-#kmail
 kmines
 kmix
 kmousetool
@@ -372,9 +370,7 @@ konq-plugins
 konqueror
 konqueror-nsplugins
 konsole
-#kontact
 kopete
-#korganizer
 kpat
 kreversi
 krita
@@ -446,11 +442,10 @@ libreoffice-writer
 libsmbios-bin
 libsvn-java
 lilypond
-#linux-headers-2.6-686
-#linux-headers-2.6-686-pae
-linux-headers-3.2.0-0.bpo.3-686-pae
+linux-headers-3.2.0-0.bpo.4-686-pae
 lshw-gtk
 lskat
+lxde
 lyx
 manpages-de
 manpages-es
@@ -486,7 +481,6 @@ nautilus
 nethogs
 netpbm
 network-manager-gnome
-#network-manager-kde
 neverball
 neverputt
 nmap
@@ -525,7 +519,6 @@ php-fpdf
 pingus
 pinta
 pioneers
-#pkg-kde-archive-keyring
 plasma-desktop
 plasma-netbook
 plasma-wallpapers-addons

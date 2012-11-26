@@ -85,7 +85,6 @@ lernstick-internet-abc
 lernstick-italc
 lernstick-jamendo
 lernstick-jfractionlab
-#lernstick-kaddressbook-squeeze
 lernstick-kanagram
 lernstick-kate-squeeze
 lernstick-kcalc-squeeze
@@ -100,10 +99,8 @@ lernstick-kinderzeitmaschine
 lernstick-kipi-plugins
 lernstick-klavaro
 lernstick-kleopatra
-lernstick-kmail-squeeze
 lernstick-kompozer
 lernstick-konqueror-squeeze
-#lernstick-korganizer-squeeze
 lernstick-kstars-squeeze
 lernstick-ktimetracker
 lernstick-ktouch-squeeze
@@ -143,7 +140,7 @@ lernstick-netbeans
 lernstick-netcity
 lernstick-netla
 lernstick-notenmax
-lernstick-nvidia-drivers-3.2.0-0.bpo.3-686-pae
+lernstick-nvidia-drivers-3.2.0-0.bpo.4-686-pae
 lernstick-okular
 lernstick-olympische-bewegung
 lernstick-omnitux
