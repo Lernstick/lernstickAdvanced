@@ -21,9 +21,13 @@ configure()
 build_image()
 {
 
+	# update time stamp in gfxboot menu
+	sed -i "s|lernstick Debian 6 (Version .*)|lernstick Debian 6 (Version ${TODAY})|1" \
+		config/templates/syslinux/normal/xmlboot.config
+
 	# update time stamp in syslinux menu
-	sed -i -e "s|menu title.*|menu title lernstick${SYSTEM_SUFFIX} `date -I`|" \
-		config/templates/syslinux/menu/menu.cfg
+#	sed -i -e "s|menu title.*|menu title lernstick${SYSTEM_SUFFIX} `date -I`|" \
+#		config/templates/syslinux/menu/menu.cfg
 	#sed -i -e "s|menu label ^lernstick.*|menu label ^lernstick${SYSTEM_SUFFIX} `date -I`|" \
 	#	config/templates/syslinux/menu/live.cfg
 #	cd gfxboot
