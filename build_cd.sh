@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SOURCE="true"
+SOURCE="false"
 
 . ./functions.sh
 

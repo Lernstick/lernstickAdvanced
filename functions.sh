@@ -58,7 +58,7 @@ build_image()
 		--mirror-chroot http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot-security http://security.debian.org/ \
 		--source ${SOURCE} \
-		--syslinux-timeout 10 \
+		--syslinux-menu false \
 		--templates "config/templates"
 
 	# disable volatile
