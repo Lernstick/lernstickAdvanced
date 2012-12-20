@@ -70,6 +70,7 @@ lernstick-gnome-system-tools
 lernstick-gnucash
 lernstick-googledocs
 lernstick-google-translate
+lernstick-gpicview
 lernstick-gretl
 lernstick-gtk-recordmydesktop
 lernstick-hamster-applet
@@ -109,6 +110,7 @@ lernstick-kturtle
 lernstick-kvkbd
 lernstick-kwalletmanager-squeeze
 lernstick-labbe-math
+lernstick-leafpad
 lernstick-learningapps
 lernstick-lepion
 lernstick-lernareal
@@ -122,6 +124,10 @@ lernstick-libreoffice-writer
 lernstick-live-boot
 lernstick-live-config
 lernstick-lshw-gtk
+lernstick-lxappearance
+lernstick-lxrandr
+lernstick-lxsession-edit
+lernstick-lxterminal
 lernstick-lyx
 lernstick-mapviewer
 lernstick-marble
@@ -142,9 +148,11 @@ lernstick-netcity
 lernstick-netla
 lernstick-notenmax
 lernstick-nvidia-drivers-3.2.0-0.bpo.4-686-pae
+lernstick-obconf
 lernstick-okular
 lernstick-olympische-bewegung
 lernstick-omnitux
+lernstick-openbox
 #lernstick-openbve
 lernstick-openclipart
 lernstick-openproj
@@ -208,6 +216,7 @@ lernstick-wine
 lernstick-wireshark-squeeze
 lernstick-wxmaxima
 lernstick-x11vnc
+lernstick-xarchiver
 lernstick-xdrawchem
 lernstick-xsane
 #lernstick-xserver-xorg-input-wacom
