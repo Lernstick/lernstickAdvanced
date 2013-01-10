@@ -632,6 +632,9 @@ update-notifier
 usb-modeswitch
 vim
 vim-gtk
+virtualbox-dkms
+#virtualbox-guest-x11
+virtualbox-qt
 virtuoso-minimal
 vlc
 vmpk

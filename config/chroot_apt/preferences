@@ -525,3 +525,16 @@ Pin-Priority: 999
 Package: libnspr4-dev
 Pin: release a=squeeze-backports
 Pin-Priority: 999
+
+Package: virtualbox-dkms
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: virtualbox-guest-x11
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: virtualbox-qt
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+

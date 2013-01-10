@@ -127,6 +127,7 @@ lernstick-lshw-gtk
 lernstick-lxappearance
 lernstick-lxrandr
 lernstick-lxsession-edit
+lernstick-lxtask
 lernstick-lxterminal
 lernstick-lyx
 lernstick-mapviewer
@@ -207,7 +208,8 @@ lernstick-unserkoerper
 lernstick-update-manager-gnome
 lernstick-usertemplate-squeeze2
 lernstick-vim-gui-common
-lernstick-virtualbox
+#lernstick-virtualbox
+lernstick-virtualbox-qt
 lernstick-vlc
 lernstick-vmpk
 lernstick-wasser
