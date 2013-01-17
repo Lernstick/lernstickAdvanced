@@ -1,7 +1,3 @@
-Package: live-initramfs
-Pin: release o=Debian
-Pin-Priority: 999
-
 Package: gnucash
 Pin: release a=squeeze-backports
 Pin-Priority: 999
@@ -83,10 +79,6 @@ Pin: release a=squeeze-backports
 Pin-Priority: 999
 
 Package: firmware-ivtv
-Pin: release a=squeeze-backports
-Pin-Priority: 999
-
-Package: firmware-iwlwifi
 Pin: release a=squeeze-backports
 Pin-Priority: 999
 
