@@ -530,3 +530,11 @@ Package: virtualbox-qt
 Pin: release a=squeeze-backports
 Pin-Priority: 999
 
+Package: libv4l-0
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libv4l-dev
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
