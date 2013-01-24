@@ -1,0 +1,15 @@
+#preseed-vim preseed-vim/preseed boolean false
+preseed-vim preseed-vim/preseed boolean true
+
+#preseed-vim preseed-vim/ai boolean false
+preseed-vim preseed-vim/ai boolean true
+#preseed-vim preseed-vim/syntax boolean false
+preseed-vim preseed-vim/syntax boolean true
+#preseed-vim preseed-vim/highlight-whitespace-eol boolean false
+preseed-vim preseed-vim/highlight-whitespace-eol boolean true
+#preseed-vim preseed-vim/hlsearch boolean false
+preseed-vim preseed-vim/hlsearch boolean true
+#preseed-vim preseed-vim/incsearch boolean false
+preseed-vim preseed-vim/incsearch boolean true
+#preseed-vim preseed-vim/noerrorbells boolean false
+preseed-vim preseed-vim/noerrorbells boolean true

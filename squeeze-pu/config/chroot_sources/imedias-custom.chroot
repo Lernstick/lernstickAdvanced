@@ -1,0 +1,6 @@
+# main lernstick repository
+deb http://www.imedias.ch/dateien/lernstick/custom/ ./
+deb-src http://www.imedias.ch/dateien/lernstick/custom/ ./
+
+# experimental lernstick repository
+#deb http://www.imedias.ch/dateien/lernstick/experimental/ ./

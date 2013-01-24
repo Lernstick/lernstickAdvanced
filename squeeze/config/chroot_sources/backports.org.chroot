@@ -1,0 +1,3 @@
+# official Debian backports
+deb http://backports.debian.org/debian-backports squeeze-backports main contrib non-free
+deb-src http://backports.debian.org/debian-backports squeeze-backports main contrib non-free

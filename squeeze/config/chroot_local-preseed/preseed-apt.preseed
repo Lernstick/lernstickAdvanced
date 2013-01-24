@@ -1,0 +1,28 @@
+################################################################################
+## preseed-apt
+
+#preseed-apt preseed-apt/preseed boolean false
+preseed-apt preseed-apt/preseed boolean true
+
+#preseed-apt preseed-apt/acquire-pdiffs boolean true
+preseed-apt preseed-apt/acquire-pdiffs boolean false
+#preseed-apt preseed-apt/apt-acquire-translation string auto
+#preseed-apt preseed-apt/apt-authentication-trustcdrom boolean true
+preseed-apt preseed-apt/apt-authentication-trustcdrom boolean false
+#preseed-apt preseed-apt/apt-clean-installed boolean false
+preseed-apt preseed-apt/apt-clean-installed boolean true
+#preseed-apt preseed-apt/apt-get-allow-unauthenticated boolean false
+#preseed-apt preseed-apt/apt-get-automatic-remove boolean false
+#preseed-apt preseed-apt/apt-get-hide-auto-remove boolean false
+preseed-apt preseed-apt/apt-get-hide-auto-remove boolean true
+#preseed-apt preseed-apt/apt-get-purge boolean false
+preseed-apt preseed-apt/apt-get-purge boolean true
+#preseed-apt preseed-apt/apt-get-show-upgraded boolean false
+preseed-apt preseed-apt/apt-get-show-upgraded boolean true
+#preseed-apt preseed-apt/apt-install-recommends boolean true
+preseed-apt preseed-apt/apt-install-recommends boolean false
+#preseed-apt preseed-apt/apt-install-suggests boolean false
+#preseed-apt preseed-apt/aptitude-recommends-important boolean true
+preseed-apt preseed-apt/aptitude-recommends-important boolean false
+#preseed-apt preseed-apt/aptitude-suggests-important boolean false
+################################################################################
