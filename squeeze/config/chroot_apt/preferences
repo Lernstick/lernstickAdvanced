@@ -538,3 +538,35 @@ Package: libv4l-dev
 Pin: release a=squeeze-backports
 Pin-Priority: 999
 
+Package: mplayer
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: vlc
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: vlc-data
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: vlc-nox
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libvlccore5
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libvlc5
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libavcodec53
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+
+Package: libavcodec-extra-53
+Pin: release a=squeeze-backports
+Pin-Priority: 999
+

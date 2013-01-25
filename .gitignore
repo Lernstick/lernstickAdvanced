@@ -23,6 +23,7 @@ squeeze-pu/config/common
 squeeze-pu/config/source
 squeeze-pu/lernstick_pruefungsumgebung_debian6_*
 squeeze-pu/logfile.txt
+squeeze-pu/source/
 squeeze-pu/source.debian.list
 squeeze-pu/source.debian-live.list
 squeeze-pu/.stage/
