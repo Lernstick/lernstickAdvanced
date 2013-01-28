@@ -515,7 +515,6 @@ pathological
 pciutils
 pentobi
 phonon-backend-gstreamer
-phonon-backend-vlc
 phonon-backend-xine
 phoronix-test-suite
 php5-curl
