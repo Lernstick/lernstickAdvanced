@@ -45,10 +45,10 @@ build_image()
 	rm -f config/chroot
 	rm -f config/common
 	rm -f config/source
-	#lh clean --purge
-	lh clean
+	#lb clean --purge
+	lb clean
 #	--linux-packages "linux-image-2.6.38-2" \
-	lh config \
+	lb config \
 		--apt-recommends false \
 		--apt-secure false \
 		--archive-areas "main contrib non-free" \
@@ -69,7 +69,7 @@ build_image()
 	sed -i -e 's|LB_VOLATILE=.*|LB_VOLATILE=false|g' config/chroot
 
 	# build image (and produce a log file)
-	lh build 2>&1 | tee logfile.txt
+	lb build 2>&1 | tee logfile.txt
 
 	# I feel like using Windows...
 	reset
@@ -124,7 +124,10 @@ build_image()
 	echo "Stop : $(date)" >> logfile.txt
 
 	# the build process seems to break vbox
-	/etc/init.d/vboxdrv restart
+	if [ -e /etc/init.d/vboxdrv ]
+	then
+		/etc/init.d/vboxdrv restart
+	fi
 
 	# hello, wake up!!! :-)
 	#eject
