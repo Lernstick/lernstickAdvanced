@@ -47,7 +47,6 @@ build_image()
 	rm -f config/source
 	#lb clean --purge
 	lb clean
-#	--linux-packages "linux-image-2.6.38-2" \
 	lb config \
 		--apt-recommends false \
 		--apt-secure false \
