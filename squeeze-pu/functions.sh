@@ -31,30 +31,30 @@ build_image()
 	rm -f config/chroot
 	rm -f config/common
 	rm -f config/source
-	#lh clean --purge
-	lh clean
-	lh config \
+	lb clean
+	lb config \
 		--apt-recommends false \
 		--apt-secure false \
+		--architectures i386 \
 		--archive-areas "main contrib non-free" \
 		--binary-images iso \
 		--distribution "squeeze" \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages "linux-image-3.2.0-0.bpo.4" \
 		--linux-flavours "686-pae" \
+		--linux-packages "linux-image-3.2.0-0.bpo.4" \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot-security http://security.debian.org/ \
 		--source ${SOURCE} \
-                --syslinux-menu false \
+		--syslinux-menu false \
 		--templates "config/templates"
 
 	# disable volatile
 	sed -i -e 's|LB_VOLATILE=.*|LB_VOLATILE=false|g' config/chroot
 
 	# build image (and produce a log file)
-	lh build 2>&1 | tee logfile.txt
+	lb build 2>&1 | tee logfile.txt
 
 	# I feel like using Windows...
 	reset

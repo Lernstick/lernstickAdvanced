@@ -50,12 +50,13 @@ build_image()
 	lb config \
 		--apt-recommends false \
 		--apt-secure false \
+		--architectures i386 \
 		--archive-areas "main contrib non-free" \
 		--binary-images iso \
 		--distribution "squeeze" \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages "linux-image-3.2.0-0.bpo.4" \
 		--linux-flavours "686-pae" \
+		--linux-packages "linux-image-3.2.0-0.bpo.4" \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot http://ftp.ch.debian.org/debian/ \
