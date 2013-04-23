@@ -1,0 +1,2 @@
+KERNEL=="seq", GROUP="audio", MODE="0660", OPTIONS+="static_node=snd/seq"
+KERNEL=="timer", GROUP="audio", MODE="0660", OPTIONS+="static_node=snd/timer"

@@ -1,0 +1,7 @@
+# imedias packages for Debian 7
+deb http://www.imedias.ch/dateien/lernstick/debian7-imedias/ ./
+deb-src http://www.imedias.ch/dateien/lernstick/debian7-imedias/ ./
+
+# experimental lernstick repository
+#deb http://www.imedias.ch/dateien/lernstick/experimental/ ./
+#deb-src http://www.imedias.ch/dateien/lernstick/experimental/ ./

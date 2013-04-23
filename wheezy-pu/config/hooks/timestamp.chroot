@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "executing timestamp hook"
+
+if [ -f /usr/local/lernstick.html -a -f /usr/local/lernstick_de.html ]
+then
+	echo "html files found"
+	_DATE="$(date -I)"
+	echo "setting time stamp \"${_DATE}\""
+	sed -i -e "s|@DATE@|${_DATE}|" /usr/local/lernstick.html
+	sed -i -e "s|@DATE@|${_DATE}|" /usr/local/lernstick_de.html
+else
+	echo "could not find html files, aborting..."
+fi

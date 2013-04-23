@@ -1,0 +1,15 @@
+Package: live-boot
+Pin: release n=debian7-imedias
+Pin-Priority: 999
+
+Package: live-boot-initramfs-tools
+Pin: release n=debian7-imedias
+Pin-Priority: 999
+
+Package: live-config
+Pin: release n=debian7-imedias
+Pin-Priority: 999
+
+Package: live-config-sysvinit
+Pin: release n=debian7-imedias
+Pin-Priority: 999
