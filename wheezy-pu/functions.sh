@@ -21,7 +21,7 @@ build_image()
 {
 
 	# update time stamp in bootloaders
- 	sed -i "s|Lernstick-Prüfungsumgebung Debian 7 (Version .*)|Lernstick-Prüfungsumgebung Debian 7 (Version ${TODAY})|1" \
+ 	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version ${TODAY})</version>|1"
  		config/bootloaders/isolinux/xmlboot.config
 	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 7 (Version ${TODAY})\"|1" \
 		config/includes.binary/boot/grub/themes/lernstick/theme.txt 
