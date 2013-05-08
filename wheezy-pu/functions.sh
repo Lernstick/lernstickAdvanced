@@ -41,7 +41,7 @@ build_image()
 		--distribution wheezy \
 		--firmware-chroot true \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-3.7-trunk \
+		--linux-packages linux-image-3.8-1 \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot http://ftp.ch.debian.org/debian/ \

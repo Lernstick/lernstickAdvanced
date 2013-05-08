@@ -140,10 +140,10 @@ libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
 libsmbios-bin
-linux-headers-3.7-trunk-486
-linux-headers-3.7-trunk-686-pae
-#linux-headers-3.8-trunk-486
-#linux-headers-3.8-trunk-686-pae
+#linux-headers-3.7-trunk-486
+#linux-headers-3.7-trunk-686-pae
+linux-headers-3.8-1-486
+linux-headers-3.8-1-686-pae
 #live-tools
 lshw-gtk
 lsof

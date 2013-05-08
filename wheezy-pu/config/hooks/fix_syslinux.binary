@@ -12,7 +12,7 @@ mv vmlinuz-3.7-trunk-686-pae vmlinuz2 || true
 mv initrd.img-3.7-trunk-486 initrd1.img || true
 mv initrd.img-3.7-trunk-686-pae initrd2.img || true
 
-mv vmlinuz-3.8-trunk-486 vmlinuz1 || true
-mv vmlinuz-3.8-trunk-686-pae vmlinuz2 || true
-mv initrd.img-3.8-trunk-486 initrd1.img || true
-mv initrd.img-3.8-trunk-686-pae initrd2.img || true
+mv vmlinuz-3.8-1-486 vmlinuz1 || true
+mv vmlinuz-3.8-1-686-pae vmlinuz2 || true
+mv initrd.img-3.8-1-486 initrd1.img || true
+mv initrd.img-3.8-1-686-pae initrd2.img || true
