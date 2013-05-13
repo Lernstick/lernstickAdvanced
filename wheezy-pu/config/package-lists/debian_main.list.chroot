@@ -29,6 +29,7 @@ dkms
 dolphin
 dosfstools
 eject
+ffmpegthumbs
 firmware-linux-free
 fonts-liberation
 geogebra
@@ -72,6 +73,7 @@ kde-config-cron
 kde-config-gtk-style
 kde-config-tablet
 kde-config-touchpad
+kdegraphics-thumbnailers
 kde-l10n-de
 kde-l10n-es
 kde-l10n-fr
