@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "setuid for hddtemp:"
+chmod u+s /usr/sbin/hddtemp

@@ -1,0 +1,3 @@
+# imedias backports for Debian 7
+deb http://www.imedias.ch/dateien/lernstick/debian7-backports/ ./
+deb-src http://www.imedias.ch/dateien/lernstick/debian7-backports/ ./

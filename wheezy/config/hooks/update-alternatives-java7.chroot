@@ -1,0 +1,2 @@
+update-alternatives --set java /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
+update-alternatives --set javaws /usr/lib/jvm/java-7-openjdk-i386/jre/bin/javaws

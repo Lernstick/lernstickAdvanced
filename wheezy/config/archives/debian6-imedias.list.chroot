@@ -1,0 +1,3 @@
+# imedias packages for Debian 6
+deb http://www.imedias.ch/dateien/lernstick/debian6-imedias/ ./
+deb-src http://www.imedias.ch/dateien/lernstick/debian6-imedias/ ./

@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "dumpcap before dpkg-reconfigure:"
+ls -l /usr/bin/dumpcap
+echo "calling dpkg-reconfigure..."
+dpkg-reconfigure -f noninteractive wireshark-common
+echo "dumpcap after dpkg-reconfigure:"
+ls -l /usr/bin/dumpcap
+chmod u+s /usr/bin/dumpcap
+echo "dumpcap after chmod:"
+ls -l /usr/bin/dumpcap

@@ -1,0 +1,14 @@
+#!/bin/sh
+echo "running VirtualBox setup..."
+
+# this export statement is needed because of
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=633549
+export BUILD_TARGET_ARCH=x86
+
+VBOX_VERSION="$(dpkg -s virtualbox-4.2 | grep "^Version: " | sed 's|Version: ||' | awk -F- '{ print $1 }')"
+KERNEL_VERSION="3.8-1"
+
+dkms install -m vboxhost -v "${VBOX_VERSION}" -k ${KERNEL_VERSION}-486
+dkms install -m vboxhost -v "${VBOX_VERSION}" -k ${KERNEL_VERSION}-686-pae
+
+rm -rf /lib/modules/3.2.0-4-686-pae
