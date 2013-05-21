@@ -31,4 +31,5 @@ squeeze/source.debian.list
 squeeze/source.debian-live.list
 squeeze/.stage/
 squeeze/virtualbox/
+wheezy/cache/
 wheezy-pu/cache/

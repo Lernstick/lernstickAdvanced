@@ -5,11 +5,16 @@ firmware-linux-nonfree
 libfglrx-amdxvba1
 libgl1-fglrx-glx
 libgl1-nvidia-legacy-173xx-glx
+libgl1-nvidia-legacy-96xx-glx
 nvidia-alternative-legacy-173xx
+nvidia-alternative-legacy-96xx
 nvidia-detect
 nvidia-glx
 nvidia-glx-legacy-173xx
+nvidia-glx-legacy-96xx
 nvidia-kernel-dkms
 nvidia-kernel-legacy-173xx-dkms
+nvidia-kernel-legacy-96xx-dkms
 p7zip-rar
 xserver-xorg-video-nvidia-legacy-173xx
+xserver-xorg-video-nvidia-legacy-96xx
