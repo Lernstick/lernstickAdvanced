@@ -3,4 +3,4 @@
 # no idea why, but some modules are not installed via dkms...
 echo "installing missing NVIDIA modules..."
 
-dkms install -m nvidia-legacy-173xx -v 173.14.35 -k 3.8-1-686-pae 
+dkms install -m nvidia-legacy-173xx -v 173.14.37 -k 3.8-1-686-pae 
