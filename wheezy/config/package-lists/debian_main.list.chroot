@@ -42,7 +42,7 @@
 #
 # * phoronix needs php-fpdf
 #
-# * playonlinux needs xterm
+# * playonlinux needs xterm and curl
 #
 # * kdenlive needs xine-ui
 #
@@ -117,6 +117,7 @@ crystalcursors
 csound
 cups
 cups-bsd
+curl
 darktable
 dasher
 deborphan
