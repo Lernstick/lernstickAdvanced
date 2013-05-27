@@ -9,6 +9,65 @@ GRUBLIB="usr/lib/grub"
 BOOT="boot"
 MKIMAGE="/usr/bin/grub-mkimage"
 
+# This list is assembled mostly by trail and error and by
+# looking at lsmod from a modular grub. Grub has to be one
+# monolithic binary for secure boot enabled systems, they don't
+# support loading modules
+MODULES="
+bitmap 
+bitmap_scale 
+bufio 
+crypto 
+efi_gop 
+efi_uga 
+extcmd 
+gettext 
+terminal 
+trig 
+video_fb 
+
+boot 
+configfile 
+fat 
+font 
+gfxmenu 
+gfxterm 
+gzio 
+linux 
+linuxefi 
+minicmd
+normal 
+part_msdos 
+png
+search 
+test 
+video
+
+all_video
+btrfs 
+cat 
+chain 
+echo 
+efifwsetup
+efinet 
+ext2 
+halt 
+hfsplus
+iso9660 
+jpeg 
+keystatus 
+loadenv 
+memdisk 
+part_apple 
+part_gpt
+password_pbkdf2 
+reboot 
+search_fs_uuid 
+search_fs_file 
+search_label 
+sleep
+"
+
 # create EFI directory
 mkdir -p $BINARY/$EFI  || true
 
@@ -20,9 +79,11 @@ for platform in x86_64-efi i386-efi ; do
     # select output filename
     case $platform in
         "x86_64-efi")
-            outfile="bootx64.efi"
+            # loading via LinuxFoundation PreLoader.efi
+            outfile="loader.efi"
             ;;
         "i386-efi")
+            # Load directly, no SecureBoot on this platform
             outfile="bootia32.efi"
             ;;
         *)
@@ -34,10 +95,7 @@ for platform in x86_64-efi i386-efi ; do
     # create EFI "image" chroot into the live-system to support 
     # cross architecture builds (amd64 / i386)
     #chroot $CHROOT $MKIMAGE --directory=/$GRUBLIB/$platform --prefix=/$BOOT/grub/$platform --output=/tmp/$outfile --format=$platform part_msdos fat
-    chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform part_msdos fat
+    chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform $MODULES
     cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
-
-    # copy grub modules
-    cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
 
 done
