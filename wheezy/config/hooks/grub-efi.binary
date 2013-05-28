@@ -9,7 +9,7 @@ GRUBLIB="usr/lib/grub"
 BOOT="boot"
 MKIMAGE="/usr/bin/grub-mkimage"
 
-# This list is assembled mostly by trail and error and by
+# This list is assembled mostly by trial and error and by
 # looking at lsmod from a modular grub. Grub has to be one
 # monolithic binary for secure boot enabled systems, they don't
 # support loading modules
