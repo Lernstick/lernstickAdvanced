@@ -95,7 +95,6 @@ cdparanoia
 cdrdao
 celestia-common
 celestia-gnome
-cheese
 chemtool
 childsplay
 childsplay-alphabet-sounds-de
@@ -157,9 +156,6 @@ extremetuxracer
 fb-music-high
 ffmpegthumbs
 filelight
-fillets-ng
-fillets-ng-data
-fillets-ng-data-cs
 firmware-linux-free
 flac
 fluid-soundfont-gm
@@ -173,12 +169,14 @@ foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
 foomatic-filters
+fotowall
 freeciv-client-gtk
 freeciv-data
 freeciv-server
 freeciv-sound-standard
 freemind
 freepats
+freespacenotifier
 frei0r-plugins
 fritzing
 frozen-bubble
@@ -294,9 +292,11 @@ kalgebra
 kalzium
 kalzium-data
 kamera
+kamoso
 kanagram
 kate
 katomic
+kbattleship
 kblackbox
 kblocks
 kbounce
@@ -309,6 +309,7 @@ kdeartwork-emoticons
 kdeartwork-style
 kdeartwork-theme-icon
 kdeartwork-theme-window
+kde-base-artwork
 kdebase-bin
 kde-config-cddb
 kde-config-cron
@@ -327,7 +328,6 @@ kdemultimedia-kio-plugins
 kdenetwork-filesharing
 kdenlive
 kdepasswd
-kde-style-bespin
 kde-style-polyester
 kde-style-qtcurve
 kdesudo
@@ -363,6 +363,7 @@ kiten
 klavaro
 kleopatra
 klettres
+klickety
 klines
 klipper
 kmag
@@ -381,6 +382,7 @@ konqueror
 konqueror-nsplugins
 konsole
 kpat
+krename
 kreversi
 krita
 krosspython
@@ -406,9 +408,6 @@ kubrick
 kvkbd
 kvpnc
 kwalletmanager
-kwin-style-crystal
-kwin-style-dekorator
-kwin-style-qtcurve
 ldap-utils
 less
 libavahi-compat-libdnssd1
@@ -537,6 +536,7 @@ phonon-backend-vlc
 phoronix-test-suite
 php5-curl
 php-fpdf
+picmi
 pingus
 pinta
 pioneers

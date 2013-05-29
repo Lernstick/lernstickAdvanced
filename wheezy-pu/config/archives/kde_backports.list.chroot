@@ -1,0 +1,3 @@
+# KDE Backports
+deb http://lernstick.killmulehill.net/debian wheezy-backports main
+deb-src http://lernstick.killmulehill.net/debian wheezy-backports main

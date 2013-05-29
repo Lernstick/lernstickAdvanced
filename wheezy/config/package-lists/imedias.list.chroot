@@ -25,7 +25,6 @@ lernstick-brasero
 lernstick-calibre
 lernstick-cantor
 lernstick-celestia-gnome
-lernstick-cheese
 lernstick-chemtool
 lernstick-childsplay
 lernstick-cooldriving
@@ -42,7 +41,6 @@ lernstick-eog
 lernstick-etoys
 lernstick-eventmanager
 lernstick-evince-common
-lernstick-fillets-ng
 lernstick-flubidux
 lernstick-focuswriter
 lernstick-freemind
@@ -97,7 +95,6 @@ lernstick-kinder-wollen-singen
 lernstick-kinderzeitmaschine
 lernstick-kipi-plugins-common
 lernstick-klavaro
-lernstick-kleopatra
 lernstick-kmix-wheezy
 lernstick-konsole-wheezy
 lernstick-kstars-wheezy
@@ -134,6 +131,7 @@ lernstick-miro
 lernstick-musescore
 lernstick-musikwissenschaften
 lernstick-mymoment
+lernstick-nepomuk-core-data
 lernstick-netbeans-wheezy
 lernstick-netcity
 lernstick-netla
@@ -194,7 +192,6 @@ lernstick-thunar
 lernstick-timeline
 lernstick-tipp10
 lernstick-toporopa
-lernstick-toppler
 lernstick-totem
 lernstick-tracker-gui
 lernstick-trigger-rally
