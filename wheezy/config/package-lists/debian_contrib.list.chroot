@@ -4,3 +4,9 @@ nvidia-settings
 nvidia-settings-legacy-173xx
 nvidia-settings-legacy-96xx
 phoronix-test-suite
+virtualbox
+virtualbox-dkms
+virtualbox-guest-dkms
+virtualbox-guest-utils
+virtualbox-guest-x11
+virtualbox-qt
