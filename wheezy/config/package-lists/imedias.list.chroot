@@ -201,7 +201,7 @@ lernstick-tuxtype-squeeze
 lernstick-unserkoerper
 lernstick-update-manager-gnome
 lernstick-usertemplate-wheezy
-#lernstick-virtualbox-wheezy
+lernstick-virtualbox-wheezy
 lernstick-visualvm
 lernstick-vmpk
 lernstick-v-sim-common
