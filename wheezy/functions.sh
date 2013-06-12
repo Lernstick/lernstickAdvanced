@@ -34,6 +34,7 @@ build_image()
 	rm -f config/source
 	lb clean
 	lb config \
+		--apt-indices false \
 		--apt-recommends false \
 		--architectures i386 \
 		--archive-areas "main contrib non-free" \

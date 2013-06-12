@@ -105,6 +105,7 @@ kvkbd
 less
 libgl1-mesa-dri
 libgoo-canvas-perl
+libkactivities-bin
 libqt4-opengl
 libreoffice
 libreoffice-base
@@ -176,7 +177,6 @@ okular-extra-backends
 oxygen-icon-theme
 p7zip-full
 patch
-pavucontrol
 pciutils
 phonon-backend-gstreamer
 phonon-backend-vlc

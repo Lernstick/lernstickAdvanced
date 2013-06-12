@@ -415,6 +415,7 @@ libcups2-dev
 libgl1-mesa-dri
 libgoo-canvas-perl
 libk3b6-extracodecs
+libkactivities-bin
 libqt4-opengl
 libreoffice
 libreoffice-base
@@ -729,6 +730,7 @@ xserver-xorg-video-tga
 xterm
 xtightvncviewer
 youtube-dl
+zaz
 zenmap
 zip
 zsync
