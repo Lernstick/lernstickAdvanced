@@ -44,6 +44,7 @@ build_image()
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-packages linux-image-3.9-1 \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
+		--mirror-binary-security http://security.debian.org/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot http://ftp.ch.debian.org/debian/ \
 		--mirror-chroot-security http://security.debian.org/ \
