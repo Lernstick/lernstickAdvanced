@@ -190,6 +190,7 @@ plymouth
 plymouth-themes-all
 plymouth-x11
 pulseaudio-utils
+r-base
 rsync
 shutter
 squashfs-tools
