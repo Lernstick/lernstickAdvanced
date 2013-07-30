@@ -417,6 +417,7 @@ libgl1-mesa-dri
 libgoo-canvas-perl
 libk3b6-extracodecs
 libkactivities-bin
+libqca2-plugin-ossl
 libqt4-opengl
 libreoffice
 libreoffice-base
@@ -660,6 +661,7 @@ usb-modeswitch
 user-setup
 vim
 vim-gtk
+virtuoso-minimal
 vlc
 vmpk
 vorbis-tools
