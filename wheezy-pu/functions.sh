@@ -61,7 +61,10 @@ build_image()
 		PREFIX="lernstick_pruefungsumgebung_debian7${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
-		mv ${ISO_FILE}.zsync ${IMAGE}.zsync
+                # we must update the zsync file because we renamed the iso file
+                echo "Updating zsync file..."
+                rm *.zsync
+                zsyncmake -C ${IMAGE}.iso -u ${IMAGE}.iso
 		echo "Creating MD5 for iso..."
 		md5sum ${IMAGE} > ${IMAGE}.md5
 
