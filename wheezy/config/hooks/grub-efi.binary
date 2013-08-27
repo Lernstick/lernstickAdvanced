@@ -102,7 +102,7 @@ for platform in x86_64-efi i386-efi ; do
     chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform $_modules
     cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
 
-    if [ "$cp_modules" == "true" ] ; then
+    if [ "$cp_modules" = "true" ] ; then
         # copy grub modules
         cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
     fi
