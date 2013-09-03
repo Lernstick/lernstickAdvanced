@@ -478,6 +478,7 @@ metacity
 miro
 mobile-broadband-provider-info 
 modemmanager
+morris
 mousetweaks
 mtools
 musescore
@@ -562,6 +563,7 @@ printer-applet
 printer-driver-all-enforce
 pulseaudio-utils
 pymol
+pysiogame
 python-notify
 python-openssl
 python-pyalsa
@@ -571,6 +573,7 @@ qelectrotech
 qelectrotech-data
 qelectrotech-examples
 qjackctl
+qtqr
 quassel-client-kde4
 remmina
 remmina-common
