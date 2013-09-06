@@ -38,6 +38,7 @@ lernstick-eboard
 lernstick-empathy
 lernstick-energiespiel
 lernstick-eog
+lernstick-epoptes
 lernstick-etoys
 lernstick-eventmanager
 lernstick-evince-common
@@ -79,6 +80,7 @@ lernstick-iconomix
 lernstick-imagemagick
 lernstick-initscripts-wheezy
 lernstick-internet-abc
+lernstick-italc2
 lernstick-jamendo
 lernstick-jfractionlab
 lernstick-kanagram
@@ -140,6 +142,7 @@ lernstick-obconf
 lernstick-okular
 lernstick-olympische-bewegung
 lernstick-omnitux
+lernstick-openbox
 #lernstick-openbve
 lernstick-openclipart
 lernstick-openjdk-7-jre
