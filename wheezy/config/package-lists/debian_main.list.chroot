@@ -505,8 +505,6 @@ nautilus-open-terminal
 nethogs
 netpbm
 network-manager-gnome
-neverball
-neverputt
 nmap
 ntfsprogs
 ntpdate
@@ -563,7 +561,7 @@ printer-applet
 printer-driver-all-enforce
 pulseaudio-utils
 pymol
-pysiogame
+#pysiogame
 python-notify
 python-openssl
 python-pyalsa
