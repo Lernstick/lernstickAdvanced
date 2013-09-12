@@ -64,7 +64,7 @@ build_image()
 		# we must update the zsync file because we renamed the iso file
 		echo "Updating zsync file..."
 		rm *.zsync
-		zsyncmake -C ${IMAGE}.iso -u ${IMAGE}.iso
+		zsyncmake -C ${IMAGE} -u ${IMAGE}
 		echo "Creating MD5 for iso..."
 		md5sum ${IMAGE} > ${IMAGE}.md5
 
