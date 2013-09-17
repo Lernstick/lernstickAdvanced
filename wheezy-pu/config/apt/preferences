@@ -13,3 +13,19 @@ Pin-Priority: 999
 Package: live-config-sysvinit
 Pin: release n=debian7-imedias
 Pin-Priority: 999
+
+Package: libreoffice*
+Pin: release n=wheezy-backports
+Pin-Priority: 999
+
+Package: python-uno
+Pin: release n=wheezy-backports
+Pin-Priority: 999
+
+Package: uno-libs3
+Pin: release n=wheezy-backports
+Pin-Priority: 999
+
+Package: ure
+Pin: release n=wheezy-backports
+Pin-Priority: 999

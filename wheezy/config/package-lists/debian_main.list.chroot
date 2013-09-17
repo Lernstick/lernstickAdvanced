@@ -425,7 +425,7 @@ libreoffice-calc
 libreoffice-draw
 libreoffice-emailmerge
 libreoffice-evolution
-libreoffice-filter-mobiledev
+#libreoffice-filter-mobiledev
 libreoffice-gnome
 libreoffice-help-de
 libreoffice-help-en-us

@@ -114,7 +114,7 @@ libreoffice-calc
 libreoffice-draw
 libreoffice-emailmerge
 libreoffice-evolution
-libreoffice-filter-mobiledev
+#libreoffice-filter-mobiledev
 libreoffice-help-de
 libreoffice-help-en-us
 libreoffice-help-es
@@ -202,6 +202,7 @@ upower
 user-setup
 vim
 vorbis-tools
+wxmaxima
 xserver-xfbdev
 xserver-xorg
 xserver-xorg-core
