@@ -8,8 +8,6 @@
 #
 # * musescore needs pulseaudio-utils for playback window
 #
-# * Kanti Sursee needs the hyphen-*, myspell-* and mythes-* packages
-#
 #################################################################################################
 acpi
 acpi-support
@@ -47,10 +45,6 @@ gstreamer0.10-schroedinger
 hicolor-icon-theme
 host
 htop
-#hyphen-de
-#hyphen-en-us
-#hyphen-fr
-#hyphen-it
 iceweasel
 iceweasel-l10n-de
 iceweasel-l10n-en-gb
@@ -158,21 +152,6 @@ mc
 menu
 mtools
 musescore
-#myspell-de-ch
-#myspell-de-de
-#myspell-en-gb
-#myspell-en-us
-#myspell-es
-#myspell-fr
-#myspell-it
-#myspell-pt-br
-#myspell-ru
-#mythes-de
-#mythes-de-ch
-#mythes-en-us
-#mythes-fr
-#mythes-it
-#mythes-ru
 okular
 okular-extra-backends
 oxygen-icon-theme

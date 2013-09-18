@@ -1,0 +1,18 @@
+#################################################################################################
+#
+# * Kanti Aarau needs the hyphen-* and myspell-* packages
+#
+#################################################################################################
+hyphen-de
+hyphen-en-us
+hyphen-fr
+hyphen-it
+myspell-de-ch
+myspell-de-de
+myspell-en-gb
+myspell-en-us
+myspell-es
+myspell-fr
+myspell-it
+myspell-pt-br
+myspell-ru

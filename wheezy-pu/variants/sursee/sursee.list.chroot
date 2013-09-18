@@ -1,0 +1,24 @@
+#################################################################################################
+#
+# * Kanti Sursee needs the hyphen-*, myspell-* and mythes-* packages
+#
+#################################################################################################
+hyphen-de
+hyphen-en-us
+hyphen-fr
+hyphen-it
+myspell-de-ch
+myspell-de-de
+myspell-en-gb
+myspell-en-us
+myspell-es
+myspell-fr
+myspell-it
+myspell-pt-br
+myspell-ru
+mythes-de
+mythes-de-ch
+mythes-en-us
+mythes-fr
+mythes-it
+mythes-ru
