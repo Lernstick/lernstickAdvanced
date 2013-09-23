@@ -11,7 +11,7 @@ lehreroffice
 lernstick-againstallodds
 lernstick-amsynth
 lernstick-ardesia
-lernstick-ardour
+lernstick-ardour3
 lernstick-arduino
 lernstick-arista
 lernstick-avidemux-qt
@@ -129,6 +129,7 @@ lernstick-mfk
 lernstick-minibooks-squeeze
 lernstick-miro
 lernstick-morris
+lernstick-mount-exchange-wheezy
 lernstick-musescore
 lernstick-musikwissenschaften
 lernstick-mymoment
@@ -235,7 +236,6 @@ live-pathological2
 live-pingus2
 #live-supertuxkart
 live-swapfile
-live-xmoto
 lxmed
 omnitux
 pauker

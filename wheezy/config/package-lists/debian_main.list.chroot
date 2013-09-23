@@ -60,7 +60,7 @@ anacron
 apt-rdepends
 apt-xapian-index
 ardesia
-ardour
+ardour3
 arduino
 arista
 ark
@@ -650,6 +650,8 @@ timidity
 tofrodos
 toppler
 trigger-rally
+tumbler
+tumbler-plugins-extra
 tuxmath
 tuxpaint
 tuxpaint-stamps-default
@@ -704,7 +706,6 @@ xfce4-volumed
 xfce4-weather-plugin
 xfce4-xkb-plugin
 xine-ui
-xmoto
 xournal
 xsane
 xserver-xfbdev
