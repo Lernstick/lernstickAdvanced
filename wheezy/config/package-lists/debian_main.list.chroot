@@ -512,9 +512,9 @@ okteta
 okular
 okular-extra-backends
 openbabel
-openjdk-7-doc
+#openjdk-7-doc
 openjdk-7-jdk
-openjdk-7-source
+#openjdk-7-source
 openprinting-ppds
 openprinting-ppds-extra
 openshot

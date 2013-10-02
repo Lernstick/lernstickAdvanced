@@ -135,7 +135,7 @@ lernstick-musescore
 lernstick-musikwissenschaften
 lernstick-mymoment
 lernstick-nepomuk-core-data
-lernstick-netbeans-wheezy
+#lernstick-netbeans-wheezy
 lernstick-netcity
 lernstick-netla
 lernstick-notenmax
@@ -228,6 +228,7 @@ lernstick-xsane
 lernstick-xterm
 lernstick-zenmap
 lernstick-zynaddsubfx
+libreoffice-languagetool
 libreoffice-templatepack
 live-armagetronad2
 live-enigma2
