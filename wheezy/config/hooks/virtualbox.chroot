@@ -11,7 +11,7 @@ echo "running VirtualBox setup..."
 export BUILD_TARGET_ARCH=x86
 
 VBOX_VERSION="$(dpkg -s virtualbox-4.2 | grep "^Version: " | sed 's|Version: ||' | awk -F- '{ print $1 }')"
-KERNEL_VERSION="3.9-1"
+KERNEL_VERSION="3.10-0.bpo.3"
 
 dkms install -m vboxhost -v "${VBOX_VERSION}" -k ${KERNEL_VERSION}-486
 dkms install -m vboxhost -v "${VBOX_VERSION}" -k ${KERNEL_VERSION}-686-pae

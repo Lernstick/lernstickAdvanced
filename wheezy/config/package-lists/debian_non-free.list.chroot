@@ -26,6 +26,7 @@ kstars-data-extra-tycho2
 libfglrx-amdxvba1
 libgl1-fglrx-glx
 libgl1-nvidia-legacy-173xx-glx
+libgl1-nvidia-legacy-304xx-glx
 libgl1-nvidia-legacy-96xx-glx
 nvidia-alternative-legacy-173xx
 nvidia-alternative-legacy-96xx
@@ -36,10 +37,13 @@ nvidia-glx-legacy-96xx
 nvidia-kernel-dkms
 nvidia-kernel-legacy-173xx-dkms
 nvidia-kernel-legacy-96xx-dkms
+nvidia-legacy-304xx-alternative
+nvidia-legacy-304xx-kernel-dkms
 openttd-opensfx
 p7zip-rar
 scribus-doc
 sweethome3d-furniture-nonfree
 xserver-xorg-video-nvidia-legacy-173xx
+xserver-xorg-video-nvidia-legacy-304xx
 xserver-xorg-video-nvidia-legacy-96xx
 zd1211-firmware

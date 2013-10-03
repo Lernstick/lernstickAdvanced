@@ -2,6 +2,7 @@ firmware-b43-installer
 firmware-b43legacy-installer
 nvidia-settings
 nvidia-settings-legacy-173xx
+nvidia-settings-legacy-304xx
 nvidia-settings-legacy-96xx
 phoronix-test-suite
 virtualbox
