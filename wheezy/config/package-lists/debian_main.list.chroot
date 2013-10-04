@@ -72,6 +72,7 @@ avahi-utils
 avogadro
 avogadro-data
 bash-completion
+bind9-host
 bkchem
 blender
 blinken
@@ -165,7 +166,7 @@ fluidsynth-dssi
 focuswriter
 fonts-liberation
 fonts-lyx
-foobillard
+foobillardplus
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
@@ -216,7 +217,7 @@ gimp-help-it
 gimp-help-ru
 gimp-plugin-registry
 gimp-texturize
-git-core
+git
 glabels
 gnome-app-install
 gnome-core
@@ -252,8 +253,6 @@ hannah-foo2zjs
 hddtemp
 hex-a-hop
 hicolor-icon-theme
-host
-hpijs
 hpijs-ppds
 hplip-gui
 htop
@@ -310,8 +309,8 @@ kdeartwork-emoticons
 kdeartwork-style
 kdeartwork-theme-icon
 kdeartwork-theme-window
+kde-baseapps-bin
 kde-base-artwork
-kdebase-bin
 kde-config-cddb
 kde-config-cron
 kde-config-gtk-style
@@ -325,7 +324,6 @@ kde-l10n-fr
 kde-l10n-it
 kde-l10n-ptbr
 kde-l10n-ru
-kdemultimedia-kio-plugins
 kdenetwork-filesharing
 kdenlive
 kdepasswd
@@ -358,6 +356,7 @@ kiki-the-nano-bot
 kile
 kile-l10n
 killbots
+kio-audiocd
 kipi-plugins
 kiriki
 kiten
@@ -423,7 +422,6 @@ libreoffice
 libreoffice-base
 libreoffice-calc
 libreoffice-draw
-libreoffice-emailmerge
 libreoffice-evolution
 #libreoffice-filter-mobiledev
 libreoffice-gnome
@@ -446,7 +444,6 @@ libreoffice-math
 libreoffice-ogltrans
 libreoffice-pdfimport
 libreoffice-presentation-minimizer
-libreoffice-presenter-console
 libreoffice-report-builder
 libreoffice-style-crystal
 libreoffice-style-galaxy
@@ -457,10 +454,10 @@ libreoffice-writer
 libsmbios-bin
 libsvn-java
 lilypond
-#linux-headers-3.9-1-486
-#linux-headers-3.9-1-686-pae
 linux-headers-3.10-0.bpo.3-486
 linux-headers-3.10-0.bpo.3-686-pae
+#linux-headers-3.9-1-486
+#linux-headers-3.9-1-686-pae
 #live-tools
 lshw-gtk
 lskat
@@ -518,7 +515,6 @@ openbabel
 openjdk-7-jdk
 #openjdk-7-source
 openprinting-ppds
-openprinting-ppds-extra
 openshot
 openshot-doc
 openssh-client
@@ -561,6 +557,7 @@ powertop
 #printconf
 printer-applet
 printer-driver-all-enforce
+printer-driver-hpijs
 pulseaudio-utils
 pymol
 #pysiogame
