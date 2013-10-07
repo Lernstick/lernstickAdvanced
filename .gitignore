@@ -32,4 +32,5 @@ squeeze/source.debian-live.list
 squeeze/.stage/
 squeeze/virtualbox/
 wheezy/cache/
+wheezy/grub_gettext/de.po~
 wheezy-pu/cache/
