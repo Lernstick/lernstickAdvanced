@@ -3,7 +3,7 @@
 SOURCE="false"
 
 # variant specific features 
-VARIANT="Sursee "
+VARIANT="Kantonsschule Sursee "
 cp variants/sursee/sursee.chroot config/hooks/ 
 cp variants/sursee/sursee.list.chroot config/package-lists/
 

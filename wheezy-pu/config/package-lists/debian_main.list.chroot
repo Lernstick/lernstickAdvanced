@@ -137,8 +137,8 @@ libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
 libsmbios-bin
-linux-headers-3.9-1-486
-linux-headers-3.9-1-686-pae
+linux-headers-3.10-0.bpo.3-486
+linux-headers-3.10-0.bpo.3-686-pae
 #live-tools
 lshw-gtk
 lsof

@@ -23,7 +23,7 @@ build_image()
 	# update time stamp in bootloaders
  	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version ${VARIANT}${TODAY})</version>|1" \
  		config/bootloaders/isolinux/xmlboot.config
-	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 7 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 7 (Version ${VARIANT}${TODAY})\"|1" \
 		config/includes.binary/boot/grub/themes/lernstick/theme.txt 
 
 	# update configuration
@@ -42,7 +42,7 @@ build_image()
 		--distribution wheezy \
 		--firmware-chroot true \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-3.9-1 \
+		--linux-packages linux-image-3.10-0.bpo.3 \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-binary-security http://security.debian.org/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
