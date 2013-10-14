@@ -457,6 +457,7 @@ libsvn-java
 lilypond
 linux-headers-3.10-0.bpo.3-486
 linux-headers-3.10-0.bpo.3-686-pae
+#linux-headers-3.10-0.bpo.3-amd64
 #linux-headers-3.9-1-486
 #linux-headers-3.9-1-686-pae
 #live-tools
@@ -611,6 +612,7 @@ step
 strace
 subversion
 sucrose-0.96
+sugar-browse-activity
 sugar-calculate-activity
 #sugar-chat-activity-0.86
 sugar-connect-activity

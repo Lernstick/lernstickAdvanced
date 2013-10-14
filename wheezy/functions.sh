@@ -33,6 +33,7 @@ build_image()
 	rm -f config/common
 	rm -f config/source
 	lb clean
+	# --linux-flavours "486 686-pae amd64" \
 	lb config \
 		--apt-indices false \
 		--apt-recommends false \
