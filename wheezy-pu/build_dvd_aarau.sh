@@ -3,7 +3,7 @@
 SOURCE="false"
 
 # variant specific features 
-VARIANT="Aarau "
+VARIANT="Neue Kantonsschule Aarau - Legasthenie "
 cp variants/aarau/aarau.list.chroot config/package-lists/
 
 # common build

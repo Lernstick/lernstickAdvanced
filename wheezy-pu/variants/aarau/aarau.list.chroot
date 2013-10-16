@@ -1,12 +1,8 @@
 #################################################################################################
 #
-# * Kanti Aarau needs the hyphen-* and myspell-* packages
+# * Kanti Aarau needs the myspell-* packages for the dyslexic variant
 #
 #################################################################################################
-hyphen-de
-hyphen-en-us
-hyphen-fr
-hyphen-it
 myspell-de-ch
 myspell-de-de
 myspell-en-gb
