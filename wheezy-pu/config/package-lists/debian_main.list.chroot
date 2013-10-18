@@ -172,6 +172,7 @@ pulseaudio-utils
 r-base
 rsync
 shutter
+software-properties-gtk
 squashfs-tools
 strace
 syslinux
@@ -181,6 +182,7 @@ upower
 user-setup
 vim
 vorbis-tools
+whois
 wxmaxima
 xserver-xfbdev
 xserver-xorg
