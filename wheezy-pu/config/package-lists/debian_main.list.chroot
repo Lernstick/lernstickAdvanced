@@ -172,7 +172,7 @@ pulseaudio-utils
 r-base
 rsync
 shutter
-software-properties-gtk
+#software-properties-gtk
 squashfs-tools
 strace
 syslinux
