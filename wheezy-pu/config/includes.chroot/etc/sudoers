@@ -22,4 +22,4 @@ root	ALL=(ALL) ALL
 # %sudo ALL=NOPASSWD: ALL
 
 user  ALL=(ALL) PASSWD: ALL
-user  ALL=(ALL) NOPASSWD: /usr/bin/dlcopy, /usr/bin/lshw-gtk
+user  ALL=(ALL) NOPASSWD: /usr/bin/dlcopy, /usr/bin/lshw-gtk, /usr/bin/lernstick_backup
