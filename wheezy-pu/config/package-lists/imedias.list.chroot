@@ -4,6 +4,7 @@ easystroke
 jbackpack
 lernstick-geogebra-wheezy-pu
 lernstick-gretl
+lernstick-hplip-gui
 lernstick-htop
 lernstick-imagemagick
 lernstick-initscripts-wheezy
@@ -32,6 +33,7 @@ lernstick-okular
 lernstick-openjdk-7-jre
 lernstick-plymouth
 lernstick-shutter
+lernstick-system-config-printer
 lernstick-systemsettings-wheezy
 lernstick-usertemplate-wheezy-pu
 lernstick-virtualbox-wheezy

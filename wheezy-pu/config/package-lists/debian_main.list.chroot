@@ -15,11 +15,16 @@ acpitail
 acpitool
 anacron
 ark
+avahi-autoipd
+avahi-daemon
+avahi-utils
 bash-completion
 bzip2
 console-setup
 cryptsetup
 crystalcursors
+cups
+cups-bsd
 deborphan
 desktop-base
 dialog
@@ -31,6 +36,7 @@ eject
 ffmpegthumbs
 firmware-linux-free
 fonts-liberation
+foomatic-db-gutenprint
 freespacenotifier
 geogebra
 geogebra-gnome
@@ -42,8 +48,10 @@ gstreamer0.10-plugins-bad
 gstreamer0.10-plugins-good
 gstreamer0.10-plugins-ugly
 gstreamer0.10-schroedinger
+gutenprint-locales
 hicolor-icon-theme
 host
+hplip-gui
 htop
 i965-va-driver
 iceweasel
@@ -56,6 +64,7 @@ iceweasel-l10n-it
 iceweasel-l10n-pt-br
 iceweasel-l10n-ru
 iceweasel-l10n-sq
+ijsgutenprint
 kaffeine
 kate
 kcalc
@@ -99,6 +108,7 @@ ksysguardd
 ksystemlog
 kvkbd
 less
+libcups2-dev
 libgl1-mesa-dri
 libgoo-canvas-perl
 libkactivities-bin
@@ -155,6 +165,7 @@ mtools
 musescore
 okular
 okular-extra-backends
+openprinting-ppds
 oxygen-icon-theme
 p7zip-full
 patch
@@ -169,6 +180,9 @@ plasma-widgets-addons
 plymouth
 plymouth-themes-all
 plymouth-x11
+printer-applet
+printer-driver-all-enforce
+printer-driver-hpijs
 pulseaudio-utils
 r-base
 rsync
@@ -177,6 +191,9 @@ shutter
 squashfs-tools
 strace
 syslinux
+system-config-printer
+system-config-printer-kde
+system-config-printer-udev
 systemsettings
 unzip
 upower
