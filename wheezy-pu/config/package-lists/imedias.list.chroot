@@ -16,7 +16,6 @@ lernstick-kdepim-runtime
 lernstick-kde-runtime-data
 lernstick-kde-runtime-pu
 lernstick-kmix-wheezy
-lernstick-konsole-wheezy
 lernstick-kvkbd
 lernstick-libreoffice-base-wheezy
 lernstick-libreoffice-calc-wheezy
@@ -40,6 +39,7 @@ lernstick-usertemplate-wheezy-pu
 lernstick-virtualbox-wheezy
 lernstick-wine
 lernstick-wxmaxima-pu
+lernstick-x11vnc
 libreoffice-templatepack
 pdfsam-enhanced
 processing
