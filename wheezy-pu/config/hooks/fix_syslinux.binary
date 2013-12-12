@@ -4,5 +4,14 @@ cd binary/live || exit 1
 
 mv vmlinuz-3.10-0.bpo.3-486 vmlinuz1 || true
 mv vmlinuz-3.10-0.bpo.3-686-pae vmlinuz2 || true
+mv vmlinuz-3.10-0.bpo.3-amd64 vmlinuz3 || true
 mv initrd.img-3.10-0.bpo.3-486 initrd1.img || true
 mv initrd.img-3.10-0.bpo.3-686-pae initrd2.img || true
+mv initrd.img-3.10-0.bpo.3-amd64 initrd3.img || true
+
+mv vmlinuz-3.11-0.bpo.2-486 vmlinuz1 || true
+mv vmlinuz-3.11-0.bpo.2-686-pae vmlinuz2 || true
+mv vmlinuz-3.11-0.bpo.2-amd64 vmlinuz3 || true
+mv initrd.img-3.11-0.bpo.2-486 initrd1.img || true
+mv initrd.img-3.11-0.bpo.2-686-pae initrd2.img || true
+mv initrd.img-3.11-0.bpo.2-amd64 initrd3.img || true
