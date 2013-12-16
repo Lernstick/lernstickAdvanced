@@ -148,10 +148,10 @@ libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
 libsmbios-bin
-linux-headers-3.11-0.bpo.2-486
-linux-headers-3.11-0.bpo.2-686-pae
 #linux-headers-3.10-0.bpo.3-486
 #linux-headers-3.10-0.bpo.3-686-pae
+linux-headers-3.11-0.bpo.2-486
+linux-headers-3.11-0.bpo.2-686-pae
 #live-tools
 lshw-gtk
 lsof
@@ -182,6 +182,7 @@ plasma-widgets-addons
 plymouth
 plymouth-themes-all
 plymouth-x11
+ppp
 printer-applet
 printer-driver-all-enforce
 printer-driver-hpijs

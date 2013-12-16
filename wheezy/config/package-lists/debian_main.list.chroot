@@ -55,10 +55,12 @@ acpitail
 acpitool
 akregator
 amarok
+amarok-doc
 amsynth
 anacron
 apt-rdepends
 apt-xapian-index
+arandr
 ardesia
 ardour3
 arduino
@@ -418,6 +420,7 @@ libgl1-mesa-dri
 libgoo-canvas-perl
 libk3b6-extracodecs
 libkactivities-bin
+libmtp-runtime
 libqca2-plugin-ossl
 libqt4-opengl
 libreoffice
@@ -456,10 +459,10 @@ libreoffice-writer
 libsmbios-bin
 libsvn-java
 lilypond
-linux-headers-3.11-0.bpo.2-486
-linux-headers-3.11-0.bpo.2-686-pae
 #linux-headers-3.10-0.bpo.3-486
 #linux-headers-3.10-0.bpo.3-686-pae
+linux-headers-3.11-0.bpo.2-486
+linux-headers-3.11-0.bpo.2-686-pae
 #live-tools
 lshw-gtk
 lskat
@@ -556,6 +559,7 @@ plymouth-themes-all
 plymouth-x11
 pokerth
 powertop
+ppp
 #printconf
 printer-applet
 printer-driver-all-enforce
