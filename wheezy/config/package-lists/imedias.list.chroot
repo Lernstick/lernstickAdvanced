@@ -37,7 +37,6 @@ lernstick-denemo
 lernstick-diaspora
 lernstick-dossizola-wheezy
 lernstick-duden
-lernstick-eboard
 lernstick-empathy
 lernstick-energiespiel
 lernstick-eog
@@ -191,7 +190,7 @@ lernstick-statatlas
 lernstick-stellarium
 lernstick-step
 lernstick-sugar-emulator
-lernstick-sweethome3d
+#lernstick-sweethome3d
 lernstick-swisstopo
 lernstick-synaptic-wheezy
 lernstick-system-config-printer
