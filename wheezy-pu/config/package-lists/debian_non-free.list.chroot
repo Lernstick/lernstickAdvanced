@@ -20,7 +20,6 @@ firmware-qlogic
 firmware-ralink
 firmware-realtek
 intel-microcode
-ixp4xx-microcode
 libfglrx-amdxvba1
 libgl1-fglrx-glx
 nvidia-detect
