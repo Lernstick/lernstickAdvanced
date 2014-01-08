@@ -1,3 +1,4 @@
+amd64-microcode
 atmel-firmware
 bluez-firmware
 celestia-common-nonfree
@@ -22,6 +23,8 @@ firmware-netxen
 firmware-qlogic
 firmware-ralink
 firmware-realtek
+intel-microcode
+ixp4xx-microcode
 kstars-data-extra-tycho2
 libfglrx-amdxvba1
 libgl1-fglrx-glx
