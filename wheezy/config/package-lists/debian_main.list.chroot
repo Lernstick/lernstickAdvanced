@@ -48,6 +48,8 @@
 #
 # * epoptes needs python-openssl
 #
+# * stopmotion needs vgrabbj
+#
 #################################################################################################
 acpi
 acpi-support
@@ -614,6 +616,7 @@ squashfs-tools
 sshfs
 stellarium
 step
+stopmotion
 strace
 subversion
 sucrose-0.96
@@ -669,6 +672,7 @@ unzip
 update-notifier
 usb-modeswitch
 user-setup
+vgrabbj
 vim
 vim-gtk
 virtuoso-minimal
