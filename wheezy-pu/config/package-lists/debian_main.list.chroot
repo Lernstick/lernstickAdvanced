@@ -198,12 +198,14 @@ system-config-printer
 system-config-printer-kde
 system-config-printer-udev
 systemsettings
+telnet
 unzip
 upower
 user-setup
 vim
 vorbis-tools
 whois
+wireless-tools
 wxmaxima
 xserver-xfbdev
 xserver-xorg
