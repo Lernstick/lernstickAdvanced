@@ -191,6 +191,7 @@ r-base
 rsync
 shutter
 #software-properties-gtk
+spice-vdagent
 squashfs-tools
 strace
 syslinux
