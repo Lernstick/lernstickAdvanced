@@ -33,6 +33,8 @@ dmz-cursor-theme
 dolphin
 dosfstools
 eject
+exfat-fuse
+exfat-utils
 ffmpegthumbs
 firmware-linux-free
 fonts-liberation
