@@ -1,2 +1,4 @@
 AutoStartInstaller=true
 ShowNotUsedInfo=true
+ShowReadOnlyInfo=true
+ShowWelcome=true
