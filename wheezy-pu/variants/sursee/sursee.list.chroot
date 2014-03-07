@@ -22,3 +22,6 @@ mythes-en-us
 mythes-fr
 mythes-it
 mythes-ru
+
+# temporary workaround for wireless card deactivation
+rfkill
