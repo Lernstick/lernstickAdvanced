@@ -205,9 +205,9 @@ gdm3
 gecko-mediaplayer
 gedit
 genisoimage
-geogebra
-geogebra-gnome
-geogebra-kde
+#geogebra
+#geogebra-gnome
+#geogebra-kde
 #ghemical
 ghex
 gimp

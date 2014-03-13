@@ -40,9 +40,9 @@ firmware-linux-free
 fonts-liberation
 foomatic-db-gutenprint
 freespacenotifier
-geogebra
-geogebra-gnome
-geogebra-kde
+#geogebra
+#geogebra-gnome
+#geogebra-kde
 gretl
 gstreamer0.10-ffmpeg
 gstreamer0.10-fluendo-mp3
