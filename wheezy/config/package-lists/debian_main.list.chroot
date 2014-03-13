@@ -122,6 +122,7 @@ crystalcursors
 csound
 cups
 cups-bsd
+cups-pdf
 curl
 darktable
 dasher
@@ -206,8 +207,8 @@ gecko-mediaplayer
 gedit
 genisoimage
 #geogebra
-#geogebra-gnome
-#geogebra-kde
+geogebra-gnome
+geogebra-kde
 #ghemical
 ghex
 gimp

@@ -25,6 +25,7 @@ cryptsetup
 crystalcursors
 cups
 cups-bsd
+cups-pdf
 deborphan
 desktop-base
 dialog
@@ -41,8 +42,8 @@ fonts-liberation
 foomatic-db-gutenprint
 freespacenotifier
 #geogebra
-#geogebra-gnome
-#geogebra-kde
+geogebra-gnome
+geogebra-kde
 gretl
 gstreamer0.10-ffmpeg
 gstreamer0.10-fluendo-mp3
