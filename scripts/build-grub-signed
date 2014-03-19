@@ -1,0 +1,124 @@
+#!/bin/sh
+
+set -e
+
+BUILDDIR="build"
+EFI_PATH="config/includes.binary/efi/boot/"
+GRUBLIB="usr/lib/grub/"
+GRUB_ARCH="x86_64-efi"
+MKIMAGE="/usr/bin/grub-mkimage"
+GRUB_SIGNED_FILE="grubx64.efi"
+
+# This list is assembled mostly by trial and error and by
+# looking at lsmod from a modular grub. Grub has to be one
+# monolithic binary for secure boot enabled systems, they don't
+# support loading modules
+MODULES="
+all_video
+bitmap 
+bitmap_scale 
+boot 
+btrfs 
+bufio 
+cat 
+chain 
+configfile 
+crypto 
+echo 
+efifwsetup
+efi_gop 
+efinet 
+efi_uga 
+ext2 
+extcmd 
+fat 
+font 
+gettext 
+gfxmenu 
+gfxterm 
+gzio 
+halt 
+hfsplus
+iso9660 
+jpeg 
+keystatus 
+linux 
+linuxefi 
+loadenv 
+memdisk 
+minicmd
+normal 
+part_apple 
+part_gpt
+part_msdos 
+password_pbkdf2 
+png
+read
+reboot 
+search 
+search_fs_file 
+search_fs_uuid 
+search_label 
+sleep
+terminal 
+test 
+trig 
+video
+video_fb 
+"
+
+usage() {
+    echo "$0 -k key -c cert -g grubpkg -e environments"
+    exit 1
+}
+
+# command line parameters
+while getopts "k:c:g:e:" opt ; do
+	case $opt in
+	k)
+		key=$OPTARG
+		;;
+	c)
+		cert=$OPTARG
+		;;
+	g)
+		grubpkg=$OPTARG
+		;;
+	e)
+		envs=$OPTARG
+		;;
+	esac
+done
+
+if [ -z $envs ] ; then
+    envs="wheezy wheezy-pu"
+fi
+
+if [ ! -r "$key" ] ; then
+    echo "Private key not readable."
+    usage
+fi
+
+if [ ! -r "$cert" ] ; then
+    echo "Certificate not readable."
+    usage
+fi
+
+if [ ! -r "$grubpkg" ] ; then
+    echo "Grub binary package file not readable. You need to download the right grub-efi-amd64-bin Package."
+    usage
+fi
+
+# extract grub
+mkdir ${BUILDDIR}
+trap "rm -rf ${BUILDDIR}" 0
+dpkg-deb -x ${grubpkg} ${BUILDDIR}
+
+# create EFI "image", this uses the grub-mkimage from the running system
+# but that should be OK.
+$MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned --format=${GRUB_ARCH} ${MODULES}
+sbsign --key ${key} --cert ${cert} --output ${BUILDDIR}/${GRUB_SIGNED_FILE} ${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned
+
+for env in ${envs} ; do
+	cp ${BUILDDIR}/${GRUB_SIGNED_FILE} ../${env}/${EFI_PATH}
+done

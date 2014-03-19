@@ -1,0 +1,28 @@
+
+This directory contains some helper scripts.
+
+build-grub-signed
+*****************
+
+This script "builds" a signed GRUB for use with UEFI SecureBoot. 
+It needs to be run for every new version of GRUB that should be 
+used with UEFI boot on 64bit UEFI systems.
+
+The scripts creates a signed version of GRUB in 
+config/includes.binary/efi/boot/grubx64.efi. This file should then
+be commited to the repository so that others can use it.
+
+The script requires the sbsigntool package currently not (yet) available
+in Debian. You can build it from https://github.com/imedias/sbsigntool.
+
+Usage:
+./build-grub-signed -k key -c cert -g grubpkg -e environments
+
+ -k key             Path to private key file (PEM encoded) (required)
+ -c cert            Path to certificate (PEM encoded) (required)
+ -g grubpkg         Path to grub-efi-amd64-bin Debian package. This has to be downloaded 
+                    or built separately and should match the architecture of the Debian 
+                    Live system. (required)
+ -e environments    Space separated list of environments where the signed binary should
+                    be installed. Enclose in "" to avoid shell escaping.
+                    (Defaults to "wheezy wheezy-pu")
