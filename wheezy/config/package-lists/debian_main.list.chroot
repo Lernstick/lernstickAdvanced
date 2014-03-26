@@ -460,10 +460,10 @@ libreoffice-writer
 libsmbios-bin
 libsvn-java
 lilypond
-#linux-headers-3.12-0.bpo.1-486
-#linux-headers-3.12-0.bpo.1-686-pae
-linux-headers-3.13-0.bpo.1-486
-linux-headers-3.13-0.bpo.1-686-pae
+linux-headers-3.12-0.bpo.1-486
+linux-headers-3.12-0.bpo.1-686-pae
+#linux-headers-3.13-0.bpo.1-486
+#linux-headers-3.13-0.bpo.1-686-pae
 #live-tools
 lshw-gtk
 lskat
