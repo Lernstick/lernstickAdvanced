@@ -6,103 +6,34 @@ CHROOT="chroot"
 BINARY="binary"
 EFI="efi/boot"
 GRUBLIB="usr/lib/grub"
+SHIMLIB="usr/lib/shim"
 BOOT="boot"
 MKIMAGE="/usr/bin/grub-mkimage"
 
-# This list is assembled mostly by trial and error and by
-# looking at lsmod from a modular grub. Grub has to be one
-# monolithic binary for secure boot enabled systems, they don't
-# support loading modules
-MODULES="
-all_video
-bitmap 
-bitmap_scale 
-boot 
-btrfs 
-bufio 
-cat 
-chain 
-configfile 
-crypto 
-echo 
-efifwsetup
-efi_gop 
-efinet 
-efi_uga 
-ext2 
-extcmd 
-fat 
-font 
-gettext 
-gfxmenu 
-gfxterm 
-gzio 
-halt 
-hfsplus
-iso9660 
-jpeg 
-keystatus 
-linux 
-linuxefi 
-loadenv 
-memdisk 
-minicmd
-normal 
-part_apple 
-part_gpt
-part_msdos 
-password_pbkdf2 
-png
-reboot 
-search 
-search_fs_file 
-search_fs_uuid 
-search_label 
-sleep
-terminal 
-test 
-trig 
-video
-video_fb 
-"
+
+# install grub for 32bit EFI systems (old Macs)
 
 # create EFI directory
 mkdir -p $BINARY/$EFI  || true
 
-for platform in x86_64-efi i386-efi ; do
+outfile="bootia32.efi"
+platform="i386-efi"
+modules="part_msdos fat"
 
-    # create grub module directory
-    mkdir -p $BINARY/$BOOT/grub/$platform || true
+# create grub module directory
+mkdir -p $BINARY/$BOOT/grub/$platform || true
 
-    # select output filename
-    case $platform in
-        "x86_64-efi")
-            # loading via LinuxFoundation PreLoader.efi
-            outfile="loader.efi"
-            cp_modules="false"
-            _modules="$MODULES"
-            ;;
-        "i386-efi")
-            # Load directly, no SecureBoot on this platform
-            outfile="bootia32.efi"
-            cp_modules="true"
-            _modules="part_msdos fat"
-            ;;
-        *)
-            echo "Unsupported platform!"
-            exit 1
-            ;;
-    esac
+# create EFI "image" chroot into the live-system to support 
+# cross architecture builds (amd64 / i386)
+#chroot $CHROOT $MKIMAGE --directory=/$GRUBLIB/$platform --prefix=/$BOOT/grub/$platform --output=/tmp/$outfile --format=$platform part_msdos fat
+chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform $modules
+cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
 
-    # create EFI "image" chroot into the live-system to support 
-    # cross architecture builds (amd64 / i386)
-    #chroot $CHROOT $MKIMAGE --directory=/$GRUBLIB/$platform --prefix=/$BOOT/grub/$platform --output=/tmp/$outfile --format=$platform part_msdos fat
-    chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform $_modules
-    cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
+# copy grub modules
+cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
 
-    if [ "$cp_modules" = "true" ] ; then
-        # copy grub modules
-        cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
-    fi
 
-done
+## Install MokManager for 64bit systems, the rest is handled by
+## binary includes and the script in scripts/build-grub-signed
+
+cp $CHROOT/$SHIMLIB/MokManager.efi.signed $BINARY/$EFI/MokManager.efi
