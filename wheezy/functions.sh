@@ -41,6 +41,7 @@ build_image()
 		--archive-areas "main contrib non-free" \
 		--binary-images iso \
 		--distribution wheezy \
+		--efi-boot true \
 		--firmware-chroot true \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-packages linux-image-3.12-0.bpo.1 \
