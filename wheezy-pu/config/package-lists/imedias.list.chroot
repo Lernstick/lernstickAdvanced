@@ -4,6 +4,7 @@ easystroke
 jbackpack-restore
 jbackpack-restore-admin
 lernstick-fglrx-control
+lernstick-firewall
 lernstick-geogebra-wheezy-pu
 lernstick-gretl
 lernstick-hplip-gui
@@ -34,10 +35,12 @@ lernstick-okular
 lernstick-openjdk-7-jre
 lernstick-plymouth
 lernstick-shutter
+lernstick-synaptic-wheezy
 lernstick-system-config-printer
 lernstick-systemsettings-wheezy
 lernstick-usertemplate-wheezy-pu
 lernstick-virtualbox-wheezy
+lernstickwelcome-wheezy-pu
 lernstick-wine
 lernstick-wxmaxima-pu
 lernstick-x11vnc

@@ -14,6 +14,7 @@ acpi-support
 acpitail
 acpitool
 anacron
+apt-xapian-index
 ark
 avahi-autoipd
 avahi-daemon
@@ -33,6 +34,7 @@ dkms
 dmz-cursor-theme
 dolphin
 dosfstools
+ecryptfs-utils
 eject
 exfat-fuse
 exfat-utils
@@ -151,10 +153,10 @@ libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
 libsmbios-bin
-linux-headers-3.12-0.bpo.1-486
-linux-headers-3.12-0.bpo.1-686-pae
-#linux-headers-3.13-0.bpo.1-486
-#linux-headers-3.13-0.bpo.1-686-pae
+#linux-headers-3.12-0.bpo.1-486
+#linux-headers-3.12-0.bpo.1-686-pae
+linux-headers-3.13-0.bpo.1-486
+linux-headers-3.13-0.bpo.1-686-pae
 #live-tools
 lshw-gtk
 lsof
@@ -183,6 +185,7 @@ plasma-desktop
 plasma-netbook
 plasma-wallpapers-addons
 plasma-widget-folderview
+plasma-widget-networkmanagement
 plasma-widgets-addons
 plymouth
 plymouth-themes-all
@@ -192,6 +195,7 @@ printer-applet
 printer-driver-all-enforce
 printer-driver-hpijs
 pulseaudio-utils
+pv
 r-base
 rsync
 shutter
@@ -199,6 +203,7 @@ shutter
 spice-vdagent
 squashfs-tools
 strace
+synaptic
 syslinux
 system-config-printer
 system-config-printer-kde

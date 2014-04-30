@@ -101,6 +101,7 @@ cdparanoia
 cdrdao
 celestia-common
 celestia-gnome
+cheese
 chemtool
 childsplay
 childsplay-alphabet-sounds-de
@@ -147,6 +148,7 @@ dvd+rw-tools
 dvgrab
 eboard
 eboard-extras-pack1
+ecryptfs-utils
 eject
 ekiga
 enigma
@@ -460,10 +462,10 @@ libreoffice-writer
 libsmbios-bin
 libsvn-java
 lilypond
-linux-headers-3.12-0.bpo.1-486
-linux-headers-3.12-0.bpo.1-686-pae
-#linux-headers-3.13-0.bpo.1-486
-#linux-headers-3.13-0.bpo.1-686-pae
+#linux-headers-3.12-0.bpo.1-486
+#linux-headers-3.12-0.bpo.1-686-pae
+linux-headers-3.13-0.bpo.1-486
+linux-headers-3.13-0.bpo.1-686-pae
 #live-tools
 lshw-gtk
 lskat
@@ -568,6 +570,7 @@ printer-applet
 printer-driver-all-enforce
 printer-driver-hpijs
 pulseaudio-utils
+pv
 pymol
 #pysiogame
 python-notify

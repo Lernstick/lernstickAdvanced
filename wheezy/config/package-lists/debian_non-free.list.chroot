@@ -23,6 +23,7 @@ firmware-netxen
 firmware-qlogic
 firmware-ralink
 firmware-realtek
+firmware-zd1211
 intel-microcode
 kstars-data-extra-tycho2
 libfglrx-amdxvba1
@@ -36,4 +37,3 @@ openttd-opensfx
 p7zip-rar
 scribus-doc
 #sweethome3d-furniture-nonfree
-zd1211-firmware
