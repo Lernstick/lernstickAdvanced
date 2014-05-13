@@ -116,6 +116,7 @@ clamtk
 cmt
 code-saturne
 code-saturne-doc
+connectagram
 console-setup
 crack-attack
 cryptsetup
@@ -651,6 +652,7 @@ system-config-printer
 system-config-printer-kde
 system-config-printer-udev
 systemsettings
+tanglet
 tcl-dev
 tcpdump
 telepathy-gabble
