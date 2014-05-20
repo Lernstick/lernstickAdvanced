@@ -1,6 +1,7 @@
 amd64-microcode
 atmel-firmware
 bluez-firmware
+#broadcom-sta-dkms
 celestia-common-nonfree
 etoys
 etoys-doc
@@ -36,4 +37,3 @@ nvidia-legacy-96xx-driver
 openttd-opensfx
 p7zip-rar
 scribus-doc
-#sweethome3d-furniture-nonfree

@@ -153,10 +153,10 @@ libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
 libsmbios-bin
-#linux-headers-3.12-0.bpo.1-486
-#linux-headers-3.12-0.bpo.1-686-pae
-linux-headers-3.13-0.bpo.1-486
-linux-headers-3.13-0.bpo.1-686-pae
+#linux-headers-3.13-0.bpo.1-486
+#linux-headers-3.13-0.bpo.1-686-pae
+linux-headers-3.14-0.bpo.1-486
+linux-headers-3.14-0.bpo.1-686-pae
 #live-tools
 lshw-gtk
 lsof
@@ -197,6 +197,7 @@ printer-driver-hpijs
 pulseaudio-utils
 pv
 r-base
+rfkill
 rsync
 shutter
 #software-properties-gtk
