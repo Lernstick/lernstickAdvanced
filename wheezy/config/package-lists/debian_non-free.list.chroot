@@ -1,7 +1,7 @@
 amd64-microcode
 atmel-firmware
 bluez-firmware
-#broadcom-sta-dkms
+broadcom-sta-dkms
 celestia-common-nonfree
 etoys
 etoys-doc

@@ -1,5 +1,6 @@
 amd64-microcode
 atmel-firmware
+broadcom-sta-dkms
 fglrx-control
 fglrx-modules-dkms
 firmware-adi
