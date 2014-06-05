@@ -52,6 +52,9 @@ build_image()
 		--source ${SOURCE} \
 		--verbose
 
+	# use the initramfs uuid feature (still broken...)
+	# export UPDATE_INITRAMFS_OPTIONS="LIVE_GENERATE_UUID=1"
+
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
 
