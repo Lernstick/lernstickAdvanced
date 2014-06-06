@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-07 09:44+0200\n"
+"POT-Creation-Date: 2014-06-06 10:22+0200\n"
 "PO-Revision-Date: 2013-03-06 16:51+0100\n"
 "Last-Translator: Ronny Standtke <ronny.standtke@fhnw.ch>\n"
 "Language-Team: DE <DE@li.org>\n"
@@ -94,8 +94,8 @@ msgstr "entfernbares Speichermedium"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:37
 #: ../config/includes.binary/boot/grub/grub_main.cfg:64
-msgid "removable USB device"
-msgstr "entfernbares USB-Speichermedium"
+msgid "USB device"
+msgstr "USB-Speichermedium"
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:7
 msgid "Start Lernstick"
@@ -179,20 +179,20 @@ msgid "Boot messages  :"
 msgstr "Startmeldungen       :"
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:113
-msgid "Check integrity of boot medium"
-msgstr "Integrität des Startmediums überprüfen"
-
-#: ../config/includes.binary/boot/grub/grub_main.cfg:114
-msgid "Checking integrity of boot medium..."
-msgstr "Integrität des Startmediums wird überprüft..."
-
-#: ../config/includes.binary/boot/grub/grub_main.cfg:119
 msgid "Custom options :"
 msgstr "Eigene Optionen      :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:121
+#: ../config/includes.binary/boot/grub/grub_main.cfg:115
 msgid "Please type your custom options in one line:"
 msgstr "Bitte geben Sie die eigenen Optionen in einer Zeile ein:"
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:120
+msgid "Check integrity of boot medium"
+msgstr "Integrität des Startmediums überprüfen"
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:121
+msgid "Checking integrity of boot medium..."
+msgstr "Integrität des Startmediums wird überprüft..."
 
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:9
 msgid "Configure data partition:"
