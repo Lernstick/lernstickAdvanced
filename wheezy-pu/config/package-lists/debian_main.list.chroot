@@ -38,6 +38,7 @@ ecryptfs-utils
 eject
 exfat-fuse
 exfat-utils
+fdupes
 ffmpegthumbs
 firmware-linux-free
 fonts-liberation

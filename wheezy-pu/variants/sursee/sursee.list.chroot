@@ -16,6 +16,3 @@ mythes-de
 mythes-de-ch
 mythes-it
 mythes-ru
-
-# temporary workaround for wireless card deactivation
-rfkill
