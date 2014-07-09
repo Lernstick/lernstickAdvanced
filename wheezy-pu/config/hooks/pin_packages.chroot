@@ -31,3 +31,5 @@ for i in /usr/src/linux-headers-*
 do
 	pin_package $(echo ${i} | awk -F/ '{ print $4 }')
 done
+
+pin_package live-boot
