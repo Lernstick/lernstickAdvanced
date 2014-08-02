@@ -572,6 +572,7 @@ ppp
 #printconf
 printer-applet
 printer-driver-all-enforce
+printer-driver-brlaser
 printer-driver-hpijs
 pulseaudio-utils
 pv
