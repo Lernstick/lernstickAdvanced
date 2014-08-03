@@ -42,7 +42,7 @@ build_image()
 		--distribution wheezy \
 		--firmware-chroot true \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-3.14-0.bpo.1 \
+		--linux-packages linux-image-3.14-0.bpo.2 \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-binary-security http://security.debian.org/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
