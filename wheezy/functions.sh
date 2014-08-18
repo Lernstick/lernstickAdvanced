@@ -55,7 +55,7 @@ build_image()
 		--verbose
 
 	# build image (and produce a log file)
-	lb build 2>&1 | tee logfile.txt
+	linux32 lb build 2>&1 | tee logfile.txt
 
 	ISO_FILE="binary.iso"
 	if [ -f ${ISO_FILE} ]

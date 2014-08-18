@@ -56,7 +56,7 @@ build_image()
 	# export UPDATE_INITRAMFS_OPTIONS="LIVE_GENERATE_UUID=1"
 
 	# build image (and produce a log file)
-	lb build 2>&1 | tee logfile.txt
+	linux32 lb build 2>&1 | tee logfile.txt
 
 	ISO_FILE="binary.iso"
 	if [ -f ${ISO_FILE} ]
