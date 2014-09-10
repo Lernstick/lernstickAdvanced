@@ -172,6 +172,13 @@ mc
 menu
 mtools
 musescore
+ncdu
+network-manager-iodine
+network-manager-openconnect
+network-manager-openvpn
+network-manager-pptp
+network-manager-strongswan
+network-manager-vpnc
 ntfs-3g
 okular
 okular-extra-backends
