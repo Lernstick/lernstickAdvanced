@@ -50,6 +50,8 @@
 #
 # * stopmotion needs vgrabbj
 #
+# * pulseaudio needs rtkit for stutterless output
+#
 #################################################################################################
 acpi
 acpi-support
@@ -617,6 +619,7 @@ rfkill
 #ri-li
 rosegarden
 rsync
+rtkit
 samba
 samplerate-programs
 sane

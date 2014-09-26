@@ -8,6 +8,8 @@
 #
 # * musescore needs pulseaudio-utils for playback window
 #
+# * pulseaudio needs rtkit for stutterless output
+#
 #################################################################################################
 acpi
 acpi-support
@@ -208,6 +210,7 @@ pv
 r-base
 rfkill
 rsync
+rtkit
 shutter
 #software-properties-gtk
 spice-vdagent
