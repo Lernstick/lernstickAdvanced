@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-06 10:22+0200\n"
+"POT-Creation-Date: 2014-10-08 11:52+0200\n"
 "PO-Revision-Date: 2013-03-06 16:51+0100\n"
 "Last-Translator: Ronny Standtke <ronny.standtke@fhnw.ch>\n"
 "Language-Team: DE <DE@li.org>\n"
@@ -84,16 +84,22 @@ msgstr "Startmedium auswählen:"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:13
 #: ../config/includes.binary/boot/grub/grub_main.cfg:62
+#: ../config/includes.binary/boot/grub/grub_main.cfg:72
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:13
 msgid "any"
 msgstr "beliebig"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:25
 #: ../config/includes.binary/boot/grub/grub_main.cfg:63
+#: ../config/includes.binary/boot/grub/grub_main.cfg:73
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:25
 msgid "removable device"
 msgstr "entfernbares Speichermedium"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:37
 #: ../config/includes.binary/boot/grub/grub_main.cfg:64
+#: ../config/includes.binary/boot/grub/grub_main.cfg:74
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:37
 msgid "USB device"
 msgstr "USB-Speichermedium"
 
@@ -114,6 +120,7 @@ msgstr "Sprache              :"
 #: ../config/includes.binary/boot/grub/grub_main.cfg:48
 #: ../config/includes.binary/boot/grub/grub_main.cfg:61
 #: ../config/includes.binary/boot/grub/grub_main.cfg:71
+#: ../config/includes.binary/boot/grub/grub_main.cfg:81
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -130,73 +137,81 @@ msgid "Start medium   :"
 msgstr "Startmedium          :"
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:70
+msgid "Data medium    :"
+msgstr "Datenmedium          :"
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:80
 msgid "Data partition :"
 msgstr "Datenpartition       :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:72
+#: ../config/includes.binary/boot/grub/grub_main.cfg:82
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:37
 msgid "not used"
 msgstr "nicht verwendet"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:73
+#: ../config/includes.binary/boot/grub/grub_main.cfg:83
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:13
 msgid "read-write"
 msgstr "lesen und schreiben"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:74
+#: ../config/includes.binary/boot/grub/grub_main.cfg:84
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:25
 msgid "read-only"
 msgstr "nur lesen"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:80
+#: ../config/includes.binary/boot/grub/grub_main.cfg:90
 msgid "Swap partition :"
 msgstr "Auslagerungspartition:"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:83
-#: ../config/includes.binary/boot/grub/grub_main.cfg:94
-#: ../config/includes.binary/boot/grub/grub_main.cfg:105
+#: ../config/includes.binary/boot/grub/grub_main.cfg:93
+#: ../config/includes.binary/boot/grub/grub_main.cfg:104
+#: ../config/includes.binary/boot/grub/grub_main.cfg:115
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:13
 #: ../config/includes.binary/boot/grub/grub_swap_file.cfg:13
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:13
 msgid "enabled"
 msgstr "aktiviert"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:85
-#: ../config/includes.binary/boot/grub/grub_main.cfg:96
-#: ../config/includes.binary/boot/grub/grub_main.cfg:107
+#: ../config/includes.binary/boot/grub/grub_main.cfg:95
+#: ../config/includes.binary/boot/grub/grub_main.cfg:106
+#: ../config/includes.binary/boot/grub/grub_main.cfg:117
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:25
 #: ../config/includes.binary/boot/grub/grub_swap_file.cfg:25
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:25
 msgid "disabled"
 msgstr "deaktiviert"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:91
+#: ../config/includes.binary/boot/grub/grub_main.cfg:101
 msgid "Swap file      :"
 msgstr "Auslagerungsdatei    :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:102
+#: ../config/includes.binary/boot/grub/grub_main.cfg:112
 msgid "Boot messages  :"
 msgstr "Startmeldungen       :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:113
+#: ../config/includes.binary/boot/grub/grub_main.cfg:123
 msgid "Custom options :"
 msgstr "Eigene Optionen      :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:115
+#: ../config/includes.binary/boot/grub/grub_main.cfg:125
 msgid "Please type your custom options in one line:"
 msgstr "Bitte geben Sie die eigenen Optionen in einer Zeile ein:"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:120
+#: ../config/includes.binary/boot/grub/grub_main.cfg:130
 msgid "Check integrity of boot medium"
 msgstr "Integrität des Startmediums überprüfen"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:121
+#: ../config/includes.binary/boot/grub/grub_main.cfg:131
 msgid "Checking integrity of boot medium..."
 msgstr "Integrität des Startmediums wird überprüft..."
 
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:9
 msgid "Configure data partition:"
 msgstr "Datenpartition einrichten:"
+
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:9
+msgid "Configure data medium:"
+msgstr "Datenmedium auswählen:"
 
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:9
 msgid "Configure boot messages:"

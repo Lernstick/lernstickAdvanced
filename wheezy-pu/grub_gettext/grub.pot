@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-06 10:26+0200\n"
+"POT-Creation-Date: 2014-10-10 23:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,16 +85,22 @@ msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:13
 #: ../config/includes.binary/boot/grub/grub_main.cfg:58
+#: ../config/includes.binary/boot/grub/grub_main.cfg:68
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:13
 msgid "any"
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:25
 #: ../config/includes.binary/boot/grub/grub_main.cfg:59
+#: ../config/includes.binary/boot/grub/grub_main.cfg:69
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:25
 msgid "removable device"
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:37
 #: ../config/includes.binary/boot/grub/grub_main.cfg:60
+#: ../config/includes.binary/boot/grub/grub_main.cfg:70
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:37
 msgid "USB device"
 msgstr ""
 
@@ -115,6 +121,7 @@ msgstr ""
 #: ../config/includes.binary/boot/grub/grub_main.cfg:48
 #: ../config/includes.binary/boot/grub/grub_main.cfg:57
 #: ../config/includes.binary/boot/grub/grub_main.cfg:67
+#: ../config/includes.binary/boot/grub/grub_main.cfg:77
 msgid "Unknown"
 msgstr ""
 
@@ -127,60 +134,68 @@ msgid "Desktop       :"
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:56
-msgid "Start medium  :"
+msgid "Start medium   :"
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:66
+msgid "Data medium    :"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:76
 msgid "Data partition:"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:68
+#: ../config/includes.binary/boot/grub/grub_main.cfg:78
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:37
 msgid "not used"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:69
+#: ../config/includes.binary/boot/grub/grub_main.cfg:79
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:13
 msgid "read-write"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:70
+#: ../config/includes.binary/boot/grub/grub_main.cfg:80
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:25
 msgid "read-only"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:76
+#: ../config/includes.binary/boot/grub/grub_main.cfg:86
 msgid "Swap partition:"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:79
-#: ../config/includes.binary/boot/grub/grub_main.cfg:90
+#: ../config/includes.binary/boot/grub/grub_main.cfg:89
+#: ../config/includes.binary/boot/grub/grub_main.cfg:100
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:13
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:13
 msgid "enabled"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:81
-#: ../config/includes.binary/boot/grub/grub_main.cfg:92
+#: ../config/includes.binary/boot/grub/grub_main.cfg:91
+#: ../config/includes.binary/boot/grub/grub_main.cfg:102
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:25
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:25
 msgid "disabled"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:87
+#: ../config/includes.binary/boot/grub/grub_main.cfg:97
 msgid "Boot messages :"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:98
+#: ../config/includes.binary/boot/grub/grub_main.cfg:108
 msgid "Check integrity of boot medium"
 msgstr ""
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:99
+#: ../config/includes.binary/boot/grub/grub_main.cfg:109
 msgid "Checking integrity of boot medium..."
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:9
 msgid "Configure data partition:"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:9
+msgid "Configure data medium:"
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:9
