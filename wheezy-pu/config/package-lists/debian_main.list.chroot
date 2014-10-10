@@ -206,6 +206,7 @@ printer-driver-all-enforce
 printer-driver-brlaser
 printer-driver-hpijs
 pspp
+pulseaudio
 pulseaudio-utils
 pv
 r-base
