@@ -52,6 +52,8 @@
 #
 # * pulseaudio needs rtkit for stutterless output
 #
+# * qxw needs wngerman, wamerican-huge, wbritish-huge
+#
 #################################################################################################
 acpi
 acpi-support
@@ -117,6 +119,7 @@ chromium
 chromium-l10n
 cifs-utils
 clamtk
+clamtk-nautilus
 cmt
 code-saturne
 code-saturne-doc
@@ -609,6 +612,7 @@ qelectrotech-examples
 qjackctl
 qtqr
 quassel-kde4
+qxw
 rawtherapee
 remmina
 remmina-common
@@ -721,12 +725,15 @@ v-sim
 v-sim-doc
 v-sim-plugins
 vym
+wamerican-huge
+wbritish-huge
 whois
 winff
 winff-doc
 wireless-tools
 wireshark
 wmctrl
+wngerman
 wodim
 wpasupplicant
 wxmaxima
