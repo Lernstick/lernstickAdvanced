@@ -10,11 +10,14 @@
 #
 # * pulseaudio needs rtkit for stutterless output
 #
+# * akonadi-backend-sqlite is only in the package list, so that akonadi-backend-mysql does not get installed
+#
 #################################################################################################
 acpi
 acpi-support
 acpitail
 acpitool
+akonadi-backend-sqlite
 anacron
 apt-xapian-index
 ark
