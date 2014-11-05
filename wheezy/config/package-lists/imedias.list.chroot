@@ -1,5 +1,6 @@
 bluej
 chewing-word
+cura
 dlcopy
 domination
 easystroke
@@ -206,7 +207,7 @@ lernstick-tipp10
 lernstick-toporopa
 lernstick-totem
 lernstick-tracker-gui
-lernstick-trigger-rally
+#lernstick-trigger-rally
 lernstick-tuxmath
 lernstick-tuxpaint
 lernstick-tuxtype-squeeze

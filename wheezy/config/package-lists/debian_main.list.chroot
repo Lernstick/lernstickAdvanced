@@ -698,7 +698,7 @@ texlive-latex-recommended
 timidity
 tofrodos
 toppler
-trigger-rally
+#trigger-rally
 tumbler
 tumbler-plugins-extra
 tuxmath
