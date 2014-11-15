@@ -343,12 +343,12 @@ kdepasswd
 kde-style-polyester
 kde-style-qtcurve
 kdesudo
-kde-telepathy-desktop-applets
-kde-telepathy-text-ui
 kde-telepathy-call-ui
+kde-telepathy-desktop-applets
 kde-telepathy-filetransfer-handler
 kde-telepathy-minimal
 kde-telepathy-send-file
+kde-telepathy-text-ui
 kdewallpapers
 kde-window-manager
 kdf
@@ -471,6 +471,8 @@ libreoffice-writer
 libsmbios-bin
 libsvn-java
 lilypond
+linux-headers-3.16.0-4-586
+linux-headers-3.16.0-4-686-pae
 lshw-gtk
 lskat
 lsof
