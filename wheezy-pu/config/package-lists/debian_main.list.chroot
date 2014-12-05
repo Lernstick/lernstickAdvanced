@@ -12,6 +12,8 @@
 #
 # * akonadi-backend-sqlite is only in the package list, so that akonadi-backend-mysql does not get installed
 #
+# * live-boot needs file when shutting down
+#
 #################################################################################################
 acpi
 acpi-support
@@ -44,6 +46,7 @@ eject
 exfat-fuse
 exfat-utils
 ffmpegthumbs
+file
 firmware-linux-free
 fonts-liberation
 foomatic-db-gutenprint
@@ -159,8 +162,8 @@ libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
 libsmbios-bin
-linux-headers-3.16-0.bpo.3-486
-linux-headers-3.16-0.bpo.3-686-pae
+linux-headers-3.16.0-0.bpo.4-586
+linux-headers-3.16.0-0.bpo.4-686-pae
 #live-tools
 lshw-gtk
 lsof

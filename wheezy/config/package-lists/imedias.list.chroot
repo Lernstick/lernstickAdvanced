@@ -176,7 +176,7 @@ lernstick-plymouth
 lernstick-pymol
 lernstick-qelectrotech
 lernstick-r-base-core
-lernstick-rosegarden
+#lernstick-rosegarden
 lernstick-schatz-der-kulturen
 #lernstick-schweizerweltatlas
 lernstick-scratch-online
