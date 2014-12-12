@@ -5,11 +5,6 @@
 #	needs the avahi packages, otherwise we get communication errors with printers
 #	needs the libcups2-dev package, otherwise hp-check can not test for the cups version
 # 
-# * rosegarden nees the following packages for a working synthesizer plugin:
-#	fluid-soundfont-gm
-#	fluid-soundfont-gs
-#	fluidsynth-dssi
-#
 # * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not be compiled
 # 
 # * openttd-openmsx needs freepats
@@ -176,9 +171,6 @@ ffmpegthumbs
 filelight
 firmware-linux-free
 flac
-#fluid-soundfont-gm
-#fluid-soundfont-gs
-#fluidsynth-dssi
 focuswriter
 fonts-liberation
 fonts-lyx
@@ -217,7 +209,6 @@ gdm3
 gecko-mediaplayer
 gedit
 genisoimage
-#geogebra
 geogebra-gnome
 geogebra-kde
 #ghemical
@@ -544,9 +535,7 @@ okteta
 okular
 okular-extra-backends
 openbabel
-#openjdk-7-doc
 openjdk-7-jdk
-#openjdk-7-source
 openprinting-ppds
 openshot
 openshot-doc
@@ -621,8 +610,6 @@ remmina-plugin-telepathy
 remmina-plugin-vnc
 remmina-plugin-xdmcp
 rfkill
-#ri-li
-#rosegarden
 rsync
 rtkit
 samba
@@ -669,8 +656,6 @@ sugar-record-activity
 sugar-terminal-activity
 #sugar-write-activity-0.86
 #swapspace
-#sweethome3d
-#sweethome3d-furniture
 swh-plugins
 synaptic
 synfigstudio
@@ -696,7 +681,6 @@ texlive-latex-recommended
 timidity
 tofrodos
 toppler
-#trigger-rally
 tumbler
 tumbler-plugins-extra
 tuxmath
