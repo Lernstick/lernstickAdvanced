@@ -691,6 +691,8 @@ vim
 vim-gtk
 virtuoso-minimal
 vlc
+vlc-plugin-fluidsynth
+vlc-plugin-pulse
 vmpk
 vokoscreen
 vorbis-tools
