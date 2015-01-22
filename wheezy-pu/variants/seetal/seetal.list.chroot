@@ -1,11 +1,6 @@
 #################################################################################################
 #
-# * Kanti Seetal needs the hyphen*- and myspell*-packages (ONLY for de,es,fr)
+# * Kanti Seetal needs spellchecking for Spanish
 #
 #################################################################################################
-hyphen-de
-hyphen-fr
-myspell-de-ch
-myspell-de-de
 myspell-es
-myspell-fr
