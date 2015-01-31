@@ -1,3 +1,5 @@
+. ./constants
+
 init_build()
 {
 	START=$(date)
@@ -33,7 +35,6 @@ build_image()
 	rm -f config/common
 	rm -f config/source
 	lb clean
-	# --linux-flavours "486 686-pae amd64" \
 	lb config \
 		--apt-indices false \
 		--apt-recommends false \
@@ -44,8 +45,8 @@ build_image()
 		--efi-boot true \
 		--firmware-chroot true \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-                --linux-packages linux-image-3.16.0-0.bpo.4 \
-                --linux-flavours "686 586" \
+		--linux-flavours "686 586" \
+		--linux-packages linux-image-3.16.0-0.bpo.4 \
 		--mirror-binary http://ftp.ch.debian.org/debian/ \
 		--mirror-binary-security http://security.debian.org/ \
 		--mirror-bootstrap http://ftp.ch.debian.org/debian/ \
@@ -83,14 +84,20 @@ build_image()
 		fi
 
 		# move files from tmpfs to harddisk
-		mv ${PREFIX}* /home/ronny/lernstick/build/
+		if [ -d "${BUILD_DIR}" ]
+		then
+			mv ${PREFIX}* "${BUILD_DIR}"
+		fi
 	else
 		echo "Error: ISO file was not build"
 	fi
 
 	echo "Start: ${START}" | tee -a logfile.txt
 	echo "Stop : $(date)" | tee -a logfile.txt
-	mv logfile.txt /home/ronny/lernstick/build/
+	if [ -d "${BUILD_DIR}" ]
+	then
+		mv logfile.txt "${BUILD_DIR}"
+	fi
 
 	# hello, wake up!!! :-)
 	#eject
