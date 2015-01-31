@@ -1,4 +1,3 @@
-jessie/cache/
 squeeze/backup.sh
 squeeze/binary/
 squeeze/binary.list
@@ -32,6 +31,4 @@ squeeze/source.debian.list
 squeeze/source.debian-live.list
 squeeze/.stage/
 squeeze/virtualbox/
-wheezy/cache/
 wheezy/grub_gettext/de.po~
-wheezy-pu/cache/

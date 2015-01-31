@@ -1,1 +1,2 @@
-BUILD_DIR="/home/lernstick/lernstick/build/"
+BUILD_DIR="/home/ronny/lernstick/build/"
+TMPFS="/mytmpfs/lernstick"

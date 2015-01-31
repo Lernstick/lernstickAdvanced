@@ -1,6 +1,5 @@
 #!/bin/sh
-
-TMPFS="/mytmpfs/lernstick"
+. ./constants
 
 rm -rf "${TMPFS}"
 mkdir "${TMPFS}"
