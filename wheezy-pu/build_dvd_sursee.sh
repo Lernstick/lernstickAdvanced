@@ -6,6 +6,7 @@ SOURCE="false"
 VARIANT="Kantonsschule Sursee "
 cp variants/sursee/sursee.chroot config/hooks/ 
 cp variants/sursee/sursee.list.chroot config/package-lists/
+cp variants/sursee/teamviewer_10.0.37742_i386.deb config/packages.chroot/
 
 # common build
 . ./functions.sh
@@ -17,3 +18,5 @@ build_image
 rm config/hooks/sursee.chroot
 rm config/package-lists/sursee.list.chroot
 rm config/includes.chroot/etc/rc.local
+rm config/packages.chroot/teamviewer_10.0.37742_i386.deb
+
