@@ -3,3 +3,4 @@
 - cups fragt während der Installation nach dem root-Passwort!?
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - combine /usr/local/lernstick* and desktop icon in lernstick-user-template into one package
+- Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
