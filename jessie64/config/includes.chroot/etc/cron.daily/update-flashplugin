@@ -1,0 +1,11 @@
+#!/bin/sh
+
+UPDATER="/usr/sbin/update-flashplugin-nonfree"
+
+test -x $UPDATER || exit 0
+
+# exit if not online
+nm-online || exit 0
+
+# install checks if the current version is already installed, otherwise upgrades
+$UPDATER --install --quiet
