@@ -60,7 +60,7 @@ build_image()
 	ISO_FILE="live-image-i386.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian8${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_debian8_32bit${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file
