@@ -5,11 +5,6 @@
 #	needs the avahi packages, otherwise we get communication errors with printers
 #	needs the libcups2-dev package, otherwise hp-check can not test for the cups version
 # 
-# * rosegarden nees the following packages for a working synthesizer plugin:
-#	fluid-soundfont-gm
-#	fluid-soundfont-gs
-#	fluidsynth-dssi
-#
 # * phoronix-test-suite needs:
 #	php5-curl
 #	php-fpdf
@@ -175,9 +170,6 @@ ffmpegthumbs
 filelight
 firmware-linux-free
 flac
-fluid-soundfont-gm
-fluid-soundfont-gs
-fluidsynth-dssi
 focuswriter
 fonts-liberation
 fonts-lyx
@@ -591,7 +583,6 @@ pymol
 python-notify
 python-openssl
 python-pyalsa
-python-sugar3
 qelectrotech
 qelectrotech-data
 qelectrotech-examples
@@ -609,7 +600,6 @@ remmina-plugin-telepathy
 remmina-plugin-vnc
 remmina-plugin-xdmcp
 rfkill
-rosegarden
 rsync
 rtkit
 samba
@@ -641,15 +631,6 @@ step
 stopmotion
 strace
 subversion
-sucrose-0.96
-sugar-browse-activity
-sugar-calculate-activity
-sugar-connect-activity
-sugar-irc-activity
-sugar-memorize-activity
-sugar-physics-activity
-sugar-record-activity
-sugar-terminal-activity
 swh-plugins
 synaptic
 synfigstudio
