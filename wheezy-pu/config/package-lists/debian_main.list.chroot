@@ -123,6 +123,7 @@ ksysguard
 ksysguardd
 ksystemlog
 kvkbd
+kwalletmanager
 less
 libcups2-dev
 libgl1-mesa-dri
