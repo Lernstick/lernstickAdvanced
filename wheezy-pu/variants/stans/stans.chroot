@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# re-enable some features in LibreOffice
+rm -rf /usr/lib/libreoffice/share/registry/data/org/openoffice/Office

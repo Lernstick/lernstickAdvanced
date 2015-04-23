@@ -1,0 +1,11 @@
+#################################################################################################
+#
+# * Kanti Stans needs spellchecking, grammar, hyphenation and thesaurus (German only)
+#
+#################################################################################################
+hyphen-de
+libreoffice-languagetool
+myspell-de-ch
+myspell-de-de
+mythes-de
+mythes-de-ch
