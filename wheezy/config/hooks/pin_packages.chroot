@@ -33,3 +33,4 @@ do
 done
 
 pin_package live-boot
+pin_package linux-compiler-gcc-4.6-x86
