@@ -1,3 +1,20 @@
-# imedias packages for Debian 8
-deb http://packages.lernstick.ch/lernstick/ lernstick-8 main contrib non-free
-deb-src http://packages.lernstick.ch/lernstick/ lernstick-8 main contrib non-free
+# Lernstick specific packages
+deb http://packages.lernstick.ch/lernstick lernstick-8 main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8 main contrib non-free
+
+# Backports done by the Lernstick team of other packages
+deb http://packages.lernstick.ch/lernstick lernstick-8-backports main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8-backports main contrib non-free
+
+# Third party packages
+deb http://packages.lernstick.ch/lernstick lernstick-8-thirdparty main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8-thirdparty main contrib non-free
+
+# Staging repository for third party packages (distribution set to "not automatic")
+deb http://packages.lernstick.ch/lernstick lernstick-8-thirdparty-staging main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8-thirdparty-staging main contrib non-free
+
+# Experimental packages (distribution set to "not automatic")
+deb http://packages.lernstick.ch/lernstick lernstick-8-experimental main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8-experimental main contrib non-free
+
