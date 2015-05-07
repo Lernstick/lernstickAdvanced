@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd binary/live || exit 1
+
+mv initrd.img-3.16.0-4-amd64 initrd || true
+mv vmlinuz-3.16.0-4-amd64 vmlinuz || true

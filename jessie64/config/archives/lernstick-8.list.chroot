@@ -1,0 +1,3 @@
+# imedias packages for Debian 8
+deb http://packages.lernstick.ch/lernstick/ lernstick-8 main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick/ lernstick-8 main contrib non-free
