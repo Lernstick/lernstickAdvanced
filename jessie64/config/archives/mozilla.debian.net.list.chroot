@@ -1,0 +1,2 @@
+deb http://mozilla.debian.net/ jessie-backports iceweasel-release
+deb-src http://mozilla.debian.net/ jessie-backports iceweasel-release
