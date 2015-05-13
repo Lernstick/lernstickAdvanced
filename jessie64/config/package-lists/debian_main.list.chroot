@@ -157,8 +157,8 @@ eject
 ekiga
 enigma
 enigma-data
-epoptes
-epoptes-client
+#epoptes
+#epoptes-client
 espeak
 evolution
 evolution-plugins
