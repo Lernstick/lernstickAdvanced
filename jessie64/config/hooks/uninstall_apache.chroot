@@ -1,0 +1,10 @@
+#!/bin/sh
+# for whatever strange reason, apache gets installed... let's remove it here
+echo "purging apache..."
+apt-get -y purge \
+	apache2 \
+	apache2-data \
+	apache2-utils \
+	libapparmor1 \
+	php5-cgi \
+	php5-fpm 
