@@ -603,7 +603,7 @@ remmina-plugin-xdmcp
 rfkill
 rsync
 rtkit
-samba
+#samba
 samplerate-programs
 sane
 sane-utils
