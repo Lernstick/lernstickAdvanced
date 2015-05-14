@@ -1,0 +1,2 @@
+- find out why apache gets installed, fix it and remove hook
+- add samba to lernstickWelcome (enables folder sharing but increases boot time)
