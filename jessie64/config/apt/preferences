@@ -1,0 +1,27 @@
+Package: libreoffice*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: python3-uno
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: uno-libs3
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: ure
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: 0ad*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: darktable*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: wesnoth-1.12*
+Pin: release n=jessie-backports
+Pin-Priority: 999
