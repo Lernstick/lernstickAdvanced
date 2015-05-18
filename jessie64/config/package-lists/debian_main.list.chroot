@@ -83,7 +83,7 @@ blockout2
 blop
 bluedevil
 bluetooth
-#bluez-cups
+bluez-cups
 bluez-tools
 bogofilter
 bonnie++
@@ -125,9 +125,9 @@ crack-attack
 cryptsetup
 crystalcursors
 csound
-#cups
+cups
+cups-backend-bjnp
 cups-bsd
-#cups-pdf
 curl
 darktable
 dasher
@@ -177,7 +177,6 @@ foobillardplus
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
-foomatic-filters
 fotowall
 freeciv-client-gtk
 freeciv-data
@@ -208,8 +207,8 @@ gdm3
 gecko-mediaplayer
 gedit
 genisoimage
-geogebra-gnome
-geogebra-kde
+#geogebra-gnome
+#geogebra-kde
 ghex
 gimp
 gimp-data
@@ -253,7 +252,6 @@ gutenprint-locales
 gwakeonlan
 gwenview
 hamster-applet
-hannah-foo2zjs
 hddtemp
 hex-a-hop
 hicolor-icon-theme
@@ -574,9 +572,9 @@ plymouth-x11
 pokerth
 powertop
 ppp
-#printer-driver-all-enforce
-printer-driver-brlaser
-printer-driver-hpijs
+printer-driver-all-enforce
+printer-driver-cups-pdf
+print-manager
 pspp
 pulseaudio-utils
 pv
