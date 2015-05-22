@@ -1,3 +1,5 @@
 - find out why apache gets installed, fix it and remove hook
 - add samba to lernstickWelcome (enables folder sharing but increases boot time)
 - cups fragt während der Installation nach dem root-Passwort!?
+- Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
+
