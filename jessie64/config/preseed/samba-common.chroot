@@ -1,0 +1,2 @@
+samba-common	samba-common/workgroup	string	lernstick
+samba-common	samba-common/dhcp	boolean	true
