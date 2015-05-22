@@ -13,7 +13,7 @@
 
 # temporary workaround
 # unblock wifi and bluetooth
-# these are blocken on boot due to a kernel bug
+# these are blocked on boot due to a kernel bug
 rfkill unblock wifi
 rfkill unblock bluetooth
 
