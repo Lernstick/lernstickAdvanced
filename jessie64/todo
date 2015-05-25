@@ -4,3 +4,5 @@
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - combine /usr/local/lernstick* and desktop icon in lernstick-user-template into one package
 - Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
+- red bash prompt for root user
+- nvidia: mismatch between kernel and Xorg on Mac@home
