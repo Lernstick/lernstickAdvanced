@@ -23,12 +23,14 @@ build_image()
 {
 
 	# update time stamp in bootloaders
+	# ISOLINUX/SYSLINUX
  	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version ${TODAY})</version>|1" \
  		config/bootloaders/isolinux/bootlogo.dir/xmlboot.config
 	gfxboot --archive config/bootloaders/isolinux/bootlogo.dir --pack-archive config/bootloaders/isolinux/bootlogo
 	cp config/bootloaders/isolinux/bootlogo config/bootloaders/isolinux/bootlogo.orig
-#	sed -i "s|title-text.*|title-text: \"Lernstick Debian 8 (Version ${TODAY})\"|1" \
-#		config/includes.binary/boot/grub/themes/lernstick/theme.txt 
+	# GRUB
+	sed -i "s|title-text.*|title-text: \"Lernstick Debian 8 (Version ${TODAY})\"|1" \
+		config/includes.binary/boot/grub/themes/lernstick/theme.txt 
 
 	# update configuration
 	rm -f config/binary
