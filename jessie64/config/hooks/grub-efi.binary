@@ -42,8 +42,9 @@ cp $CHROOT/$SHIMLIB/MokManager.efi.signed $BINARY/$EFI/MokManager.efi
 
 # replace path to kernel image and initrd
 # Default entries
-DEFAULT_FLAVOUR="$(echo ${LB_LINUX_FLAVOURS} | awk '{ print $1 }')"
-DEFAULT_KERNEL="$(basename ${CHROOT}/${BOOT}/${KERNEL_NAME}-*${DEFAULT_FLAVOUR})"
-DEFAULT_INITRD="${INITRD_NAME}-$(echo ${DEFAULT_KERNEL} | sed -e "s|${KERNEL_NAME}-||")"
+#DEFAULT_FLAVOUR="$(echo ${LB_LINUX_FLAVOURS} | awk '{ print $1 }')"
+#DEFAULT_KERNEL="$(basename ${CHROOT}/${BOOT}/${KERNEL_NAME}-*${DEFAULT_FLAVOUR})"
+#DEFAULT_INITRD="${INITRD_NAME}-$(echo ${DEFAULT_KERNEL} | sed -e "s|${KERNEL_NAME}-||")"
+#sed -i -e "s|#DEFAULT_KERNEL#|${DEFAULT_KERNEL}|" -e "s|#DEFAULT_INITRD#|${DEFAULT_INITRD}|" ${BINARY}/${BOOT}/grub/grub.cfg
 
-sed -i -e "s|#DEFAULT_KERNEL#|${DEFAULT_KERNEL}|" -e "s|#DEFAULT_INITRD#|${DEFAULT_INITRD}|" ${BINARY}/${BOOT}/grub/grub.cfg
+sed -i -e "s|#DEFAULT_KERNEL#|vmlinuz|" -e "s|#DEFAULT_INITRD#|initrd|" ${BINARY}/${BOOT}/grub/grub.cfg
