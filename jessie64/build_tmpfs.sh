@@ -1,5 +1,6 @@
 #!/bin/sh
-. ./constants
+. ./functions.sh
+check_and_source_constants
 
 rm -rf "${TMPFS}"
 mkdir "${TMPFS}"

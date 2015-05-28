@@ -1,4 +1,13 @@
-. ./constants
+check_and_source_constants()
+{
+	if [ -e constants ]
+	then
+		. ./constants
+	else
+		echo "Please copy the file \"constants.example\" to \"constants\" and adopt the settings to your build environment."
+		exit
+	fi
+}
 
 init_build()
 {
