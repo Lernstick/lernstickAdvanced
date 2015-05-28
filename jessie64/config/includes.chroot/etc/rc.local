@@ -14,7 +14,8 @@
 # temporary workaround
 # unblock wifi and bluetooth
 # these are blocked on boot due to a kernel bug
-rfkill unblock wifi
-rfkill unblock bluetooth
+modprobe rfkill || true
+rfkill unblock wifi || true
+rfkill unblock bluetooth || true
 
 exit 0
