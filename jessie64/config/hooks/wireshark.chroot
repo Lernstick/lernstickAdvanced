@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# In theory the wireshark preseed file should take care of this. And the wireshark-common
+# postinst should set the correct permissions. But the postinst only sets the appropriate
+# linux capabilities if the underlying filesystem supports this. This works on the build
+# filesystem and on squashfs, but does not work for aufs filesystems. Thus the running
+# live system does not have the capabilities set. We fix this by setting the setuid bit
+# which also works on aufs.
+chmod u+s /usr/bin/dumpcap
+
