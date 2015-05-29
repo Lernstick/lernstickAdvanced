@@ -1,10 +1,14 @@
 dlcopy
 lernstick-archive-keyring
+lernstick-calibre
 lernstick-config
+lernstick-evince-common
 lernstick-libreoffice-base
 lernstick-libreoffice-calc
 lernstick-libreoffice-common
 lernstick-libreoffice-draw
 lernstick-libreoffice-gtk
+lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
+lernstick-orage
