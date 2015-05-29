@@ -1,9 +1,11 @@
 - find out why apache gets installed, fix it and remove hook
 - add samba to lernstickWelcome (enables folder sharing but increases boot time)
-- cups fragt während der Installation nach dem root-Passwort!?
+- cups fragt während der Installation nach dem root-Passwort!? (bisher nur auf Rechner im imedias-Büro)
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - combine /usr/local/lernstick* and desktop icon in lernstick-user-template into one package
 - Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
 - red bash prompt for root user
 - nvidia: mismatch between kernel and Xorg on Mac@home
 - add cinnamon and mate to grub
+- gdm often fails to start when configured for the first time (timing issue with live-config)
+- update broadcom package to include support for Lenovo Yoga 3
