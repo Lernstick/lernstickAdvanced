@@ -6,3 +6,4 @@
 - Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
 - red bash prompt for root user
 - nvidia: mismatch between kernel and Xorg on Mac@home
+- add cinnamon and mate to grub
