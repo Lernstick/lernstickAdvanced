@@ -114,6 +114,8 @@ childsplay-alphabet-sounds-ru
 chromium
 chromium-l10n
 cifs-utils
+cinnamon-desktop-environment
+cinnamon-l10n
 clamtk
 clamtk-nautilus
 cmt
@@ -476,6 +478,7 @@ manpages-fr
 manpages-it
 manpages-pt
 marble
+mate-desktop-environment
 maxima-share
 mc
 mdadm
