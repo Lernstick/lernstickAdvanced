@@ -152,6 +152,7 @@ dossizola
 dvdauthor
 dvd+rw-tools
 dvgrab
+e17
 eboard
 eboard-extras-pack1
 ecryptfs-utils
@@ -162,8 +163,6 @@ enigma-data
 #epoptes
 #epoptes-client
 espeak
-evolution
-evolution-plugins
 exfat-fuse
 exfat-utils
 extremetuxracer
@@ -268,7 +267,9 @@ hyphen-en-us
 hyphen-fr
 hyphen-it
 i965-va-driver
+icedove
 icedtea-7-plugin
+iceowl-extension
 iceweasel
 iceweasel-l10n-de
 iceweasel-l10n-en-gb
