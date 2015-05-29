@@ -9,3 +9,4 @@
 - add cinnamon and mate to grub
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
+- build with recommends enabled (hopefully fixes gramps)
