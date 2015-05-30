@@ -49,6 +49,8 @@
 #
 # * qxw needs wngerman, wamerican-huge, wbritish-huge
 #
+# * gramps needs gir1.2-gexiv2-0.10 and gir1.2-osmgpsmap-1.0
+#
 #################################################################################################
 acpi
 acpi-support
@@ -223,11 +225,12 @@ gimp-gap
 #gimp-help-ru
 gimp-plugin-registry
 gimp-texturize
+gir1.2-gexiv2-0.10
+gir1.2-osmgpsmap-1.0
 git
 glabels
 gnome-core
 gnome-disk-utility
-gnome-orca
 gnome-shell-extensions
 gnome-system-monitor
 gnome-system-tools
@@ -555,9 +558,6 @@ pentobi
 pentobi-kde-thumbnailer
 phonon-backend-gstreamer
 phonon-backend-vlc
-#phoronix-test-suite
-php5-curl
-php-fpdf
 picmi
 pingus
 pinta
@@ -642,7 +642,6 @@ system-config-printer
 system-config-printer-udev
 systemsettings
 tanglet
-tcl-dev
 tcpdump
 telepathy-gabble
 telepathy-haze
@@ -670,6 +669,7 @@ update-notifier
 usb-modeswitch
 usbutils
 user-setup
+vdpau-va-driver
 vgrabbj
 vim
 vim-gtk
