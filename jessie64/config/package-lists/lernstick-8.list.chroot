@@ -6,6 +6,7 @@ lernstick-calibre
 lernstick-config
 lernstick-eog
 lernstick-evince-common
+lernstick-freemind
 lernstick-galculator
 lernstick-gedit
 lernstick-ghex
@@ -17,6 +18,7 @@ lernstick-hamster-applet
 lernstick-hugin
 lernstick-icedtea-netx
 lernstick-imagemagick
+lernstick-kcalc
 lernstick-leafpad
 lernstick-libreoffice-base
 lernstick-libreoffice-calc
@@ -26,6 +28,7 @@ lernstick-libreoffice-gtk
 lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
+lernstick-lyx
 lernstick-mate-terminal
 lernstick-mypaint
 lernstick-nautilus
@@ -39,6 +42,7 @@ lernstick-qelectrotech
 lernstick-r-base-core
 lernstick-scribus
 lernstick-software-properties-gtk
+lernstick-speedcrunch
 lernstick-systemsettings
 lernstick-thunar
 lernstick-tracker-gui
