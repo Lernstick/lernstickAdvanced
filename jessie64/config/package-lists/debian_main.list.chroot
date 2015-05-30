@@ -37,8 +37,6 @@
 #
 # * solfege needs python-pyalsa
 #
-# * playonlinux needs xterm and curl
-#
 # * kdenlive needs xine-ui
 #
 # * epoptes needs python-openssl
@@ -132,7 +130,6 @@ csound
 cups
 cups-backend-bjnp
 cups-bsd
-curl
 darktable
 dasher
 deborphan
@@ -742,7 +739,6 @@ xserver-xorg-video-glide
 xserver-xorg-video-ivtv
 xserver-xorg-video-modesetting
 xserver-xorg-video-qxl
-xterm
 xtightvncviewer
 youtube-dl
 zenmap
