@@ -10,3 +10,8 @@
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
 - live-build still does not use "-iso-level 3" for xorriso
+- put third party debs (e.g. cura) into our repository
+- check on real hardware if we need synaptiks desktop entry (it seems to be available in systemsettings)
+- install (lernstick-)visualvm together with netbeans (package "Java development environment")
+- package xlogo (http://xlogo.tuxfamily.org/)
+- package xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
