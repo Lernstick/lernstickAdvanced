@@ -5,10 +5,6 @@
 #	needs the avahi packages, otherwise we get communication errors with printers
 #	needs the libcups2-dev package, otherwise hp-check can not test for the cups version
 # 
-# * phoronix-test-suite needs:
-#	php5-curl
-#	php-fpdf
-#
 # * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not be compiled
 # 
 # * openttd-openmsx needs freepats
@@ -257,7 +253,7 @@ hddtemp
 hex-a-hop
 hicolor-icon-theme
 hpijs-ppds
-#hplip-gui
+hplip-gui
 htop
 hugin
 hydrogen
@@ -344,6 +340,7 @@ kde-telepathy-send-file
 kde-telepathy-text-ui
 kdewallpapers
 kde-window-manager
+kde-workspace-randr
 kdf
 kdiamond
 kdm
@@ -420,7 +417,6 @@ kvpnc
 kwalletmanager
 ldap-utils
 less
-libavahi-compat-libdnssd1
 libcups2-dev
 libgl1-mesa-dri
 libgoo-canvas-perl
@@ -541,6 +537,7 @@ openttd
 openttd-opengfx
 openttd-openmsx
 openttd-opensfx
+owncloud-client
 oxygen-icon-theme
 p7zip-full
 palapeli
@@ -579,7 +576,6 @@ pulseaudio-utils
 pv
 pymol
 python-notify
-python-openssl
 python-pyalsa
 qelectrotech
 qelectrotech-data
