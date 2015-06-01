@@ -10,5 +10,3 @@ export MIRROR_BUILD="http://localhost:9999/debian"
 export MIRROR_SYSTEM="http://httpredir.debian.org/debian"
 export MIRROR_SECURITY_SYSTEM="http://security.debian.org/"
 
-# Flag to enable building a source image
-export SOURCE="false"
