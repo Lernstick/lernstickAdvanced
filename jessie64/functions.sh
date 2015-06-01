@@ -49,23 +49,7 @@ build_image()
 	rm -f config/common
 	rm -f config/source
 	lb clean
-	lb config \
-                --apt-indices false \
-                --apt-recommends false \
-                --architectures amd64 \
-                --archive-areas "main contrib non-free" \
-                --binary-images iso \
-                --distribution jessie \
-                --firmware-chroot true \
-                --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-                --mirror-binary http://ftp.ch.debian.org/debian/ \
-                --mirror-binary-security http://security.debian.org/ \
-                --mirror-bootstrap http://ftp.ch.debian.org/debian/ \
-                --mirror-chroot http://ftp.ch.debian.org/debian/ \
-                --mirror-chroot-security http://security.debian.org/ \
-                --source ${SOURCE} \
-                --verbose
-
+	lb config
 
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
