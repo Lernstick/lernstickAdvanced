@@ -168,7 +168,6 @@ firmware-linux-free
 flac
 focuswriter
 fonts-liberation
-fonts-lyx
 foobillardplus
 foomatic-db-compressed-ppds
 foomatic-db-engine
@@ -359,8 +358,6 @@ khelpcenter4
 kig
 kigo
 kiki-the-nano-bot
-kile
-kile-l10n
 killbots
 kio-audiocd
 kipi-plugins
@@ -466,7 +463,6 @@ lskat
 lsof
 lxde
 lxtask
-lyx
 manpages-de
 manpages-es
 manpages-fr
@@ -643,9 +639,6 @@ telepathy-rakia
 telepathy-salut
 telnet
 testdisk
-texlive-extra-utils
-texlive-fonts-recommended
-texlive-latex-recommended
 timidity
 tofrodos
 toppler
