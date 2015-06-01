@@ -457,7 +457,6 @@ libreoffice-style-hicontrast
 libreoffice-style-oxygen
 libreoffice-style-tango
 libreoffice-writer
-libsmbios-bin
 libsvn-java
 lilypond
 linux-headers-3.16.0-4-amd64
@@ -607,6 +606,7 @@ seahorse
 shutter
 smb4k
 smbclient
+smbios-utils
 smplayer
 smplayer-l10n
 smplayer-themes
