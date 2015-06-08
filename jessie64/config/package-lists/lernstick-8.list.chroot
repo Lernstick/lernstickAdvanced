@@ -58,6 +58,7 @@ lernstick-nepomuk-core-data
 lernstick-okular
 lernstick-openclipart
 lernstick-openjdk-7-jre
+lernstick-openshot
 lernstick-orage
 lernstick-owncloud-client
 lernstick-pavucontrol
@@ -79,6 +80,7 @@ lernstick-strut
 lernstick-synfigstudio
 lernstick-systemsettings
 lernstick-thunar
+lernstick-totem
 lernstick-tracker-gui
 lernstick-tuxpaint
 lernstick-vim-common

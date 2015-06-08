@@ -19,8 +19,6 @@
 #
 # * musescore needs pulseaudio-utils for playback window
 #
-# * klavaro needs espeak
-#
 # * solfege needs csound
 #
 # * miro needs libavahi-compat-libdnssd1
@@ -32,8 +30,6 @@
 # * gnome-system-tools are needed because it's the only GUI to change /etc/hostname
 #
 # * solfege needs python-pyalsa
-#
-# * kdenlive needs xine-ui
 #
 # * epoptes needs python-openssl
 #
@@ -158,7 +154,6 @@ enigma
 enigma-data
 #epoptes
 #epoptes-client
-espeak
 exfat-fuse
 exfat-utils
 extremetuxracer
@@ -225,6 +220,7 @@ glabels
 gnome-core
 gnome-disk-utility
 gnome-shell-extensions
+gnome-sound-recorder
 gnome-system-monitor
 gnome-system-tools
 gnome-themes
@@ -605,7 +601,6 @@ smbios-utils
 smplayer
 smplayer-l10n
 smplayer-themes
-smtube
 software-properties-gtk
 solfege
 solfege-doc
@@ -703,7 +698,6 @@ xfce4-taskmanager
 xfce4-volumed
 xfce4-weather-plugin
 xfce4-xkb-plugin
-xine-ui
 xournal
 xsane
 xserver-xorg
@@ -732,4 +726,3 @@ youtube-dl
 zenmap
 zip
 zsync
-zynaddsubfx
