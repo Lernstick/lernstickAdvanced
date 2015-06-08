@@ -19,3 +19,6 @@
 - MacBook@work:
 	- kdm timeout seems to be to small (starting with DVD)
 	- WLAN does not work
+- remote support on HTTPS (easier with Swisscom firewalls)
+	- add https://meet.jit.si/lernstick to chromium bookmarks
+	- preinstall jitsi desktop streamer plugin in chromium
