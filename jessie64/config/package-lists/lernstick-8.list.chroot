@@ -1,9 +1,13 @@
 dlcopy
+lernstick-amarok-utils
 lernstick-arandr
 lernstick-archive-keyring
+lernstick-ardour3
 lernstick-arduino
+lernstick-arista
 lernstick-bluedevil
 lernstick-calibre
+lernstick-cheese
 lernstick-config
 lernstick-darktable
 lernstick-digikam
@@ -18,6 +22,7 @@ lernstick-ghex
 lernstick-gimp
 lernstick-gnome-calculator
 lernstick-gnome-font-viewer
+lernstick-gnome-mplayer
 lernstick-gnome-system-tools
 lernstick-gpicview
 lernstick-gucharmap
@@ -43,6 +48,7 @@ lernstick-libreoffice-gtk
 lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
+lernstick-lmms
 lernstick-mate-terminal
 lernstick-mc
 lernstick-mypaint
@@ -54,6 +60,7 @@ lernstick-openclipart
 lernstick-openjdk-7-jre
 lernstick-orage
 lernstick-owncloud-client
+lernstick-pavucontrol
 lernstick-pcmanfm
 lernstick-pdfshuffler
 lernstick-pymol
@@ -76,9 +83,13 @@ lernstick-tracker-gui
 lernstick-tuxpaint
 lernstick-vim-common
 lernstick-virtualbox
+lernstick-vokoscreen
+lernstick-winff
+lernstick-wxmaxima
 lernstick-x11vnc
 lernstick-xarchiver
 lernstick-xfce4-appfinder
+lernstick-xfce4-mixer
 lernstick-xfce4-sensors-plugin
 lernstick-xfce4-taskmanager
 lernstick-xournal
