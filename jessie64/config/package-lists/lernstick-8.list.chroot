@@ -5,9 +5,12 @@ lernstick-archive-keyring
 lernstick-ardour3
 lernstick-arduino
 lernstick-arista
+lernstick-avogadro
+lernstick-bkchem
 lernstick-bluedevil
 lernstick-calibre
 lernstick-cheese
+lernstick-chemtool
 lernstick-config
 lernstick-darktable
 lernstick-digikam
@@ -76,6 +79,7 @@ lernstick-snap
 lernstick-software-properties-gtk
 lernstick-speedcrunch
 lernstick-squeak-vm
+lernstick-step
 lernstick-strut
 lernstick-synfigstudio
 lernstick-systemsettings
@@ -85,11 +89,13 @@ lernstick-tracker-gui
 lernstick-tuxpaint
 lernstick-vim-common
 lernstick-virtualbox
+lernstick-vmpk
 lernstick-vokoscreen
 lernstick-winff
 lernstick-wxmaxima
 lernstick-x11vnc
 lernstick-xarchiver
+lernstick-xdrawchem
 lernstick-xfce4-appfinder
 lernstick-xfce4-mixer
 lernstick-xfce4-sensors-plugin
