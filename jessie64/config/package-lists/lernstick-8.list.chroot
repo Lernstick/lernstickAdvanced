@@ -21,6 +21,7 @@ lernstick-freemind
 lernstick-fritzing
 lernstick-fslint
 lernstick-galculator
+lernstick-gcompris
 lernstick-gedit
 lernstick-ghex
 lernstick-gimp
@@ -36,6 +37,7 @@ lernstick-hplip-gui
 lernstick-hugin
 lernstick-icedtea-netx
 lernstick-imagemagick
+lernstick-kalgebra
 lernstick-kcalc
 lernstick-kde-workspace-randr
 lernstick-krename
@@ -68,6 +70,7 @@ lernstick-owncloud-client
 lernstick-pavucontrol
 lernstick-pcmanfm
 lernstick-pdfshuffler
+lernstick-pspp
 lernstick-pymol
 lernstick-qelectrotech
 lernstick-qtqr
