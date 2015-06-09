@@ -14,6 +14,7 @@ lernstick-chemtool
 lernstick-childsplay
 lernstick-config
 lernstick-darktable
+lernstick-dconf-editor
 lernstick-digikam
 lernstick-eog
 lernstick-evince-common
@@ -22,18 +23,22 @@ lernstick-fritzing
 lernstick-fslint
 lernstick-galculator
 lernstick-gcompris
+lernstick-gdebi-kde
 lernstick-gedit
 lernstick-ghex
 lernstick-gimp
+lernstick-gksu
 lernstick-gnome-calculator
 lernstick-gnome-font-viewer
 lernstick-gnome-mplayer
+lernstick-gnome-system-monitor
 lernstick-gnome-system-tools
 lernstick-gpicview
 lernstick-gucharmap
 lernstick-gwakeonlan
 lernstick-hamster-applet
 lernstick-hplip-gui
+lernstick-htop
 lernstick-hugin
 lernstick-icedtea-netx
 lernstick-imagemagick
@@ -55,6 +60,8 @@ lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
 lernstick-lmms
+lernstick-lxtask
+lernstick-lxterminal
 lernstick-mate-terminal
 lernstick-mc
 lernstick-mypaint
@@ -86,6 +93,7 @@ lernstick-squeak-vm
 lernstick-step
 lernstick-strut
 lernstick-synfigstudio
+lernstick-system-config-printer
 lernstick-systemsettings
 lernstick-thunar
 lernstick-totem
