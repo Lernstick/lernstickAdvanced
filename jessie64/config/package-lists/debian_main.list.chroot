@@ -19,7 +19,11 @@
 #
 # * musescore needs pulseaudio-utils for playback window
 #
-# * solfege needs csound
+# * solfege
+#	temporarily disabled until https://code.google.com/p/solfege/issues/detail?id=279 gets fixed
+#	recommends:
+#		- csound
+#		- python-pyalsa
 #
 # * miro needs libavahi-compat-libdnssd1
 #
@@ -28,8 +32,6 @@
 # * kdenetwork-filesharing needs samba
 #
 # * gnome-system-tools are needed because it's the only GUI to change /etc/hostname
-#
-# * solfege needs python-pyalsa
 #
 # * epoptes needs python-openssl
 #
@@ -114,7 +116,6 @@ console-setup
 crack-attack
 cryptsetup
 crystalcursors
-csound
 cups
 cups-backend-bjnp
 cups-bsd
@@ -561,7 +562,6 @@ pulseaudio-utils
 pv
 pymol
 python-notify
-python-pyalsa
 qelectrotech
 qelectrotech-data
 qelectrotech-examples
@@ -596,8 +596,8 @@ smplayer
 smplayer-l10n
 smplayer-themes
 software-properties-gtk
-solfege
-solfege-doc
+#solfege
+#solfege-doc
 sozi
 spamassassin
 speedcrunch
