@@ -22,3 +22,6 @@
 - remote support on HTTPS (easier with Swisscom firewalls)
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
+- remove from backports:
+	- stopmotion
+	- openttd
