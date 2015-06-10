@@ -69,6 +69,7 @@ avahi-daemon
 avahi-utils
 avogadro
 avogadro-data
+baloo4
 bash-completion
 bind9-host
 bkchem
@@ -303,6 +304,7 @@ kdeartwork-theme-icon
 kdeartwork-theme-window
 kde-baseapps-bin
 kde-base-artwork
+kde-config-baloo-advanced
 kde-config-cddb
 kde-config-cron
 kde-config-gtk-style
