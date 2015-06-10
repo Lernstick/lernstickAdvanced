@@ -7,17 +7,21 @@ lernstick-arduino
 lernstick-arista
 lernstick-avogadro
 lernstick-bkchem
+lernstick-blockout2
 lernstick-bluedevil
 lernstick-calibre
 lernstick-cheese
 lernstick-chemtool
 lernstick-childsplay
 lernstick-config
+lernstick-crack-attack
 lernstick-darktable
 lernstick-dconf-editor
 lernstick-digikam
+lernstick-dossizola
 lernstick-eog
 lernstick-evince-common
+lernstick-freeciv-client-gtk
 lernstick-freemind
 lernstick-fritzing
 lernstick-fslint
@@ -33,10 +37,12 @@ lernstick-gnome-font-viewer
 lernstick-gnome-mplayer
 lernstick-gnome-system-monitor
 lernstick-gnome-system-tools
+lernstick-gnugo
 lernstick-gpicview
 lernstick-gucharmap
 lernstick-gwakeonlan
 lernstick-hamster-applet
+lernstick-hex-a-hop
 lernstick-hplip-gui
 lernstick-htop
 lernstick-hugin
@@ -64,6 +70,7 @@ lernstick-lxtask
 lernstick-lxterminal
 lernstick-mate-terminal
 lernstick-mc
+lernstick-morris
 lernstick-mypaint
 lernstick-nautilus
 lernstick-nemo
@@ -81,6 +88,7 @@ lernstick-pspp
 lernstick-pymol
 lernstick-qelectrotech
 lernstick-qtqr
+lernstick-qxw
 lernstick-rawtherapee
 lernstick-r-base-core
 lernstick-scratch-online
@@ -95,6 +103,7 @@ lernstick-strut
 lernstick-synfigstudio
 lernstick-system-config-printer
 lernstick-systemsettings
+lernstick-tanglet
 lernstick-thunar
 lernstick-totem
 lernstick-tracker-gui
@@ -115,3 +124,6 @@ lernstick-xfce4-taskmanager
 lernstick-xournal
 lernstick-xsane
 lernstick-zenmap
+live-armagetronad2
+live-foobillardplus
+live-resolution
