@@ -1,3 +1,4 @@
+- live build auto config does not work for me (contrib and non-free is missing in chroot)
 - add samba to lernstickWelcome (enables folder sharing but increases boot time)
 - cups fragt während der Installation nach dem root-Passwort!?
 	- bisher nur auf Rechner im imedias-Büro
