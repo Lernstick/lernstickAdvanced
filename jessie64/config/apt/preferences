@@ -25,3 +25,11 @@ Pin-Priority: 999
 Package: wesnoth-1.12*
 Pin: release n=jessie-backports
 Pin-Priority: 999
+
+Package: wireshark
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: youtube-dl
+Pin: release n=jessie-backports
+Pin-Priority: 999
