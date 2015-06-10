@@ -26,7 +26,23 @@ Package: wesnoth-1.12*
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
-Package: wireshark
+Package: wireshark*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: libwireshark*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: libwiretap*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: libwsutil*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: tshark
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
