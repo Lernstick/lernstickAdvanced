@@ -26,4 +26,6 @@
 - remove from backports:
 	- stopmotion
 	- openttd
-	- vokoscreen & ffmpeg (enlarges fonts in KDE!?)
+- problems in KDE (caused by backports?)
+	- fonts are somewhat large
+	- logging of does no longer work
