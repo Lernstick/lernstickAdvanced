@@ -23,9 +23,4 @@
 - remote support on HTTPS (easier with Swisscom firewalls)
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
-- remove from backports:
-	- stopmotion
-	- openttd
-- problems in KDE (caused by backports?)
-	- fonts are somewhat large
-	- logging of does no longer work
+- backport of virtualbox 4.3.28-dfsg-1 breaks KDE
