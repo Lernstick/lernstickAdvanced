@@ -26,3 +26,4 @@
 - remove from backports:
 	- stopmotion
 	- openttd
+	- vokoscreen & ffmpeg (enlarges fonts in KDE!?)
