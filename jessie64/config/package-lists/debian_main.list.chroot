@@ -657,7 +657,7 @@ vlc
 vlc-plugin-fluidsynth
 vlc-plugin-pulse
 vmpk
-vokoscreen
+#vokoscreen
 vorbis-tools
 vpnc
 vym
