@@ -1,8 +1,10 @@
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
-- add samba to lernstickWelcome (enables folder sharing but increases boot time)
-- cups fragt während der Installation nach dem root-Passwort!?
-	- bisher nur auf Rechner im imedias-Büro
-	- fragt nicht mehr, wenn alle cups-dienste beendet wurden
+- lernstickWelcome:
+	- samba (enables folder sharing but increases boot time)
+	- kile
+	- lyx
+	- steam (muss multiarch aktivieren)
+	- wine (auch multiarch)
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - combine /usr/local/lernstick* and desktop icon in lernstick-user-template into one package
 - Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
@@ -10,8 +12,17 @@
 - nvidia: mismatch between kernel and Xorg on Mac@home and MacDesktop@work
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
-- live-build still does not use "-iso-level 3" for xorriso
-- put third party debs (e.g. cura) into our repository
+- put third party debs into our repository:
+	- cura
+	- kara
+	- bluej
+	- tigerjython
+	- greenfoot
+	- webweaver desktop
+	- tuxmathscrabble
+	- tipp10
+	- filius
+	- rstudio
 - install (lernstick-)visualvm together with netbeans (package "Java development environment")
 - package xlogo (http://xlogo.tuxfamily.org/)
 - package xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
