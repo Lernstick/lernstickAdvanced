@@ -3,8 +3,8 @@
 	- samba (enables folder sharing but increases boot time)
 	- kile
 	- lyx
-	- steam (muss multiarch aktivieren)
-	- wine (auch multiarch)
+	- steam (has to activate multiarch)
+	- wine (also multiarch)
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - combine /usr/local/lernstick* and desktop icon in lernstick-user-template into one package
 - Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
@@ -12,6 +12,10 @@
 - nvidia: mismatch between kernel and Xorg on Mac@home and MacDesktop@work
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
+- add our own packages:
+	- pauker
+	- jbackpack
+	- rscc(-defaults-lernstick)
 - put third party debs into our repository:
 	- cura
 	- kara
@@ -23,11 +27,17 @@
 	- tipp10
 	- filius
 	- rstudio
+	- freedoko
+	- omnitux
+	- domination
+	- libreoffice-languagetool
+	- libreoffice-templatepack
+	- lxmed
+	- xlogo
 - install (lernstick-)visualvm together with netbeans (package "Java development environment")
 - package xlogo (http://xlogo.tuxfamily.org/)
 - package xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
-- steam package can not be found/installed!?
 - MacBook@work:
 	- kdm timeout seems to be to small (starting with DVD)
 	- WLAN does not work
@@ -35,3 +45,8 @@
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
 - backport of virtualbox 4.3.28-dfsg-1 breaks KDE
+- test if we still need these packages from wheezy:
+	- lernstick-kmix
+	- lernstick-mount-exchange
+	- lernstick-partitionmanager
+	- lernstick-plymouth
