@@ -5,6 +5,11 @@
 	- lyx
 	- steam (has to activate multiarch)
 	- wine (also multiarch)
+	- do not run firewall status in learning environment
+	- remove adobereader
+	- detect and use correct architecture for:
+		- google earth
+		- skype
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - combine /usr/local/lernstick* and desktop icon in lernstick-user-template into one package
 - Move .bashrc from config/includes.chroot/etc/skel/ to lernstick-user-template
@@ -17,22 +22,26 @@
 	- jbackpack
 	- rscc(-defaults-lernstick)
 - put third party debs into our repository:
-	- cura
-	- kara
+	- libdvdcss
 	- bluej
-	- tigerjython
-	- greenfoot
-	- webweaver desktop
-	- tuxmathscrabble
-	- tipp10
-	- filius
-	- rstudio
-	- freedoko
-	- omnitux
+	- cura
 	- domination
+	- filius
+	- freedoko
+	- greenfoot
+	- kara
 	- libreoffice-languagetool
 	- libreoffice-templatepack
 	- lxmed
+	- netbeans
+	- omnitux
+	- processing
+	- rstudio
+	- sweethome3d
+	- tigerjython
+	- tipp10
+	- tuxmathscrabble
+	- webweaver desktop
 	- xlogo
 - install (lernstick-)visualvm together with netbeans (package "Java development environment")
 - package xlogo (http://xlogo.tuxfamily.org/)
@@ -50,3 +59,6 @@
 	- lernstick-mount-exchange
 	- lernstick-partitionmanager
 	- lernstick-plymouth
+- backports:
+	- lazarus
+	- gnucash
