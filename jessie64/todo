@@ -17,6 +17,7 @@
 - nvidia: mismatch between kernel and Xorg on Mac@home and MacDesktop@work
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
+- high-res icon for dlcopy
 - add our own packages:
 	- pauker
 	- jbackpack
@@ -55,11 +56,15 @@
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
 - backport of virtualbox 4.3.28-dfsg-1 breaks KDE
+- supertuxkart crashes at Mac@Michelle, recheck with proprietary driver or other machine
+- live-startup-scripts for:
+	- megaglest
+	- hedgewars
 - test if we still need these packages from wheezy:
 	- lernstick-kmix
 	- lernstick-mount-exchange
-	- lernstick-partitionmanager
 	- lernstick-plymouth
+	- live-swapfile
 - backports:
 	- todo:
 		- cinnamon
