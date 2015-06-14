@@ -23,6 +23,7 @@
 	- rscc(-defaults-lernstick)
 - put third party debs into our repository:
 	- libdvdcss
+	- alice2
 	- bluej
 	- cura
 	- domination
@@ -60,5 +61,28 @@
 	- lernstick-partitionmanager
 	- lernstick-plymouth
 - backports:
-	- lazarus
-	- gnucash
+	- todo:
+		- cinnamon
+		- efibootmgr
+		- exfat-utils
+		- firmware-nonfree
+		- gnome
+		- gnucash
+		- linux (including aufs!?)
+		- mate
+		- phoronix-test-suite (orphaned!?)
+		- qreator
+		- xfce4
+	- backports pinned to official backports but newer version available:
+		- darktable
+		- youtube-dl
+	- backports with bugs:
+		- stopmotion (program crashes)
+		- openttd (needs newer gfx package)
+		- virtualbox (breaks KDE in virtualbox)
+		- fritzing (needs fritzing-parts which is not yet available)
+		- miro (freezes in youtube section)
+	- backporting failed:
+		- ardour3
+		- calibre
+		- owncloud
