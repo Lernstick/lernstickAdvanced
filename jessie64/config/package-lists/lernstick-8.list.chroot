@@ -156,7 +156,7 @@ lernstick-vim-common
 lernstick-virtualbox
 lernstick-vmpk
 lernstick-vokoscreen
-lernstickwelcome-wheezy
+lernstickwelcome
 lernstick-weltmusik
 lernstick-wiktionary
 lernstick-winff
@@ -168,6 +168,7 @@ lernstick-xfce4-appfinder
 lernstick-xfce4-mixer
 lernstick-xfce4-sensors-plugin
 lernstick-xfce4-taskmanager
+lernstick-xfce4-terminal
 lernstick-xournal
 lernstick-xsane
 lernstick-zenmap
