@@ -116,6 +116,7 @@ lernstick-openttd
 lernstick-orage
 lernstick-orthografietrainer
 lernstick-owncloud-client
+lernstick-partitionmanager
 lernstick-pavucontrol
 lernstick-pcmanfm
 lernstick-pdfshuffler
@@ -173,5 +174,8 @@ lernstick-xournal
 lernstick-xsane
 lernstick-zenmap
 live-armagetronad
-live-foobillardplus
 live-enigma
+live-extremetuxracer
+live-foobillardplus
+live-pathological
+live-pingus
