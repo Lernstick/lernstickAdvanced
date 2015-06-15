@@ -62,6 +62,7 @@ lernstick-hugin
 lernstick-icedtea-netx
 lernstick-imagemagick
 lernstick-jamendo
+lernstick-jfractionlab
 lernstick-kalgebra
 lernstick-kcalc
 lernstick-kde-workspace-randr
@@ -153,6 +154,7 @@ lernstick-tracker-gui
 lernstick-tuxpaint
 lernstick-tuxtype
 lernstick-unserkoerper
+lernstick-usertemplate
 lernstick-vim-common
 lernstick-virtualbox
 lernstick-vmpk
