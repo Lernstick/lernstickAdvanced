@@ -38,7 +38,6 @@
 	- omnitux
 	- processing
 	- rstudio
-	- sweethome3d
 	- tigerjython
 	- tipp10
 	- tuxmathscrabble
@@ -54,12 +53,10 @@
 - remote support on HTTPS (easier with Swisscom firewalls)
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
-- backport of virtualbox 4.3.28-dfsg-1 breaks KDE
 - JFractionLab: creating worksheets doesn't work
-- Blender: international fonts do no longer work
 - user template:
-	- default bookmarks in iceweasel
-	- minimal settings for xmoto
+	- iceweasel: default bookmarks
+	- xmoto: minimal settings
 - live-startup-scripts for:
 	- megaglest
 	- hedgewars
@@ -85,13 +82,14 @@
 		- darktable
 		- youtube-dl
 	- backports with bugs:
+		- blender (international fonts are not available)
 		- fritzing (needs fritzing-parts which is not yet available)
 		- miro (freezes in youtube section)
 		- nvidia-graphics-drivers (failure during dkms install)
 		- openttd (needs newer gfx package)
 		- stopmotion (program crashes)
-		- virtualbox (breaks KDE in virtualbox)
 		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
+		- virtualbox (breaks KDE in virtualbox)
 	- backporting failed:
 		- ardour3
 		- calibre
