@@ -15,6 +15,7 @@
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
 - high-res icon for dlcopy
+- width of networkmanager applet in KDE is too large
 - add our own packages:
 	- pauker
 	- jbackpack
@@ -54,7 +55,6 @@
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
 - backport of virtualbox 4.3.28-dfsg-1 breaks KDE
-- supertuxkart crashes at Mac@Michelle, recheck with proprietary driver or other machine
 - JFractionLab: creating worksheets doesn't work
 - Blender: international fonts do no longer work
 - user template:
@@ -85,11 +85,13 @@
 		- darktable
 		- youtube-dl
 	- backports with bugs:
-		- stopmotion (program crashes)
-		- openttd (needs newer gfx package)
-		- virtualbox (breaks KDE in virtualbox)
 		- fritzing (needs fritzing-parts which is not yet available)
 		- miro (freezes in youtube section)
+		- nvidia-graphics-drivers (failure during dkms install)
+		- openttd (needs newer gfx package)
+		- stopmotion (program crashes)
+		- virtualbox (breaks KDE in virtualbox)
+		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
 	- backporting failed:
 		- ardour3
 		- calibre
