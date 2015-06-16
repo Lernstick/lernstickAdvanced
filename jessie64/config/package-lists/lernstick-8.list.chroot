@@ -8,6 +8,7 @@ lernstick-archive-keyring
 lernstick-ardour3
 lernstick-arduino
 lernstick-arista
+lernstick-avidemux-qt
 lernstick-avogadro
 lernstick-bkchem
 lernstick-blockout2
@@ -55,6 +56,7 @@ lernstick-gpicview
 lernstick-gucharmap
 lernstick-gwakeonlan
 lernstick-hamster-applet
+lernstick-handbrake-gtk
 lernstick-hex-a-hop
 lernstick-hplip-gui
 lernstick-htop
