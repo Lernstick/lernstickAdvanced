@@ -11,13 +11,13 @@
 		- google earth
 		- skype
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
-- nvidia: test Mac@home
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
+- mac volumeicon is too dark on black background (transparency in svg file!?)
+- set language and keyboard at every boot
 - dlcopy:
 	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
-- width of networkmanager applet in KDE is too large
 - add our own packages:
 	- pauker
 	- jbackpack
@@ -50,7 +50,7 @@
 - Audacity: high-res icon
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
 - MacBook@work:
-	- kdm timeout seems to be to small (starting with DVD)
+	- kdm timeout seems to be too small (starting with DVD)
 	- WLAN does not work
 - remote support on HTTPS (easier with Swisscom firewalls)
 	- add https://meet.jit.si/lernstick to chromium bookmarks
