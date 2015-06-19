@@ -13,7 +13,7 @@
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
-- mac volumeicon is too dark on black background (transparency in svg file!?)
+- test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
 - set language and keyboard at every boot
 - dlcopy:
 	- high-res icon
