@@ -98,3 +98,4 @@
 		- calibre
 		- owncloud
 		- netbeans
+		- pspp 0.8.5 (initdb: cannot be run as root)
