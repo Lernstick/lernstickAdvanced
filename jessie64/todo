@@ -49,6 +49,7 @@
 - package xlogo (http://xlogo.tuxfamily.org/)
 - package xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
 - Audacity: high-res icon
+- mac volume label still doesn't seem to work (tested on Mac@home)
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
 - MacBook@work:
 	- kdm timeout seems to be too small (starting with DVD)
