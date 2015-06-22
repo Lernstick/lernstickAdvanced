@@ -14,7 +14,7 @@
 - gdm often fails to start when configured for the first time (timing issue with live-config)
 - update broadcom package to include support for Lenovo Yoga 3
 - test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
-- set language and keyboard at every boot
+- set keyboard at every boot
 - disable screen lock in GNOME
 - dlcopy:
 	- high-res icon
