@@ -15,6 +15,9 @@
 - update broadcom package to include support for Lenovo Yoga 3
 - test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
 - set keyboard at every boot
+	- GNOME:
+		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch(fr)'), ('xkb', 'us'), ('xkb', 'it'), ('xkb', 'fr'), ('xkb', 'de')]"
+		"ch(fr)" does not work, must be "ch+fr"
 - disable screen lock in GNOME
 - dlcopy:
 	- high-res icon
