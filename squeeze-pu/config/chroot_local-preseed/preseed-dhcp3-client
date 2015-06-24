@@ -1,5 +1,0 @@
-#preseed-dhcp3-client preseed-dhcp3-client/preseed boolean false
-preseed-dhcp3-client preseed-dhcp3-client/preseed boolean true
-
-#preseed-dhcp3-client preseed-dhcp3-client/send-host-name boolean false
-preseed-dhcp3-client preseed-dhcp3-client/send-host-name boolean true

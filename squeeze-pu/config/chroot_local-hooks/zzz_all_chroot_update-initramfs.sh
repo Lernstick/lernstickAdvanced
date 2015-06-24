@@ -1,1 +1,0 @@
-/usr/share/live/build/examples/hooks/all_chroot_update-initramfs.sh

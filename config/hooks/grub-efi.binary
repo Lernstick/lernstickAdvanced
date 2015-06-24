@@ -1,0 +1,50 @@
+#!/bin/sh
+
+set -e
+
+CHROOT="chroot"
+BINARY="binary"
+EFI="efi/boot"
+GRUBLIB="usr/lib/grub"
+SHIMLIB="usr/lib/shim"
+BOOT="boot"
+MKIMAGE="/usr/bin/grub-mkimage"
+KERNEL_NAME="vmlinuz"
+INITRD_NAME="initrd.img"
+
+
+# install grub for 32bit EFI systems (old Macs)
+
+# create EFI directory
+mkdir -p $BINARY/$EFI  || true
+
+outfile="bootia32.efi"
+platform="i386-efi"
+modules="part_msdos fat"
+
+# create grub module directory
+mkdir -p $BINARY/$BOOT/grub/$platform || true
+
+# create EFI "image" chroot into the live-system to support 
+# cross architecture builds (amd64 / i386)
+#chroot $CHROOT $MKIMAGE --directory=/$GRUBLIB/$platform --prefix=/$BOOT/grub/$platform --output=/tmp/$outfile --format=$platform part_msdos fat
+chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform $modules
+cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
+
+# copy grub modules
+cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
+
+
+## Install MokManager for 64bit systems, the rest is handled by
+## binary includes and the script in scripts/build-grub-signed
+
+#cp $CHROOT/$SHIMLIB/MokManager.efi.signed $BINARY/$EFI/MokManager.efi
+
+# replace path to kernel image and initrd
+# Default entries
+#DEFAULT_FLAVOUR="$(echo ${LB_LINUX_FLAVOURS} | awk '{ print $1 }')"
+#DEFAULT_KERNEL="$(basename ${CHROOT}/${BOOT}/${KERNEL_NAME}-*${DEFAULT_FLAVOUR})"
+#DEFAULT_INITRD="${INITRD_NAME}-$(echo ${DEFAULT_KERNEL} | sed -e "s|${KERNEL_NAME}-||")"
+#sed -i -e "s|#DEFAULT_KERNEL#|${DEFAULT_KERNEL}|" -e "s|#DEFAULT_INITRD#|${DEFAULT_INITRD}|" ${BINARY}/${BOOT}/grub/grub.cfg
+
+sed -i -e "s|#DEFAULT_KERNEL#|vmlinuz2|" -e "s|#DEFAULT_INITRD#|initrd2|" ${BINARY}/${BOOT}/grub/grub.cfg

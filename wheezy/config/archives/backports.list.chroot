@@ -1,3 +1,0 @@
-# official backports for Debian 7
-deb http://ftp.ch.debian.org/debian/ wheezy-backports main contrib non-free
-deb-src http://ftp.ch.debian.org/debian/ wheezy-backports main contrib non-free

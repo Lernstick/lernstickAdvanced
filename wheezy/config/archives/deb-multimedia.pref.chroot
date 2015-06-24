@@ -1,7 +1,0 @@
-Package: *
-Pin: origin "www.deb-multimedia.org"
-Pin-Priority: 1
-
-Package: libmp3lame0
-Pin: origin "www.deb-multimedia.org"
-Pin-Priority: 999

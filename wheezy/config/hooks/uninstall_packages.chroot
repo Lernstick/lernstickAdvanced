@@ -1,4 +1,0 @@
-#!/bin/sh
-# for whatever strange reason, the debug kernel package gets installed
-# let's remove it here
-apt-get -y purge linux-image-3.16.0-0.bpo.4-686-pae-dbg

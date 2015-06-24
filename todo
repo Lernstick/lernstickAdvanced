@@ -1,0 +1,117 @@
+- missing packages:
+	- shim
+	- lernstick-icedtea-netx
+	- lernstick-openjdk-7-jre
+
+- re-enable mokmanager in grub hook
+
+- wl driver crashes on HP Compaq nx9105
+
+- live build auto config does not work for me (contrib and non-free is missing in chroot)
+- lernstickWelcome:
+	- do not run firewall status in learning environment
+	- samba (enables folder sharing but increases boot time)
+	- kile
+	- lyx
+	- steam (has to activate multiarch)
+	- wine (also multiarch)
+	- install (lernstick-)visualvm together with netbeans (package "Java development environment")
+	- detect and use correct architecture for:
+		- google earth
+		- skype
+- Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
+- gdm often fails to start when configured for the first time (timing issue with live-config)
+- update broadcom package to include support for Lenovo Yoga 3
+- test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
+- set keyboard at every boot
+	- GNOME:
+		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch(fr)'), ('xkb', 'us'), ('xkb', 'it'), ('xkb', 'fr'), ('xkb', 'de')]"
+		"ch(fr)" does not work, must be "ch+fr"
+- disable screen lock in GNOME
+- no tty after X on MacDesktop@work and Mac@home
+	- see https://bbs.archlinux.org/viewtopic.php?id=143569
+	- try boot options "video=vesa:off vga=normal"
+- dlcopy:
+	- high-res icon
+	- when data partition of source is read-only, data partition mode shows "read and write"
+- add our own packages:
+	- pauker
+	- jbackpack
+	- rscc(-defaults-lernstick)
+- put third party debs into our repository:
+	- libdvdcss
+	- alice2
+	- bluej
+	- cmaptools (license!?)
+	- cura
+	- domination
+	- filius
+	- freedoko
+	- greenfoot
+	- kara
+	- libreoffice-languagetool
+	- libreoffice-templatepack
+	- lxmed
+	- netbeans
+	- omnitux
+	- processing
+	- rstudio
+	- tigerjython
+	- tipp10
+	- tuxmathscrabble
+	- webweaver desktop
+	- xlogo
+- package xlogo (http://xlogo.tuxfamily.org/)
+- package xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
+- Audacity: high-res icon
+- mac volume label still doesn't seem to work (tested on Mac@home)
+- exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
+- MacBook@work:
+	- kdm timeout seems to be too small (starting with DVD)
+	- WLAN does not work
+- remote support on HTTPS (easier with Swisscom firewalls)
+	- add https://meet.jit.si/lernstick to chromium bookmarks
+	- preinstall jitsi desktop streamer plugin in chromium
+- JFractionLab: creating worksheets doesn't work
+- user template:
+	- iceweasel: default bookmarks
+	- xmoto: minimal settings
+- live-startup-scripts for:
+	- megaglest
+	- hedgewars
+- test if we still need these packages from wheezy:
+	- lernstick-kmix
+	- lernstick-mount-exchange
+	- lernstick-plymouth
+	- live-swapfile
+- backports:
+	- todo:
+		- cinnamon
+		- efibootmgr
+		- exfat-utils
+		- firmware-nonfree
+		- gnome
+		- gnucash
+		- linux (including aufs!?)
+		- mate
+		- phoronix-test-suite (orphaned!?)
+		- qreator
+		- xfce4
+	- backports pinned to official backports but newer version available:
+		- darktable
+		- youtube-dl
+	- backports with bugs:
+		- blender (international fonts are not available)
+		- fritzing (needs fritzing-parts which is not yet available)
+		- miro (freezes in youtube section)
+		- nvidia-graphics-drivers (failure during dkms install)
+		- openttd (needs newer gfx package)
+		- stopmotion (program crashes)
+		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
+		- virtualbox (breaks KDE in virtualbox)
+	- backporting failed:
+		- ardour3
+		- calibre
+		- owncloud
+		- netbeans
+		- pspp 0.8.5 (initdb: cannot be run as root)

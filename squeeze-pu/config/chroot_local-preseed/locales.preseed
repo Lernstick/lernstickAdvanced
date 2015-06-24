@@ -1,8 +1,0 @@
-################################################################################
-## locales
-
-#locales locales/locales_to_be_generated multiselect
-locales locales/locales_to_be_generated multiselect de_CH, fr_CH, it_CH, en_US
-#locales locales/default_environment_locale string
-locales locales/default_environment_locale string de_CH
-################################################################################

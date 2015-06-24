@@ -1,5 +1,0 @@
-#preseed-bash-completion preseed-bash-completion/preseed boolean false
-preseed-bash-completion preseed-bash-completion/preseed boolean true
-
-#preseed-bash-completion preseed-bash-completion/enable boolean false
-preseed-bash-completion preseed-bash-completion/enable boolean true

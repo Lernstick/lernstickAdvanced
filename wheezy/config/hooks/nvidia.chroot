@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# seems to be fixed now...
-exit 0
-
-# no idea why, but some modules are not installed via dkms...
-echo "installing missing NVIDIA modules..."
-
-dkms install -m nvidia-legacy-173xx -v 173.14.38 -k 3.10-0.bpo.3-686-pae 

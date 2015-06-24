@@ -1,3 +1,0 @@
-#!/bin/bash
-
-cp chroot/lib/modules/*/modules.alias binary/isolinux/

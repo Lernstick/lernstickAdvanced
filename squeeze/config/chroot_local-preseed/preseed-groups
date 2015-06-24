@@ -1,1 +1,0 @@
-debconf passwd/user-default-groups string audio cdrom dialout floppy video plugdev netdev powerdev vboxusers fuse dip lp lpadmin

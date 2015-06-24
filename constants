@@ -1,0 +1,12 @@
+BUILD_DIR="/home/ronny/lernstick/build/"
+TMPFS="/mytmpfs/lernstick"
+
+# these variables must be exported to make them available to
+# subcommands
+# Mirror used to build the image (preferably a local mirror)
+export MIRROR_BUILD="http://ftp.ch.debian.org/debian/"
+
+# Mirror used on the built system (preferably a mirror with good connectivity for most users)
+export MIRROR_SYSTEM="http://httpredir.debian.org/debian/"
+export MIRROR_SECURITY_SYSTEM="http://security.debian.org/debian/"
+

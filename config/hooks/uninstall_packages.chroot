@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# For whatever strange reason, a debug kernel package is installed...
+apt-get remove --purge -y linux-image-3.16.0-4-686-pae-dbg
