@@ -83,7 +83,7 @@
 	- lernstick-kmix
 	- lernstick-mount-exchange
 	- lernstick-plymouth
-	- live-swapfile
+- switch live-swapfile from sysvinit to systemd/live-config/...
 - backports:
 	- todo:
 		- cinnamon
