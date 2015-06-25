@@ -4,12 +4,13 @@
 
 - wl driver crashes on HP Compaq nx9105
 
+- show synaptiks only in KDE
+
 - preseeding for steam package
 - preinstall lernstick-wine on i386
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 - lernstickWelcome:
-	- do not run firewall status in learning environment
 	- samba (enables folder sharing but increases boot time)
 	- kile
 	- lyx
