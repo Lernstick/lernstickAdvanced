@@ -1,9 +1,6 @@
 - missing packages:
-	- shim
 	- lernstick-icedtea-netx
 	- lernstick-openjdk-7-jre
-
-- re-enable mokmanager in grub hook
 
 - wl driver crashes on HP Compaq nx9105
 

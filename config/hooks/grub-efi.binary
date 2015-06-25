@@ -38,7 +38,7 @@ cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
 ## Install MokManager for 64bit systems, the rest is handled by
 ## binary includes and the script in scripts/build-grub-signed
 
-#cp $CHROOT/$SHIMLIB/MokManager.efi.signed $BINARY/$EFI/MokManager.efi
+cp $CHROOT/$SHIMLIB/MokManager.efi.signed $BINARY/$EFI/MokManager.efi
 
 # replace path to kernel image and initrd
 # Default entries
