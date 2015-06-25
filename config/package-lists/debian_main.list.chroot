@@ -87,6 +87,7 @@ bluez-tools
 bogofilter
 bonnie++
 bovo
+brasero
 bzip2
 calibre
 calligra-l10n-de
@@ -197,6 +198,7 @@ gdebi-kde
 gdm3
 gecko-mediaplayer
 gedit
+gedit-plugins
 genisoimage
 #geogebra-gnome
 #geogebra-kde
@@ -217,8 +219,11 @@ gir1.2-gexiv2-0.10
 gir1.2-osmgpsmap-1.0
 git
 glabels
+gnome-clocks
 gnome-core
 gnome-disk-utility
+gnome-maps
+gnome-nettool
 gnome-shell-extensions
 gnome-sound-recorder
 gnome-system-monitor
@@ -634,6 +639,7 @@ testdisk
 timidity
 tofrodos
 toppler
+totem-plugins
 tumbler
 tumbler-plugins-extra
 tuxmath
