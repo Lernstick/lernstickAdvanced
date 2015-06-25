@@ -47,4 +47,4 @@ cp $CHROOT/$SHIMLIB/MokManager.efi.signed $BINARY/$EFI/MokManager.efi
 #DEFAULT_INITRD="${INITRD_NAME}-$(echo ${DEFAULT_KERNEL} | sed -e "s|${KERNEL_NAME}-||")"
 #sed -i -e "s|#DEFAULT_KERNEL#|${DEFAULT_KERNEL}|" -e "s|#DEFAULT_INITRD#|${DEFAULT_INITRD}|" ${BINARY}/${BOOT}/grub/grub.cfg
 
-sed -i -e "s|#DEFAULT_KERNEL#|vmlinuz2|" -e "s|#DEFAULT_INITRD#|initrd2|" ${BINARY}/${BOOT}/grub/grub.cfg
+sed -i -e "s|#DEFAULT_KERNEL#|vmlinuz2|" -e "s|#DEFAULT_INITRD#|initrd2.img|" ${BINARY}/${BOOT}/grub/grub.cfg
