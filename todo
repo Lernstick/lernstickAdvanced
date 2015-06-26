@@ -1,15 +1,19 @@
-- missing packages:
-	- lernstick-icedtea-netx
-	- lernstick-openjdk-7-jre
-
-- wl driver crashes on HP Compaq nx9105
+- broadcom package:
+	- wl driver crashes on HP Compaq nx9105
+	- update broadcom package to include support for Lenovo Yoga 3
 
 - show synaptiks only in KDE
 
 - preseeding for steam package
+
 - preinstall lernstick-wine on i386
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
+
+- missing packages:
+	- lernstick-icedtea-netx
+	- lernstick-openjdk-7-jre
+
 - lernstickWelcome:
 	- samba (enables folder sharing but increases boot time)
 	- kile
@@ -20,10 +24,14 @@
 	- detect and use correct architecture for:
 		- google earth
 		- skype
+
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
-- gdm often fails to start when configured for the first time (timing issue with live-config)
-- update broadcom package to include support for Lenovo Yoga 3
+
+- gdm fails to start when kdm was used at previous boot
+
 - test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
+- mac volume label still doesn't seem to work (tested on Mac@home)
+
 - set keyboard at every boot
 	- always run 0150-keybard-configuration in live-config
 	- GNOME:
@@ -40,31 +48,20 @@
 - dlcopy:
 	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
-- add our own packages:
-	- pauker
-	- jbackpack
-	- rscc(-defaults-lernstick)
 - put third party debs into our repository:
-	- libdvdcss
 	- alice2
 	- cmaptools (license!?)
-	- domination
-	- filius
 	- freedoko
 	- kara
 	- libreoffice-languagetool
 	- libreoffice-templatepack
 	- lxmed
-	- omnitux
-	- tigerjython
-	- tipp10
-	- tuxmathscrabble
-	- webweaver desktop
-	- xlogo
-- package xlogo (http://xlogo.tuxfamily.org/)
-- package xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
+- package software
+	- tuxmathscrabble (http://www.asymptopia.org/software/tuxmathscrabble/)
+	- freedoko http://free-doko.sourceforge.net/de/FreeDoko.html
+	- xlogo (http://xlogo.tuxfamily.org/)
+	- xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
 - Audacity: high-res icon
-- mac volume label still doesn't seem to work (tested on Mac@home)
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
 - MacBook@work:
 	- kdm timeout seems to be too small (starting with DVD)
@@ -83,6 +80,7 @@
 	- lernstick-kmix
 	- lernstick-mount-exchange
 	- lernstick-plymouth
+	- lernstick-wine
 - switch live-swapfile from sysvinit to systemd/live-config/...
 - backports:
 	- todo:
