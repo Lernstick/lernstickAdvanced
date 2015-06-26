@@ -134,6 +134,7 @@ denemo
 denemo-doc
 desktop-base
 dia
+dia-gnome
 dialog
 dia-rib-network
 dia-shapes
@@ -647,8 +648,8 @@ totem-plugins
 tumbler
 tumbler-plugins-extra
 tuxmath
-tuxpaint
-tuxpaint-stamps-default
+#tuxpaint
+#tuxpaint-stamps-default
 tuxtype
 tuxtype-data
 tuxtype-data-nonfree
