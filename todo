@@ -93,11 +93,13 @@
 		- firmware-nonfree
 		- gnome
 		- gnucash
+		- i965-va-driver
 		- linux (including aufs!?)
 		- mate
 		- phoronix-test-suite (orphaned!?)
 		- qreator
 		- xfce4
+		- xorg-server
 	- backports pinned to official backports but newer version available:
 		- darktable
 		- youtube-dl
