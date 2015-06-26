@@ -25,9 +25,14 @@
 - update broadcom package to include support for Lenovo Yoga 3
 - test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
 - set keyboard at every boot
+	- always run 0150-keybard-configuration in live-config
 	- GNOME:
 		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch(fr)'), ('xkb', 'us'), ('xkb', 'it'), ('xkb', 'fr'), ('xkb', 'de')]"
 		"ch(fr)" does not work, must be "ch+fr"
+	- KDE:
+		- disable 1060-kde-services in live-config
+		- move relevant parts to lernstick-config
+		- set selected choice in .kde/share/apps/kded/session/keyboard/layout_memory.xml
 - disable screen lock in GNOME
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
