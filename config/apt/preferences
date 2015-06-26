@@ -1,3 +1,7 @@
+Package: amsynth
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
 Package: libreoffice*
 Pin: release n=jessie-backports
 Pin-Priority: 999
