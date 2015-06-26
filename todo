@@ -18,6 +18,7 @@
 	- samba (enables folder sharing but increases boot time)
 	- kile
 	- lyx
+	- tuxpaint
 	- steam (has to activate multiarch on amd64)
 	- wine (also multiarch on amd64)
 	- install (lernstick-)visualvm together with netbeans (package "Java development environment")
@@ -48,6 +49,7 @@
 - dlcopy:
 	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
+
 - put third party debs into our repository:
 	- alice2
 	- cmaptools (license!?)
