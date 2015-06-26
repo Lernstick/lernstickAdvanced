@@ -45,6 +45,8 @@
 #
 # * kigo needs gnugo
 #
+# * marble recommends monav-routing-daemon
+#
 #################################################################################################
 acpi
 acpi-support
@@ -225,6 +227,7 @@ gnome-disk-utility
 gnome-maps
 gnome-nettool
 gnome-shell-extensions
+gnome-software
 gnome-sound-recorder
 gnome-system-monitor
 gnome-system-tools
@@ -476,6 +479,7 @@ metacity
 #miro
 mobile-broadband-provider-info 
 modemmanager
+monav-routing-daemon
 morris
 mousetweaks
 mtools
