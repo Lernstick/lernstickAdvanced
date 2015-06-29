@@ -4,8 +4,6 @@
 
 - show synaptiks only in KDE
 
-- preseeding for steam package
-
 - preinstall lernstick-wine on i386
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
