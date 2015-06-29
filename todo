@@ -91,7 +91,6 @@
 		- exfat-utils
 		- firmware-nonfree
 		- gnome
-		- gnucash
 		- i965-va-driver
 		- linux (including aufs!?)
 		- mate
