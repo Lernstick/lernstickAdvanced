@@ -18,7 +18,7 @@
 	- samba (enables folder sharing but increases boot time)
 	- kile
 	- lyx
-	- tuxpaint
+	- webweaver desktop
 	- steam (has to activate multiarch on amd64)
 	- wine (also multiarch on amd64)
 	- install (lernstick-)visualvm together with netbeans (package "Java development environment")
@@ -53,7 +53,6 @@
 - put third party debs into our repository:
 	- alice2
 	- cmaptools (license!?)
-	- freedoko
 	- kara
 	- libreoffice-languagetool
 	- libreoffice-templatepack

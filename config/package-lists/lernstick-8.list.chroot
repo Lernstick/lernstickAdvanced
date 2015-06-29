@@ -158,7 +158,7 @@ lernstick-thunar
 lernstick-toporopa
 lernstick-totem
 lernstick-tracker-gui
-#lernstick-tuxpaint
+lernstick-tuxpaint
 lernstick-tuxtype
 lernstick-unserkoerper
 lernstick-usertemplate
@@ -195,5 +195,5 @@ rscc
 rscc-defaults-lernstick
 tigerjython
 tipp10
-webweaverdesktop
+#webweaverdesktop
 xlogo-ide
