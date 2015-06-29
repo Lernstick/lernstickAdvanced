@@ -19,6 +19,7 @@
 	- kile
 	- lyx
 	- webweaver desktop
+	- (live-)enigma(-data)
 	- steam (has to activate multiarch on amd64)
 	- wine (also multiarch on amd64)
 	- install (lernstick-)visualvm together with netbeans (package "Java development environment")
