@@ -1,24 +1,8 @@
-Package: amsynth
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
-Package: libreoffice*
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
-Package: python3-uno
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
-Package: uno-libs3
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
-Package: ure
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
 Package: 0ad*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: amsynth
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
@@ -30,11 +14,15 @@ Package: hedgewars*
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
-Package: wesnoth-1.12*
+Package: libaqbanking-d*
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
-Package: wireshark*
+Package: libaqbanking35*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: libreoffice*
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
@@ -50,7 +38,27 @@ Package: libwsutil*
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
+Package: python3-uno
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
 Package: tshark
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: uno-libs3
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: ure
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: wesnoth-1.12*
+Pin: release n=jessie-backports
+Pin-Priority: 999
+
+Package: wireshark*
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
