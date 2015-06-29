@@ -73,6 +73,7 @@ lernstick-jamendo
 lernstick-jfractionlab
 lernstick-kalgebra
 lernstick-kcalc
+lernstick-kde-config-touchpad
 lernstick-kde-workspace-randr
 lernstick-kgeography
 lernstick-kinderwald
@@ -183,7 +184,7 @@ lernstick-xournal
 lernstick-xsane
 lernstick-zenmap
 live-armagetronad
-live-enigma
+#live-enigma
 live-extremetuxracer
 live-foobillardplus
 live-pathological
@@ -195,5 +196,4 @@ rscc
 rscc-defaults-lernstick
 tigerjython
 tipp10
-#webweaverdesktop
 xlogo-ide

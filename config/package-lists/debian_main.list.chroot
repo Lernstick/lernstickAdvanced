@@ -152,8 +152,8 @@ eboard-extras-pack1
 ecryptfs-utils
 eject
 ekiga
-enigma
-enigma-data
+#enigma
+#enigma-data
 #epoptes
 #epoptes-client
 exfat-fuse
