@@ -21,6 +21,7 @@
 	- steam (has to activate multiarch on amd64)
 	- wine (also multiarch on amd64)
 	- install (lernstick-)visualvm together with netbeans (package "Java development environment")
+	- tts package (gespeaker + mbrola voices for supported languages)
 	- detect and use correct architecture for:
 		- google earth
 		- skype
