@@ -159,7 +159,7 @@ lernstick-thunar
 lernstick-toporopa
 lernstick-totem
 lernstick-tracker-gui
-lernstick-tuxpaint
+#lernstick-tuxpaint
 lernstick-tuxtype
 lernstick-unserkoerper
 lernstick-usertemplate
@@ -183,6 +183,8 @@ lernstick-xfce4-terminal
 lernstick-xournal
 lernstick-xsane
 lernstick-zenmap
+libreoffice-languagetool
+libreoffice-templatepack
 live-armagetronad
 #live-enigma
 live-extremetuxracer
@@ -190,7 +192,7 @@ live-foobillardplus
 live-pathological
 live-pingus
 live-swapfile
-omnitux
+#omnitux
 pauker
 rscc
 rscc-defaults-lernstick
