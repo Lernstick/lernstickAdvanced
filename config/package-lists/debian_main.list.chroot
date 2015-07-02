@@ -645,8 +645,8 @@ totem-plugins
 tumbler
 tumbler-plugins-extra
 tuxmath
-tuxpaint
-tuxpaint-stamps-default
+#tuxpaint
+#tuxpaint-stamps-default
 tuxtype
 tuxtype-data
 tuxtype-data-nonfree
