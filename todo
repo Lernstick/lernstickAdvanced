@@ -83,6 +83,7 @@
 	- lernstick-plymouth
 	- lernstick-wine
 - switch live-swapfile from sysvinit to systemd/live-config/...
+- blender: activate add-on “Add Mesh Extra Objets”
 - backports:
 	- todo:
 		- cinnamon
