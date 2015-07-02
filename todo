@@ -2,7 +2,7 @@
 	- wl driver crashes on HP Compaq nx9105
 	- update broadcom package to include support for Lenovo Yoga 3
 
-- show synaptiks only in KDE
+- gdm fails to start when kdm was used at previous boot
 
 - preinstall lernstick-wine on i386
 
@@ -17,18 +17,20 @@
 	- kile
 	- lyx
 	- webweaver desktop
+	- omnitux
 	- (live-)enigma(-data)
+	- (lernstick-)tuxpaint(-stamps-default)
 	- steam (has to activate multiarch on amd64)
 	- wine (also multiarch on amd64)
-	- install (lernstick-)visualvm together with netbeans (package "Java development environment")
+	- Java Development Environment
+		- netbeans
+		- (lernstick-)visualvm
 	- tts package (gespeaker + mbrola voices for supported languages)
 	- detect and use correct architecture for:
 		- google earth
 		- skype
 
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
-
-- gdm fails to start when kdm was used at previous boot
 
 - test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
 - mac volume label still doesn't seem to work (tested on Mac@home)
@@ -54,8 +56,6 @@
 	- alice2
 	- cmaptools (license!?)
 	- kara
-	- libreoffice-languagetool
-	- libreoffice-templatepack
 	- lxmed
 - package software
 	- tuxmathscrabble (http://www.asymptopia.org/software/tuxmathscrabble/)
