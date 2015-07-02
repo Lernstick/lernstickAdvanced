@@ -52,6 +52,8 @@
 	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
 
+- detect connection loss to system storage media and show notification to user
+
 - put third party debs into our repository:
 	- alice2
 	- cmaptools (license!?)
