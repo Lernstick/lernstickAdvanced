@@ -36,14 +36,8 @@
 - mac volume label still doesn't seem to work (tested on Mac@home)
 
 - set keyboard at every boot
-	- always run 0150-keybard-configuration in live-config
-	- GNOME:
-		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch(fr)'), ('xkb', 'us'), ('xkb', 'it'), ('xkb', 'fr'), ('xkb', 'de')]"
-		"ch(fr)" does not work, must be "ch+fr"
-	- KDE:
-		- disable 1060-kde-services in live-config
-		- move relevant parts to lernstick-config
-		- set selected choice in .kde/share/apps/kded/session/keyboard/layout_memory.xml
+	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
+
 - disable screen lock in GNOME
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
@@ -51,6 +45,8 @@
 - dlcopy:
 	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
+
+- GNOME displays all Java applications as "Domination" (wtf?!)
 
 - detect connection loss to system storage media and show notification to user
 
