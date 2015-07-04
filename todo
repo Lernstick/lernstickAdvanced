@@ -4,6 +4,16 @@
 
 - gdm fails to start when kdm was used at previous boot
 
+- GNOME displays all Java applications as "Domination"
+	- GNOME wants the lowercase version of the StartupWMClass entry to match the desktop file name
+	  (see https://wiki.gnome.org/Projects/GnomeShell/ApplicationBased)
+	- we need to check and fix the desktop files of all java applications
+
+- set keyboard at every boot
+	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
+	- Cinnamon: autostart script successfully updates layout list but is too late
+	  to update the selection (previously selected layout is kept until next login)
+
 - preinstall lernstick-wine on i386
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
@@ -35,9 +45,6 @@
 - test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
 - mac volume label still doesn't seem to work (tested on Mac@home)
 
-- set keyboard at every boot
-	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
-
 - disable screen lock in GNOME
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
@@ -45,8 +52,6 @@
 - dlcopy:
 	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
-
-- GNOME displays all Java applications as "Domination" (wtf?!)
 
 - detect connection loss to system storage media and show notification to user
 
