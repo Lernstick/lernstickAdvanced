@@ -47,6 +47,8 @@
 #
 # * marble recommends monav-routing-daemon
 #
+# * enlightenment recommends terminology
+#
 #################################################################################################
 acpi
 acpi-support
@@ -637,6 +639,7 @@ telepathy-idle
 telepathy-rakia
 telepathy-salut
 telnet
+terminology
 testdisk
 timidity
 tofrodos
