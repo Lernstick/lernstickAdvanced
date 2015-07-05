@@ -13,8 +13,12 @@
 	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
 	- Cinnamon: autostart script successfully updates layout list but is too late
 	  to update the selection (previously selected layout is kept until next login)
+	- Enlightenment:
+		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
 
 - preinstall lernstick-wine on i386
+
+- show terminology only in enlightement
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
