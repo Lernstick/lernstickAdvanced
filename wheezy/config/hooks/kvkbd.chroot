@@ -1,4 +1,6 @@
 #!/bin/sh
 # see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=680192
-echo "unpacking kvkbd handbook"
-gunzip /usr/share/doc/kde/HTML/en/kvkbd/index.docbook.gz
+if [ -f /usr/share/doc/kde/HTML/en/kvkbd/index.docbook.gz ] ; then
+    echo "unpacking kvkbd handbook"
+    gunzip /usr/share/doc/kde/HTML/en/kvkbd/index.docbook.gz
+fi
