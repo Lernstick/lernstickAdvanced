@@ -1,6 +1,8 @@
 - broadcom package:
 	- wl driver crashes on HP Compaq nx9105
-	- update broadcom package to include support for Lenovo Yoga 3
+	- fix live-config 1190-broadcom-sta:
+		- installation test on wrong file (from broadcom-sta-common)
+		- blacklist wl when no wl card found!
 
 - gdm fails to start when kdm was used at previous boot
 
@@ -31,9 +33,6 @@
 	- kile
 	- lyx
 	- webweaver desktop
-	- omnitux
-	- (live-)enigma(-data)
-	- (lernstick-)tuxpaint(-stamps-default)
 	- steam (has to activate multiarch on amd64)
 	- wine (also multiarch on amd64)
 	- Java Development Environment
