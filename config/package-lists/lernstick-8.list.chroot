@@ -155,11 +155,11 @@ lernstick-synfigstudio
 lernstick-system-config-printer
 lernstick-systemsettings
 lernstick-tanglet
+lernstick-terminology
 lernstick-thunar
 lernstick-toporopa
 lernstick-totem
 lernstick-tracker-gui
-#lernstick-tuxpaint
 lernstick-tuxtype
 lernstick-unserkoerper
 lernstick-usertemplate
@@ -186,7 +186,7 @@ lernstick-zenmap
 libreoffice-languagetool
 libreoffice-templatepack
 live-armagetronad
-#live-enigma
+live-enigma
 live-extremetuxracer
 live-foobillardplus
 live-pathological
