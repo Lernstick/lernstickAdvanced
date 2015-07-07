@@ -4,6 +4,8 @@
 		- installation test on wrong file (from broadcom-sta-common)
 		- blacklist wl when no wl card found!
 
+- dkms changes in wheezy are also needed in jessie (build for all kernels!)
+
 - gdm fails to start when kdm was used at previous boot
 
 - GNOME displays all Java applications as "Domination"
