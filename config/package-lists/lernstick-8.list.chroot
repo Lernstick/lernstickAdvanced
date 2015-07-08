@@ -118,6 +118,7 @@ lernstick-nepomuk-core-data
 lernstick-notenmax
 lernstick-okular
 lernstick-openclipart
+lernstick-openjdk-7-jre
 lernstick-openshot
 lernstick-openstreetmap
 lernstick-openthesaurus
@@ -170,6 +171,7 @@ lernstick-vokoscreen
 lernstickwelcome
 lernstick-weltmusik
 lernstick-wiktionary
+lernstick-wine
 lernstick-winff
 lernstick-wxmaxima
 lernstick-x11vnc
