@@ -8,40 +8,25 @@
 
 - gdm fails to start when kdm was used at previous boot
 
-- GNOME displays all Java applications as "Domination"
-	- GNOME wants the lowercase version of the StartupWMClass entry to match the desktop file name
-	  (see https://wiki.gnome.org/Projects/GnomeShell/ApplicationBased)
-	- we need to check and fix the desktop files of all java applications
-
 - set keyboard at every boot
 	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
-	- Cinnamon: autostart script successfully updates layout list but is too late
+	- Cinnamon & MATE: autostart script successfully updates layout list but is too late
 	  to update the selection (previously selected layout is kept until next login)
 	- Enlightenment:
 		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
 
-- preinstall lernstick-wine on i386
-
-- show terminology only in enlightement
+- live-guest
+	- update for jessie
+	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
-- missing packages:
-	- lernstick-icedtea-netx
-	- lernstick-openjdk-7-jre
+- GNOME wants the lowercase version of the StartupWMClass entry to match the desktop file name
+	- see https://wiki.gnome.org/Projects/GnomeShell/ApplicationBased
+	- could be tricky for dlcopy-pu version
 
 - lernstickWelcome:
-	- samba (enables folder sharing but increases boot time)
-	- kile
-	- lyx
-	- webweaver desktop
-	- steam (has to activate multiarch on amd64)
-	- wine (also multiarch on amd64)
-	- Java Development Environment
-		- netbeans
-		- (lernstick-)visualvm
-	- tts package (gespeaker + mbrola voices for supported languages)
-	- detect and use correct architecture for:
+	- detect and use correct architecture (i386 or amd64) for:
 		- google earth
 		- skype
 
@@ -51,6 +36,7 @@
 - mac volume label still doesn't seem to work (tested on Mac@home)
 
 - disable screen lock in GNOME
+
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
 	- try boot options "video=vesa:off vga=normal"
@@ -89,9 +75,9 @@
 	- lernstick-kmix
 	- lernstick-mount-exchange
 	- lernstick-plymouth
-	- lernstick-wine
 - switch live-swapfile from sysvinit to systemd/live-config/...
 - blender: activate add-on “Add Mesh Extra Objets”
+- tts package (gespeaker + mbrola voices for supported languages)
 - backports:
 	- todo:
 		- cinnamon
