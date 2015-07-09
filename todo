@@ -26,9 +26,25 @@
 	- could be tricky for dlcopy-pu version
 
 - lernstickWelcome:
+	- add findbugs to netbeans package ("Java development package"?)
+	- makehuman
+	- ocr package:
+		- gimagereader
+		- tesseract-ocr-deu
+		- tesseract-ocr-deu-frak
+		- tesseract-ocr-eng
+		- tesseract-ocr-fra
+		- tesseract-ocr-ita
+		- tesseract-ocr-por
+		- tesseract-ocr-rus
+		- tesseract-ocr-spa
 	- detect and use correct architecture (i386 or amd64) for:
 		- google earth
 		- skype
+
+- test new programs:
+	- flightgear
+	- fgrun
 
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 
