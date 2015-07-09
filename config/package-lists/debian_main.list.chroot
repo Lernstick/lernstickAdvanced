@@ -49,6 +49,8 @@
 #
 # * enlightenment recommends terminology
 #
+# * qreator needs geoclue-hostip
+#
 #################################################################################################
 acpi
 acpi-support
@@ -202,6 +204,7 @@ gecko-mediaplayer
 gedit
 gedit-plugins
 genisoimage
+geoclue-hostip
 #geogebra-gnome
 #geogebra-kde
 ghex
@@ -240,7 +243,6 @@ gnuplot-x11
 gpart
 gramps
 graphviz
-gromacs
 gstreamer1.0-fluendo-mp3
 gstreamer1.0-libav
 gstreamer1.0-plugins-bad
@@ -580,6 +582,7 @@ qelectrotech
 qelectrotech-data
 qelectrotech-examples
 qjackctl
+qreator
 qtqr
 quassel-kde4
 qxw
