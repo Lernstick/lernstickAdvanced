@@ -89,8 +89,6 @@
 		- linux (including aufs!?)
 		- mate
 		- phoronix-test-suite (orphaned!?)
-		- qreator
-		- xfce4
 		- xorg-server
 	- backports pinned to official backports but newer version available:
 		- darktable
@@ -107,6 +105,10 @@
 	- backporting failed:
 		- ardour3
 		- calibre
-		- owncloud
 		- netbeans
+		- owncloud
+		- pentobi (dependencies to KDE 5)
 		- pspp 0.8.5 (initdb: cannot be run as root)
+		- xfce4
+			- error while backporting libxfce4util-4.12.1:
+				dh_install: libxfce4util-dev missing files (usr/share/gtk-doc/html/libxfce4util/*), aborting
