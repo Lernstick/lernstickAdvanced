@@ -1,12 +1,4 @@
-- broadcom package:
-	- wl driver crashes on HP Compaq nx9105
-	- fix live-config 1190-broadcom-sta:
-		- installation test on wrong file (from broadcom-sta-common)
-		- blacklist wl when no wl card found!
-
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
-
-- gdm fails to start when kdm was used at previous boot
 
 - set keyboard at every boot
 	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
@@ -21,26 +13,15 @@
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
-- GNOME wants the lowercase version of the StartupWMClass entry to match the desktop file name
-	- see https://wiki.gnome.org/Projects/GnomeShell/ApplicationBased
-	- could be tricky for dlcopy-pu version
-
 - lernstickWelcome:
 	- add findbugs to netbeans package ("Java development package"?)
 	- makehuman
-	- ocr package:
-		- gimagereader
-		- tesseract-ocr-deu
-		- tesseract-ocr-deu-frak
-		- tesseract-ocr-eng
-		- tesseract-ocr-fra
-		- tesseract-ocr-ita
-		- tesseract-ocr-por
-		- tesseract-ocr-rus
-		- tesseract-ocr-spa
 	- detect and use correct architecture (i386 or amd64) for:
 		- google earth
 		- skype
+
+- efi blacklist
+	- also blacklist kernel driver (test on MacBook)
 
 - test new programs:
 	- flightgear
@@ -56,8 +37,8 @@
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
 	- try boot options "video=vesa:off vga=normal"
+
 - dlcopy:
-	- high-res icon
 	- when data partition of source is read-only, data partition mode shows "read and write"
 
 - detect connection loss to system storage media and show notification to user
@@ -72,28 +53,38 @@
 	- freedoko http://free-doko.sourceforge.net/de/FreeDoko.html
 	- xlogo (http://xlogo.tuxfamily.org/)
 	- xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
+
 - Audacity: high-res icon
+
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
+
 - MacBook@work:
 	- kdm timeout seems to be too small (starting with DVD)
-	- WLAN does not work
+
 - remote support on HTTPS (easier with Swisscom firewalls)
 	- add https://meet.jit.si/lernstick to chromium bookmarks
 	- preinstall jitsi desktop streamer plugin in chromium
+
 - JFractionLab: creating worksheets doesn't work
+
 - user template:
 	- iceweasel: default bookmarks
 	- xmoto: minimal settings
+
 - live-startup-scripts for:
 	- megaglest
 	- hedgewars
+
 - test if we still need these packages from wheezy:
 	- lernstick-kmix
-	- lernstick-mount-exchange
 	- lernstick-plymouth
+
 - switch live-swapfile from sysvinit to systemd/live-config/...
+
 - blender: activate add-on “Add Mesh Extra Objets”
+
 - tts package (gespeaker + mbrola voices for supported languages)
+
 - backports:
 	- todo:
 		- cinnamon
