@@ -87,11 +87,11 @@ build_image()
 		if [ "${SOURCE}" = "true" ]
 		then
 			# debian live sources
-			mv source.debian-live.tar ${PREFIX}_source.debian-live.tar
+			mv live-image-source.live.tar ${PREFIX}-source.live.tar
 
 			# debian sources
-			DEBIAN_TAR="${PREFIX}_source.debian.tar"
-			mv source.debian.tar ${DEBIAN_TAR}
+			DEBIAN_TAR="${PREFIX}-source.debian.tar"
+			mv live-image-source.debian.tar ${DEBIAN_TAR}
 			md5sum ${DEBIAN_TAR} > ${DEBIAN_TAR}.md5
 		fi
 
