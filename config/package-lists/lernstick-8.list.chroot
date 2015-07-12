@@ -159,6 +159,7 @@ lernstick-systemsettings
 lernstick-tanglet
 lernstick-terminology
 lernstick-thunar
+lernstick-tipp10
 lernstick-toporopa
 lernstick-totem
 lernstick-tracker-gui
@@ -195,7 +196,6 @@ live-foobillardplus
 live-pathological
 live-pingus
 live-swapfile
-#omnitux
 pauker
 rscc
 rscc-defaults-lernstick
