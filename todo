@@ -1,11 +1,15 @@
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
+- boot options for system and persistence media with preference and fallback instead of hard selection
+
 - set keyboard at every boot
 	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
 	- Cinnamon & MATE: autostart script successfully updates layout list but is too late
 	  to update the selection (previously selected layout is kept until next login)
 	- Enlightenment:
 		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
+
+- new world 2 doesn't work with chromium?
 
 - live-guest
 	- update for jessie
@@ -40,6 +44,8 @@
 
 - dlcopy:
 	- when data partition of source is read-only, data partition mode shows "read and write"
+	- show data partition combobox also when creating only a boot image
+	- create a new uuid when copying or creating a new image
 
 - detect connection loss to system storage media and show notification to user
 
