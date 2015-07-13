@@ -9,6 +9,21 @@
 	- Enlightenment:
 		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
 
+- persistence media boot option does not get written back to bootloader
+	- is "usb" a supported option?
+	- manpage says only removable|removable-usb, see
+	  http://live.debian.net/manpages/stable/en/html/live-boot.7.html
+
+- live-swapfile needs interaction with the user at system startup
+	- as systemd service?
+		- start before display managers
+		- dialog needs a getty
+	- in live-config?
+		- plymouth user interaction
+			- simply sucks
+			- availability is not guaranteed
+		- gettys are not there yet
+
 - new world 2 doesn't work with chromium?
 
 - live-guest
@@ -44,7 +59,6 @@
 
 - dlcopy:
 	- when data partition of source is read-only, data partition mode shows "read and write"
-	- show data partition combobox also when creating only a boot image
 	- create a new uuid when copying or creating a new image
 
 - detect connection loss to system storage media and show notification to user
@@ -84,8 +98,6 @@
 - test if we still need these packages from wheezy:
 	- lernstick-kmix
 	- lernstick-plymouth
-
-- switch live-swapfile from sysvinit to systemd/live-config/...
 
 - blender: activate add-on “Add Mesh Extra Objets”
 
