@@ -6,3 +6,8 @@ mv vmlinuz-3.16.0-4-586 vmlinuz1 || true
 mv vmlinuz-3.16.0-4-686-pae vmlinuz2 || true
 mv initrd.img-3.16.0-4-586 initrd1.img || true
 mv initrd.img-3.16.0-4-686-pae initrd2.img || true
+
+mv vmlinuz-4.0.0-2-lernstick-586 vmlinuz1 || true
+mv vmlinuz-4.0.0-2-lernstick-686-pae vmlinuz2 || true
+mv initrd.img-4.0.0-2-lernstick-586 initrd1.img || true
+mv initrd.img-4.0.0-2-lernstick-686-pae initrd2.img || true
