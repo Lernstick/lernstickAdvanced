@@ -26,6 +26,8 @@
 
 - new world 2 doesn't work with chromium?
 
+- remote support setup so that Gaudenz can also provide support
+
 - live-guest
 	- update for jessie
 	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
@@ -48,7 +50,6 @@
 
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 
-- test if mac volumeicon now looks good on black background (Mac@Stan or Mac@Nicolas)
 - mac volume label still doesn't seem to work (tested on Mac@home)
 
 - disable screen lock in GNOME
@@ -112,6 +113,29 @@
 		- gnome
 		- i965-va-driver
 		- linux (including aufs!?)
+			- patching in aufs (see aufs README):
+				- cd linux-sources
+				- patch -p1 </home/blah/aufs4-standalone/aufs4-base.patch
+				- patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
+				- patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
+				- patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
+				- copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
+				- adopt debian/config/config (see previous kernels) to build module
+				- change debian/config/defines e.g.:
+					- abiname: 2-lernstick
+			- build all packages:
+				- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
+				- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae DEBIAN_KERNEL_JOBS=8
+				- fakeroot make -f debian/rules.gen setup_i386_none_586
+				- fakeroot make -f debian/rules.gen binary-arch_i386_none_586 DEBIAN_KERNEL_JOBS=8
+			- build common headers:
+				- fakeroot make -f debian/rules.gen binary-arch_i386_none_real DEBIAN_KERNEL_JOBS=8
+			- build linux-compiler package:
+				- fakeroot make -f debian/rules.gen binary-arch_i386_extra DEBIAN_KERNEL_JOBS=8
+			- build libc-dev package:
+				- fakeroot make -f debian/rules.gen binary-libc-dev_i386 DEBIAN_KERNEL_JOBS=8
+			- backport linux-tools
+			- cleanup: make -f debian/rules clean
 		- mate
 		- phoronix-test-suite (orphaned!?)
 		- xorg-server
