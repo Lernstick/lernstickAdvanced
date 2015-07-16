@@ -112,7 +112,8 @@
 		- firmware-nonfree
 		- gnome
 		- i965-va-driver
-		- linux (see backports_kernel.txt)
+		- linux 4.1 (see backports_kernel.txt)
+			- fglrx does not compile, see https://bugs.launchpad.net/ubuntu/+source/fglrx-installer/+bug/1449448
 		- mate
 		- phoronix-test-suite (orphaned!?)
 		- xorg-server
