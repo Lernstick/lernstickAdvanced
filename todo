@@ -1,5 +1,9 @@
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
+- test supertuxkart with new kernel/drivers
+
+- where is my kernel pinning hook again?!
+
 - boot options for system and persistence media with preference and fallback instead of hard selection
 
 - set keyboard at every boot
