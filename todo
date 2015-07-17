@@ -28,7 +28,9 @@
 			- availability is not guaranteed
 		- gettys are not there yet
 
-- new world 2 doesn't work with chromium?
+- improve support for surface 3:
+       - camera: https://bugzilla.redhat.com/show_bug.cgi?id=1192065
+       - buttons, battery, ...: https://bugzilla.kernel.org/show_bug.cgi?id=84651
 
 - remote support setup so that Gaudenz can also provide support
 
