@@ -28,6 +28,13 @@
 			- availability is not guaranteed
 		- gettys are not there yet
 
+- more categories in GNOME: https://wiki.gnome.org/HowDoI/AppFolders
+	- dconf dump /org/gnome/desktop/app-folders/ > lernstick_gnome_app_folders.dump
+	- dconf reset -f /org/gnome/desktop/app-folders/
+	- dconf load /org/gnome/desktop/app-folders/ < lernstick_gnome_app_folders.dump
+
+- hide arandr in gnome?
+
 - improve support for surface 3:
        - camera: https://bugzilla.redhat.com/show_bug.cgi?id=1192065
        - buttons, battery, ...: https://bugzilla.kernel.org/show_bug.cgi?id=84651
