@@ -1,0 +1,69 @@
+[/]
+folder-children=['Utilities', 'Game', 'AudioVideo', 'Settings', 'Development', 'Lernstick', 'Education', 'Graphics', 'Office', 'Network', 'System', 'Compatibility']
+
+[folders/Game]
+translate=true
+categories=['Game']
+name='Game.directory'
+
+[folders/Compatibility]
+translate=true
+categories=['Emulator']
+name='compatibility.directory'
+
+[folders/Sundry]
+translate=true
+categories=['X-GNOME-Sundry']
+apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
+name='X-GNOME-Sundry.directory'
+
+[folders/Graphics]
+translate=true
+categories=['Graphics']
+name='Graphics.directory'
+
+[folders/Settings]
+translate=true
+categories=['Settings']
+name='Settings.directory'
+
+[folders/Utilities]
+translate=true
+categories=['X-GNOME-Utilities', 'Utility']
+apps=['org.gnome.baobab.desktop', 'deja-dup-preferences.desktop', 'eog.desktop', 'evince.desktop', 'org.gnome.FileRoller.desktop', 'gnome-calculator.desktop', 'gnome-dictionary.desktop', 'gnome-disks.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Screenshot.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-terminal.desktop', 'gnome-tweak-tool.desktop', 'gucharmap.desktop', 'seahorse.desktop', 'vinagre.desktop', 'yelp.desktop']
+name='X-GNOME-Utilities.directory'
+
+[folders/System]
+translate=true
+categories=['System', 'PackageManager']
+name='System-Tools.directory'
+
+[folders/Office]
+translate=true
+categories=['Office']
+name='Office.directory'
+
+[folders/Development]
+translate=true
+categories=['Development']
+name='Development.directory'
+
+[folders/Lernstick]
+translate=true
+categories=['X-lernstick']
+name='lernstick-system.directory'
+
+[folders/AudioVideo]
+translate=true
+categories=['AudioVideo']
+name='AudioVideo.directory'
+
+[folders/Education]
+translate=true
+categories=['Education', 'X-lernstick-Astronomy', 'X-lernstick-History', 'Music', 'Geography', 'Typewriting']
+name='Education.directory'
+
+[folders/Network]
+translate=true
+categories=['Network']
+name='Network.directory'

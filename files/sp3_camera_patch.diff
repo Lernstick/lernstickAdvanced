@@ -1,0 +1,24 @@
+--- linux-3.18.5-201.fc21.x86_64/drivers/media/usb/uvc/uvc_driver.c	2015-02-11 17:51:14.624838248 -0500
++++ linux-3.18.5-201.fc21.x86_64/drivers/media/usb/uvc/uvc_driver.c	2015-02-11 18:03:08.666450232 -0500
+@@ -2506,6 +2506,22 @@ static struct usb_device_id uvc_ids[] =
+ 				| UVC_QUIRK_IGNORE_SELECTOR_UNIT },
+ 	/* Generic USB Video Class */
+ 	{ USB_INTERFACE_INFO(USB_CLASS_VIDEO, 1, 0) },
++	/* Microsoft Surface Pro 3 Front */
++        { .match_flags          = USB_DEVICE_ID_MATCH_DEVICE
++                                | USB_DEVICE_ID_MATCH_INT_INFO,
++          .idVendor             = 0x045e,
++          .idProduct            = 0x07be,
++          .bInterfaceClass      = USB_CLASS_VIDEO,
++          .bInterfaceSubClass   = 1,
++          .bInterfaceProtocol   = 1 },
++	/* Microsoft Surface Pro 3 Rear */
++        { .match_flags          = USB_DEVICE_ID_MATCH_DEVICE
++                                | USB_DEVICE_ID_MATCH_INT_INFO,
++          .idVendor             = 0x045e,
++          .idProduct            = 0x07bf,
++          .bInterfaceClass      = USB_CLASS_VIDEO,
++          .bInterfaceSubClass   = 1,
++          .bInterfaceProtocol   = 1 },
+ 	{}
+ };
