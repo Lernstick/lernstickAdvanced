@@ -28,11 +28,6 @@
 			- availability is not guaranteed
 		- gettys are not there yet
 
-- more categories in GNOME: https://wiki.gnome.org/HowDoI/AppFolders
-	- dconf dump /org/gnome/desktop/app-folders/ > lernstick_gnome_app_folders.dump
-	- dconf reset -f /org/gnome/desktop/app-folders/
-	- dconf load /org/gnome/desktop/app-folders/ < lernstick_gnome_app_folders.dump
-
 - hide arandr in gnome?
 
 - improve support for surface 3:
@@ -49,7 +44,8 @@
 
 - lernstickWelcome:
 	- add findbugs to netbeans package ("Java development package"?)
-	- makehuman
+	- add makehuman
+	- add flightgear/fgrun
 	- detect and use correct architecture (i386 or amd64) for:
 		- google earth
 		- skype
@@ -57,15 +53,9 @@
 - efi blacklist
 	- also blacklist kernel driver (test on MacBook)
 
-- test new programs:
-	- flightgear
-	- fgrun
-
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 
 - mac volume label still doesn't seem to work (tested on Mac@home)
-
-- disable screen lock in GNOME
 
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
