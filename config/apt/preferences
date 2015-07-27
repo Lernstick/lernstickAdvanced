@@ -6,10 +6,6 @@ Package: amsynth
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
-Package: darktable*
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
 Package: fonts-opensymbol
 Pin: release n=jessie-backports
 Pin-Priority: 999
@@ -67,9 +63,5 @@ Pin: release n=jessie-backports
 Pin-Priority: 999
 
 Package: xserver-xorg-video-intel
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
-Package: youtube-dl
 Pin: release n=jessie-backports
 Pin-Priority: 999

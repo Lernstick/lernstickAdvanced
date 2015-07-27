@@ -120,9 +120,6 @@
 		- mate
 		- phoronix-test-suite (orphaned!?)
 		- xorg-server
-	- backports pinned to official backports but newer version available:
-		- darktable
-		- youtube-dl
 	- backports with bugs:
 		- blender (international fonts are not available)
 		- fritzing (needs fritzing-parts which is not yet available)
