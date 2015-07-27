@@ -53,6 +53,8 @@
 #
 # * gimagereader needs the tesseract-ocr-* language files
 #
+# * gnome-control-center recommends cracklib-runtime
+#
 #################################################################################################
 acpi
 acpi-support
@@ -125,6 +127,7 @@ cmt
 connectagram
 console-setup
 crack-attack
+cracklib-runtime
 cryptsetup
 crystalcursors
 cups
