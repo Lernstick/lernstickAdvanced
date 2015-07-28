@@ -210,8 +210,8 @@ gedit
 gedit-plugins
 genisoimage
 geoclue-hostip
-#geogebra-gnome
-#geogebra-kde
+geogebra-gnome
+geogebra-kde
 ghex
 gimagereader
 gimp
@@ -235,6 +235,7 @@ gnome-core
 gnome-disk-utility
 gnome-maps
 gnome-nettool
+gnome-packagekit
 gnome-shell-extensions
 gnome-software
 gnome-sound-recorder
@@ -320,7 +321,6 @@ kamera
 kanagram
 kate
 katomic
-kbattleship
 kblackbox
 kblocks
 kbounce
@@ -333,6 +333,7 @@ kdeartwork-emoticons
 kdeartwork-style
 kdeartwork-theme-icon
 kdeartwork-theme-window
+kdeartwork-wallpapers
 kde-baseapps-bin
 kde-base-artwork
 kde-config-baloo-advanced
@@ -361,7 +362,6 @@ kde-telepathy-filetransfer-handler
 kde-telepathy-minimal
 kde-telepathy-send-file
 kde-telepathy-text-ui
-kdewallpapers
 kde-window-manager
 kde-workspace-randr
 kdf
@@ -400,6 +400,7 @@ kmines
 kmix
 kmousetool
 kmplot
+knavalbattle
 knetwalk
 knode
 knotes
@@ -469,7 +470,6 @@ libreoffice-l10n-ru
 libreoffice-math
 libreoffice-ogltrans
 libreoffice-pdfimport
-libreoffice-presentation-minimizer
 libreoffice-report-builder
 libreoffice-style-crystal
 libreoffice-style-galaxy
@@ -577,9 +577,9 @@ pinta
 pioneers
 plasma-desktop
 plasma-netbook
+plasma-nm
 plasma-wallpapers-addons
 plasma-widget-folderview
-plasma-widget-networkmanagement
 plasma-widgets-addons
 playonlinux
 plymouth
@@ -616,7 +616,6 @@ remmina-plugin-xdmcp
 rfkill
 rsync
 rtkit
-#samba
 samplerate-programs
 sane
 sane-utils
@@ -678,13 +677,10 @@ totem-plugins
 tumbler
 tumbler-plugins-extra
 tuxmath
-#tuxpaint
-#tuxpaint-stamps-default
 tuxtype
 tuxtype-data
 tuxtype-data-nonfree
 unzip
-update-notifier
 usb-modeswitch
 usbutils
 user-setup
@@ -695,7 +691,6 @@ vim-gtk
 virtuoso-minimal
 vlc
 vlc-plugin-fluidsynth
-vlc-plugin-pulse
 vmpk
 vokoscreen
 vorbis-tools
