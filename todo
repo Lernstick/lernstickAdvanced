@@ -30,6 +30,8 @@
 
 - hide arandr in gnome?
 
+- fix online marker in TigerJython
+
 - improve support for surface 3:
        - camera: https://bugzilla.redhat.com/show_bug.cgi?id=1192065
        - buttons, battery, ...: https://bugzilla.kernel.org/show_bug.cgi?id=84651
@@ -115,20 +117,14 @@
 		- firmware-nonfree
 		- gnome
 		- i965-va-driver
-		- linux 4.1 (see backports_kernel.txt)
-			- fglrx does not compile, see https://bugs.launchpad.net/ubuntu/+source/fglrx-installer/+bug/1449448
 		- mate
 		- phoronix-test-suite (orphaned!?)
 		- xorg-server
 	- backports with bugs:
-		- blender (international fonts are not available)
-		- fritzing (needs fritzing-parts which is not yet available)
 		- miro (freezes in youtube section)
-		- nvidia-graphics-drivers (failure during dkms install)
 		- openttd (needs newer gfx package)
 		- stopmotion (program crashes)
 		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
-		- virtualbox (breaks KDE in virtualbox)
 	- backporting failed:
 		- ardour3
 		- calibre
