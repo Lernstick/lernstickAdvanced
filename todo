@@ -30,6 +30,8 @@
 
 - hide arandr in gnome?
 
+- audacity config crashes on high resolution displays (e.g. on MS Surface)
+
 - fix online marker in TigerJython
 
 - improve support for surface 3:
@@ -80,7 +82,7 @@
 	- xlogo (http://xlogo.tuxfamily.org/)
 	- xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
 
-- Audacity: high-res icon
+- minetest: fix low-res icon in KDE
 
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
 
