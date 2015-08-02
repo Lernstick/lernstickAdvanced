@@ -55,6 +55,8 @@
 #
 # * gnome-control-center recommends cracklib-runtime
 #
+# * freemind-plugins-svg recommends fop (needed for PDF export)
+#
 #################################################################################################
 acpi
 acpi-support
@@ -178,12 +180,16 @@ foobillardplus
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
+fop
 fotowall
 freeciv-client-gtk
 freeciv-data
 freeciv-server
 freeciv-sound-standard
 freemind
+freemind-doc
+freemind-plugins-help
+freemind-plugins-svg
 freepats
 freespacenotifier
 frei0r-plugins
