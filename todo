@@ -1,17 +1,8 @@
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
-- test supertuxkart with new kernel/drivers
-
-- where is my kernel pinning hook again?!
-
-- boot options for system and persistence media with preference and fallback instead of hard selection
-
-- set keyboard at every boot
-	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
-	- Cinnamon & MATE: autostart script successfully updates layout list but is too late
-	  to update the selection (previously selected layout is kept until next login)
-	- Enlightenment:
-		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
+- live-guest
+	- update for jessie
+	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
 
 - persistence media boot option does not get written back to bootloader
 	- is "usb" a supported option?
@@ -28,7 +19,22 @@
 			- availability is not guaranteed
 		- gettys are not there yet
 
-- hide arandr in gnome?
+- dlcopy:
+	- when data partition of source is read-only, data partition mode shows "read and write"
+	- create a new uuid when copying or creating a new image
+
+- where is my kernel pinning hook again?! (also include linux-libc-dev)
+
+- boot options for system and persistence media with preference and fallback instead of hard selection
+
+- set keyboard at every boot
+	- disable 0150-keyboard-configuration and 1060-kde-services in live-config
+	- Cinnamon & MATE: autostart script successfully updates layout list but is too late
+	  to update the selection (previously selected layout is kept until next login)
+	- Enlightenment:
+		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
+
+- hide arandr in gnome? (ask Rene Schwarzinger)
 
 - audacity config crashes on high resolution displays (e.g. on MS Surface)
 
@@ -39,10 +45,6 @@
        - buttons, battery, ...: https://bugzilla.kernel.org/show_bug.cgi?id=84651
 
 - remote support setup so that Gaudenz can also provide support
-
-- live-guest
-	- update for jessie
-	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
@@ -65,10 +67,6 @@
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
 	- try boot options "video=vesa:off vga=normal"
 
-- dlcopy:
-	- when data partition of source is read-only, data partition mode shows "read and write"
-	- create a new uuid when copying or creating a new image
-
 - detect connection loss to system storage media and show notification to user
 
 - put third party debs into our repository:
@@ -83,6 +81,14 @@
 	- xlogo4schools (http://sourceforge.net/projects/xlogo4schools/)
 
 - minetest: fix low-res icon in KDE
+
+- fix low-res icons:
+	- pathological
+	- hydrogen
+	- eboard
+	- italc
+
+- check why epoptes eats up the cpu, fix it and re-add epoptes to default package list
 
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
 
@@ -116,7 +122,6 @@
 		- cinnamon
 		- efibootmgr
 		- exfat-utils
-		- firmware-nonfree
 		- gnome
 		- i965-va-driver
 		- mate
