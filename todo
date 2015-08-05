@@ -49,7 +49,9 @@
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
 - lernstickWelcome:
-	- add findbugs to netbeans package ("Java development package"?)
+	- Java Development package (formerly NetBeans)
+		- add sonar (http://sonar-pkg.sourceforge.net/) and check that findbugs is included
+		- PMD (static code analysis)
 	- add makehuman
 	- add flightgear/fgrun
 	- detect and use correct architecture (i386 or amd64) for:
