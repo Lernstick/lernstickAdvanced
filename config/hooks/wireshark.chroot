@@ -6,5 +6,8 @@
 # filesystem and on squashfs, but does not work for aufs filesystems. Thus the running
 # live system does not have the capabilities set. We fix this by setting the setuid bit
 # which also works on aufs.
-chmod u+s /usr/bin/dumpcap
+if [ -e /usr/bin/dumpcap ]
+then
+	chmod u+s /usr/bin/dumpcap
+fi
 
