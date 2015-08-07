@@ -31,8 +31,6 @@
 #
 # * kdenetwork-filesharing needs samba
 #
-# * gnome-system-tools are needed because it's the only GUI to change /etc/hostname
-#
 # * epoptes needs python-openssl
 #
 # * stopmotion needs vgrabbj
@@ -246,7 +244,6 @@ gnome-shell-extensions
 gnome-software
 gnome-sound-recorder
 gnome-system-monitor
-gnome-system-tools
 gnome-themes
 gnome-tweak-tool
 gnucap
