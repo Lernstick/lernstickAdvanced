@@ -74,7 +74,6 @@
 - put third party debs into our repository:
 	- alice2
 	- cmaptools (license!?)
-	- kara
 	- lxmed
 - package software
 	- tuxmathscrabble (http://www.asymptopia.org/software/tuxmathscrabble/)
@@ -88,7 +87,7 @@
 	- pathological
 	- hydrogen
 	- eboard
-	- italc
+	- rscc
 
 - check why epoptes eats up the cpu, fix it and re-add epoptes to default package list
 
