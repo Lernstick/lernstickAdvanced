@@ -88,6 +88,7 @@
 	- hydrogen
 	- eboard
 	- rscc
+	- glabels
 
 - check why epoptes eats up the cpu, fix it and re-add epoptes to default package list
 
@@ -115,8 +116,6 @@
 	- lernstick-plymouth
 
 - blender: activate add-on “Add Mesh Extra Objets”
-
-- tts package (gespeaker + mbrola voices for supported languages)
 
 - backports:
 	- todo:
