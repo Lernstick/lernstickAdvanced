@@ -85,8 +85,6 @@
 
 - fix low-res icons:
 	- pathological
-	- hydrogen
-	- eboard
 
 - check why epoptes eats up the cpu, fix it and re-add epoptes to default package list
 
