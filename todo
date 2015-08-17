@@ -20,7 +20,6 @@
 		- gettys are not there yet
 
 - dlcopy:
-	- when data partition of source is read-only, data partition mode shows "read and write"
 	- create a new uuid when copying or creating a new image
 
 - where is my kernel pinning hook again?! (also include linux-libc-dev)
@@ -33,8 +32,6 @@
 	  to update the selection (previously selected layout is kept until next login)
 	- Enlightenment:
 		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
-
-- hide arandr in gnome? (ask Rene Schwarzinger)
 
 - audacity config crashes on high resolution displays (e.g. on MS Surface)
 
