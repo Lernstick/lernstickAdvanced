@@ -19,6 +19,8 @@
 			- availability is not guaranteed
 		- gettys are not there yet
 
+- kernel panic on Shuttle@office
+
 - dlcopy:
 	- create a new uuid when copying or creating a new image
 
