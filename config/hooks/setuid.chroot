@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Some programs use capabilities (extended attributes) instead of setuid for
+# fine-grained control over superuser permissions.
+# Unfortunately, aufs does not support capabilities. Therefore we have to set
+# the setuid bit for these programs.
+
+PROGRAMS="/usr/bin/dumpcap /bin/ping"
+
+for i in ${PROGRAMS}
+do
+        if [ -e $i ]
+        then
+                chmod u+s $i
+        fi
+done
