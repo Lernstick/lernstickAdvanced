@@ -1,19 +1,6 @@
-#################################################################################################
-# Some notes:
-# -----------
-# 
-# * phoronix-test-suite needs:
-#	php5-curl
-#	php-fpdf
-#
-#################################################################################################
 amd64-microcode
 atmel-firmware
-bluez-firmware
 broadcom-sta-dkms
-celestia-common-nonfree
-etoys
-etoys-doc
 fglrx-control
 fglrx-modules-dkms
 firmware-adi
@@ -35,7 +22,6 @@ firmware-ralink
 firmware-realtek
 firmware-zd1211
 intel-microcode
-kstars-data-extra-tycho2
 libfglrx-amdxvba1
 libgl1-fglrx-glx
 libnvidia-encode1
@@ -44,9 +30,3 @@ nvidia-detect
 nvidia-driver
 nvidia-legacy-304xx-driver
 nvidia-legacy-340xx-driver
-openttd-opensfx
-p7zip-rar
-#phoronix-test-suite
-#php5-curl
-#php-fpdf
-scribus-doc
