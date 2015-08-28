@@ -1,7 +1,3 @@
-- install enigmail
-
-- use upstream owncloud and add owncloud-client-nautilus
-
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
 - live-guest

@@ -55,4 +55,6 @@ Common steps:
 - build libc-dev package:
 	- fakeroot make -f debian/rules.gen binary-libc-dev_i386 DEBIAN_KERNEL_JOBS=8
 - backport linux-tools
+	- apt-get source --only-source linux-tools=x.y.z
+	- call "dpkg-buildpackage -sa" two times in a row
 - cleanup: make -f debian/rules clean
