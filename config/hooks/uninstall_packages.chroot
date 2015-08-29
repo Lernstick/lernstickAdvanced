@@ -4,3 +4,17 @@
 apt-get remove --purge -y linux-image-4.0.0-2-lernstick-686-pae-dbg
 apt-get remove --purge -y linux-image-4.1.0-trunk-686-pae-dbg
 apt-get remove --purge -y linux-image-4.1.0-2-686-pae-dbg
+
+# Some unwanted packages are pulled in via metapackages.
+# We have to remove them here manually.
+apt-get remove --purge -y \
+	empathy \
+	empathy-common \
+	gnome-contacts \
+	gnome-dictionary \
+	gnome-disk-utility \
+	gnome-screenshot \
+	libtotem0 \
+	pidgin \
+	totem \
+	totem-common

@@ -7,15 +7,9 @@
 # 
 # * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not be compiled
 # 
-# * openttd-openmsx needs freepats
-#
 # * shutter needs libgoo-canvas-perl
 #
-# * parley needs krosspython
-#
 # * synaptic needs apt-xapian-index for quicksearch
-#
-# * openshot needs frei0r-plugins
 #
 # * musescore needs pulseaudio-utils for playback window
 #
@@ -25,35 +19,11 @@
 #		- csound
 #		- python-pyalsa
 #
-# * miro needs libavahi-compat-libdnssd1
-#
-# * netbeans needs libsvn-java
-#
-# * kdenetwork-filesharing needs samba
-#
-# * epoptes needs python-openssl
-#
-# * stopmotion needs vgrabbj
-#
 # * pulseaudio needs rtkit for stutterless output
-#
-# * qxw needs wngerman, wamerican-huge, wbritish-huge
-#
-# * gramps needs gir1.2-gexiv2-0.10 and gir1.2-osmgpsmap-1.0
-#
-# * kigo needs gnugo
-#
-# * marble recommends monav-routing-daemon
-#
-# * enlightenment recommends terminology
-#
-# * qreator needs geoclue-hostip
-#
-# * gimagereader needs the tesseract-ocr-* language files
 #
 # * gnome-control-center recommends cracklib-runtime
 #
-# * freemind-plugins-svg recommends fop (needed for PDF export)
+# * gnome-shell-extensions (the places extension) nees xdg-user-dirs
 #
 #################################################################################################
 acpi
@@ -62,30 +32,34 @@ acpitail
 acpitool
 alsa-utils
 anacron
-apper
-ark
+apt-xapian-index
 avahi-autoipd
 avahi-daemon
 avahi-utils
-baloo4
 bash-completion
+bzip2
+command-not-found
 console-setup
 cracklib-runtime
 cryptsetup
 cups
 cups-backend-bjnp
 cups-bsd
+deborphan
 desktop-base
 dialog
 dkms
 eject
+exfat-fuse
+exfat-utils
 ffmpegthumbs
-filelight
+file
 firmware-linux-free
 fonts-liberation
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
+fslint
 gdebi
 gdm3
 gecko-mediaplayer
@@ -94,14 +68,10 @@ gir1.2-gexiv2-0.10
 gir1.2-osmgpsmap-1.0
 gnome-clocks
 gnome-core
-gnome-disk-utility
-gnome-maps
 gnome-nettool
 gnome-packagekit
 gnome-shell-extensions
 gnome-shell-extensions-gpaste
-gnome-software
-gnome-sound-recorder
 gnome-system-monitor
 gnome-themes
 gnome-tweak-tool
@@ -113,8 +83,10 @@ gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
 gutenprint-locales
 hicolor-icon-theme
+host
 hpijs-ppds
 hplip-gui
+htop
 i965-va-driver
 iceweasel
 iceweasel-l10n-de
@@ -127,8 +99,11 @@ iceweasel-l10n-pt-br
 iceweasel-l10n-ru
 iceweasel-l10n-sq
 ijsgutenprint
+iotop
 less
+libcups2-dev
 libgl1-mesa-dri
+libgoo-canvas-perl
 libreoffice
 libreoffice-base
 libreoffice-calc
@@ -161,7 +136,15 @@ libreoffice-style-tango
 libreoffice-writer
 locales
 lshw-gtk
+lsof
+manpages-de
+manpages-es
+manpages-fr
+manpages-it
+manpages-pt
 maxima-share
+mc
+menu
 musescore
 nautilus
 nautilus-admin
@@ -176,7 +159,11 @@ network-manager-pptp
 network-manager-pptp-gnome
 network-manager-vpnc
 network-manager-vpnc-gnome
+ntfs-3g
 openprinting-ppds
+p7zip-full
+patch
+pciutils
 plymouth
 plymouth-themes
 plymouth-x11
@@ -184,29 +171,35 @@ printer-driver-all-enforce
 printer-driver-cups-pdf
 print-manager
 pspp
+pulseaudio
 pulseaudio-utils
-rfkill
+pv
 r-base
+rfkill
 rsync
 rtkit
 shutter
 software-properties-gtk
 spice-vdagent
 squashfs-tools
+strace
 synaptic
 syslinux
 system-config-printer
 system-config-printer-udev
-systemsettings
+telnet
 totem-plugins
 unzip
 upower
 user-setup
 vdpau-va-driver
 vim
+vorbis-tools
 vpnc
+whois
 wireless-tools
 wxmaxima
+xdg-user-dirs
 xserver-xorg
 xserver-xorg-core
 xserver-xorg-input-acecad
