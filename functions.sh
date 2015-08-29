@@ -37,7 +37,7 @@ build_image()
 	gfxboot --archive config/bootloaders/isolinux/bootlogo.dir --pack-archive config/bootloaders/isolinux/bootlogo
 	cp config/bootloaders/isolinux/bootlogo config/bootloaders/isolinux/bootlogo.orig
 	# GRUB
-	sed -i "s|title-text.*|title-text: \"Lernstick Debian 8 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 8 (Version ${TODAY})\"|1" \
 		config/includes.binary/boot/grub/themes/lernstick/theme.txt 
 
 	# update configuration
@@ -74,7 +74,7 @@ build_image()
 	ISO_FILE="live-image-i386.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian8_32bit${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_pruefungsumgebung_debian8_32bit${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file
