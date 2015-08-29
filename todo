@@ -1,6 +1,7 @@
 - check that mounting exchange partition really works
 - i18n/L10n in xmlboot
 - lernstick-menu-xdg-exam (add backup script and message about password)
+- disable gksudo info dialog
 
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
