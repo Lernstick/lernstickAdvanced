@@ -1,3 +1,5 @@
+- check that mounting exchange partition really works
+
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
 - live-guest
