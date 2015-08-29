@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# The list of programs for the command-not-found package is created using the
+# update-command-not-found program, and is not shipped with the package.
+# Therefore we create the list with this hook.
+
+update-command-not-found
