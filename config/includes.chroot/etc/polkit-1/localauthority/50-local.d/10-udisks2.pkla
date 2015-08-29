@@ -1,0 +1,6 @@
+[disallow user mounting and unmounting of devices]
+Identity=unix-user:user
+Action=org.freedesktop.udisks2.filesystem-mount;org.freedesktop.udisks2.filesystem-mount-system;org.freedesktop.udisks2.filesystem-unmount-others
+ResultAny=no
+ResultInactive=no
+ResultActive=no
