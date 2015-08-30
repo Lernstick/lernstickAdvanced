@@ -55,6 +55,8 @@
 #
 # * freemind-plugins-svg recommends fop (needed for PDF export)
 #
+# * rdiff-backup recommends python-pylibacl and python-pyxattr
+#
 #################################################################################################
 acpi
 acpi-support
@@ -603,6 +605,8 @@ pulseaudio-utils
 pv
 pymol
 python-notify
+python-pylibacl
+python-pyxattr
 qelectrotech
 qelectrotech-data
 qelectrotech-examples
