@@ -25,6 +25,8 @@
 #
 # * gnome-shell-extensions (the places extension) nees xdg-user-dirs
 #
+# * rdiff-backup recommends python-pylibacl and python-pyxattr
+#
 #################################################################################################
 acpi
 acpi-support
@@ -175,6 +177,8 @@ pulseaudio
 pulseaudio-utils
 pv
 r-base
+python-pylibacl
+python-pyxattr
 rfkill
 rsync
 rtkit
