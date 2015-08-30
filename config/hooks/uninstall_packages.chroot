@@ -8,8 +8,12 @@ apt-get remove --purge -y linux-image-4.1.0-2-686-pae-dbg
 # Some unwanted packages are pulled in via metapackages.
 # We have to remove them here manually.
 apt-get remove --purge -y \
+	bluez \
+	bluez-firmware \
+	bluez-obexd \
 	empathy \
 	empathy-common \
+	gnome-bluetooth \
 	gnome-contacts \
 	gnome-dictionary \
 	gnome-disk-utility \
