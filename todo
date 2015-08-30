@@ -1,6 +1,7 @@
+- allow icons on desktop (create fork lernstick-usertemplate-exam)
 - i18n/L10n in xmlboot
-- disable gksudo info dialog
-- allow icons on desktop
+- GNOME mixes up "JBackpack" and "JBackpack (Admin)" in most used apps
+- disable gksudo info dialog about passwordless access
 
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
