@@ -27,6 +27,8 @@
 #
 # * rdiff-backup recommends python-pylibacl and python-pyxattr
 #
+# * the kde-l10n* packages are needed for localized kdialog messages
+#
 #################################################################################################
 acpi
 acpi-support
@@ -102,6 +104,12 @@ iceweasel-l10n-ru
 iceweasel-l10n-sq
 ijsgutenprint
 iotop
+kde-l10n-de
+kde-l10n-es
+kde-l10n-fr
+kde-l10n-it
+kde-l10n-ptbr
+kde-l10n-ru
 less
 libcups2-dev
 libgl1-mesa-dri
@@ -176,9 +184,9 @@ pspp
 pulseaudio
 pulseaudio-utils
 pv
-r-base
 python-pylibacl
 python-pyxattr
+r-base
 rfkill
 rsync
 rtkit
