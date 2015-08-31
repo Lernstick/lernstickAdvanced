@@ -1,4 +1,3 @@
-- i18n/L10n in xmlboot
 - GNOME mixes up "JBackpack" and "JBackpack (Admin)" in most used apps
 
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
