@@ -1,13 +1,13 @@
+- persistence media boot option "usb" does not work
+	- is "usb" a supported option?
+	- manpage says only removable|removable-usb, see
+	  http://live.debian.net/manpages/stable/en/html/live-boot.7.html
+
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
 - live-guest
 	- update for jessie
 	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
-
-- persistence media boot option does not get written back to bootloader
-	- is "usb" a supported option?
-	- manpage says only removable|removable-usb, see
-	  http://live.debian.net/manpages/stable/en/html/live-boot.7.html
 
 - live-swapfile needs interaction with the user at system startup
 	- as systemd service?
