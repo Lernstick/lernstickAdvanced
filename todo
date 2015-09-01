@@ -1,3 +1,5 @@
+- change touchpad config (tap clicking, stop on keyboard input)
+
 - persistence media boot option "usb" does not work
 	- is "usb" a supported option?
 	- manpage says only removable|removable-usb, see
@@ -20,8 +22,6 @@
 	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
 
 - Mac EFI icon does not show up for exchange parititon
-
-- tap-clicking does not work on Dell XPS (but works on Surface!?)
 
 - upstream patch for virtualbox (no desktop notification when running outside virtualbox)
 
