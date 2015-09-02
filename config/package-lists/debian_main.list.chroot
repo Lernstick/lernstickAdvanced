@@ -57,6 +57,8 @@
 #
 # * rdiff-backup recommends python-pylibacl and python-pyxattr
 #
+# * maxima recommends gnuplot-x11
+#
 #################################################################################################
 acpi
 acpi-support
