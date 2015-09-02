@@ -29,6 +29,8 @@
 #
 # * the kde-l10n* packages are needed for localized kdialog messages
 #
+# * maxima recommends gnuplot-x11
+#
 #################################################################################################
 acpi
 acpi-support
@@ -79,6 +81,7 @@ gnome-shell-extensions-gpaste
 gnome-system-monitor
 gnome-themes
 gnome-tweak-tool
+gnuplot-x11
 gstreamer1.0-fluendo-mp3
 gstreamer1.0-libav
 gstreamer1.0-plugins-bad
@@ -90,6 +93,7 @@ hicolor-icon-theme
 host
 hpijs-ppds
 hplip-gui
+hp-ppd
 htop
 i965-va-driver
 iceweasel
