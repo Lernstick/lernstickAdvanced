@@ -21,8 +21,6 @@
 	- update for jessie
 	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
 
-- Mac EFI icon does not show up for exchange parititon
-
 - better scribus icon
 
 - upstream patch for virtualbox (no desktop notification when running outside virtualbox)
@@ -42,8 +40,6 @@
 		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
 
 - audacity config crashes on high resolution displays (e.g. on MS Surface)
-
-- fix online marker in TigerJython
 
 - improve support for surface 3:
        - camera: https://bugzilla.redhat.com/show_bug.cgi?id=1192065
