@@ -3,7 +3,6 @@
 	- manpage says only removable|removable-usb, see
 	  http://live.debian.net/manpages/stable/en/html/live-boot.7.html
 
-- move scribus to lernstickWelcome
 - support new LA-Tools in lernstickWelcome
 
 - dkms changes in wheezy are also needed in jessie (build for all kernels!)
