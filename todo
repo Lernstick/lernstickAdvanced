@@ -1,17 +1,11 @@
-- install enigmail
-
-- use upstream owncloud and add owncloud-client-nautilus
-
-- dkms changes in wheezy are also needed in jessie (build for all kernels!)
-
-- live-guest
-	- update for jessie
-	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
-
-- persistence media boot option does not get written back to bootloader
+- persistence media boot option "usb" does not work
 	- is "usb" a supported option?
 	- manpage says only removable|removable-usb, see
 	  http://live.debian.net/manpages/stable/en/html/live-boot.7.html
+
+- support new LA-Tools in lernstickWelcome
+
+- dkms changes in wheezy are also needed in jessie (build for all kernels!)
 
 - live-swapfile needs interaction with the user at system startup
 	- as systemd service?
@@ -22,6 +16,12 @@
 			- simply sucks
 			- availability is not guaranteed
 		- gettys are not there yet
+
+- live-guest
+	- update for jessie
+	- add fix script for owncloud folders (it always uses full paths but would work with relative paths)
+
+- better scribus icon
 
 - upstream patch for virtualbox (no desktop notification when running outside virtualbox)
 
@@ -40,8 +40,6 @@
 		- change config via eet (./e/config/standard/e.cfg E_Config_XKB_Layout)
 
 - audacity config crashes on high resolution displays (e.g. on MS Surface)
-
-- fix online marker in TigerJython
 
 - improve support for surface 3:
        - camera: https://bugzilla.redhat.com/show_bug.cgi?id=1192065

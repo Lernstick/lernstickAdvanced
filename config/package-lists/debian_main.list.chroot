@@ -55,6 +55,10 @@
 #
 # * freemind-plugins-svg recommends fop (needed for PDF export)
 #
+# * rdiff-backup recommends python-pylibacl and python-pyxattr
+#
+# * maxima recommends gnuplot-x11
+#
 #################################################################################################
 acpi
 acpi-support
@@ -124,6 +128,7 @@ cinnamon-l10n
 clamtk
 clamtk-nautilus
 cmt
+command-not-found
 connectagram
 console-setup
 crack-attack
@@ -270,6 +275,7 @@ hex-a-hop
 hicolor-icon-theme
 hpijs-ppds
 hplip-gui
+hp-ppd
 htop
 hugin
 hydrogen
@@ -602,6 +608,8 @@ pulseaudio-utils
 pv
 pymol
 python-notify
+python-pylibacl
+python-pyxattr
 qelectrotech
 qelectrotech-data
 qelectrotech-examples
@@ -625,8 +633,6 @@ rtkit
 samplerate-programs
 sane
 sane-utils
-scribus
-scribus-template
 seahorse
 shutter
 smb4k
