@@ -10,11 +10,15 @@ deb-src http://packages.lernstick.ch/lernstick lernstick-8-backports main contri
 deb http://packages.lernstick.ch/lernstick lernstick-8-thirdparty main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-8-thirdparty main contrib non-free
 
-# Staging repository for third party packages (distribution set to "not automatic")
+# Staging packages (distribution set to "not automatic")
+deb http://packages.lernstick.ch/lernstick lernstick-8-staging main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8-staging main contrib non-free
+
+# Staging distribution for third party packages (distribution set to "not automatic")
 deb http://packages.lernstick.ch/lernstick lernstick-8-thirdparty-staging main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-8-thirdparty-staging main contrib non-free
 
-# Experimental packages (distribution set to "not automatic")
-deb http://packages.lernstick.ch/lernstick lernstick-8-experimental main contrib non-free
-deb-src http://packages.lernstick.ch/lernstick lernstick-8-experimental main contrib non-free
+# Staging distribution for backports (set to "not automatic")
+deb http://packages.lernstick.ch/lernstick lernstick-8-backports-staging main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-8-backports-staging main contrib non-free
 
