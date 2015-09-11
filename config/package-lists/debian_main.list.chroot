@@ -482,10 +482,12 @@ libreoffice-math
 libreoffice-ogltrans
 libreoffice-pdfimport
 libreoffice-report-builder
-libreoffice-style-crystal
+libreoffice-style-breeze
+#libreoffice-style-crystal
 libreoffice-style-galaxy
 libreoffice-style-hicontrast
 libreoffice-style-oxygen
+libreoffice-style-sifr
 libreoffice-style-tango
 libreoffice-writer
 libsvn-java
