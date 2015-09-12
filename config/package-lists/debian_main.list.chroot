@@ -123,8 +123,9 @@ libreoffice-base
 libreoffice-calc
 libreoffice-draw
 libreoffice-evolution
-#libreoffice-gnome
+libreoffice-gnome
 libreoffice-gtk
+libreoffice-gtk3
 libreoffice-help-de
 libreoffice-help-en-us
 libreoffice-help-es
@@ -143,6 +144,7 @@ libreoffice-math
 libreoffice-ogltrans
 libreoffice-pdfimport
 libreoffice-report-builder
+libreoffice-sdbc-hsqldb
 libreoffice-style-breeze
 #libreoffice-style-crystal
 libreoffice-style-galaxy
@@ -166,6 +168,7 @@ musescore
 nautilus
 nautilus-admin
 nautilus-open-terminal
+nautilus-owncloud
 nautilus-wipe
 network-manager-gnome
 network-manager-openconnect
