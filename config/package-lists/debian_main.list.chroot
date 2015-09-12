@@ -123,7 +123,8 @@ libreoffice-base
 libreoffice-calc
 libreoffice-draw
 libreoffice-evolution
-libreoffice-gnome
+#libreoffice-gnome
+libreoffice-gtk
 libreoffice-help-de
 libreoffice-help-en-us
 libreoffice-help-es
@@ -142,10 +143,12 @@ libreoffice-math
 libreoffice-ogltrans
 libreoffice-pdfimport
 libreoffice-report-builder
-libreoffice-style-crystal
+libreoffice-style-breeze
+#libreoffice-style-crystal
 libreoffice-style-galaxy
 libreoffice-style-hicontrast
 libreoffice-style-oxygen
+libreoffice-style-sifr
 libreoffice-style-tango
 libreoffice-writer
 locales
