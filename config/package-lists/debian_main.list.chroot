@@ -462,7 +462,8 @@ libreoffice-base
 libreoffice-calc
 libreoffice-draw
 libreoffice-evolution
-libreoffice-gnome
+#libreoffice-gnome
+libreoffice-gtk
 libreoffice-help-de
 libreoffice-help-en-us
 libreoffice-help-es
