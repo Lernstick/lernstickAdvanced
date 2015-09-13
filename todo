@@ -1,3 +1,5 @@
+- show okteta and kcalc in GNOME
+
 - live-swapfile needs interaction with the user at system startup
 	- as systemd service?
 		- start before display managers
