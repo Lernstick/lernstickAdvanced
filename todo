@@ -1,5 +1,7 @@
 - show okteta and kcalc in GNOME
 
+- pre-install open-vm-tools
+
 - live-swapfile needs interaction with the user at system startup
 	- as systemd service?
 		- start before display managers
