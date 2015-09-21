@@ -125,7 +125,7 @@ libreoffice-draw
 libreoffice-evolution
 libreoffice-gnome
 libreoffice-gtk
-libreoffice-gtk3
+#libreoffice-gtk3
 libreoffice-help-de
 libreoffice-help-en-us
 libreoffice-help-es
