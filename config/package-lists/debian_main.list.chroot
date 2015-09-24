@@ -1,6 +1,10 @@
 #################################################################################################
 # Some notes:
 # -----------
+#
+# * file-roller is needed for creating and opening encrypted files so that content can be included
+#   in the image by teachers but is not available to students until the exam actually takes place
+#
 # * hplip
 #	needs the avahi packages, otherwise we get communication errors with printers
 #	needs the libcups2-dev package, otherwise hp-check can not test for the cups version
@@ -60,6 +64,7 @@ exfat-fuse
 exfat-utils
 ffmpegthumbs
 file
+file-roller
 firmware-linux-free
 fonts-liberation
 foomatic-db-compressed-ppds
