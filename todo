@@ -1,3 +1,15 @@
+- system crash on certain hardware when USB flash drives are plugged and unplugged very fast (without unmounting)
+	- reproducable on:
+		- Dell XPS 13
+		- Microsoft Surface Pro 3
+	- NOT reproducable on:
+		- Desktop@Home (Motherboard: MSI X99S)
+		- VirtualBox
+
+- unattended upgrades without blocking other cronjobs
+
+- Dell XPS: when booting from USB and allowing system partition "any", the Debian 7 system partition on the internal harddrive is used!?
+
 - show okteta and kcalc in GNOME
 
 - pre-install open-vm-tools
@@ -22,6 +34,7 @@
 
 - dlcopy:
 	- create a new uuid when copying or creating a new image
+	- keep user password when upgrading storage media
 
 - where is my kernel pinning hook again?! (also include linux-libc-dev)
 
