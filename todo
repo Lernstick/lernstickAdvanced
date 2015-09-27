@@ -118,7 +118,6 @@
 		- xorg-server
 	- backports with bugs:
 		- miro (freezes in youtube section)
-		- openttd (needs newer gfx package)
 		- stopmotion (program crashes)
 		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
 	- backporting failed:
