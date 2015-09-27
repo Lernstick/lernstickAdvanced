@@ -43,7 +43,12 @@ Linux 4.1: patching in missing aufs parts:
 
 Common steps:
 -------------
-- build all packages:
+- backport linux-tools
+	- apt-get source --only-source linux-tools=x.y.z
+	- in chroot: apt-get install liblzma-dev
+	- call "dpkg-buildpackage -sa" two times in a row
+- put new linux-tools packages into local "unfinished" repository
+- build all packages (in pbuilder chroot, see backports.txt):
 	- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
 	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae DEBIAN_KERNEL_JOBS=8
 	- fakeroot make -f debian/rules.gen setup_i386_none_586
@@ -54,7 +59,4 @@ Common steps:
 	- fakeroot make -f debian/rules.gen binary-arch_i386_extra DEBIAN_KERNEL_JOBS=8
 - build libc-dev package:
 	- fakeroot make -f debian/rules.gen binary-libc-dev_i386 DEBIAN_KERNEL_JOBS=8
-- backport linux-tools
-	- apt-get source --only-source linux-tools=x.y.z
-	- call "dpkg-buildpackage -sa" two times in a row
 - cleanup: make -f debian/rules clean
