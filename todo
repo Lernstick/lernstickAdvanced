@@ -12,6 +12,8 @@
 
 - show okteta and kcalc in GNOME
 
+- install aufs-tools?
+
 - pre-install open-vm-tools
 
 - live-swapfile needs interaction with the user at system startup
@@ -35,6 +37,10 @@
 - dlcopy:
 	- create a new uuid when copying or creating a new image
 	- keep user password when upgrading storage media
+	- copy-up files/dirs we want to keep from squashfs to data partition before replacing the squashfs
+		- recursive "touch -a" seems to be the easiest/fastest option
+		- sanity check: size of dirs to keep is smaller than filesystem size
+		- check result of every touch call!
 
 - where is my kernel pinning hook again?! (also include linux-libc-dev)
 
