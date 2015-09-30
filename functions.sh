@@ -57,8 +57,8 @@ build_image()
                 --distribution jessie \
                 --firmware-chroot true \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-flavours "686 586" \
-		--linux-packages linux-image-4.2.0-1-lernstick \
+		--linux-flavours "686-pae 586" \
+		--linux-packages linux-image-4.2.0-1+lernstick.1 \
                 --mirror-binary http://ftp.ch.debian.org/debian/ \
                 --mirror-binary-security http://security.debian.org/ \
                 --mirror-bootstrap http://ftp.ch.debian.org/debian/ \
