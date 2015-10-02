@@ -1,11 +1,3 @@
-- system crash on certain hardware when USB flash drives are plugged and unplugged very fast (without unmounting)
-	- reproducable on:
-		- Dell XPS 13
-		- Microsoft Surface Pro 3
-	- NOT reproducable on:
-		- Desktop@Home (Motherboard: MSI X99S)
-		- VirtualBox
-
 - unattended upgrades without blocking other cronjobs
 
 - Dell XPS: when booting from USB and allowing system partition "any", the Debian 7 system partition on the internal harddrive is used!?
@@ -38,9 +30,7 @@
 	- create a new uuid when copying or creating a new image
 	- keep user password when upgrading storage media
 	- copy-up files/dirs we want to keep from squashfs to data partition before replacing the squashfs
-		- recursive "touch -a" seems to be the easiest/fastest option
-		- sanity check: size of dirs to keep is smaller than filesystem size
-		- check result of every touch call!
+		- sanity check before execution: size of dirs to keep is smaller than available filesystem size (including file system overhead estimation)
 
 - where is my kernel pinning hook again?! (also include linux-libc-dev)
 
