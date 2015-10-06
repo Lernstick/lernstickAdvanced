@@ -45,9 +45,10 @@ Common steps:
 - put new linux-tools packages into local "unfinished" repository
 - change debian/config/defines e.g.:
 	- abiname: 1+lernstick.1
-- make -f debian/rules clean
-- dch --local +lernstick.
 - build all packages (in pbuilder chroot, see backports.txt):
+	- make -f debian/rules clean
+	- apt-get install vim
+	- dch --local +lernstick.
 	- make -f debian/rules clean
 	- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
 	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8
@@ -59,4 +60,3 @@ Common steps:
 	- fakeroot make -f debian/rules.gen binary-arch_i386_extra
 - build libc-dev package:
 	- fakeroot make -f debian/rules.gen binary-libc-dev_i386
-- cleanup: make -f debian/rules clean
