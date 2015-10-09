@@ -1,6 +1,12 @@
 - GNOME mixes up "JBackpack" and "JBackpack (Admin)" in most used apps
 
+- unattended upgrades without blocking other cronjobs
+
+- Dell XPS: when booting from USB and allowing system partition "any", the Debian 7 system partition on the internal harddrive is used!?
+
 - show okteta and kcalc in GNOME
+
+- install aufs-tools?
 
 - pre-install open-vm-tools
 
@@ -24,8 +30,7 @@
 
 - dlcopy:
 	- create a new uuid when copying or creating a new image
-
-- where is my kernel pinning hook again?! (also include linux-libc-dev)
+	- keep user password when upgrading storage media
 
 - set keyboard at every boot
 	- Cinnamon & MATE: autostart script successfully updates layout list but is too late
@@ -120,7 +125,6 @@
 		- xorg-server
 	- backports with bugs:
 		- miro (freezes in youtube section)
-		- openttd (needs newer gfx package)
 		- stopmotion (program crashes)
 		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
 	- backporting failed:

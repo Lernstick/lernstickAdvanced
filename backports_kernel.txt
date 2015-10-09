@@ -6,9 +6,6 @@ Linux 4.0: patching in aufs completely (see aufs README):
 - patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
 - patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
 - copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
-- change debian/config/defines e.g.:
-	- abiname: 1-lernstick
-- dch --bpo with similar version, e.g. 4.1.2-1~lernstick1
 - add to debian/config/config (see previous kernels) to build module:
 ##
 ## file: fs/aufs/Kconfig
@@ -35,26 +32,31 @@ Linux 4.1: patching in missing aufs parts:
 ------------------------------------------
 - patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
 - copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
-- change debian/config/defines e.g.:
-	- abiname: 1-lernstick
-- dch --bpo with similar version, e.g. 4.1.2-1~lernstick1
 - add to debian/config/config (see above) to build module
+- call dpkg-source --commit to add a quilt patch
 
 
 Common steps:
 -------------
-- build all packages:
-	- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae DEBIAN_KERNEL_JOBS=8
-	- fakeroot make -f debian/rules.gen setup_i386_none_586
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_586 DEBIAN_KERNEL_JOBS=8
-- build common headers:
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_real DEBIAN_KERNEL_JOBS=8
-- build linux-compiler package:
-	- fakeroot make -f debian/rules.gen binary-arch_i386_extra DEBIAN_KERNEL_JOBS=8
-- build libc-dev package:
-	- fakeroot make -f debian/rules.gen binary-libc-dev_i386 DEBIAN_KERNEL_JOBS=8
 - backport linux-tools
 	- apt-get source --only-source linux-tools=x.y.z
+	- in chroot: apt-get install liblzma-dev
 	- call "dpkg-buildpackage -sa" two times in a row
-- cleanup: make -f debian/rules clean
+- put new linux-tools packages into local "unfinished" repository
+- change debian/config/defines e.g.:
+	- abiname: 1+lernstick.1
+- build all packages (in pbuilder chroot, see backports.txt):
+	- make -f debian/rules clean
+	- apt-get install vim
+	- dch --local +lernstick.
+	- make -f debian/rules clean
+	- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
+	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8
+	- fakeroot make -f debian/rules.gen setup_i386_none_586
+	- fakeroot make -f debian/rules.gen binary-arch_i386_none_586 binary-indep DEBIAN_KERNEL_JOBS=8
+- build common headers:
+	- fakeroot make -f debian/rules.gen binary-arch_i386_none_real
+- build linux-compiler package:
+	- fakeroot make -f debian/rules.gen binary-arch_i386_extra
+- build libc-dev package:
+	- fakeroot make -f debian/rules.gen binary-libc-dev_i386
