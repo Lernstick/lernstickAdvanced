@@ -26,8 +26,6 @@
 
 - better scribus icon
 
-- upstream patch for virtualbox (no desktop notification when running outside virtualbox)
-
 - dlcopy:
 	- create a new uuid when copying or creating a new image
 	- keep user password when upgrading storage media

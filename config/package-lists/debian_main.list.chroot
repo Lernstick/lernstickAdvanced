@@ -54,6 +54,7 @@ cracklib-runtime
 cryptsetup
 cups
 cups-backend-bjnp
+cups-browsed
 cups-bsd
 deborphan
 desktop-base
