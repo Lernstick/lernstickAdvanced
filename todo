@@ -1,7 +1,5 @@
 - unattended upgrades without blocking other cronjobs
 
-- Dell XPS: when booting from USB and allowing system partition "any", the Debian 7 system partition on the internal harddrive is used!?
-
 - show okteta and kcalc in GNOME
 
 - install aufs-tools?
