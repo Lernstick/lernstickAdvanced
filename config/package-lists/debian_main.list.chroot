@@ -59,6 +59,8 @@
 #
 # * maxima recommends gnuplot-x11
 #
+# * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
+#
 #################################################################################################
 acpi
 acpi-support
@@ -321,6 +323,7 @@ italc-client
 italc-master
 jackd2
 jfractionlab
+jovie
 k3b
 k3b-i18n
 kaffeine
