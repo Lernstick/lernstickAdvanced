@@ -57,7 +57,7 @@
 
 - Test if hp-wmi rfkill workaround is still needed. See https://bugzilla.kernel.org/show_bug.cgi?id=76471
 
-- mac volume label still doesn't seem to work (tested on Mac@home)
+- mac volume label doesn't seem to work on older Macs (tested on Mac@home and MacDesktop@work)
 
 - no tty after X on MacDesktop@work and Mac@home
 	- see https://bbs.archlinux.org/viewtopic.php?id=143569
