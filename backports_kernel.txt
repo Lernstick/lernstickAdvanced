@@ -38,6 +38,9 @@ Linux 4.1: patching in missing aufs parts:
 
 Common steps:
 -------------
+- apply own patches
+	- copy quilt patches to debian/patches
+	- patch -p1 < debian/patches/<name of quilt file>
 - backport linux-tools
 	- apt-get source --only-source linux-tools=x.y.z
 	- in chroot: apt-get install liblzma-dev
