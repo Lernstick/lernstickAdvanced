@@ -63,3 +63,6 @@ Common steps:
 	- fakeroot make -f debian/rules.gen binary-arch_i386_extra
 - build libc-dev package:
 	- fakeroot make -f debian/rules.gen binary-libc-dev_i386
+
+all in one line (for easy copy&pasting):
+fakeroot make -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen setup_i386_none_586; fakeroot make -f debian/rules.gen binary-arch_i386_none_586 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -f debian/rules.gen binary-arch_i386_extra; fakeroot make -f debian/rules.gen binary-libc-dev_i386
