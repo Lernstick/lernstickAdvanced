@@ -1,3 +1,7 @@
+- upgrade nvidia driver handling
+	- use new package and tool (update-glx) for glx-alternative setting
+	- special xorg.conf no longer needed
+
 - unattended upgrades without blocking other cronjobs
 
 - show okteta and kcalc in GNOME
