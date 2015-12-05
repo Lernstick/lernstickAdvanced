@@ -2,7 +2,7 @@ dlcopy-exam
 jbackpack-restore
 jbackpack-restore-admin
 lernstick-config
-lernstick-fglrx-control
+#lernstick-fglrx-control
 lernstick-firewall
 lernstick-geogebra-exam
 lernstick-gksu
