@@ -61,6 +61,9 @@
 #
 # * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
 #
+# * gnome-session (gnome-settings-daemon) tries to load the file /usr/share/hwdata/pnp.ids (seen via journalctl on Acer Iconia Tab)
+#   therefore we add the package hwdata
+#
 #################################################################################################
 acpi
 acpi-support
@@ -281,6 +284,7 @@ hplip-gui
 hp-ppd
 htop
 hugin
+hwdata
 hydrogen
 hydrogen-drumkits
 hyphen-de
@@ -615,6 +619,13 @@ printer-driver-all-enforce
 printer-driver-cups-pdf
 print-manager
 pspp
+pulseaudio-module-bluetooth
+pulseaudio-module-gconf
+pulseaudio-module-jack
+pulseaudio-module-lirc
+pulseaudio-module-raop
+pulseaudio-module-x11
+pulseaudio-module-zeroconf
 pulseaudio-utils
 pv
 pymol
