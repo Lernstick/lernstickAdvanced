@@ -35,6 +35,9 @@
 #
 # * maxima recommends gnuplot-x11
 #
+# * gnome-session (gnome-settings-daemon) tries to load the file /usr/share/hwdata/pnp.ids (seen via journalctl on Acer Iconia Tab)
+#   therefore we add the package hwdata
+#
 #################################################################################################
 acpi
 acpi-support
@@ -101,6 +104,7 @@ hpijs-ppds
 hplip-gui
 hp-ppd
 htop
+hwdata
 i965-va-driver
 iceweasel
 iceweasel-l10n-de
@@ -199,6 +203,12 @@ printer-driver-cups-pdf
 print-manager
 pspp
 pulseaudio
+pulseaudio-module-gconf
+pulseaudio-module-jack
+pulseaudio-module-lirc
+pulseaudio-module-raop
+pulseaudio-module-x11
+pulseaudio-module-zeroconf
 pulseaudio-utils
 pv
 python-pylibacl
