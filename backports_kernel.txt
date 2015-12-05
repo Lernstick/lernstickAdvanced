@@ -38,6 +38,10 @@ Linux 4.1: patching in missing aufs parts:
 
 Common steps:
 -------------
+- apply own patches
+	- copy existing quilt patches to debian/patches
+	- patch -p1 < debian/patches/<name of quilt file>
+	- add necessary statements to debian/config/config (e.g. CONFIG_SURFACE_PRO3_BUTTON=m)
 - backport linux-tools
 	- apt-get source --only-source linux-tools=x.y.z
 	- in chroot: apt-get install liblzma-dev
@@ -60,3 +64,6 @@ Common steps:
 	- fakeroot make -f debian/rules.gen binary-arch_i386_extra
 - build libc-dev package:
 	- fakeroot make -f debian/rules.gen binary-libc-dev_i386
+
+all in one line (for easy copy&pasting):
+fakeroot make -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen setup_i386_none_586; fakeroot make -f debian/rules.gen binary-arch_i386_none_586 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -f debian/rules.gen binary-arch_i386_extra; fakeroot make -f debian/rules.gen binary-libc-dev_i386
