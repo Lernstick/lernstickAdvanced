@@ -68,12 +68,12 @@ video_fb
 "
 
 usage() {
-    echo "$0 -k key -c cert -g grubpkg -e environments"
+    echo "$0 -k key -c cert -g grubpkg"
     exit 1
 }
 
 # command line parameters
-while getopts "k:c:g:e:" opt ; do
+while getopts "k:c:g:" opt ; do
 	case $opt in
 	k)
 		key=$OPTARG
@@ -84,15 +84,10 @@ while getopts "k:c:g:e:" opt ; do
 	g)
 		grubpkg=$OPTARG
 		;;
-	e)
-		envs=$OPTARG
 		;;
 	esac
 done
 
-if [ -z $envs ] ; then
-    envs="wheezy wheezy-pu"
-fi
 
 if [ ! -r "$key" ] ; then
     echo "Private key not readable."
@@ -119,6 +114,4 @@ dpkg-deb -x ${grubpkg} ${BUILDDIR}
 $MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned --format=${GRUB_ARCH} ${MODULES}
 sbsign --key ${key} --cert ${cert} --output ${BUILDDIR}/${GRUB_SIGNED_FILE} ${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned
 
-for env in ${envs} ; do
-	cp ${BUILDDIR}/${GRUB_SIGNED_FILE} ../${env}/${EFI_PATH}
-done
+cp ${BUILDDIR}/${GRUB_SIGNED_FILE} ../${EFI_PATH}
