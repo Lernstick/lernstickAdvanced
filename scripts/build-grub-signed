@@ -68,12 +68,15 @@ video_fb
 "
 
 usage() {
-    echo "$0 -k key -c cert -g grubpkg"
+    echo "$0 -g grubpkg [ -k key -c cert -u ]"
     exit 1
 }
 
+# set defaults
+signed=1
+
 # command line parameters
-while getopts "k:c:g:" opt ; do
+while getopts "k:c:g:u" opt ; do
 	case $opt in
 	k)
 		key=$OPTARG
@@ -84,19 +87,22 @@ while getopts "k:c:g:" opt ; do
 	g)
 		grubpkg=$OPTARG
 		;;
+	u)
+		signed=0
 		;;
 	esac
 done
 
+if [ "$signed" -eq 1 ] ; then
+    if [ ! -r "$key" ] ; then
+        echo "Private key not readable."
+        usage
+   fi
 
-if [ ! -r "$key" ] ; then
-    echo "Private key not readable."
-    usage
-fi
-
-if [ ! -r "$cert" ] ; then
-    echo "Certificate not readable."
-    usage
+   if [ ! -r "$cert" ] ; then
+        echo "Certificate not readable."
+        usage
+   fi
 fi
 
 if [ ! -r "$grubpkg" ] ; then
@@ -112,6 +118,11 @@ dpkg-deb -x ${grubpkg} ${BUILDDIR}
 # create EFI "image", this uses the grub-mkimage from the running system
 # but that should be OK.
 $MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned --format=${GRUB_ARCH} ${MODULES}
-sbsign --key ${key} --cert ${cert} --output ${BUILDDIR}/${GRUB_SIGNED_FILE} ${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned
+
+if [ "$signed" -eq 1 ] ; then
+    sbsign --key ${key} --cert ${cert} --output ${BUILDDIR}/${GRUB_SIGNED_FILE} ${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned
+else
+    cp ${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned ${BUILDDIR}/${GRUB_SIGNED_FILE}
+fi
 
 cp ${BUILDDIR}/${GRUB_SIGNED_FILE} ../${EFI_PATH}
