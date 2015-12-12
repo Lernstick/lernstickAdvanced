@@ -55,7 +55,6 @@ build_image()
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
                 --distribution jessie \
-                --firmware-chroot true \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-flavours "686-pae 586" \
 		--linux-packages linux-image-4.2.0-1+lernstick.1 \
