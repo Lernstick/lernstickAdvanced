@@ -59,11 +59,9 @@ build_image()
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-flavours "686-pae 586" \
 		--linux-packages linux-image-4.2.0-1+lernstick.1 \
-                --mirror-binary http://ftp.ch.debian.org/debian/ \
-                --mirror-binary-security http://security.debian.org/ \
-                --mirror-bootstrap http://ftp.ch.debian.org/debian/ \
-                --mirror-chroot http://ftp.ch.debian.org/debian/ \
-                --mirror-chroot-security http://security.debian.org/ \
+                --mirror-binary ${MIRROR_SYSTEM} \
+                --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
+                --mirror-bootstrap ${MIRROR_BUILD} \
                 --source ${SOURCE} \
                 --verbose
 
