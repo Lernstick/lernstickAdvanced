@@ -50,7 +50,7 @@ sudo pbuilder --login --basetgz /var/cache/pbuilder/base-jessie-bpo.tar.gz --bin
 
 cd /mnt/sda8/backports/$PACKAGE-*
 
-apt-get update; apt-get upgrade; apt-get --yes --force-yes install pbuilder sudo devscripts fakeroot; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
+apt-get update; apt-get upgrade; apt-get -t jessie-backports --yes --force-yes install pbuilder; apt-get --yes --force-yes install sudo devscripts fakeroot; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
 erstes build:
 dpkg-buildpackage -sa

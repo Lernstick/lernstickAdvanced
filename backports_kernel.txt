@@ -49,15 +49,23 @@ Common steps:
 - put new linux-tools packages into local "unfinished" repository
 - change debian/config/defines e.g.:
 	- abiname: 1+lernstick.1
+- build with gcc-4.9, carefully replace gcc-5 references:
+	vi debian/config/defines
+	sed -i 's/gcc-5/gcc-4.9/g' \
+		debian/config/amd64/defines
+		debian/config/i386/defines
+		debian/control
+		debian/rules.gen
+		debian/templates/control.extra.in
 - build all packages (in pbuilder chroot, see backports.txt):
 	- make -f debian/rules clean
 	- apt-get install vim
-	- dch --local +lernstick.
+	- dch --local +lernstick. (use "lernstick-8-backports-staging" as distribution)
 	- make -f debian/rules clean
 	- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
 	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8
-	- fakeroot make -f debian/rules.gen setup_i386_none_586
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_586 binary-indep DEBIAN_KERNEL_JOBS=8
+	- fakeroot make -f debian/rules.gen setup_i386_none_686
+	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8
 - build common headers:
 	- fakeroot make -f debian/rules.gen binary-arch_i386_none_real
 - build linux-compiler package:
@@ -66,4 +74,4 @@ Common steps:
 	- fakeroot make -f debian/rules.gen binary-libc-dev_i386
 
 all in one line (for easy copy&pasting):
-fakeroot make -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen setup_i386_none_586; fakeroot make -f debian/rules.gen binary-arch_i386_none_586 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -f debian/rules.gen binary-arch_i386_extra; fakeroot make -f debian/rules.gen binary-libc-dev_i386
+fakeroot make -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen setup_i386_none_686; fakeroot make -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -f debian/rules.gen binary-arch_i386_extra; fakeroot make -f debian/rules.gen binary-libc-dev_i386
