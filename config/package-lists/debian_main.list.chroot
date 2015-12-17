@@ -458,6 +458,7 @@ kwalletmanager
 ldap-utils
 less
 libcups2-dev
+libegl1-mesa-drivers
 libgl1-mesa-dri
 libgoo-canvas-perl
 libk3b6-extracodecs
@@ -502,6 +503,7 @@ libreoffice-style-sifr
 libreoffice-style-tango
 libreoffice-writer
 libsvn-java
+libva-egl1
 lilypond
 lmms
 locales
