@@ -126,6 +126,7 @@ kde-l10n-ptbr
 kde-l10n-ru
 less
 libcups2-dev
+libegl1-mesa-drivers
 libgl1-mesa-dri
 libgoo-canvas-perl
 libreoffice
@@ -163,6 +164,7 @@ libreoffice-style-oxygen
 libreoffice-style-sifr
 libreoffice-style-tango
 libreoffice-writer
+libva-egl1
 locales
 lshw-gtk
 lsof
