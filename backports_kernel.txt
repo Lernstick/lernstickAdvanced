@@ -41,7 +41,8 @@ Common steps:
 - apply own patches
 	- copy existing quilt patches to debian/patches
 	- patch -p1 < debian/patches/<name of quilt file>
-	- add necessary statements to debian/config/config (e.g. CONFIG_SURFACE_PRO3_BUTTON=m)
+	- add necessary statements to debian/config/config
+	  (e.g. add "CONFIG_SURFACE_PRO3_BUTTON=m" to section drivers/platform/x86/Kconfig)
 - backport linux-tools
 	- apt-get source --only-source linux-tools=x.y.z
 	- in chroot: apt-get install liblzma-dev
@@ -52,10 +53,10 @@ Common steps:
 - build with gcc-4.9, carefully replace gcc-5 references:
 	vi debian/config/defines
 	sed -i 's/gcc-5/gcc-4.9/g' \
-		debian/config/amd64/defines
-		debian/config/i386/defines
-		debian/control
-		debian/rules.gen
+		debian/config/amd64/defines \
+		debian/config/i386/defines \
+		debian/control \
+		debian/rules.gen \
 		debian/templates/control.extra.in
 - build all packages (in pbuilder chroot, see backports.txt):
 	- make -f debian/rules clean
