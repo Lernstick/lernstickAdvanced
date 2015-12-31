@@ -1,3 +1,5 @@
 cache/
+config/bootloaders/isolinux/bootlogo.dir/xmlboot.config
+config/includes.binary/boot/grub/themes/lernstick/theme.txt
 config/packages.chroot/
 constants

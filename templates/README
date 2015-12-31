@@ -1,0 +1,13 @@
+This directory contains some templates.
+
+xmlboot.config
+**************
+
+This is a template for XMLboot, our gfxboot script for syslinux, our bootloader
+for BIOS boots.
+
+
+theme.txt
+*********
+
+This is a template for GRUB, our bootloader for UEFI boots.
