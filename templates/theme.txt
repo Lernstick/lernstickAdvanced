@@ -1,4 +1,4 @@
-title-text: "Lernstick Debian 7 (Version 2013-10-07)"
+title-text: "Lernstick Debian 8 (Version YYYY-MM-DD)"
 desktop-image: "lernstick-splash-1280x800.png"
 
 + boot_menu {
