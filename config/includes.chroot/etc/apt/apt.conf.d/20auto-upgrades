@@ -1,4 +1,0 @@
-APT::Periodic::Download-Upgradeable-Packages "1";
-APT::Periodic::MaxAge "1";
-APT::Periodic::Unattended-Upgrade "1";
-APT::Periodic::Update-Package-Lists "1";
