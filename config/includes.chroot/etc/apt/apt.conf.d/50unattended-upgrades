@@ -51,7 +51,7 @@ Unattended-Upgrade::Package-Blacklist {
 // unattended-upgrades will automatically run 
 //   dpkg --force-confold --configure -a
 // The default is true, to ensure updates keep getting installed
-//Unattended-Upgrade::AutoFixInterruptedDpkg "false";
+Unattended-Upgrade::AutoFixInterruptedDpkg "true";
 
 // Split the upgrade into the smallest possible chunks so that
 // they can be interrupted with SIGUSR1. This makes the upgrade
