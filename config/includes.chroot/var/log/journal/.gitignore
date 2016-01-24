@@ -1,0 +1,7 @@
+# The empty directory /var/log/journal is needed so that journald log messages
+# are stored persistently.
+
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
