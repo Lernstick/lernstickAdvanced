@@ -33,7 +33,6 @@ Linux 4.1: patching in missing aufs parts:
 - patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
 - copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
 - add to debian/config/config (see above) to build module
-- call dpkg-source --commit to add a quilt patch
 
 
 Common steps:
