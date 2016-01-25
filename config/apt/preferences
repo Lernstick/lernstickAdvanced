@@ -54,10 +54,6 @@ Package: ure
 Pin: release n=jessie-backports
 Pin-Priority: 999
 
-Package: virtualbox*
-Pin: release n=jessie-backports
-Pin-Priority: 999
-
 Package: wesnoth-1.12*
 Pin: release n=jessie-backports
 Pin-Priority: 999
