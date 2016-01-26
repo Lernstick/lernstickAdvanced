@@ -45,6 +45,8 @@ acpitail
 acpitool
 alsa-utils
 anacron
+apt-rdepends
+apt-transport-https
 apt-xapian-index
 avahi-autoipd
 avahi-daemon
