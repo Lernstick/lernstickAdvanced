@@ -99,8 +99,6 @@ def DotNodesAndEdges_(root, nodes=None, only_installed=True):
         apt_pkg = APT_CACHE[root.name]
     except KeyError:
         raise Error('Unknown package "%s"' % root.name)
-    if only_installed and not apt_pkg.installed:
-        return nodes, []
     nodes[root.name] = apt_pkg
     res = []
     for dep_type in root.children:
@@ -108,9 +106,14 @@ def DotNodesAndEdges_(root, nodes=None, only_installed=True):
         if dep_type in DOTTY_STYLE:
             style = ' %s' % DOTTY_STYLE[dep_type]
         for child in root.children[dep_type]:
-            res.append('"%s" -> "%s"%s;' % (child.name, root.name, style))
-            _, sub = DotNodesAndEdges_(child, nodes=nodes)
-            res.extend(sub)
+	    try:
+                apt_pkg = APT_CACHE[child.name]
+            except KeyError:
+                raise Error('Unknown package "%s"' % child.name)
+            if not only_installed or apt_pkg.installed:
+                res.append('"%s" -> "%s"%s;' % (child.name, root.name, style))
+                _, sub = DotNodesAndEdges_(child, nodes=nodes)
+                res.extend(sub)
     return nodes, res
 
 
