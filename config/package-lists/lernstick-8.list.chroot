@@ -45,7 +45,6 @@ lernstick-execute-jar
 #lernstick-fglrx-control
 lernstick-flubidux
 lernstick-freeciv-client-gtk
-lernstick-freemind
 lernstick-fritzing
 lernstick-fslint
 lernstick-galculator
@@ -121,7 +120,7 @@ lernstick-nepomuk-core-data
 lernstick-notenmax
 lernstick-okular
 lernstick-openclipart
-lernstick-openjdk-7-jre
+lernstick-openjdk-8-jre
 lernstick-openshot
 lernstick-openstreetmap
 lernstick-openthesaurus

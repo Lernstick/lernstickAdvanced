@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# For whatever strange reason, a debug kernel package is installed...
-apt-get remove --purge -y linux-image-4.2.0-1-lernstick-686-pae-dbg
-apt-get remove --purge -y linux-image-4.2.0-1+lernstick.1-686-pae-dbg
-apt-get remove --purge -y linux-image-4.3.0-1+lernstick.1-686-pae-dbg
+# Because of random dependency resolving, openjdk-7 gets installed in addition to openjdk-8.
+# This is unnecessary and we remove it in this hook.
+apt-get remove --purge -y \
+	openjdk-7-jdk \
+	openjdk-7-jre \
+	openjdk-7-jre-headless

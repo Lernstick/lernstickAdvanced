@@ -53,8 +53,6 @@
 #
 # * gnome-control-center recommends cracklib-runtime
 #
-# * freemind-plugins-svg recommends fop (needed for PDF export)
-#
 # * rdiff-backup recommends python-pylibacl and python-pyxattr
 #
 # * maxima recommends gnuplot-x11
@@ -193,17 +191,13 @@ foobillardplus
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
-fop
 fotowall
 freeciv-client-gtk
 freeciv-data
 freeciv-server
 freeciv-sound-standard
-freemind
-freemind-doc
-freemind-plugins-help
-freemind-plugins-svg
 freepats
+freeplane
 freespacenotifier
 frei0r-plugins
 fritzing
@@ -302,7 +296,7 @@ icedove-l10n-it
 icedove-l10n-pt-br
 icedove-l10n-ru
 icedove-l10n-sq
-icedtea-7-plugin
+icedtea-8-plugin
 iceowl-extension
 iceowl-l10n-de
 iceowl-l10n-es-es
