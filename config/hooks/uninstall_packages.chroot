@@ -8,4 +8,4 @@ apt-get purge -y \
 	openjdk-7-jre-headless
 
 # clean up
-apt-get purge -y autoremove
+apt-get purge -y --auto-remove
