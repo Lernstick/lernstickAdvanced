@@ -2,7 +2,10 @@
 
 # Because of random dependency resolving, openjdk-7 gets installed in addition to openjdk-8.
 # This is unnecessary and we remove it in this hook.
-apt-get remove --purge -y \
+apt-get purge -y \
 	openjdk-7-jdk \
 	openjdk-7-jre \
 	openjdk-7-jre-headless
+
+# clean up
+apt-get purge -y autoremove
