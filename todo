@@ -130,6 +130,7 @@
 			dpkg-shlibdeps: error: couldn't find library libardour.so.3 needed by debian/ardour3/usr/lib/ardour4/surfaces/libardour_osc.so (ELF format: 'elf32-i386'; RPATH: '')
 			...
 		- calibre (see https://bugs.launchpad.net/calibre/+bug/1516448 for details)
+		- extremetuxracer (needs newer libsfml which needs a newer g++ ... too much hassle)
 		- netbeans
 		- owncloud
 		- pentobi (dependencies to KDE 5)
