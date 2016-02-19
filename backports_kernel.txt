@@ -30,7 +30,15 @@ CONFIG_AUFS_BR_HFSPLUS=y
 
 Linux 4.1: patching in missing aufs parts:
 ------------------------------------------
-- patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
+- revert debian patches (most of the time not up-to-date and sometimes even incompatible with current upstream)
+	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-standalone.patch
+	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-mmap.patch
+	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-base.patch
+- apply upstream patches
+	patch -p1 </home/blah/aufs4-standalone/aufs4-base.patch
+	patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
+	patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
+	patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
 - copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
 - add to debian/config/config (see above) to build module
 
