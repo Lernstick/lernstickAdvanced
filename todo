@@ -135,6 +135,7 @@
 		- owncloud
 		- pentobi (dependencies to KDE 5)
 		- pspp 0.8.5 (initdb: cannot be run as root)
+		- quassel (needs newer QT5)
 		- vlc (needs newer phonon-backend-vlc which needs extra-cmake-modules which is not in stable ... too much hassle)
 		- xfce4
 			- error while backporting libxfce4util-4.12.1:
