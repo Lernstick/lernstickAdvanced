@@ -1,12 +1,16 @@
-Linux 4.0: patching in aufs completely (see aufs README):
----------------------------------------------------------
-- cd linux-sources
-- patch -p1 </home/blah/aufs4-standalone/aufs4-base.patch
-- patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
-- patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
-- patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
+patching in missing aufs parts:
+-------------------------------
+- revert debian patches (most of the time not up-to-date and sometimes even incompatible with current upstream)
+	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-standalone.patch
+	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-mmap.patch
+	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-base.patch
+- apply upstream patches
+	patch -p1 </home/blah/aufs4-standalone/aufs4-base.patch
+	patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
+	patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
+	patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
 - copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
-- add to debian/config/config (see previous kernels) to build module:
+- add to debian/config/config to build module
 ##
 ## file: fs/aufs/Kconfig
 ##
@@ -28,28 +32,11 @@ CONFIG_AUFS_BR_HFSPLUS=y
 # CONFIG_AUFS_DEBUG is not set
 
 
-Linux 4.1: patching in missing aufs parts:
-------------------------------------------
-- revert debian patches (most of the time not up-to-date and sometimes even incompatible with current upstream)
-	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-standalone.patch
-	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-mmap.patch
-	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-base.patch
-- apply upstream patches
-	patch -p1 </home/blah/aufs4-standalone/aufs4-base.patch
-	patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
-	patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
-	patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
-- copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
-- add to debian/config/config (see above) to build module
-
-
-Common steps:
--------------
+building the new kernel:
+------------------------
 - apply own patches
 	- copy existing quilt patches to debian/patches
 	- patch -p1 < debian/patches/<name of quilt file>
-	- add necessary statements to debian/config/config
-	  (e.g. add "CONFIG_SURFACE_PRO3_BUTTON=m" to section drivers/platform/x86/Kconfig)
 - backport linux-tools
 	- apt-get source --only-source linux-tools=x.y.z
 	- in chroot: apt-get install liblzma-dev
