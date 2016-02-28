@@ -121,19 +121,24 @@
 		- gnome
 		- i965-va-driver
 		- mate
-		- phoronix-test-suite (orphaned!?)
 		- xorg-server
 	- backports with bugs:
 		- miro (freezes in youtube section)
 		- stopmotion (program crashes)
-		- supertuxkart (system crash, tested on Mac@Michelle and Latitude D630) 
 	- backporting failed:
-		- ardour3
-		- calibre
+		- ardour:
+			dh_shlibdeps -pardour3    
+			dpkg-shlibdeps: warning: couldn't find library libardourcp.so needed by debian/ardour3/usr/lib/ardour4/surfaces/libardour_osc.so (ELF format: 'elf32-i386'; RPATH: '')
+			dpkg-shlibdeps: error: couldn't find library libardour.so.3 needed by debian/ardour3/usr/lib/ardour4/surfaces/libardour_osc.so (ELF format: 'elf32-i386'; RPATH: '')
+			...
+		- calibre (see https://bugs.launchpad.net/calibre/+bug/1516448 for details)
+		- extremetuxracer (needs newer libsfml which needs a newer g++ ... too much hassle)
 		- netbeans
 		- owncloud
 		- pentobi (dependencies to KDE 5)
 		- pspp 0.8.5 (initdb: cannot be run as root)
+		- quassel (needs newer QT5)
+		- vlc (needs newer phonon-backend-vlc which needs extra-cmake-modules which is not in stable ... too much hassle)
 		- xfce4
 			- error while backporting libxfce4util-4.12.1:
 				dh_install: libxfce4util-dev missing files (usr/share/gtk-doc/html/libxfce4util/*), aborting

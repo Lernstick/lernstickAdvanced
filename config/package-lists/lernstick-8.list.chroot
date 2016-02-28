@@ -27,7 +27,8 @@ lernstick-menu
 lernstick-menu-xdg-exam
 lernstick-mount-exchange-exam
 lernstick-musescore
-lernstick-openjdk-7-jre
+lernstick-openjdk-8-jre
+lernstick-pspp
 lernstick-r-base-core
 lernstick-shutter
 lernstick-software-properties-gtk

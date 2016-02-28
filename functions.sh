@@ -61,6 +61,7 @@ build_image()
                 --binary-images iso \
                 --distribution jessie \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
+		--firmware-chroot false \
 		--linux-flavours "686-pae 686" \
 		--linux-packages linux-image-4.4.0-1+lernstick.1 \
                 --mirror-binary ${MIRROR_SYSTEM} \
@@ -80,10 +81,10 @@ build_image()
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file
-		echo "Updating zsync file..."
+		echo "Updating zsync file..." | tee -a logfile.txt
 		rm *.zsync
 		zsyncmake -C ${IMAGE} -u ${IMAGE}
-		echo "Creating MD5 for iso..."
+		echo "Creating MD5 for iso..." | tee -a logfile.txt
 		md5sum ${IMAGE} > ${IMAGE}.md5
 
 		if [ "${SOURCE}" = "true" ]
@@ -103,8 +104,14 @@ build_image()
 			mv ${PREFIX}* "${BUILD_DIR}"
 		fi
 	else
-		echo "Error: ISO file was not build"
+		echo "Error: ISO file was not build" | tee -a logfile.txt
 	fi
+
+	# When installing firmware-b43legacy-installer downloads.openwrt.org is
+	# sometimes down. Building doesn't fail in this situation but we would
+	# have produced an image without support for some legacy broadcom cards.
+	# Therefore we must check via eyeballs what happened...
+	grep downloads.openwrt.org logfile.txt
 
 	echo "Start: ${START}" | tee -a logfile.txt
 	echo "Stop : $(date)" | tee -a logfile.txt
