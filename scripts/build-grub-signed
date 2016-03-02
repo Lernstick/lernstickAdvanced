@@ -115,9 +115,20 @@ mkdir ${BUILDDIR}
 trap "rm -rf ${BUILDDIR}" 0
 dpkg-deb -x ${grubpkg} ${BUILDDIR}
 
+# Create embedded GRUB config file to find live medium
+# this causes GRUB to load it's configuration from the partition that contains /live/vmlinuz1
+cat > ${BUILDDIR}/grub.cfg <<EOF
+search --no-floppy --set=root --file /live/vmlinuz1
+set prefix=(\$root)/boot/grub
+EOF
+
 # create EFI "image", this uses the grub-mkimage from the running system
 # but that should be OK.
-$MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned --format=${GRUB_ARCH} ${MODULES}
+$MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} \
+	 --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned \
+	 --format=${GRUB_ARCH} \
+	 --config=${BUILDDIR}/grub.cfg \
+	 ${MODULES}
 
 if [ "$signed" -eq 1 ] ; then
     sbsign --key ${key} --cert ${cert} --output ${BUILDDIR}/${GRUB_SIGNED_FILE} ${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned
