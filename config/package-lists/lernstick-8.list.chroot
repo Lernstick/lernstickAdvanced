@@ -45,4 +45,4 @@ processing
 rscc
 rscc-defaults-lernstick
 rstudio
-tuxedo-wmi-dkms
+#tuxedo-wmi-dkms
