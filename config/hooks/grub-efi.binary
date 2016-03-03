@@ -20,7 +20,7 @@ mkdir -p $BINARY/$EFI  || true
 
 outfile="bootia32.efi"
 platform="i386-efi"
-modules="part_msdos fat"
+modules="part_msdos fat ext2 search"
 
 # create grub module directory
 mkdir -p $BINARY/$BOOT/grub/$platform || true
