@@ -20,15 +20,27 @@ mkdir -p $BINARY/$EFI  || true
 
 outfile="bootia32.efi"
 platform="i386-efi"
-modules="part_msdos fat"
+modules="part_msdos fat ext2 search"
 
 # create grub module directory
 mkdir -p $BINARY/$BOOT/grub/$platform || true
 
+# Create embedded GRUB config file to find live medium
+# this causes GRUB to load it's configuration from the partition that contains /live/vmlinuz1
+cat > ${CHROOT}/tmp/grub.cfg <<EOF
+search --no-floppy --set=root --file /live/vmlinuz1
+set prefix=(\$root)/boot/grub
+EOF
+
 # create EFI "image" chroot into the live-system to support 
 # cross architecture builds (amd64 / i386)
 #chroot $CHROOT $MKIMAGE --directory=/$GRUBLIB/$platform --prefix=/$BOOT/grub/$platform --output=/tmp/$outfile --format=$platform part_msdos fat
-chroot $CHROOT $MKIMAGE --output=/tmp/$outfile --format=$platform $modules
+chroot $CHROOT $MKIMAGE \
+       --output=/tmp/$outfile \
+       --format=$platform \
+       --config=/tmp/grub.cfg \
+       $modules
+
 cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
 
 # copy grub modules
