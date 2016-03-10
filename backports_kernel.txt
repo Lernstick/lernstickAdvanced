@@ -70,3 +70,42 @@ building the new kernel:
 
 all in one line (for easy copy&pasting):
 fakeroot make -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen setup_i386_none_686; fakeroot make -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -f debian/rules.gen binary-arch_i386_extra; fakeroot make -f debian/rules.gen binary-libc-dev_i386
+
+
+building test image with new kernel:
+------------------------------------
+
+add the following lines to config/apt/preferences:
+
+Package: linux-compiler-gcc-4.9-x86
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-4.4.0-1+lernstick.1-686
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-4.4.0-1+lernstick.1-686-pae
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-4.4.0-1+lernstick.1-common
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-image-4.4.0-1+lernstick.1-686
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-image-4.4.0-1+lernstick.1-686-pae
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-libc-dev
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
+Package: linux-libc-dev
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
