@@ -2,6 +2,10 @@
 	- use new package and tool (update-glx) for glx-alternative setting
 	- special xorg.conf no longer needed
 
+- more plymouth tests (especially with NVIDIA GPUs) needed:
+	- sudo plymouth-set-default-theme lines
+	- sudo plymouthd ; sudo plymouth --show-splash ; sudo plymouth display-message --text="Test"; sleep 10 ; sudo killall plymouthd
+
 - unattended upgrades without blocking other cronjobs
 
 - show okteta and kcalc in GNOME
