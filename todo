@@ -29,6 +29,7 @@
 - better scribus icon
 
 - dlcopy:
+	- save/load settings (data partition read/write mode, data partition file system, data partition copy mode, exchange partition size)
 	- create a new uuid when copying or creating a new image
 	- keep user password when upgrading storage media
 

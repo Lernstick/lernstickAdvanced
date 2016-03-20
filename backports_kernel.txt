@@ -57,19 +57,19 @@ building the new kernel:
 	- apt-get install vim
 	- dch --local +lernstick. (use "lernstick-8-backports-staging" as distribution)
 	- make -f debian/rules clean
-	- fakeroot make -f debian/rules.gen setup_i386_none_686-pae
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8
-	- fakeroot make -f debian/rules.gen setup_i386_none_686
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8
+	- fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae
+	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep
+	- fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686
+	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep
 - build common headers:
-	- fakeroot make -f debian/rules.gen binary-arch_i386_none_real
+	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_real
 - build linux-compiler package:
-	- fakeroot make -f debian/rules.gen binary-arch_i386_extra
+	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_extra
 - build libc-dev package:
-	- fakeroot make -f debian/rules.gen binary-libc-dev_i386
+	- fakeroot make -j$(nproc) -f debian/rules.gen binary-libc-dev_i386
 
 all in one line (for easy copy&pasting):
-fakeroot make -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen setup_i386_none_686; fakeroot make -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -f debian/rules.gen binary-arch_i386_extra; fakeroot make -f debian/rules.gen binary-libc-dev_i386
+fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep; fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_extra; fakeroot make -j$(nproc) -f debian/rules.gen binary-libc-dev_i386
 
 
 building test image with new kernel:
