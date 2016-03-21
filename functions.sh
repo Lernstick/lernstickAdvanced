@@ -63,7 +63,7 @@ build_image()
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
 		--linux-flavours "686-pae 686" \
-		--linux-packages linux-image-4.4.0-1+lernstick.1 \
+		--linux-packages linux-image-4.4.0-1+lernstick.2 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
