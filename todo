@@ -118,6 +118,7 @@
 
 - backports:
 	- todo:
+		- sonicpi
 		- cinnamon
 		- efibootmgr
 		- exfat-utils
