@@ -1,3 +1,5 @@
+- do not lock screen after resume
+
 - GNOME mixes up "JBackpack" and "JBackpack (Admin)" in most used apps
 
 - upgrade nvidia driver handling
