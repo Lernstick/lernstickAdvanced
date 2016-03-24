@@ -39,7 +39,7 @@ lernstick-dia-common
 lernstick-digikam
 lernstick-dolphin
 lernstick-dossizola
-lernstick-energiespiel
+#lernstick-energiespiel (needs Flash > 11.5)
 lernstick-eog
 lernstick-etoys
 lernstick-evince-common
@@ -172,7 +172,6 @@ lernstick-vlc
 lernstick-vmpk
 lernstick-vokoscreen
 lernstickwelcome
-lernstick-weltmusik
 lernstick-wiktionary
 lernstick-wine
 lernstick-winff
