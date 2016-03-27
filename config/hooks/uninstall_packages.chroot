@@ -4,6 +4,7 @@
 # We have to remove them here manually.
 # Because of random dependency resolving, openjdk-7 gets installed in addition to openjdk-8.
 # This is unnecessary and we remove it in this hook.
+# Iceweasel was replaced with Firefox in March 2016 (see https://glandium.org/blog/?p=3622) but iceweasel is still a dependency of some metapackages in Debian Jessie. Therefore we remove iceweasel in this hook.
 apt-get remove --purge -y \
 	bluez \
 	bluez-firmware \
@@ -15,13 +16,11 @@ apt-get remove --purge -y \
 	gnome-dictionary \
 	gnome-disk-utility \
 	gnome-screenshot \
+	iceweasel \
 	libtotem0 \
 	openjdk-7-jdk \
 	openjdk-7-jre \
-	openjdk-7-jre-headless \
-	pidgin \
-	totem \
-	totem-common
+	openjdk-7-jre-headless
 
 # clean up
 apt-get purge -y --auto-remove
