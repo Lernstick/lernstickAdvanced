@@ -5,7 +5,7 @@ jbackpack-restore
 jbackpack-restore-admin
 lernstick-archive-keyring
 lernstick-config
-#lernstick-fglrx-control
+lernstick-execute-jar
 lernstick-firewall
 lernstick-geogebra-exam
 lernstick-gksu
