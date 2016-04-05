@@ -31,8 +31,6 @@
 #
 # * kdenetwork-filesharing needs samba
 #
-# * epoptes needs python-openssl
-#
 # * stopmotion needs vgrabbj
 #
 # * pulseaudio needs rtkit for stutterless output
@@ -175,8 +173,8 @@ ekiga
 enigma
 enigma-data
 enigmail
-#epoptes
-#epoptes-client
+epoptes
+epoptes-client
 exfat-fuse
 exfat-utils
 extremetuxracer
