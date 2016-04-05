@@ -66,6 +66,7 @@ desktop-base
 dialog
 dkms
 eject
+epoptes-client
 exfat-fuse
 exfat-utils
 ffmpegthumbs
