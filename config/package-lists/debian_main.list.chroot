@@ -186,6 +186,7 @@ firefox-l10n-de
 firefox-l10n-en-gb
 firefox-l10n-es-ar
 firefox-l10n-es-es
+firefox-l10n-fa
 firefox-l10n-fr
 firefox-l10n-it
 firefox-l10n-pt-br
@@ -357,6 +358,7 @@ kdegames-card-data
 kdegraphics-thumbnailers
 kde-l10n-de
 kde-l10n-es
+kde-l10n-fa
 kde-l10n-fr
 kde-l10n-it
 kde-l10n-ptbr
@@ -477,8 +479,10 @@ libreoffice-impress
 #libreoffice-kde
 libreoffice-l10n-de
 libreoffice-l10n-es
+libreoffice-l10n-fa
 libreoffice-l10n-fr
 libreoffice-l10n-it
+libreoffice-l10n-kmr
 libreoffice-l10n-pt-br
 libreoffice-l10n-ru
 libreoffice-math
@@ -535,8 +539,10 @@ myspell-de-de
 myspell-en-gb
 myspell-en-us
 myspell-es
+myspell-fa
 myspell-fr
 myspell-it
+myspell-ku
 myspell-pt-br
 myspell-ru
 mythes-de
