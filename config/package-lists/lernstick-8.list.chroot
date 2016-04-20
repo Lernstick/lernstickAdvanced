@@ -50,7 +50,6 @@ lernstick-freeciv-client-gtk
 lernstick-fritzing
 lernstick-fslint
 lernstick-galculator
-lernstick-gcompris
 lernstick-gdebi-kde
 lernstick-gedit
 lernstick-geogebra
@@ -175,7 +174,6 @@ lernstickwelcome
 lernstick-wiktionary
 lernstick-wine
 lernstick-winff
-lernstick-wxmaxima
 lernstick-x11vnc
 lernstick-xarchiver
 lernstick-xdrawchem

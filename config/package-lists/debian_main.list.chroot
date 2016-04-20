@@ -7,17 +7,7 @@
 # 
 # * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not be compiled
 # 
-# * openttd-openmsx needs freepats
-#
-# * shutter needs libgoo-canvas-perl
-#
-# * parley needs krosspython
-#
 # * synaptic needs apt-xapian-index for quicksearch
-#
-# * openshot needs frei0r-plugins
-#
-# * musescore needs pulseaudio-utils for playback window
 #
 # * solfege
 #	temporarily disabled until https://code.google.com/p/solfege/issues/detail?id=279 gets fixed
@@ -25,40 +15,21 @@
 #		- csound
 #		- python-pyalsa
 #
-# * miro needs libavahi-compat-libdnssd1
-#
 # * netbeans needs libsvn-java
-#
-# * kdenetwork-filesharing needs samba
-#
-# * stopmotion needs vgrabbj
-#
-# * pulseaudio needs rtkit for stutterless output
 #
 # * qxw needs wngerman, wamerican-huge, wbritish-huge
 #
-# * gramps needs gir1.2-gexiv2-0.10 and gir1.2-osmgpsmap-1.0
-#
 # * kigo needs gnugo
 #
-# * marble recommends monav-routing-daemon
+# * marble suggests monav-routing-daemon
 #
 # * enlightenment recommends terminology
 #
-# * qreator needs geoclue-hostip
+# * qreator needs geoclue-hostip (upstream bug, see https://bugs.launchpad.net/qreator/+bug/1186224)
 #
 # * gimagereader needs the tesseract-ocr-* language files
 #
-# * gnome-control-center recommends cracklib-runtime
-#
-# * rdiff-backup recommends python-pylibacl and python-pyxattr
-#
-# * maxima recommends gnuplot-x11
-#
 # * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
-#
-# * gnome-session (gnome-settings-daemon) tries to load the file /usr/share/hwdata/pnp.ids (seen via journalctl on Acer Iconia Tab)
-#   therefore we add the package hwdata
 #
 #################################################################################################
 acpi
@@ -137,7 +108,6 @@ command-not-found
 connectagram
 console-setup
 crack-attack
-cracklib-runtime
 cryptsetup
 crystalcursors
 cups
@@ -206,23 +176,13 @@ freeciv-client-gtk
 freeciv-data
 freeciv-server
 freeciv-sound-standard
-freepats
 freeplane
 freespacenotifier
-frei0r-plugins
 fritzing
 frozen-bubble
 frozen-bubble-data
 fslint
 gbrainy
-gcompris
-gcompris-sound-de
-gcompris-sound-en
-gcompris-sound-es
-gcompris-sound-fr
-gcompris-sound-it
-gcompris-sound-ptbr
-gcompris-sound-ru
 gconf-editor
 gdb
 gdebi
@@ -249,8 +209,6 @@ gimp-help-it
 gimp-help-ru
 gimp-plugin-registry
 gimp-texturize
-gir1.2-gexiv2-0.10
-gir1.2-osmgpsmap-1.0
 git
 glabels
 gnome-clocks
@@ -268,7 +226,6 @@ gnome-tweak-tool
 gnucap
 gnuchess
 gnugo
-gnuplot-x11
 gpart
 gramps
 graphviz
@@ -290,7 +247,6 @@ hplip-gui
 hp-ppd
 htop
 hugin
-hwdata
 hydrogen
 hydrogen-drumkits
 hyphen-de
@@ -341,12 +297,6 @@ kbreakout
 kbruch
 kcalc
 kcharselect
-kdeartwork
-kdeartwork-emoticons
-kdeartwork-style
-kdeartwork-theme-icon
-kdeartwork-theme-window
-kdeartwork-wallpapers
 kde-baseapps-bin
 kde-base-artwork
 kde-config-baloo-advanced
@@ -428,7 +378,6 @@ kpat
 krename
 kreversi
 krita
-krosspython
 kscreensaver
 kshisen
 ksplash-theme-aperture
@@ -455,12 +404,6 @@ less
 libcups2-dev
 libegl1-mesa-drivers
 libgl1-mesa-dri
-libgoo-canvas-perl
-libk3b6-extracodecs
-libkactivities-bin
-libmtp-runtime
-libqca2-plugin-ossl
-libqt4-opengl
 libreoffice
 libreoffice-base
 libreoffice-calc
@@ -518,13 +461,11 @@ manpages-it
 manpages-pt
 marble
 mate-desktop-environment
-maxima-share
 mc
 mdadm
 mesa-vdpau-drivers
 metacity
 #miro
-mobile-broadband-provider-info 
 modemmanager
 monav-routing-daemon
 morris
@@ -588,7 +529,6 @@ openttd-opengfx
 openttd-openmsx
 openttd-opensfx
 owncloud-client
-oxygen-icon-theme
 p7zip-full
 palapeli
 parley
@@ -630,12 +570,9 @@ pulseaudio-module-lirc
 pulseaudio-module-raop
 pulseaudio-module-x11
 pulseaudio-module-zeroconf
-pulseaudio-utils
 pv
 pymol
 python-notify
-python-pylibacl
-python-pyxattr
 qelectrotech
 qelectrotech-data
 qelectrotech-examples
@@ -657,7 +594,6 @@ rfkill
 rhythmbox
 rhythmbox-plugins
 rsync
-rtkit
 samplerate-programs
 sane
 sane-utils
@@ -726,7 +662,6 @@ usb-modeswitch
 usbutils
 user-setup
 vdpau-va-driver
-vgrabbj
 vim
 vim-gtk
 vinagre
@@ -749,7 +684,6 @@ wmctrl
 wngerman
 wodim
 wpasupplicant
-wxmaxima
 x11vnc
 xdrawchem
 xfce4

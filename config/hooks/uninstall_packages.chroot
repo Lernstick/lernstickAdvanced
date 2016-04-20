@@ -12,6 +12,7 @@ apt-get purge -y \
 # Building the system with recommends enabled pulls in a lot of packages we don't want to have.
 # Unfortunately, we have no blacklist while building the system so we have to remove them here right afer installing them...
 apt-get purge -y \
+	gnome-system-tools \
 	lilypond-doc \
 	lilypond-doc-pdf \
 	texlive-fonts-recommended-doc \
