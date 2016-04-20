@@ -9,5 +9,17 @@ apt-get purge -y \
 	openjdk-7-jre \
 	openjdk-7-jre-headless
 
+# Building the system with recommends enabled pulls in a lot of packages we don't want to have.
+# Unfortunately, we have no blacklist while building the system so we have to remove them here right afer installing them...
+apt-get purge -y \
+	lilypond-doc \
+	lilypond-doc-pdf \
+	texlive-fonts-recommended-doc \
+	texlive-latex-base-doc \
+	texlive-latex-extra-doc \
+	texlive-latex-recommended-doc \
+	texlive-pictures-doc \
+	texlive-pstricks-doc
+
 # clean up
 apt-get purge -y --auto-remove
