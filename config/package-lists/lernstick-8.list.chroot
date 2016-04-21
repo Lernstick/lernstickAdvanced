@@ -17,6 +17,7 @@ lernstick-archive-keyring
 lernstick-ardour3
 lernstick-arduino
 lernstick-arista
+lernstick-atril
 lernstick-avidemux-qt
 lernstick-avogadro
 lernstick-bkchem
@@ -29,6 +30,7 @@ lernstick-cheese
 lernstick-chemtool
 lernstick-childsplay
 lernstick-clamtk-gnome
+lernstick-clipit
 lernstick-config
 lernstick-cooldriving
 lernstick-crack-attack
@@ -41,6 +43,7 @@ lernstick-dolphin
 lernstick-dossizola
 #lernstick-energiespiel (needs Flash > 11.5)
 lernstick-eog
+lernstick-eom
 lernstick-evince-common
 lernstick-execute-jar
 #lernstick-fglrx-control
@@ -117,6 +120,7 @@ lernstick-nautilus
 lernstick-nemo
 lernstick-nepomuk-core-data
 lernstick-notenmax
+lernstick-obconf
 lernstick-okular
 lernstick-openclipart
 lernstick-openjdk-8-jre
@@ -161,6 +165,7 @@ lernstick-totem
 lernstick-tracker-gui
 lernstick-tuxtype
 lernstick-unserkoerper
+lernstick-usermode
 lernstick-usertemplate
 lernstick-vim-common
 lernstick-virtualbox
