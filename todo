@@ -52,7 +52,7 @@
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
 - lernstickWelcome:
-	- add gcompris and wxmaxima
+	- add gcompris, wxmaxima, kstars, hydrogen (with drumkit effects) and etoys (with lernstick-squeak-vm)
 	- Java Development package (formerly NetBeans)
 		- add sonar (http://sonar-pkg.sourceforge.net/) and check that findbugs is included
 		- PMD (static code analysis)

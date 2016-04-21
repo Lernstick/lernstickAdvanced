@@ -41,7 +41,6 @@ lernstick-dolphin
 lernstick-dossizola
 #lernstick-energiespiel (needs Flash > 11.5)
 lernstick-eog
-lernstick-etoys
 lernstick-evince-common
 lernstick-execute-jar
 #lernstick-fglrx-control
@@ -84,7 +83,6 @@ lernstick-klavaro
 lernstick-konsole
 lernstick-krename
 lernstick-krita
-lernstick-kstars
 lernstick-ktimetracker
 lernstick-ktouch
 lernstick-kturtle
@@ -148,7 +146,6 @@ lernstick-sikore
 lernstick-snap
 lernstick-software-properties-gtk
 lernstick-speedcrunch
-lernstick-squeak-vm
 lernstick-step
 lernstick-strut
 lernstick-synaptic

@@ -12,8 +12,6 @@ atmel-firmware
 bluez-firmware
 broadcom-sta-dkms
 celestia-common-nonfree
-etoys
-etoys-doc
 #fglrx-control
 #fglrx-modules-dkms
 firmware-amd-graphics
@@ -40,7 +38,6 @@ firmware-siano
 firmware-ti-connectivity
 firmware-zd1211
 intel-microcode
-kstars-data-extra-tycho2
 #libfglrx-amdxvba1
 #libgl1-fglrx-glx
 libnvidia-encode1
