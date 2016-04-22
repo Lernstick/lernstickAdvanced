@@ -20,6 +20,7 @@ lernstick-arista
 lernstick-atril
 lernstick-avidemux-qt
 lernstick-avogadro
+lernstick-baobab
 lernstick-bkchem
 lernstick-blockout2
 lernstick-bluedevil
@@ -141,6 +142,7 @@ lernstick-pcmanfm
 lernstick-pdfshuffler
 lernstick-phet
 lernstick-playonlinux
+lernstick-pluma
 lernstick-pspp
 lernstick-pymol
 lernstick-qelectrotech
@@ -186,6 +188,7 @@ lernstick-xdrawchem
 lernstick-xfce4-appfinder
 lernstick-xfce4-clipman
 lernstick-xfce4-mixer
+lernstick-xfce4-notes
 lernstick-xfce4-sensors-plugin
 lernstick-xfce4-taskmanager
 lernstick-xfce4-terminal
