@@ -81,23 +81,23 @@ Package: linux-compiler-gcc-4.9-x86
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.4.0-1+lernstick.1-686
+Package: linux-headers-4.5.0-1+lernstick.1-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.4.0-1+lernstick.1-686-pae
+Package: linux-headers-4.5.0-1+lernstick.1-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.4.0-1+lernstick.1-common
+Package: linux-headers-4.5.0-1+lernstick.1-common
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.4.0-1+lernstick.1-686
+Package: linux-image-4.5.0-1+lernstick.1-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.4.0-1+lernstick.1-686-pae
+Package: linux-image-4.5.0-1+lernstick.1-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
