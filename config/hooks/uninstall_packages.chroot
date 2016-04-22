@@ -12,15 +12,18 @@ apt-get purge -y \
 # Building the system with recommends enabled pulls in a lot of packages we don't want to have.
 # Unfortunately, we have no blacklist while building the system so we have to remove them here right afer installing them...
 apt-get purge -y \
+	alsamixergui \
 	gnome-system-tools \
 	lilypond-doc \
 	lilypond-doc-pdf \
+	prerex \
 	texlive-fonts-recommended-doc \
 	texlive-latex-base-doc \
 	texlive-latex-extra-doc \
 	texlive-latex-recommended-doc \
 	texlive-pictures-doc \
-	texlive-pstricks-doc
+	texlive-pstricks-doc \
+	vprerex
 
 # clean up
 apt-get purge -y --auto-remove
