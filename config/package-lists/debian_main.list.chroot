@@ -11,32 +11,15 @@
 # 
 # * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not be compiled
 # 
-# * shutter needs libgoo-canvas-perl
-#
-# * synaptic needs apt-xapian-index for quicksearch
-#
-# * musescore needs pulseaudio-utils for playback window
-#
 # * solfege
 #	temporarily disabled until https://code.google.com/p/solfege/issues/detail?id=279 gets fixed
 #	recommends:
 #		- csound
 #		- python-pyalsa
 #
-# * pulseaudio needs rtkit for stutterless output
-#
-# * gnome-control-center recommends cracklib-runtime
-#
-# * gnome-shell-extensions (the places extension) nees xdg-user-dirs
-#
-# * rdiff-backup recommends python-pylibacl and python-pyxattr
-#
 # * the kde-l10n* packages are needed for localized kdialog messages
 #
-# * maxima recommends gnuplot-x11
-#
-# * gnome-session (gnome-settings-daemon) tries to load the file /usr/share/hwdata/pnp.ids (seen via journalctl on Acer Iconia Tab)
-#   therefore we add the package hwdata
+# * netbeans needs libsvn-java
 #
 #################################################################################################
 acpi
@@ -45,9 +28,9 @@ acpitail
 acpitool
 alsa-utils
 anacron
+aptitude
 apt-rdepends
 apt-transport-https
-apt-xapian-index
 avahi-autoipd
 avahi-daemon
 avahi-utils
@@ -55,7 +38,6 @@ bash-completion
 bzip2
 command-not-found
 console-setup
-cracklib-runtime
 cryptsetup
 cups
 cups-backend-bjnp
@@ -77,6 +59,7 @@ firefox-l10n-de
 firefox-l10n-en-gb
 firefox-l10n-es-ar
 firefox-l10n-es-es
+firefox-l10n-fa
 firefox-l10n-fr
 firefox-l10n-it
 firefox-l10n-pt-br
@@ -92,8 +75,6 @@ gdebi
 gdm3
 gecko-mediaplayer
 geogebra-gnome
-gir1.2-gexiv2-0.10
-gir1.2-osmgpsmap-1.0
 gnome-clocks
 gnome-core
 gnome-nettool
@@ -103,7 +84,6 @@ gnome-shell-extensions-gpaste
 gnome-system-monitor
 gnome-themes
 gnome-tweak-tool
-gnuplot-x11
 gstreamer1.0-fluendo-mp3
 gstreamer1.0-libav
 gstreamer1.0-plugins-bad
@@ -117,13 +97,13 @@ hpijs-ppds
 hplip-gui
 hp-ppd
 htop
-hwdata
 i965-va-driver
 icedtea-8-plugin
 ijsgutenprint
 iotop
 kde-l10n-de
 kde-l10n-es
+kde-l10n-fa
 kde-l10n-fr
 kde-l10n-it
 kde-l10n-ptbr
@@ -132,7 +112,6 @@ less
 libcups2-dev
 libegl1-mesa-drivers
 libgl1-mesa-dri
-libgoo-canvas-perl
 libreoffice
 libreoffice-base
 libreoffice-calc
@@ -140,7 +119,7 @@ libreoffice-draw
 libreoffice-evolution
 libreoffice-gnome
 libreoffice-gtk
-#libreoffice-gtk3
+libreoffice-gtk3
 libreoffice-help-de
 libreoffice-help-en-us
 libreoffice-help-es
@@ -151,8 +130,10 @@ libreoffice-help-ru
 libreoffice-impress
 libreoffice-l10n-de
 libreoffice-l10n-es
+libreoffice-l10n-fa
 libreoffice-l10n-fr
 libreoffice-l10n-it
+libreoffice-l10n-kmr
 libreoffice-l10n-pt-br
 libreoffice-l10n-ru
 libreoffice-math
@@ -179,7 +160,6 @@ manpages-es
 manpages-fr
 manpages-it
 manpages-pt
-maxima-share
 mc
 menu
 mesa-vdpau-drivers
@@ -187,7 +167,6 @@ musescore
 nautilus
 nautilus-admin
 nautilus-open-terminal
-nautilus-owncloud
 nautilus-wipe
 network-manager-gnome
 network-manager-openconnect
@@ -217,14 +196,9 @@ pulseaudio-module-lirc
 pulseaudio-module-raop
 pulseaudio-module-x11
 pulseaudio-module-zeroconf
-pulseaudio-utils
 pv
-python-pylibacl
-python-pyxattr
-r-base
 rfkill
 rsync
-rtkit
 shutter
 software-properties-gtk
 spice-vdagent
@@ -246,7 +220,6 @@ vpnc
 whois
 wireless-tools
 wxmaxima
-xdg-user-dirs
 xserver-xorg
 xserver-xorg-core
 xserver-xorg-input-acecad

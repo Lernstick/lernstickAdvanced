@@ -55,7 +55,7 @@ build_image()
 	lb clean
 	lb config \
                 --apt-indices false \
-                --apt-recommends false \
+                --apt-recommends true \
                 --architectures i386 \
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
@@ -63,7 +63,7 @@ build_image()
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
 		--linux-flavours "686-pae 686" \
-		--linux-packages linux-image-4.4.0-1+lernstick.2 \
+		--linux-packages linux-image-4.5.0-1+lernstick.1 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \

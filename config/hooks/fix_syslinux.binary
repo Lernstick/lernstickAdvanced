@@ -2,11 +2,6 @@
 
 cd binary/live || exit 1
 
-mv vmlinuz-4.3.0-1+lernstick.1-686 vmlinuz1 || true
-mv vmlinuz-4.3.0-1+lernstick.1-686-pae vmlinuz2 || true
-mv initrd.img-4.3.0-1+lernstick.1-686 initrd1.img || true
-mv initrd.img-4.3.0-1+lernstick.1-686-pae initrd2.img || true
-
 mv vmlinuz-4.4.0-1+lernstick.1-686 vmlinuz1 || true
 mv vmlinuz-4.4.0-1+lernstick.1-686-pae vmlinuz2 || true
 mv initrd.img-4.4.0-1+lernstick.1-686 initrd1.img || true
@@ -16,3 +11,8 @@ mv vmlinuz-4.4.0-1+lernstick.2-686 vmlinuz1 || true
 mv vmlinuz-4.4.0-1+lernstick.2-686-pae vmlinuz2 || true
 mv initrd.img-4.4.0-1+lernstick.2-686 initrd1.img || true
 mv initrd.img-4.4.0-1+lernstick.2-686-pae initrd2.img || true
+
+mv vmlinuz-4.5.0-1+lernstick.1-686 vmlinuz1 || true
+mv vmlinuz-4.5.0-1+lernstick.1-686-pae vmlinuz2 || true
+mv initrd.img-4.5.0-1+lernstick.1-686 initrd1.img || true
+mv initrd.img-4.5.0-1+lernstick.1-686-pae initrd2.img || true

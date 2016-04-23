@@ -7,7 +7,6 @@
 # Iceweasel was replaced with Firefox in March 2016 (see https://glandium.org/blog/?p=3622) but iceweasel is still a dependency of some metapackages in Debian Jessie. Therefore we remove iceweasel in this hook.
 apt-get remove --purge -y \
 	bluez \
-	bluez-firmware \
 	bluez-obexd \
 	empathy \
 	empathy-common \
@@ -18,9 +17,35 @@ apt-get remove --purge -y \
 	gnome-screenshot \
 	iceweasel \
 	libtotem0 \
-	openjdk-7-jdk \
 	openjdk-7-jre \
 	openjdk-7-jre-headless
+
+# Building the system with recommends enabled pulls in a lot of packages we don't want to have.
+# Unfortunately, we have no blacklist while building the system so we have to remove them here right afer installing them...
+apt-get purge -y \
+	evolution \
+	evolution-common \
+	evolution-plugins \
+	gedit \
+	gedit-common \
+	gimp \
+	gimp-data \
+	libevolution \
+	libgimp2.0 \
+	libreoffice-evolution \
+	libsane-extras \
+	libsane-extras-common \
+	prerex \
+	sane-utils \
+	texlive-fonts-recommended-doc \
+	texlive-latex-base-doc \
+	texlive-latex-extra-doc \
+	texlive-latex-recommended-doc \
+	texlive-pictures-doc \
+	texlive-pstricks-doc \
+	vprerex \
+	xsane \
+	xsane-common
 
 # clean up
 apt-get purge -y --auto-remove
