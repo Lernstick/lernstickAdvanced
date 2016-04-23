@@ -400,6 +400,7 @@ less
 libcups2-dev
 libegl1-mesa-drivers
 libgl1-mesa-dri
+libpam-smbpass
 libreoffice
 libreoffice-base
 libreoffice-calc
@@ -493,6 +494,7 @@ nautilus
 nautilus-admin
 nautilus-open-terminal
 nautilus-owncloud
+nautilus-share
 nautilus-wipe
 ncdu
 nethogs
