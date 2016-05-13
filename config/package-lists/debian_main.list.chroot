@@ -32,10 +32,6 @@
 # * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
 #
 #################################################################################################
-acpi
-acpi-support
-acpitail
-acpitool
 akregator
 alsa-utils
 amarok
