@@ -25,6 +25,7 @@ apt-get purge -y \
 	gnome-system-tools \
 	lilypond-doc \
 	lilypond-doc-pdf \
+	minidlna \
 	prerex \
 	texlive-fonts-recommended-doc \
 	texlive-latex-base-doc \
