@@ -61,7 +61,3 @@ Pin-Priority: 999
 Package: wireshark*
 Pin: release n=jessie-backports
 Pin-Priority: 999
-
-Package: xserver-xorg-video-intel
-Pin: release n=jessie-backports
-Pin-Priority: 999
