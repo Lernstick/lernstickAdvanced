@@ -5,10 +5,11 @@ patching in missing aufs parts:
 	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-mmap.patch
 	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-base.patch
 - apply upstream patches
-	patch -p1 </home/blah/aufs4-standalone/aufs4-base.patch
-	patch -p1 </home/blah/aufs4-standalone/aufs4-mmap.patch
-	patch -p1 </home/blah/aufs4-standalone/aufs4-standalone.patch
-	patch -p1 </home/blah/aufs4-standalone/aufs4-kbuild.patch
+	export AUFS_DIR=/home/ronny/Programme/aufs4-standalone/
+	patch -p1 < ${AUFS_DIR}/aufs4-base.patch
+	patch -p1 < ${AUFS_DIR}/aufs4-mmap.patch
+	patch -p1 < ${AUFS_DIR}/aufs4-standalone.patch
+	patch -p1 < ${AUFS_DIR}/aufs4-kbuild.patch
 - copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
 - add to debian/config/config to build module
 ##
@@ -53,14 +54,15 @@ building the new kernel:
 		debian/rules.gen \
 		debian/templates/control.extra.in
 - build all packages (in pbuilder chroot, see backports.txt):
-	- make -f debian/rules clean
-	- apt-get install vim
-	- dch --local +lernstick. (use "lernstick-8-backports-staging" as distribution)
-	- make -f debian/rules clean
-	- fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae
-	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep
-	- fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686
-	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep
+	make -f debian/rules clean
+	apt-get install vim
+	dch --local +lernstick.
+		(use "lernstick-8-backports-staging" as distribution)
+	make -f debian/rules clean
+	fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae
+	fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep
+	fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686
+	fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep
 - build common headers:
 	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_real
 - build linux-compiler package:
