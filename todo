@@ -57,6 +57,7 @@
 		- PMD (static code analysis)
 	- add makehuman
 	- add flightgear/fgrun
+	- add scantailor
 	- detect and use correct architecture (i386 or amd64) for:
 		- google earth
 		- skype
@@ -79,6 +80,7 @@
 	- cmaptools (license!?)
 	- lxmed
 - package software
+	- https://extensions.gnome.org/extension/495/topicons/
 	- tuxmathscrabble (http://www.asymptopia.org/software/tuxmathscrabble/)
 	- freedoko http://free-doko.sourceforge.net/de/FreeDoko.html
 	- xlogo (http://xlogo.tuxfamily.org/)
@@ -142,6 +144,7 @@
 		- pentobi (dependencies to KDE 5)
 		- pspp 0.8.5 (initdb: cannot be run as root)
 		- quassel (needs newer QT5)
+		- rhythmbox (needs libgrilo-0.3-dev which needs newer valac which clashes with valac in jessie)
 		- vlc (needs newer phonon-backend-vlc which needs extra-cmake-modules which is not in stable ... too much hassle)
 		- xfce4
 			- error while backporting libxfce4util-4.12.1:
