@@ -2,10 +2,15 @@
 
 # Some unwanted packages are pulled in via metapackages.
 # We have to remove them here manually.
-# Because of random dependency resolving, openjdk-7 gets installed in addition to openjdk-8.
-# This is unnecessary and we remove it in this hook.
-# Iceweasel was replaced with Firefox in March 2016 (see https://glandium.org/blog/?p=3622) but iceweasel is still a dependency of some metapackages in Debian Jessie. Therefore we remove iceweasel in this hook.
-apt-get remove --purge -y \
+#
+# Because of random dependency resolving, openjdk-7 gets installed in addition
+# to openjdk-8. This is unnecessary and we remove it in this hook.
+#
+# Iceweasel was replaced with Firefox in March 2016 (see
+# https://glandium.org/blog/?p=3622) but iceweasel is still a dependency of
+# some metapackages in Debian Jessie. Therefore we remove iceweasel in this
+# hook.
+apt-get purge -y \
 	bluez \
 	bluez-obexd \
 	empathy \
@@ -20,8 +25,9 @@ apt-get remove --purge -y \
 	openjdk-7-jre \
 	openjdk-7-jre-headless
 
-# Building the system with recommends enabled pulls in a lot of packages we don't want to have.
-# Unfortunately, we have no blacklist while building the system so we have to remove them here right afer installing them...
+# Building the system with recommends enabled pulls in a lot of packages we
+# don't want to have. Unfortunately, we have no blacklist while building the
+# system so we have to remove them here right afer installing them...
 apt-get purge -y \
 	evolution \
 	evolution-common \

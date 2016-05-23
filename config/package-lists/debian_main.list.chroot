@@ -22,10 +22,6 @@
 # * netbeans needs libsvn-java
 #
 #################################################################################################
-acpi
-acpi-support
-acpitail
-acpitool
 alsa-utils
 anacron
 aptitude
