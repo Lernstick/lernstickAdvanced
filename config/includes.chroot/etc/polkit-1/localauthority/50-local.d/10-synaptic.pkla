@@ -1,0 +1,6 @@
+[disallow user mounting and unmounting of devices]
+Identity=unix-user:user
+Action=com.ubuntu.pkexec.synaptic
+ResultAny=auth_self
+ResultInactive=auth_self
+ResultActive=auth_self
