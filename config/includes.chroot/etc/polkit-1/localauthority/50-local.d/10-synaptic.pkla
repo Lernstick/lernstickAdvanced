@@ -1,4 +1,4 @@
-[disallow user mounting and unmounting of devices]
+[allow user to run synaptic with self authentication]
 Identity=unix-user:user
 Action=com.ubuntu.pkexec.synaptic
 ResultAny=auth_self
