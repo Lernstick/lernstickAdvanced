@@ -179,6 +179,8 @@ network-manager-vpnc
 network-manager-vpnc-gnome
 ntfs-3g
 openprinting-ppds
+openssh-client
+openssh-server
 p7zip-full
 patch
 pciutils
