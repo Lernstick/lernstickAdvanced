@@ -189,7 +189,7 @@ gecko-mediaplayer
 gedit
 gedit-plugins
 genisoimage
-geoclue-hostip
+#geoclue-hostip
 geogebra-gnome
 geogebra-kde
 ghex
@@ -363,7 +363,6 @@ knavalbattle
 knetwalk
 knode
 knotes
-knowthelist
 kollision
 konq-plugins
 konqueror
@@ -460,6 +459,7 @@ mdadm
 mesa-vdpau-drivers
 metacity
 #miro
+mixxx
 modemmanager
 monav-routing-daemon
 morris
@@ -574,7 +574,7 @@ qelectrotech
 qelectrotech-data
 qelectrotech-examples
 qjackctl
-qreator
+#qreator
 qtqr
 quassel-kde4
 qxw
