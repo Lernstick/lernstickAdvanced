@@ -77,7 +77,7 @@ fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae; fakeroot m
 building test image with new kernel:
 ------------------------------------
 
-add the following lines to config/apt/preferences:
+add the following lines to config/apt/preferences
 
 Package: linux-compiler-gcc-4.9-x86
 Pin: release n=lernstick-8-backports-staging
