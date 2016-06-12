@@ -1,0 +1,6 @@
+[enforce authentication before running the Hardware Lister]
+Identity=unix-user:*
+Action=ch.lernstick.lshw-gtk
+ResultAny=auth_self
+ResultInactive=auth_self
+ResultActive=auth_self
