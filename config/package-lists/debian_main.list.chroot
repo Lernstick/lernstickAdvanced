@@ -17,8 +17,6 @@
 #		- csound
 #		- python-pyalsa
 #
-# * the kde-l10n* packages are needed for localized kdialog messages
-#
 # * netbeans needs libsvn-java
 #
 # * when running Java programs we often get the message:
@@ -101,13 +99,6 @@ i965-va-driver
 icedtea-8-plugin
 ijsgutenprint
 iotop
-kde-l10n-de
-kde-l10n-es
-kde-l10n-fa
-kde-l10n-fr
-kde-l10n-it
-kde-l10n-ptbr
-kde-l10n-ru
 less
 libcanberra-gtk0
 libcups2-dev
