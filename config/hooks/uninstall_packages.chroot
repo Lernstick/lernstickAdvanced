@@ -6,15 +6,16 @@
 # Because of random dependency resolving, openjdk-7 gets installed in addition
 # to openjdk-8. This is unnecessary and we remove it in this hook.
 #
-# Iceweasel was replaced with Firefox in March 2016 (see
+# Iceweasel was replaced with Firefox ESR in March 2016 (see
 # https://glandium.org/blog/?p=3622) but iceweasel is still a dependency of
-# some metapackages in Debian Jessie. Therefore we remove iceweasel in this
-# hook.
+# some metapackages in Debian Jessie. Therefore we remove iceweasel and
+# firefox-esr in this hook.
 apt-get purge -y \
 	bluez \
 	bluez-obexd \
 	empathy \
 	empathy-common \
+	firefox-esr \
 	gnome-bluetooth \
 	gnome-contacts \
 	gnome-dictionary \

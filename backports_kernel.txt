@@ -46,9 +46,9 @@ building the new kernel:
 - change debian/config/defines e.g.:
 	- abiname: 1+lernstick.1
 - build with gcc-4.9, carefully replace gcc-5 references:
-	vi debian/config/defines
 	sed -i 's/gcc-5/gcc-4.9/g' \
 		debian/config/amd64/defines \
+		debian/config/defines \
 		debian/config/i386/defines \
 		debian/control \
 		debian/rules.gen \
@@ -77,7 +77,7 @@ fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae; fakeroot m
 building test image with new kernel:
 ------------------------------------
 
-add the following lines to config/apt/preferences:
+add the following lines to config/apt/preferences
 
 Package: linux-compiler-gcc-4.9-x86
 Pin: release n=lernstick-8-backports-staging
