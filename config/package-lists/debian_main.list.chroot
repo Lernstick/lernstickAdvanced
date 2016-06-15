@@ -249,6 +249,7 @@ hyphen-it
 i965-va-driver
 icedove
 icedove-l10n-de
+icedove-l10n-es-ar
 icedove-l10n-es-es
 icedove-l10n-fr
 icedove-l10n-it
@@ -258,10 +259,13 @@ icedove-l10n-sq
 icedtea-8-plugin
 iceowl-extension
 iceowl-l10n-de
+iceowl-l10n-es-ar
 iceowl-l10n-es-es
 iceowl-l10n-fr
 iceowl-l10n-it
+iceowl-l10n-pt-br
 iceowl-l10n-ru
+iceowl-l10n-sq
 icnsutils
 iftop
 ijsgutenprint
