@@ -14,15 +14,10 @@
 
 - pre-install open-vm-tools
 
-- live-swapfile needs interaction with the user at system startup
-	- as systemd service?
-		- start before display managers
-		- dialog needs a getty
-	- in live-config?
-		- plymouth user interaction
-			- simply sucks
-			- availability is not guaranteed
-		- gettys are not there yet
+- live-swapfile:
+	- depend on swapspace (https://packages.qa.debian.org/s/swapspace.html)
+	- only select the destination for creating swapfiles
+	- let swapspace do the dynamic swapfile creation
 
 - live-guest
 	- update for jessie
@@ -48,9 +43,6 @@
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
 - lernstickWelcome:
-	- Java Development package (formerly NetBeans)
-		- add sonar (http://sonar-pkg.sourceforge.net/) and check that findbugs is included
-		- PMD (static code analysis)
 	- add makehuman
 	- add flightgear/fgrun
 	- add scantailor
