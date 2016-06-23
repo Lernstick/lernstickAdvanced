@@ -18,15 +18,10 @@
 
 - pre-install open-vm-tools
 
-- live-swapfile needs interaction with the user at system startup
-	- as systemd service?
-		- start before display managers
-		- dialog needs a getty
-	- in live-config?
-		- plymouth user interaction
-			- simply sucks
-			- availability is not guaranteed
-		- gettys are not there yet
+- live-swapfile:
+	- depend on swapspace (https://packages.qa.debian.org/s/swapspace.html)
+	- only select the destination for creating swapfiles
+	- let swapspace do the dynamic swapfile creation
 
 - live-guest
 	- update for jessie
@@ -47,18 +42,11 @@
 
 - audacity config crashes on high resolution displays (e.g. on MS Surface)
 
-- improve support for surface 3:
-       - camera: https://bugzilla.redhat.com/show_bug.cgi?id=1192065
-       - buttons, battery, ...: https://bugzilla.kernel.org/show_bug.cgi?id=84651
-
 - remote support setup so that Gaudenz can also provide support
 
 - live build auto config does not work for me (contrib and non-free is missing in chroot)
 
 - lernstickWelcome:
-	- Java Development package (formerly NetBeans)
-		- add sonar (http://sonar-pkg.sourceforge.net/) and check that findbugs is included
-		- PMD (static code analysis)
 	- add makehuman
 	- add flightgear/fgrun
 	- add scantailor
@@ -94,8 +82,6 @@
 
 - fix low-res icons:
 	- pathological
-
-- check why epoptes eats up the cpu, fix it and re-add epoptes to default package list
 
 - exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
 
