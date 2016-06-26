@@ -38,11 +38,6 @@ building the new kernel:
 - apply own patches
 	- copy existing quilt patches to debian/patches
 	- patch -p1 < debian/patches/<name of quilt file>
-- backport linux-tools
-	- apt-get source --only-source linux-tools=x.y.z
-	- in chroot: apt-get install liblzma-dev
-	- call "dpkg-buildpackage -sa" two times in a row
-- put new linux-tools packages into local "unfinished" repository
 - change debian/config/defines e.g.:
 	- abiname: 1+lernstick.1
 - build with gcc-4.9, carefully replace gcc-5 references:
@@ -73,6 +68,7 @@ building the new kernel:
 all in one line (for easy copy&pasting):
 fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep; fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_extra; fakeroot make -j$(nproc) -f debian/rules.gen binary-libc-dev_i386
 
+- until we find out how to build the linux-kbuild package ourself we add the version from the official debian backports into our repo
 
 building test image with new kernel:
 ------------------------------------
@@ -83,23 +79,23 @@ Package: linux-compiler-gcc-4.9-x86
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.5.0-2+lernstick.1-686
+Package: linux-headers-4.6.0-1+lernstick.1-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.5.0-2+lernstick.1-686-pae
+Package: linux-headers-4.6.0-1+lernstick.1-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.5.0-2+lernstick.1-common
+Package: linux-headers-4.6.0-1+lernstick.1-common
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.5.0-2+lernstick.1-686
+Package: linux-image-4.6.0-1+lernstick.1-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.5.0-2+lernstick.1-686-pae
+Package: linux-image-4.6.0-1+lernstick.1-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
