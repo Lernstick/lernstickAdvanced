@@ -8,6 +8,8 @@
 
 - unattended upgrades without blocking other cronjobs
 
+- test if hfsprogs, hfsplus or hfsutils are needed to access some HFS(+) partitions (Mac@Dieter?)
+
 - show okteta and kcalc in GNOME
 
 - install aufs-tools?
