@@ -13,17 +13,17 @@ do
 	echo "$i: "
 	AUTOREMOVE_SIZE=0
 	AUTOREMOVE_PACKAGES="$(apt-get -s autoremove $i | grep ^Remv | awk '{ print $2 }')"
-	for i in ${AUTOREMOVE_PACKAGES}
+	for j in ${AUTOREMOVE_PACKAGES}
 	do
-		SIZE=$(apt-cache show --no-all-versions $i | grep ^Size | awk '{ print $2 }')
-		echo "   size of $i: ${SIZE}"
+		SIZE=$(apt-cache show --no-all-versions $j | grep ^Size | awk '{ print $2 }')
+		echo "   size of $j: ${SIZE}"
 		AUTOREMOVE_SIZE=$((${AUTOREMOVE_SIZE} + ${SIZE}))
 	done
 	echo "   ===> autoremove size: ${AUTOREMOVE_SIZE}"
 	echo -n "$i,${AUTOREMOVE_SIZE}," >> checksize.csv
-        for i in ${AUTOREMOVE_PACKAGES}
+        for j in ${AUTOREMOVE_PACKAGES}
 	do
-		echo -n "$i " >> checksize.csv
+		echo -n "$j " >> checksize.csv
 	done
 	echo "" >> checksize.csv
 done
