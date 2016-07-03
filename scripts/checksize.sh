@@ -5,6 +5,8 @@
 # This data can be the base for deciding what packages to remove from
 # the default package lists in case our ISO grows too large.
 
+START=$(date)
+
 echo "package,autoremove size,removed packages" > checksize.csv
 
 declare -A SIZE_CACHE
@@ -13,7 +15,7 @@ for i in $(dpkg -l | grep ^ii | awk '{ print $2 }')
 do
 	echo "$i: "
 	AUTOREMOVE_SIZE=0
-	AUTOREMOVE_PACKAGES="$(apt-get -s autoremove $i | grep ^Remv | awk '{ print $2 }')"
+	AUTOREMOVE_PACKAGES="$(apt-get -s autoremove $i | grep ^Remv | awk '{ print $2 }' | sort)"
 	for j in ${AUTOREMOVE_PACKAGES}
 	do
 		if [ ${SIZE_CACHE[$j]+_} ]
@@ -36,3 +38,6 @@ do
 	done
 	echo "" >> checksize.csv
 done
+
+echo "Start: ${START}"
+echo "Stop : $(date)"
