@@ -5,6 +5,9 @@
 # This data can be the base for deciding what packages to remove from
 # the default package lists in case our ISO grows too large.
 
+# refresh package information
+sudo apt-get update
+
 START=$(date)
 
 echo "package,autoremove size,removed packages" > checksize.csv
