@@ -1,3 +1,5 @@
+- extlinux seems to be very unreliably, switch back to syslinux?
+
 - upgrade nvidia driver handling
 	- use new package and tool (update-glx) for glx-alternative setting
 	- special xorg.conf no longer needed
