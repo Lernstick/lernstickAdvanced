@@ -16,7 +16,8 @@
 
 - show okteta and kcalc in GNOME
 
-- install aufs-tools?
+- check if the aufs pseudo link feature doesn't need so much space if we preinstall aufs-tools
+  (run all updates a month after release and check the disk usage)
 
 - pre-install open-vm-tools
 
