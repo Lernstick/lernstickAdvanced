@@ -29,6 +29,7 @@ anacron
 aptitude
 apt-rdepends
 apt-transport-https
+aufs-tools
 avahi-autoipd
 avahi-daemon
 avahi-utils

@@ -5,6 +5,9 @@
 # This data can be the base for deciding what packages to remove from
 # the default package lists in case our ISO grows too large.
 
+# refresh package information
+sudo apt-get update
+
 START=$(date)
 
 echo "package,autoremove size,removed packages" > checksize.csv
@@ -18,6 +21,13 @@ COUNTER=1
 for i in ${PACKAGES}
 do
 	echo "$i (${COUNTER}/${PACKAGE_COUNT}): "
+        PRIORITY="$(apt-cache show --no-all-versions $i | grep ^Priority | awk '{ print $2 }')"
+        echo "   priority: ${PRIORITY}"
+        if [ "${PRIORITY}" = "required" ] || [ "${PRIORITY}" = "important" ]
+        then
+                echo "   skipping because package priority is ${PRIORITY}"
+                continue
+        fi
 	AUTOREMOVE_SIZE=0
 	AUTOREMOVE_PACKAGES="$(apt-get -s autoremove $i | grep ^Remv | awk '{ print $2 }' | sort)"
 	for j in ${AUTOREMOVE_PACKAGES}

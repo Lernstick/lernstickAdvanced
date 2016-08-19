@@ -2,6 +2,8 @@
 
 - GNOME mixes up "JBackpack" and "JBackpack (Admin)" in most used apps
 
+- extlinux seems to be very unreliably, switch back to syslinux?
+
 - upgrade nvidia driver handling
 	- use new package and tool (update-glx) for glx-alternative setting
 	- special xorg.conf no longer needed
@@ -12,11 +14,14 @@
 
 - unattended upgrades without blocking other cronjobs
 
+- eject DVD media when shutting down
+
 - test if hfsprogs, hfsplus or hfsutils are needed to access some HFS(+) partitions (Mac@Dieter?)
 
 - show okteta and kcalc in GNOME
 
-- install aufs-tools?
+- check if the aufs pseudo link feature doesn't need so much space if we preinstall aufs-tools
+  (run all updates a month after release and check the disk usage)
 
 - pre-install open-vm-tools
 
