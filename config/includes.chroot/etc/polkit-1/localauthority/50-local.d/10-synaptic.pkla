@@ -1,6 +1,0 @@
-[allow user to run synaptic with self authentication]
-Identity=unix-user:user
-Action=com.ubuntu.pkexec.synaptic
-ResultAny=yes
-ResultInactive=yes
-ResultActive=yes

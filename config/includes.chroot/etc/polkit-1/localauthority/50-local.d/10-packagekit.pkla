@@ -1,6 +1,0 @@
-[allow user to execute packagekit actions]
-Identity=unix-user:user
-Action=org.freedesktop.packagekit.*
-ResultAny=yes
-ResultInactive=yes
-ResultActive=yes
