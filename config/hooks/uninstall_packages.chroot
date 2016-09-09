@@ -37,11 +37,19 @@ apt-get purge -y \
 	gedit-common \
 	gimp \
 	gimp-data \
+	hunspell-en-us \
 	libevolution \
 	libgimp2.0 \
 	libreoffice-evolution \
 	libsane-extras \
 	libsane-extras-common \
+	myspell-de-de \
+	myspell-en-gb \
+	myspell-es \
+	myspell-fr \
+	myspell-it \
+	myspell-pt-br \
+	myspell-ru \
 	prerex \
 	sane-utils \
 	texlive-fonts-recommended-doc \
@@ -53,6 +61,7 @@ apt-get purge -y \
 	vprerex \
 	xsane \
 	xsane-common
+
 
 # clean up
 apt-get purge -y --auto-remove
