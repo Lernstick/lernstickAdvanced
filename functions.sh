@@ -62,8 +62,8 @@ build_image()
                 --distribution jessie \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
-		--linux-flavours "686-pae 686" \
-		--linux-packages linux-image-4.6.0-1+lernstick.1 \
+		--linux-flavours "686-pae-unsigned 686-unsigned" \
+		--linux-packages linux-image-4.7.0-1+lernstick.1 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
