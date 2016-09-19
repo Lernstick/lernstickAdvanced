@@ -1,6 +1,6 @@
-diff -r -u linux-4.5.5_original/drivers/hid/hid-core.c linux-4.5.5/drivers/hid/hid-core.c
---- linux-4.5.5_original/drivers/hid/hid-core.c	2016-05-19 03:35:34.000000000 +0200
-+++ linux-4.5.5/drivers/hid/hid-core.c	2016-06-18 14:42:24.715902426 +0200
+diff -u -r linux-4.7.4_original/drivers/hid/hid-core.c linux-4.7.4_patched/drivers/hid/hid-core.c
+--- linux-4.7.4_original/drivers/hid/hid-core.c	2016-09-15 08:21:53.000000000 +0200
++++ linux-4.7.4_patched/drivers/hid/hid-core.c	2016-09-19 10:52:03.386908788 +0200
 @@ -727,6 +727,8 @@
  	    (hid->product == USB_DEVICE_ID_MS_TYPE_COVER_PRO_3 ||
  	     hid->product == USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_2 ||
@@ -10,19 +10,20 @@ diff -r -u linux-4.5.5_original/drivers/hid/hid-core.c linux-4.5.5/drivers/hid/h
  	     hid->product == USB_DEVICE_ID_MS_TYPE_COVER_3 ||
  	     hid->product == USB_DEVICE_ID_MS_POWER_COVER) &&
  	    hid->group == HID_GROUP_MULTITOUCH)
-@@ -1932,6 +1934,8 @@
+@@ -1976,6 +1978,8 @@
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_2) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_JP) },
 +	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_4) },
 +	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_4_2) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_3) },
- 	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_POWER_COVER) },
- 	{ HID_USB_DEVICE(USB_VENDOR_ID_MONTEREY, USB_DEVICE_ID_GENIUS_KB29E) },
-diff -r -u linux-4.5.5_original/drivers/hid/hid-ids.h linux-4.5.5/drivers/hid/hid-ids.h
---- linux-4.5.5_original/drivers/hid/hid-ids.h	2016-05-19 03:35:34.000000000 +0200
-+++ linux-4.5.5/drivers/hid/hid-ids.h	2016-06-18 14:43:57.748363789 +0200
-@@ -687,6 +687,8 @@
+ 	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_DIGITAL_MEDIA_7K) },
+ 	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_DIGITAL_MEDIA_600) },
+Nur in linux-4.7.4_patched/drivers/hid: hid-core.c.orig.
+diff -u -r linux-4.7.4_original/drivers/hid/hid-ids.h linux-4.7.4_patched/drivers/hid/hid-ids.h
+--- linux-4.7.4_original/drivers/hid/hid-ids.h	2016-09-15 08:21:53.000000000 +0200
++++ linux-4.7.4_patched/drivers/hid/hid-ids.h	2016-09-19 10:52:03.386908788 +0200
+@@ -703,6 +703,8 @@
  #define USB_DEVICE_ID_MS_TYPE_COVER_PRO_3    0x07dc
  #define USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_2  0x07e2
  #define USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_JP 0x07dd
@@ -31,10 +32,11 @@ diff -r -u linux-4.5.5_original/drivers/hid/hid-ids.h linux-4.5.5/drivers/hid/hi
  #define USB_DEVICE_ID_MS_TYPE_COVER_3    0x07de
  #define USB_DEVICE_ID_MS_POWER_COVER     0x07da
  
-diff -r -u linux-4.5.5_original/drivers/hid/hid-microsoft.c linux-4.5.5/drivers/hid/hid-microsoft.c
---- linux-4.5.5_original/drivers/hid/hid-microsoft.c	2016-05-19 03:35:34.000000000 +0200
-+++ linux-4.5.5/drivers/hid/hid-microsoft.c	2016-06-18 14:44:56.480655052 +0200
-@@ -282,6 +282,10 @@
+Nur in linux-4.7.4_patched/drivers/hid: hid-ids.h.orig.
+diff -u -r linux-4.7.4_original/drivers/hid/hid-microsoft.c linux-4.7.4_patched/drivers/hid/hid-microsoft.c
+--- linux-4.7.4_original/drivers/hid/hid-microsoft.c	2016-09-15 08:21:53.000000000 +0200
++++ linux-4.7.4_patched/drivers/hid/hid-microsoft.c	2016-09-19 10:52:03.390908784 +0200
+@@ -288,6 +288,10 @@
  		.driver_data = MS_HIDINPUT },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_JP),
  		.driver_data = MS_HIDINPUT },
@@ -45,10 +47,11 @@ diff -r -u linux-4.5.5_original/drivers/hid/hid-microsoft.c linux-4.5.5/drivers/
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_3),
  		.driver_data = MS_HIDINPUT },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_POWER_COVER),
-diff -r -u linux-4.5.5_original/drivers/hid/usbhid/hid-quirks.c linux-4.5.5/drivers/hid/usbhid/hid-quirks.c
---- linux-4.5.5_original/drivers/hid/usbhid/hid-quirks.c	2016-05-19 03:35:34.000000000 +0200
-+++ linux-4.5.5/drivers/hid/usbhid/hid-quirks.c	2016-06-18 14:47:36.305447648 +0200
-@@ -92,6 +92,8 @@
+Nur in linux-4.7.4_patched/drivers/hid: hid-microsoft.c.orig.
+diff -u -r linux-4.7.4_original/drivers/hid/usbhid/hid-quirks.c linux-4.7.4_patched/drivers/hid/usbhid/hid-quirks.c
+--- linux-4.7.4_original/drivers/hid/usbhid/hid-quirks.c	2016-09-15 08:21:53.000000000 +0200
++++ linux-4.7.4_patched/drivers/hid/usbhid/hid-quirks.c	2016-09-19 10:52:03.390908784 +0200
+@@ -98,6 +98,8 @@
  	{ USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3, HID_QUIRK_NO_INIT_REPORTS },
  	{ USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_2, HID_QUIRK_NO_INIT_REPORTS },
  	{ USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_PRO_3_JP, HID_QUIRK_NO_INIT_REPORTS },
@@ -57,3 +60,4 @@ diff -r -u linux-4.5.5_original/drivers/hid/usbhid/hid-quirks.c linux-4.5.5/driv
  	{ USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_TYPE_COVER_3, HID_QUIRK_NO_INIT_REPORTS },
  	{ USB_VENDOR_ID_MICROSOFT, USB_DEVICE_ID_MS_POWER_COVER, HID_QUIRK_NO_INIT_REPORTS },
  	{ USB_VENDOR_ID_MSI, USB_DEVICE_ID_MSI_GT683R_LED_PANEL, HID_QUIRK_NO_INIT_REPORTS },
+Nur in linux-4.7.4_patched/drivers/hid/usbhid: hid-quirks.c.orig.
