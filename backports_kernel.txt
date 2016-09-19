@@ -99,11 +99,11 @@ Package: linux-headers-4.7.0-1+lernstick.1-common
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.7.0-1+lernstick.1-686
+Package: linux-image-4.7.0-1+lernstick.1-686-unsigned
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.7.0-1+lernstick.1-686-pae
+Package: linux-image-4.7.0-1+lernstick.1-686-pae-unsigned
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
