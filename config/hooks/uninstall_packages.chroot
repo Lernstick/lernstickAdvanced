@@ -14,6 +14,10 @@ apt-get purge -y \
 	openjdk-7-jre \
 	openjdk-7-jre-headless
 
+# Only now that we have removed openjdk-7 we can reliably install libreoffice-languagetool.
+# It really needs Java 8 to be there and the default JRE.
+apt-get install -y libreoffice-languagetool
+
 # Building the system with recommends enabled pulls in a lot of packages we
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
