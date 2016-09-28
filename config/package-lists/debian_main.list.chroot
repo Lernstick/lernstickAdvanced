@@ -727,6 +727,7 @@ xserver-xorg-input-vmmouse
 xserver-xorg-input-void
 xserver-xorg-input-wacom
 xserver-xorg-video-all
+xserver-xorg-video-amdgpu
 xserver-xorg-video-dummy
 xserver-xorg-video-glamo
 xserver-xorg-video-glide
