@@ -460,6 +460,7 @@ marble
 mate-desktop-environment
 mc
 mdadm
+mesa-va-drivers
 mesa-vdpau-drivers
 mesa-vulkan-drivers
 metacity
@@ -662,7 +663,6 @@ unzip
 usb-modeswitch
 usbutils
 user-setup
-vdpau-va-driver
 vim
 vim-gtk
 vinagre
