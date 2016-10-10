@@ -73,6 +73,7 @@ bogofilter
 bonnie++
 bovo
 brasero
+browser-plugin-vlc
 bzip2
 calendar-exchange-provider
 calendar-google-provider
@@ -184,7 +185,6 @@ gdb
 gdebi
 gdebi-kde
 gdm3
-gecko-mediaplayer
 gedit
 gedit-plugins
 genisoimage
