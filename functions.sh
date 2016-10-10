@@ -70,7 +70,7 @@ build_image()
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick Debian 8 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick Debian 9 (Version ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
@@ -84,14 +84,12 @@ build_image()
 	lb config \
                 --apt-indices false \
                 --apt-recommends true \
-                --architectures i386 \
+                --architectures amd64 \
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
-                --distribution jessie \
+                --distribution stretch \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
-		--linux-flavours "686-pae-unsigned 686-unsigned" \
-		--linux-packages linux-image-4.7.0-1+lernstick.1 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
@@ -100,12 +98,12 @@ build_image()
 
 
 	# build image (and produce a log file)
-	linux32 lb build 2>&1 | tee logfile.txt
+	lb build 2>&1 | tee logfile.txt
 
-	ISO_FILE="live-image-i386.iso"
+	ISO_FILE="live-image-amd64.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian8_32bit${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_debian9${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file

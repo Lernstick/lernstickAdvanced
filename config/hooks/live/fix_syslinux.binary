@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd live || exit 1
+
+mv vmlinuz-4.7.0-1-amd64 vmlinuz || true
+mv initrd.img-4.7.0-1-amd64 initrd.img || true

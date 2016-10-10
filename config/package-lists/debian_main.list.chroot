@@ -21,8 +21,6 @@
 #
 # * kigo needs gnugo
 #
-# * marble suggests monav-routing-daemon
-#
 # * enlightenment recommends terminology
 #
 # * qreator needs geoclue-hostip (upstream bug, see https://bugs.launchpad.net/qreator/+bug/1186224)
@@ -38,7 +36,7 @@ amarok
 amarok-doc
 amsynth
 anacron
-apper
+#apper
 aptitude
 apt-rdepends
 apt-transport-https
@@ -47,7 +45,6 @@ arandr
 #ardesia
 ardour3
 arduino
-arista
 ark
 armagetronad
 audacity
@@ -73,6 +70,7 @@ bogofilter
 bonnie++
 bovo
 brasero
+browser-plugin-vlc
 bzip2
 calendar-exchange-provider
 calendar-google-provider
@@ -81,8 +79,6 @@ calligra-l10n-de
 caps
 cdparanoia
 cdrdao
-celestia-common
-celestia-gnome
 cheese
 chemtool
 childsplay
@@ -112,7 +108,7 @@ cups-bsd
 darktable
 deborphan
 debtree
-denemo
+#denemo
 denemo-doc
 desktop-base
 devede
@@ -136,7 +132,7 @@ eboard
 eboard-extras-pack1
 ecryptfs-utils
 eject
-ekiga
+#ekiga
 enigma
 enigma-data
 enigmail
@@ -145,20 +141,20 @@ epoptes-client
 exfat-fuse
 exfat-utils
 extremetuxracer
-fb-music-high
+#fb-music-high
 ffmpegthumbs
 filelight
-firefox
-firefox-l10n-de
-firefox-l10n-en-gb
-firefox-l10n-es-ar
-firefox-l10n-es-es
-firefox-l10n-fa
-firefox-l10n-fr
-firefox-l10n-it
-firefox-l10n-pt-br
-firefox-l10n-ru
-firefox-l10n-sq
+firefox-esr
+firefox-esr-l10n-de
+firefox-esr-l10n-en-gb
+firefox-esr-l10n-es-ar
+firefox-esr-l10n-es-es
+firefox-esr-l10n-fa
+firefox-esr-l10n-fr
+firefox-esr-l10n-it
+firefox-esr-l10n-pt-br
+firefox-esr-l10n-ru
+firefox-esr-l10n-sq
 firmware-linux-free
 flac
 focuswriter
@@ -167,13 +163,11 @@ foobillardplus
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
-fotowall
 freeciv-client-gtk
 freeciv-data
 freeciv-server
 freeciv-sound-standard
 freeplane
-freespacenotifier
 fritzing
 frozen-bubble
 frozen-bubble-data
@@ -184,7 +178,6 @@ gdb
 gdebi
 gdebi-kde
 gdm3
-gecko-mediaplayer
 gedit
 gedit-plugins
 genisoimage
@@ -217,7 +210,6 @@ gnome-shell-extensions
 gnome-shell-extensions-gpaste
 gnome-sound-recorder
 gnome-system-monitor
-gnome-themes
 gnome-tweak-tool
 gnucap
 gnuchess
@@ -234,6 +226,7 @@ gutenprint-locales
 gwakeonlan
 gwenview
 hamster-applet
+#handbrake
 hddtemp
 hex-a-hop
 hicolor-icon-theme
@@ -242,6 +235,7 @@ hplip-gui
 hp-ppd
 htop
 hugin
+hunspell-en-us
 hyphen-de
 hyphen-en-us
 hyphen-fr
@@ -275,6 +269,7 @@ iotop
 iptraf
 jackd2
 jfractionlab
+#jitsi
 jmtpfs
 jovie
 k3b
@@ -296,12 +291,9 @@ kbruch
 kcalc
 kcharselect
 kde-baseapps-bin
-kde-base-artwork
-kde-config-baloo-advanced
 kde-config-cddb
 kde-config-cron
 kde-config-gtk-style
-kde-config-tablet
 kde-config-touchpad
 kdegames-card-data
 kdegraphics-thumbnailers
@@ -315,27 +307,15 @@ kde-l10n-ru
 kdenetwork-filesharing
 kdenlive
 kdepasswd
-kde-style-polyester
 kde-style-qtcurve
 kdesudo
-kde-telepathy-call-ui
-kde-telepathy-desktop-applets
-kde-telepathy-filetransfer-handler
-kde-telepathy-minimal
-kde-telepathy-send-file
-kde-telepathy-text-ui
 kde-window-manager
-kde-workspace-randr
 kdf
 kdiamond
-kdm
-kdm-theme-aperture
-kdm-theme-bespin
-kdm-theme-tibanna
 keepassx
 kfind
 kfourinline
-kgamma
+kgamma5
 kgeography
 kgeography-data
 kgoldrunner
@@ -355,7 +335,6 @@ kleopatra
 klettres
 klickety
 klines
-klipper
 kmag
 kmahjongg
 kmenuedit
@@ -375,12 +354,9 @@ konsole
 kpat
 krename
 kreversi
-krita
-kscreensaver
+#krita
 kshisen
-ksplash-theme-aperture
-ksplash-theme-bespin
-ksplash-theme-tibanna
+ksnakeduel
 ksquares
 ksudoku
 ksysguard
@@ -389,7 +365,6 @@ ksystemlog
 ktimetracker
 ktorrent
 ktouch
-ktron
 ktuberling
 kturtle
 kubrick
@@ -400,7 +375,6 @@ less
 libcups2-dev
 libegl1-mesa-drivers
 libgl1-mesa-dri
-libpam-smbpass
 libreoffice
 libreoffice-base
 libreoffice-calc
@@ -441,7 +415,7 @@ libreoffice-style-tango
 libreoffice-writer
 libsvn-java
 libva-egl1
-lilypond
+#lilypond
 live-tools
 lmms
 locales
@@ -467,7 +441,6 @@ metacity
 #miro
 mixxx
 modemmanager
-monav-routing-daemon
 morris
 mousetweaks
 mtools
@@ -479,7 +452,6 @@ mypaint-data-extras
 myspell-de-ch
 myspell-de-de
 myspell-en-gb
-myspell-en-us
 myspell-es
 myspell-fa
 myspell-fr
@@ -533,7 +505,7 @@ owncloud-client
 p7zip-full
 palapeli
 parley
-partitionmanager
+#partitionmanager
 patch
 pathological
 pavucontrol
@@ -549,10 +521,8 @@ pingus
 pinta
 pioneers
 plasma-desktop
-plasma-netbook
 plasma-nm
 plasma-wallpapers-addons
-plasma-widget-folderview
 plasma-widgets-addons
 playonlinux
 plymouth
@@ -565,13 +535,13 @@ printer-driver-all-enforce
 printer-driver-cups-pdf
 print-manager
 pspp
-pulseaudio-module-bluetooth
-pulseaudio-module-gconf
-pulseaudio-module-jack
-pulseaudio-module-lirc
-pulseaudio-module-raop
-pulseaudio-module-x11
-pulseaudio-module-zeroconf
+#pulseaudio-module-bluetooth
+#pulseaudio-module-gconf
+#pulseaudio-module-jack
+#pulseaudio-module-lirc
+#pulseaudio-module-raop
+#pulseaudio-module-x11
+#pulseaudio-module-zeroconf
 pv
 pymol
 python-notify
@@ -599,6 +569,7 @@ rsync
 samplerate-programs
 sane
 sane-utils
+sddm
 seahorse
 shutter
 smb4k
@@ -613,12 +584,11 @@ software-properties-gtk
 sozi
 spamassassin
 speedcrunch
-spice-client
 spice-vdagent
 squashfs-tools
 sshfs
 step
-stopmotion
+#stopmotion
 strace
 subversion
 swh-plugins
@@ -690,7 +660,6 @@ wpasupplicant
 x11vnc
 xdrawchem
 xfce4
-xfce4-artwork
 xfce4-battery-plugin
 xfce4-clipman
 xfce4-clipman-plugin
@@ -709,7 +678,7 @@ xfce4-sensors-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
 xfce4-terminal
-xfce4-volumed
+#xfce4-volumed
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
@@ -726,7 +695,6 @@ xserver-xorg-input-kbd
 xserver-xorg-input-mouse
 xserver-xorg-input-multitouch
 xserver-xorg-input-mutouch
-xserver-xorg-input-vmmouse
 xserver-xorg-input-void
 xserver-xorg-input-wacom
 xserver-xorg-video-all

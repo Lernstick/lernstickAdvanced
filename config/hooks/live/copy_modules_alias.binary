@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp ../chroot/lib/modules/*/modules.alias isolinux/
