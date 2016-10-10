@@ -44,7 +44,7 @@ cache_cleanup()
 				for VERSION in ${VERSIONS}
 				do
 					OTHER_VERSION=$(basename ${VERSION} | sed 's/.*_\(.*\)_.*/\1/')
-					if [ "${PACKAGE_VERSION}" \< "${OTHER_VERSION}" ]
+					if dpkg --compare-versions "${PACKAGE_VERSION}" lt "${OTHER_VERSION}"
 					then
 						echo "removing deprecated cache file ${FILE}"
 						rm ${FILE}
