@@ -28,6 +28,34 @@ configure()
 	echo ""
 }
 
+cache_cleanup()
+{
+	for DIR in cache/packages.*
+	do
+		for FILE in ${DIR}/*
+		do
+			BASE_NAME=$(basename ${FILE})
+			PACKAGE_NAME=$(echo ${BASE_NAME} | sed 's/_.*//')
+			VERSIONS=$(ls ${DIR}/${PACKAGE_NAME}_*)
+			COUNTER=$(echo ${VERSIONS} | wc -w)
+			if [ ${COUNTER} -gt 1 ]
+			then
+				PACKAGE_VERSION=$(echo ${BASE_NAME} | sed 's/.*_\(.*\)_.*/\1/')
+				for VERSION in ${VERSIONS}
+				do
+					OTHER_VERSION=$(basename ${VERSION} | sed 's/.*_\(.*\)_.*/\1/')
+					if [ "${PACKAGE_VERSION}" \< "${OTHER_VERSION}" ]
+					then
+						echo "removing deprecated cache file ${FILE}"
+						rm ${FILE}
+						break
+					fi
+				done
+			fi
+		done
+	done
+}
+
 build_image()
 {
 	# update time stamp in bootloaders
@@ -62,8 +90,8 @@ build_image()
                 --distribution jessie \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
-		--linux-flavours "686-pae 686" \
-		--linux-packages linux-image-4.6.0-1+lernstick.1 \
+		--linux-flavours "686-pae-unsigned 686-unsigned" \
+		--linux-packages linux-image-4.7.0-1+lernstick.1 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
@@ -106,6 +134,8 @@ build_image()
 	else
 		echo "Error: ISO file was not build" | tee -a logfile.txt
 	fi
+
+	cache_cleanup
 
 	# When installing firmware-b43legacy-installer downloads.openwrt.org is
 	# sometimes down. Building doesn't fail in this situation but we would

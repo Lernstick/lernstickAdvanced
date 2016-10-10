@@ -34,6 +34,7 @@ avahi-autoipd
 avahi-daemon
 avahi-utils
 bash-completion
+browser-plugin-vlc
 bzip2
 command-not-found
 console-setup
@@ -72,7 +73,6 @@ foomatic-db-gutenprint
 fslint
 gdebi
 gdm3
-gecko-mediaplayer
 geogebra-gnome
 gnome-clocks
 gnome-core
@@ -155,7 +155,9 @@ manpages-it
 manpages-pt
 mc
 menu
+mesa-va-drivers
 mesa-vdpau-drivers
+mesa-vulkan-drivers
 musescore
 nautilus
 nautilus-wipe
@@ -206,7 +208,8 @@ totem-plugins
 unzip
 upower
 user-setup
-vdpau-va-driver
+vainfo
+vdpauinfo
 vim
 vorbis-tools
 vpnc
@@ -228,6 +231,7 @@ xserver-xorg-input-vmmouse
 xserver-xorg-input-void
 xserver-xorg-input-wacom
 xserver-xorg-video-all
+xserver-xorg-video-amdgpu
 xserver-xorg-video-dummy
 xserver-xorg-video-glamo
 xserver-xorg-video-glide

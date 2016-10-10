@@ -62,7 +62,6 @@ apt-get purge -y \
 	xsane \
 	xsane-common
 
-
 # clean up
 apt-get purge -y --auto-remove
 

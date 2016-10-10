@@ -54,6 +54,13 @@ building the new kernel:
 	dch --local +lernstick.
 		(use "lernstick-8-backports-staging" as distribution)
 	make -f debian/rules clean
+
+	# new: all-in-one build?
+	fakeroot make -j$(nproc) -f debian/rules binary
+
+	# see https://lists.debian.org/debian-kernel/2016/09/msg00025.html
+	dpkg-buildpackage -d -b -us -uc -T binary-arch
+
 	fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae
 	fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep
 	fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686
@@ -73,29 +80,30 @@ fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae; fakeroot m
 building test image with new kernel:
 ------------------------------------
 
-add the following lines to config/apt/preferences
+mkdir config/apt
+vi config/apt/preferences
 
 Package: linux-compiler-gcc-4.9-x86
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.6.0-1+lernstick.1-686
+Package: linux-headers-4.7.0-1+lernstick.1-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.6.0-1+lernstick.1-686-pae
+Package: linux-headers-4.7.0-1+lernstick.1-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.6.0-1+lernstick.1-common
+Package: linux-headers-4.7.0-1+lernstick.1-common
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.6.0-1+lernstick.1-686
+Package: linux-image-4.7.0-1+lernstick.1-686-unsigned
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.6.0-1+lernstick.1-686-pae
+Package: linux-image-4.7.0-1+lernstick.1-686-pae-unsigned
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
