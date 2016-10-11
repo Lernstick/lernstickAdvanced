@@ -28,10 +28,17 @@ configure()
 	echo ""
 }
 
+get_version_number()
+{
+	echo $1 | sed 's/.*_\(.*\)_.*/\1/' | sed 's/%3a/:/'
+}
+
 cache_cleanup()
 {
+	echo "removing deprecated packages from cache"
 	for DIR in cache/packages.*
 	do
+		echo "checking directory ${DIR}"
 		for FILE in ${DIR}/*
 		do
 			BASE_NAME=$(basename ${FILE})
@@ -40,13 +47,13 @@ cache_cleanup()
 			COUNTER=$(echo ${VERSIONS} | wc -w)
 			if [ ${COUNTER} -gt 1 ]
 			then
-				PACKAGE_VERSION=$(echo ${BASE_NAME} | sed 's/.*_\(.*\)_.*/\1/')
+				PACKAGE_VERSION="$(get_version_number ${BASE_NAME})"
 				for VERSION in ${VERSIONS}
 				do
-					OTHER_VERSION=$(basename ${VERSION} | sed 's/.*_\(.*\)_.*/\1/')
+					OTHER_VERSION="$(get_version_number ${VERSION})"
 					if dpkg --compare-versions "${PACKAGE_VERSION}" lt "${OTHER_VERSION}"
 					then
-						echo "removing deprecated cache file ${FILE}"
+						echo "removing deprecated cache file ${FILE} (newer version ${OTHER_VERSION} found)"
 						rm ${FILE}
 						break
 					fi
