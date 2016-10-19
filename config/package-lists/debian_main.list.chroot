@@ -294,6 +294,8 @@ kde-baseapps-bin
 kde-config-cddb
 kde-config-cron
 kde-config-gtk-style
+kde-config-gtk-style-preview
+kde-config-systemd
 kde-config-touchpad
 kdegames-card-data
 kdegraphics-thumbnailers
