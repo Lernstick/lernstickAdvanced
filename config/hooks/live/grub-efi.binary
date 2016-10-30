@@ -38,6 +38,7 @@ EOF
 chroot $CHROOT $MKIMAGE \
        --output=/tmp/$outfile \
        --format=$platform \
+       --prefix=/boot/grub \
        --config=/tmp/grub.cfg \
        $modules
 
