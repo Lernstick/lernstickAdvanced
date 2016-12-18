@@ -8,8 +8,8 @@ filius
 greenfoot
 jbackpack-full
 lernstick-againstallodds
-lernstick-amarok
-lernstick-amarok-utils
+#lernstick-amarok
+#lernstick-amarok-utils
 #lernstick-apper
 lernstick-arandr
 lernstick-archive-keyring
@@ -169,7 +169,7 @@ lernstick-unserkoerper
 lernstick-usermode
 lernstick-usertemplate
 lernstick-vim-common
-lernstick-virtualbox
+#lernstick-virtualbox
 lernstick-vlc
 lernstick-vmpk
 lernstick-vokoscreen

@@ -32,8 +32,8 @@
 #################################################################################################
 akregator
 alsa-utils
-amarok
-amarok-doc
+#amarok
+#amarok-doc
 amsynth
 anacron
 #apper
@@ -132,7 +132,7 @@ eboard
 eboard-extras-pack1
 ecryptfs-utils
 eject
-#ekiga
+ekiga
 enigma
 enigma-data
 enigmail
@@ -141,7 +141,7 @@ epoptes-client
 exfat-fuse
 exfat-utils
 extremetuxracer
-#fb-music-high
+fb-music-high
 ffmpegthumbs
 filelight
 firefox-esr
@@ -689,7 +689,7 @@ xournal
 xsane
 xserver-xorg
 xserver-xorg-core
-xserver-xorg-input-acecad
+#xserver-xorg-input-acecad
 xserver-xorg-input-aiptek
 xserver-xorg-input-all
 xserver-xorg-input-elographics
@@ -703,7 +703,7 @@ xserver-xorg-input-wacom
 xserver-xorg-video-all
 xserver-xorg-video-amdgpu
 xserver-xorg-video-dummy
-xserver-xorg-video-glamo
+#xserver-xorg-video-glamo
 xserver-xorg-video-glide
 xserver-xorg-video-ivtv
 xserver-xorg-video-modesetting
