@@ -98,7 +98,7 @@ build_image()
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
 		--linux-flavours "686-pae-unsigned 686-unsigned" \
-		--linux-packages linux-image-4.7.0-1+lernstick.1 \
+		--linux-packages linux-image-4.8.0-0.bpo.2 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
