@@ -83,27 +83,31 @@ building test image with new kernel:
 mkdir config/apt
 vi config/apt/preferences
 
+Package: aufs-dkms
+Pin: release n=lernstick-8-backports-staging
+Pin-Priority: 999
+
 Package: linux-compiler-gcc-4.9-x86
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.8.0-0.bpo.2-686
+Package: linux-headers-4.9.0-0.bpo.1-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.8.0-0.bpo.2-686-pae
+Package: linux-headers-4.9.0-0.bpo.1-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.8.0-0.bpo.2-common
+Package: linux-headers-4.9.0-0.bpo.1-common
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.8.0-0.bpo.2-686-unsigned
+Package: linux-image-4.9.0-0.bpo.1-686-unsigned
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.8.0-0.bpo.2-686-pae-unsigned
+Package: linux-image-4.9.0-0.bpo.1-686-pae-unsigned
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
