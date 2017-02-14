@@ -48,7 +48,8 @@ arduino
 ark
 armagetronad
 audacity
-aufs-tools
+#aufs-dkms
+#aufs-tools
 avahi-autoipd
 avahi-daemon
 avahi-utils
@@ -444,6 +445,7 @@ metacity
 mixxx
 modemmanager
 morris
+mousepad
 mousetweaks
 mtools
 mumble
@@ -567,6 +569,7 @@ remmina-plugin-xdmcp
 rfkill
 rhythmbox
 rhythmbox-plugins
+ristretto
 rsync
 samplerate-programs
 sane
