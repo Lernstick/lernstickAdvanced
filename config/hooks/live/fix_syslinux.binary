@@ -2,5 +2,5 @@
 
 cd live || exit 1
 
-mv vmlinuz-4.8.0-2-amd64 vmlinuz || true
-mv initrd.img-4.8.0-2-amd64 initrd.img || true
+mv vmlinuz-4.9.0-1-amd64 vmlinuz || true
+mv initrd.img-4.9.0-1-amd64 initrd.img || true
