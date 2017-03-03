@@ -253,6 +253,7 @@ hyphen-de
 hyphen-en-us
 hyphen-fr
 hyphen-it
+i2c-tools
 i965-va-driver
 icedove
 icedove-l10n-de
@@ -718,6 +719,7 @@ xfce4-volumed
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
+xinput
 xournal
 xsane
 xserver-xorg
