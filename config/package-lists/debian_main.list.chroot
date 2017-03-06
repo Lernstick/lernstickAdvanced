@@ -98,6 +98,7 @@ hpijs-ppds
 hplip-gui
 hp-ppd
 htop
+i2c-tools
 i965-va-driver
 icedtea-8-plugin
 ijsgutenprint
@@ -219,6 +220,7 @@ vulkan-utils
 whois
 wireless-tools
 wxmaxima
+xinput
 xserver-xorg
 xserver-xorg-core
 xserver-xorg-input-acecad
