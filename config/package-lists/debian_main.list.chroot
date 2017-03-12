@@ -225,12 +225,16 @@ gnuchess
 gnugo
 gramps
 graphviz
+gstreamer1.0-alsa
+gstreamer1.0-crystalhd
 gstreamer1.0-fluendo-mp3
 gstreamer1.0-libav
+gstreamer1.0-packagekit
 gstreamer1.0-plugins-bad
 gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
+gstreamer1.0-vaapi
 gutenprint-locales
 gwakeonlan
 gwenview
