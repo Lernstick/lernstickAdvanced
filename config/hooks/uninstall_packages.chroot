@@ -9,7 +9,6 @@
 # firefox-esr in this hook.
 apt-get purge -y \
 	iceweasel \
-	firefox-esr \
 	openjdk-7-jdk \
 	openjdk-7-jre \
 	openjdk-7-jre-headless
