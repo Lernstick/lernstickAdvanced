@@ -15,7 +15,6 @@ apt-get purge -y \
 	bluez-obexd \
 	empathy \
 	empathy-common \
-	firefox-esr \
 	gnome-bluetooth \
 	gnome-contacts \
 	gnome-dictionary \
