@@ -39,6 +39,7 @@ gfxterm
 gzio 
 halt 
 hfsplus
+iorw
 iso9660 
 jpeg 
 keystatus 
@@ -128,6 +129,7 @@ $MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} \
 	 --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned \
 	 --format=${GRUB_ARCH} \
 	 --config=${BUILDDIR}/grub.cfg \
+	 --prefix=/boot/grub/ \
 	 ${MODULES}
 
 if [ "$signed" -eq 1 ] ; then
