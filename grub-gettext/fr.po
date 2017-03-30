@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:57+0200\n"
+"POT-Creation-Date: 2017-03-30 18:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../config/includes.binary/boot/grub/grub_desktop.cfg:9
@@ -22,7 +22,7 @@ msgid "Select desktop:"
 msgstr "Choisissez un environnement:"
 
 #: ../config/includes.binary/boot/grub/grub_desktop.cfg:90
-#: ../config/includes.binary/boot/grub/grub_main.cfg:58
+#: ../config/includes.binary/boot/grub/grub_main.cfg:86
 msgid "Text console"
 msgstr "Console texte"
 
@@ -31,47 +31,47 @@ msgid "Select keyboard:"
 msgstr "Choisissez un clavier:"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:13
-#: ../config/includes.binary/boot/grub/grub_main.cfg:35
+#: ../config/includes.binary/boot/grub/grub_main.cfg:63
 msgid "Switzerland (German)"
 msgstr "Suisse (allemand)"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:25
-#: ../config/includes.binary/boot/grub/grub_main.cfg:36
+#: ../config/includes.binary/boot/grub/grub_main.cfg:64
 msgid "Switzerland (French)"
 msgstr "Suisse (français)"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:37
-#: ../config/includes.binary/boot/grub/grub_main.cfg:37
+#: ../config/includes.binary/boot/grub/grub_main.cfg:65
 msgid "Germany"
 msgstr "Allemagne"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:49
-#: ../config/includes.binary/boot/grub/grub_main.cfg:38
+#: ../config/includes.binary/boot/grub/grub_main.cfg:66
 msgid "Italy"
 msgstr "Italie"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:61
-#: ../config/includes.binary/boot/grub/grub_main.cfg:39
+#: ../config/includes.binary/boot/grub/grub_main.cfg:67
 msgid "USA"
 msgstr ""
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:73
-#: ../config/includes.binary/boot/grub/grub_main.cfg:40
+#: ../config/includes.binary/boot/grub/grub_main.cfg:68
 msgid "Spain"
 msgstr "Espagne"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:85
-#: ../config/includes.binary/boot/grub/grub_main.cfg:41
+#: ../config/includes.binary/boot/grub/grub_main.cfg:69
 msgid "Brazil"
 msgstr "Brésil"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:97
-#: ../config/includes.binary/boot/grub/grub_main.cfg:42
+#: ../config/includes.binary/boot/grub/grub_main.cfg:70
 msgid "Russia"
 msgstr "Russie"
 
 #: ../config/includes.binary/boot/grub/grub_keyboard.cfg:109
-#: ../config/includes.binary/boot/grub/grub_main.cfg:43
+#: ../config/includes.binary/boot/grub/grub_main.cfg:71
 msgid "Albania"
 msgstr "Albanie"
 
@@ -84,123 +84,165 @@ msgid "Configure start medium:"
 msgstr "Choisissez le média de démarrage:"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:13
-#: ../config/includes.binary/boot/grub/grub_main.cfg:66
-#: ../config/includes.binary/boot/grub/grub_main.cfg:76
+#: ../config/includes.binary/boot/grub/grub_main.cfg:94
+#: ../config/includes.binary/boot/grub/grub_main.cfg:104
 #: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:13
 msgid "any"
 msgstr "indifférent"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:25
-#: ../config/includes.binary/boot/grub/grub_main.cfg:67
-#: ../config/includes.binary/boot/grub/grub_main.cfg:77
+#: ../config/includes.binary/boot/grub/grub_main.cfg:95
+#: ../config/includes.binary/boot/grub/grub_main.cfg:105
 #: ../config/includes.binary/boot/grub/grub_persistence_media.cfg:25
 msgid "removable device"
 msgstr "média amovible"
 
 #: ../config/includes.binary/boot/grub/grub_live_media.cfg:37
-#: ../config/includes.binary/boot/grub/grub_main.cfg:68
+#: ../config/includes.binary/boot/grub/grub_main.cfg:96
 msgid "USB device"
 msgstr "clef USB"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:7
+#: ../config/includes.binary/boot/grub/grub_main.cfg:9
+#: ../config/includes.binary/boot/grub/grub_main.cfg:34
 msgid "Start Lernstick"
 msgstr "Démarrer Lernstick"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:8
+#: ../config/includes.binary/boot/grub/grub_main.cfg:10
+#: ../config/includes.binary/boot/grub/grub_main.cfg:17
+msgid " ========================================================================================="
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:11
+msgid ""
+"| This Mac has two graphic cards (AMD and "
+"Intel).                                         |"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:12
+msgid ""
+"| The Lernstick system only works with the Intel card and has to switch off "
+"the AMD card. |"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:13
+msgid ""
+"| This means, your screen will now turn black for some "
+"seconds.                           |"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:14
+msgid ""
+"| DON'T PANIC! "
+"OK?                                                                        |"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:15
+msgid ""
+"| We will be right back after switching to the Intel "
+"card...                              |"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:16
+msgid ""
+"| (You can skip the countdown by pressing the esc "
+"key.)                                   |"
+msgstr ""
+
+#: ../config/includes.binary/boot/grub/grub_main.cfg:35
 msgid "Loading Lernstick..."
 msgstr "Chargement de Lernstick..."
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:13
+#: ../config/includes.binary/boot/grub/grub_main.cfg:41
 msgid "Language       :"
 msgstr "Langue                 :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:14
-#: ../config/includes.binary/boot/grub/grub_main.cfg:34
-#: ../config/includes.binary/boot/grub/grub_main.cfg:50
-#: ../config/includes.binary/boot/grub/grub_main.cfg:65
-#: ../config/includes.binary/boot/grub/grub_main.cfg:75
-#: ../config/includes.binary/boot/grub/grub_main.cfg:84
+#: ../config/includes.binary/boot/grub/grub_main.cfg:42
+#: ../config/includes.binary/boot/grub/grub_main.cfg:62
+#: ../config/includes.binary/boot/grub/grub_main.cfg:78
+#: ../config/includes.binary/boot/grub/grub_main.cfg:93
+#: ../config/includes.binary/boot/grub/grub_main.cfg:103
+#: ../config/includes.binary/boot/grub/grub_main.cfg:112
 msgid "Unknown"
 msgstr "Inconnu(e)"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:33
+#: ../config/includes.binary/boot/grub/grub_main.cfg:61
 msgid "Keyboard       :"
 msgstr "Clavier                :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:49
+#: ../config/includes.binary/boot/grub/grub_main.cfg:77
 msgid "Desktop        :"
 msgstr "Environnement          :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:64
+#: ../config/includes.binary/boot/grub/grub_main.cfg:92
 msgid "Start medium   :"
 msgstr "Média de démarrage     :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:74
+#: ../config/includes.binary/boot/grub/grub_main.cfg:102
 msgid "Data medium    :"
 msgstr "Média de stockage      :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:83
+#: ../config/includes.binary/boot/grub/grub_main.cfg:111
 msgid "Data partition :"
 msgstr "Partition de données   :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:85
+#: ../config/includes.binary/boot/grub/grub_main.cfg:113
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:37
 msgid "not used"
 msgstr "non utilisé"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:86
+#: ../config/includes.binary/boot/grub/grub_main.cfg:114
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:13
 msgid "read-write"
 msgstr "lecture-écriture"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:87
+#: ../config/includes.binary/boot/grub/grub_main.cfg:115
 #: ../config/includes.binary/boot/grub/grub_persistence.cfg:25
 msgid "read-only"
 msgstr "lecture seule"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:93
+#: ../config/includes.binary/boot/grub/grub_main.cfg:121
 msgid "Swap partition :"
 msgstr "Partition d´échange    :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:96
-#: ../config/includes.binary/boot/grub/grub_main.cfg:107
-#: ../config/includes.binary/boot/grub/grub_main.cfg:118
+#: ../config/includes.binary/boot/grub/grub_main.cfg:124
+#: ../config/includes.binary/boot/grub/grub_main.cfg:135
+#: ../config/includes.binary/boot/grub/grub_main.cfg:146
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:13
 #: ../config/includes.binary/boot/grub/grub_swap_file.cfg:13
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:13
 msgid "enabled"
 msgstr "activé(e)"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:98
-#: ../config/includes.binary/boot/grub/grub_main.cfg:109
-#: ../config/includes.binary/boot/grub/grub_main.cfg:120
+#: ../config/includes.binary/boot/grub/grub_main.cfg:126
+#: ../config/includes.binary/boot/grub/grub_main.cfg:137
+#: ../config/includes.binary/boot/grub/grub_main.cfg:148
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:25
 #: ../config/includes.binary/boot/grub/grub_swap_file.cfg:25
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:25
 msgid "disabled"
 msgstr "désactivé(e)"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:104
+#: ../config/includes.binary/boot/grub/grub_main.cfg:132
 msgid "Swap file      :"
 msgstr "Fichier d´échange      :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:115
+#: ../config/includes.binary/boot/grub/grub_main.cfg:143
 msgid "Boot messages  :"
 msgstr "Messages de démarrage  :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:126
+#: ../config/includes.binary/boot/grub/grub_main.cfg:154
 msgid "Custom options :"
 msgstr "Options personnalisées :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:128
+#: ../config/includes.binary/boot/grub/grub_main.cfg:156
 msgid "Please type your custom options in one line:"
 msgstr "Tapez vos options personnalisées sur une seule ligne :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:133
+#: ../config/includes.binary/boot/grub/grub_main.cfg:161
 msgid "Check integrity of boot medium"
 msgstr "Vérifier l'intégrité du média de démarrage"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:134
+#: ../config/includes.binary/boot/grub/grub_main.cfg:162
 msgid "Checking integrity of boot medium..."
 msgstr "Vérification de l'intégrité du média de démarrage..."
 

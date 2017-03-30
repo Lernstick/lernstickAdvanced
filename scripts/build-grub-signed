@@ -39,6 +39,7 @@ gfxterm
 gzio 
 halt 
 hfsplus
+hwdetect
 iorw
 iso9660 
 jpeg 
@@ -46,6 +47,7 @@ keystatus
 linux 
 linuxefi 
 loadenv 
+lspci
 memdisk 
 minicmd
 normal 
@@ -122,6 +124,9 @@ cat > ${BUILDDIR}/grub.cfg <<EOF
 search --no-floppy --set=root --file /live/vmlinuz1
 set prefix=(\$root)/boot/grub
 EOF
+
+# add our own grub2 module
+cp hwdetect.mod ${BUILDDIR}/usr/lib/grub/x86_64-efi/
 
 # create EFI "image", this uses the grub-mkimage from the running system
 # but that should be OK.
