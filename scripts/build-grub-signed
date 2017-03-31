@@ -25,9 +25,7 @@ chain
 configfile 
 crypto 
 echo 
-efifwsetup
 efi_gop 
-efinet 
 efi_uga 
 ext2 
 extcmd 
@@ -47,6 +45,7 @@ keystatus
 linux 
 linuxefi 
 loadenv 
+lsefisystab
 lspci
 memdisk 
 minicmd
