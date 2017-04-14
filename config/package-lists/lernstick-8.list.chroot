@@ -47,7 +47,6 @@ lernstick-eog
 lernstick-eom
 lernstick-evince-common
 lernstick-execute-jar
-#lernstick-fglrx-control
 lernstick-file-roller
 lernstick-firefox-esr
 lernstick-flubidux
@@ -213,7 +212,7 @@ live-swapfile
 pauker
 rscc
 rscc-defaults-lernstick
-tigerjython
+#tigerjython
 tipp10
 #tuxedo-wmi-dkms
 vanished-root-handler
