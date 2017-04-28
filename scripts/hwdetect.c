@@ -37,9 +37,13 @@ static int apple = 0;
 
 // known graphic cards
 static int amd_radeon_hd_6600M_series = 0;
+static int amd_radeon_hd_6700M_series = 0;
+static int intel_2nd_gen_graphics= 0;
+static int intel_3rd_gen_graphics= 0;
 static int intel_hd_graphics_3000 = 0;
 static int intel_hd_graphics_arrandale = 0;
 static int nvidia_geforce_gt_330m= 0;
+static int nvidia_geforce_gt_650m= 0;
 
 static int
 grub_hwdetect_iter (grub_pci_device_t dev __attribute__ ((unused)), grub_pci_id_t pciid,
@@ -59,6 +63,21 @@ grub_hwdetect_iter (grub_pci_device_t dev __attribute__ ((unused)), grub_pci_id_
       intel_hd_graphics_3000=1;
       break;
 
+    case 19300486:
+      // PCI ID "8086:0126"
+      intel_2nd_gen_graphics=1;
+      break;
+
+    case 23494790:
+      // PCI ID "8086:0166"
+      intel_3rd_gen_graphics=1;
+      break;
+
+    case 1732251650:
+      // PCI ID "1002:6740"
+      amd_radeon_hd_6700M_series=1;
+      break;
+
     case 1732317186:
       // PCI ID "1002:6741"
       amd_radeon_hd_6600M_series=1;
@@ -67,6 +86,11 @@ grub_hwdetect_iter (grub_pci_device_t dev __attribute__ ((unused)), grub_pci_id_
     case 170463454:
       // PCI ID "10DE:0A29"
       nvidia_geforce_gt_330m=1;
+      break;
+
+    case 265621726:
+      // PCI ID "10DE:0FD5"
+      nvidia_geforce_gt_650m=1;
       break;
   }
 
@@ -99,7 +123,11 @@ grub_cmd_hwdetect (grub_extcmd_context_t ctxt __attribute__ ((unused)),
   // detect known (problematic) hardware
   if (apple && intel_hd_graphics_3000 && amd_radeon_hd_6600M_series) {
     grub_env_set ("detected_hw", "Mac_A1286_Radeon");
+  } else if (apple && intel_2nd_gen_graphics && amd_radeon_hd_6700M_series) {
+    grub_env_set ("detected_hw", "Mac_A1286_Radeon");
   } else if (apple && intel_hd_graphics_arrandale && nvidia_geforce_gt_330m) {
+    grub_env_set ("detected_hw", "Mac_A1286_NVIDIA");
+  } else if (apple && intel_3rd_gen_graphics && nvidia_geforce_gt_650m) {
     grub_env_set ("detected_hw", "Mac_A1286_NVIDIA");
   } else {
     grub_env_set ("detected_hw", "unknown");
