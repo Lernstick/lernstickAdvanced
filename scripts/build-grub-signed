@@ -25,9 +25,7 @@ chain
 configfile 
 crypto 
 echo 
-efifwsetup
 efi_gop 
-efinet 
 efi_uga 
 ext2 
 extcmd 
@@ -39,12 +37,16 @@ gfxterm
 gzio 
 halt 
 hfsplus
+hwdetect
+iorw
 iso9660 
 jpeg 
 keystatus 
 linux 
 linuxefi 
 loadenv 
+lsefisystab
+lspci
 memdisk 
 minicmd
 normal 
@@ -122,12 +124,16 @@ search --no-floppy --set=root --file /live/vmlinuz1
 set prefix=(\$root)/boot/grub
 EOF
 
+# add our own grub2 module
+cp hwdetect.mod ${BUILDDIR}/usr/lib/grub/x86_64-efi/
+
 # create EFI "image", this uses the grub-mkimage from the running system
 # but that should be OK.
 $MKIMAGE --directory=${BUILDDIR}/${GRUBLIB}/${GRUB_ARCH} \
 	 --output=${BUILDDIR}/${GRUB_SIGNED_FILE}.unsigned \
 	 --format=${GRUB_ARCH} \
 	 --config=${BUILDDIR}/grub.cfg \
+	 --prefix=/boot/grub/ \
 	 ${MODULES}
 
 if [ "$signed" -eq 1 ] ; then
