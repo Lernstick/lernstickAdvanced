@@ -32,6 +32,7 @@
 # * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
 #
 #################################################################################################
+2048-qt
 akregator
 alsa-utils
 amarok
