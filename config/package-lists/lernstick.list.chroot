@@ -24,7 +24,6 @@ lernstick-blockout2
 lernstick-bluedevil
 lernstick-bodenlift
 lernstick-calibre
-lernstick-cheese
 lernstick-chemtool
 lernstick-childsplay
 lernstick-clipit
@@ -85,8 +84,8 @@ lernstick-kinderzeitmaschine
 lernstick-klavaro
 lernstick-konsole
 lernstick-krename
-#lernstick-krita
 lernstick-kreuzwortraetsel-generator
+#lernstick-krita
 lernstick-ktimetracker
 lernstick-ktouch
 lernstick-kturtle
@@ -163,6 +162,7 @@ lernstick-system-config-printer
 lernstick-systemsettings
 lernstick-tanglet
 #lernstick-terminology
+lernstick-texlive-base
 lernstick-thunar
 lernstick-tipp10
 lernstick-toporopa
@@ -183,7 +183,7 @@ lernstick-wine
 lernstick-winff
 lernstick-x11vnc
 lernstick-xarchiver
-#lernstick-xdrawchem
+lernstick-xdrawchem
 lernstick-xfce4-appfinder
 lernstick-xfce4-clipman
 #lernstick-xfce4-mixer
@@ -197,7 +197,6 @@ lernstick-zenmap
 libreoffice-templatepack
 live-armagetronad
 live-enigma
-live-extremetuxracer
 live-foobillardplus
 live-frozen-bubble
 live-pathological

@@ -39,8 +39,8 @@ libnvidia-encode1
 libnvidia-legacy-340xx-encode1
 nvidia-detect
 nvidia-driver
-#nvidia-legacy-304xx-driver
-#nvidia-legacy-340xx-driver
+nvidia-legacy-304xx-driver
+nvidia-legacy-340xx-driver
 openttd-opensfx
 p7zip-rar
 #phoronix-test-suite
