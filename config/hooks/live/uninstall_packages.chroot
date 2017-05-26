@@ -1,22 +1,5 @@
 #!/bin/sh
 
-# Because of random dependency resolving, openjdk-7 gets installed in addition
-# to openjdk-8. This is unnecessary and we remove it in this hook.
-#
-# Iceweasel was replaced with Firefox ESR in March 2016 (see
-# https://glandium.org/blog/?p=3622) but iceweasel is still a dependency of
-# some metapackages in Debian Jessie. Therefore we remove iceweasel and
-# firefox-esr in this hook.
-apt-get purge -y \
-	iceweasel \
-	openjdk-7-jdk \
-	openjdk-7-jre \
-	openjdk-7-jre-headless
-
-# Only now that we have removed openjdk-7 we can reliably install libreoffice-languagetool.
-# It really needs Java 8 to be there and the default JRE.
-apt-get install -y libreoffice-languagetool
-
 # Building the system with recommends enabled pulls in a lot of packages we
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
@@ -29,8 +12,6 @@ apt-get purge -y \
 	exim4-daemon-light \
 	gnome-system-tools \
 	kde-wallpapers \
-	lilypond-doc \
-	lilypond-doc-pdf \
 	minidlna \
 	prerex \
 	system-tools-backends \
