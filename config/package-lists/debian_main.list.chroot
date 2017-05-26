@@ -31,6 +31,7 @@
 #
 #################################################################################################
 2048-qt
+aisleriot
 akregator
 alsa-utils
 #amarok
@@ -129,8 +130,6 @@ dvdauthor
 dvd+rw-tools
 dvgrab
 e17
-eboard
-eboard-extras-pack1
 ecryptfs-utils
 eject
 ekiga
@@ -349,7 +348,8 @@ konsole
 kpat
 krename
 kreversi
-#krita
+krita
+krita-l10n
 kshisen
 ksnakeduel
 ksquares
@@ -410,7 +410,6 @@ libreoffice-style-tango
 libreoffice-writer
 libsvn-java
 libva-egl1
-#lilypond
 lightning
 lightning-l10n-de
 lightning-l10n-es-ar
@@ -420,6 +419,7 @@ lightning-l10n-it
 lightning-l10n-pt-br
 lightning-l10n-ru
 lightning-l10n-sq
+#lilypond
 live-tools
 lmms
 locales
@@ -506,7 +506,7 @@ owncloud-client
 p7zip-full
 palapeli
 parley
-#partitionmanager
+partitionmanager
 patch
 pathological
 pavucontrol
@@ -551,18 +551,19 @@ qelectrotech-data
 qelectrotech-examples
 qjackctl
 #qreator
+qstopmotion
 qtqr
 quassel-kde4
 qxw
 rawtherapee
-remmina
-remmina-common
-remmina-plugin-gnome
-remmina-plugin-nx
-remmina-plugin-rdp
-remmina-plugin-telepathy
-remmina-plugin-vnc
-remmina-plugin-xdmcp
+#remmina
+#remmina-common
+#remmina-plugin-gnome
+#remmina-plugin-nx
+#remmina-plugin-rdp
+#remmina-plugin-telepathy
+#remmina-plugin-vnc
+#remmina-plugin-xdmcp
 rfkill
 rhythmbox
 rhythmbox-plugins
@@ -590,7 +591,6 @@ spice-vdagent
 squashfs-tools
 sshfs
 step
-#stopmotion
 strace
 subversion
 swh-plugins

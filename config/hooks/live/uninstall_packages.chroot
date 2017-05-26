@@ -22,6 +22,7 @@ apt-get install -y libreoffice-languagetool
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
 	alsamixergui \
+	blueman \
 	bsd-mailx \
 	exim4-base \
 	exim4-config \
@@ -32,6 +33,7 @@ apt-get purge -y \
 	lilypond-doc-pdf \
 	minidlna \
 	prerex \
+	system-tools-backends \
 	texlive-fonts-recommended-doc \
 	texlive-latex-base-doc \
 	texlive-latex-extra-doc \
