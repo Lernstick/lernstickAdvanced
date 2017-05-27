@@ -15,6 +15,7 @@ lernstick-arandr
 lernstick-archive-keyring
 lernstick-ardour3
 lernstick-arduino
+lernstick-ark
 lernstick-atril
 #lernstick-avidemux-qt
 lernstick-avogadro
@@ -63,8 +64,8 @@ lernstick-gnome-font-viewer
 lernstick-gnome-screenshot
 lernstick-gnome-system-monitor
 lernstick-gnugo
+lernstick-gpaste
 lernstick-gpicview
-lernstick-gucharmap
 lernstick-hamster-applet
 #lernstick-handbrake-gtk
 lernstick-hex-a-hop
@@ -74,14 +75,19 @@ lernstick-hugin
 lernstick-imagemagick
 lernstick-jamendo
 lernstick-jfractionlab
+lernstick-kalarm
 lernstick-kalgebra
+lernstick-kate
 lernstick-kcalc
+lernstick-kcharselect
 lernstick-kde-config-touchpad
 lernstick-kgeography
 lernstick-kinderwald
 lernstick-kinder-wollen-singen
 lernstick-kinderzeitmaschine
 lernstick-klavaro
+lernstick-kleopatra
+lernstick-knotes
 lernstick-konsole
 lernstick-krename
 lernstick-kreuzwortraetsel-generator
@@ -122,6 +128,7 @@ lernstick-nautilus
 lernstick-nemo
 lernstick-notenmax
 lernstick-obconf
+lernstick-okteta
 lernstick-okular
 lernstick-openclipart
 lernstick-openjdk-8-jre
@@ -138,6 +145,7 @@ lernstick-pcmanfm
 lernstick-pdfshuffler
 lernstick-phet
 #lernstick-phoronix-test-suite
+lernstick-plasma-workspace
 lernstick-playonlinux
 lernstick-pluma
 lernstick-pspp
