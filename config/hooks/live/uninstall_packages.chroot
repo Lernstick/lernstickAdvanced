@@ -11,6 +11,8 @@ apt-get purge -y \
 	exim4-config \
 	exim4-daemon-light \
 	gnome-system-tools \
+	gucharmap \
+	hexchat \
 	kde-wallpapers \
 	minidlna \
 	prerex \
