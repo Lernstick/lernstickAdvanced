@@ -17,7 +17,7 @@ lernstick-ardour3
 lernstick-arduino
 lernstick-ark
 lernstick-atril
-#lernstick-avidemux-qt
+lernstick-avidemux-qt
 lernstick-avogadro
 lernstick-baobab
 lernstick-bkchem
@@ -69,7 +69,7 @@ lernstick-gpaste
 lernstick-gpicview
 lernstick-gwenview
 lernstick-hamster-applet
-#lernstick-handbrake-gtk
+lernstick-handbrake-gtk
 lernstick-hex-a-hop
 lernstick-hplip-gui
 lernstick-htop
@@ -77,6 +77,7 @@ lernstick-hugin
 lernstick-imagemagick
 lernstick-jamendo
 lernstick-jfractionlab
+lernstick-k3b
 lernstick-kalarm
 lernstick-kalgebra
 lernstick-kate
@@ -104,9 +105,11 @@ lernstick-krename
 lernstick-kreuzwortraetsel-generator
 lernstick-kreversi
 #lernstick-krita
+lernstick-ksudoku
 lernstick-ksysguard
 lernstick-ksystemlog
 lernstick-ktimetracker
+lernstick-ktorrent
 lernstick-ktouch
 lernstick-kturtle
 lernstick-kvkbd
@@ -154,12 +157,12 @@ lernstick-openttd
 lernstick-orage
 lernstick-orthografietrainer
 lernstick-owncloud-client
-#lernstick-partitionmanager
+lernstick-partitionmanager
 lernstick-pavucontrol
 lernstick-pcmanfm
 lernstick-pdfshuffler
 lernstick-phet
-#lernstick-phoronix-test-suite
+lernstick-phoronix-test-suite
 lernstick-plasma-workspace
 lernstick-playonlinux
 lernstick-pluma

@@ -10,6 +10,7 @@ apt-get purge -y \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
+	gnome-robots \
 	gnome-system-tools \
 	gucharmap \
 	hexchat \

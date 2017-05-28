@@ -124,6 +124,7 @@ digikam-doc
 dkms
 dmz-cursor-theme
 dolphin
+dolphin-owncloud
 dosfstools
 dossizola
 dvdauthor
@@ -214,6 +215,7 @@ gnome-tweak-tool
 gnucap
 gnuchess
 gnugo
+gparted
 gramps
 graphviz
 gstreamer1.0-alsa
@@ -351,7 +353,6 @@ kreversi
 krita
 krita-l10n
 kshisen
-ksnakeduel
 ksquares
 ksudoku
 ksysguard
@@ -374,7 +375,6 @@ libreoffice
 libreoffice-base
 libreoffice-calc
 libreoffice-draw
-libreoffice-evolution
 libreoffice-gnome
 libreoffice-gtk
 libreoffice-gtk3
@@ -472,6 +472,7 @@ nautilus-owncloud
 nautilus-share
 nautilus-wipe
 ncdu
+nemo-owncloud
 nethogs
 netpbm
 network-manager-gnome
@@ -584,6 +585,7 @@ smplayer-themes
 software-properties-gtk
 #solfege
 #solfege-doc
+sonic-pi
 sozi
 spamassassin
 speedcrunch
