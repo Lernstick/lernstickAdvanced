@@ -16,6 +16,8 @@ apt-get purge -y \
 	hexchat \
 	kde-wallpapers \
 	minidlna \
+	plasma-discover \
+	plasma-discover-common \
 	prerex \
 	system-tools-backends \
 	texlive-fonts-recommended-doc \
