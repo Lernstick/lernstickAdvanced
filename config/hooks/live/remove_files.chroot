@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rm /etc/apt/apt.conf.d/20auto-upgrades.ucf-dist
+rm -f /etc/apt/apt.conf.d/20auto-upgrades.ucf-dist
