@@ -26,7 +26,8 @@ apt-get purge -y \
 	texlive-latex-recommended-doc \
 	texlive-pictures-doc \
 	texlive-pstricks-doc \
-	vprerex
+	vprerex \
+	xscreensaver
 
 # clean up
 apt-get purge -y --auto-remove
