@@ -103,11 +103,11 @@ Package: linux-headers-4.9.0-0.bpo.3-common
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.9.0-0.bpo.3-686-unsigned
+Package: linux-image-4.9.0-0.bpo.3-686
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.9.0-0.bpo.3-686-pae-unsigned
+Package: linux-image-4.9.0-0.bpo.3-686-pae
 Pin: release n=lernstick-8-backports-staging
 Pin-Priority: 999
 
