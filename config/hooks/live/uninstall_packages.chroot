@@ -34,4 +34,6 @@ apt-get purge -y --auto-remove
 
 # for whatever reasons some packages are not automatically cleaned up
 # we manually clean them up here:
-apt-get purge -y liblognorm1
+apt-get purge -y \
+	gcc-5-base \
+	liblognorm1
