@@ -206,8 +206,10 @@ gnome-core
 gnome-disk-utility
 gnome-maps
 gnome-nettool
+gnome-shell-extension-dashtodock
 gnome-shell-extensions
 gnome-shell-extensions-gpaste
+gnome-shell-extension-top-icons-plus
 gnome-software-plugin-flatpak
 gnome-software-plugin-limba
 gnome-sound-recorder
