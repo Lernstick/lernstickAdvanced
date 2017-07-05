@@ -187,18 +187,6 @@ geogebra-gnome
 geogebra-kde
 ghex
 gimagereader
-gimp
-gimp-data
-gimp-data-extras
-gimp-gap
-gimp-help-de
-gimp-help-en
-gimp-help-es
-gimp-help-fr
-gimp-help-it
-gimp-help-ru
-gimp-plugin-registry
-gimp-texturize
 git
 glabels
 gnome-clocks
@@ -493,6 +481,7 @@ network-manager-vpnc-gnome
 nmap
 ntfs-3g
 ntpdate
+octave
 okteta
 okular
 okular-extra-backends
@@ -529,6 +518,7 @@ plasma-desktop
 plasma-nm
 plasma-wallpapers-addons
 plasma-widgets-addons
+plasma-workspace-wallpapers
 playonlinux
 plymouth
 plymouth-themes
