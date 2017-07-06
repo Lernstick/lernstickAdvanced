@@ -26,9 +26,9 @@ modules="part_msdos fat ext2 search"
 mkdir -p $BINARY/$BOOT/grub/$platform || true
 
 # Create embedded GRUB config file to find live medium
-# this causes GRUB to load it's configuration from the partition that contains /live/vmlinuz1
+# this causes GRUB to load it's configuration from the partition that contains /live/filesystem.squashfs
 cat > ${CHROOT}/tmp/grub.cfg <<EOF
-search --no-floppy --set=root --file /live/vmlinuz1
+search --no-floppy --set=root --file /live/filesystem.squashfs
 set prefix=(\$root)/boot/grub
 EOF
 
