@@ -94,9 +94,10 @@ build_image()
                 --architectures amd64 \
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
+		--bootloaders syslinux \
                 --distribution stretch \
-                --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
+                --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
