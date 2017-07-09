@@ -29,6 +29,9 @@
 #
 # * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
 #
+# * kdialog and java need libcanberra-gtk-module, otherwise they complain with the following error message:
+#   Failed to load module "canberra-gtk-module"
+#
 #################################################################################################
 2048-qt
 aisleriot
@@ -360,6 +363,7 @@ kvkbd
 kwalletmanager
 ldap-utils
 less
+libcanberra-gtk-module
 libcups2-dev
 libegl1-mesa-drivers
 libgl1-mesa-dri
