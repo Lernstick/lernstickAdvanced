@@ -104,7 +104,6 @@ build_image()
                 --source ${SOURCE} \
                 --verbose
 
-
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
 
