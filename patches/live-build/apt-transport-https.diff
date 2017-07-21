@@ -1,0 +1,14 @@
+diff --git a/scripts/build/bootstrap_archives b/scripts/build/bootstrap_archives
+index f7bf7d8..b6ec91d 100755
+--- a/scripts/build/bootstrap_archives
++++ b/scripts/build/bootstrap_archives
+@@ -247,6 +247,9 @@ then
+ 	Chroot chroot "apt-get ${APT_OPTIONS} install aptitude"
+ fi
+ 
++# make sure that we can also use https repositories
++Chroot chroot "apt-get ${APT_OPTIONS} install apt-transport-https"
++
+ # Rebuild apt indices from scratch.
+ # Due to the fact that apt doesn't understand
+ # pinning on the fly, we need to manually remove
