@@ -1,3 +1,8 @@
 #!/bin/sh
 
-plymouth-set-default-theme -R tribar
+if command -v plymouth-set-default-theme > /dev/null
+then
+	plymouth-set-default-theme -R tribar
+else
+	echo "WARNING: plymouth-set-default-theme not found"
+fi

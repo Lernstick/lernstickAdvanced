@@ -4,4 +4,9 @@
 # update-command-not-found program, and is not shipped with the package.
 # Therefore we create the list with this hook.
 
-update-command-not-found
+if command -v update-command-not-found > /dev/null
+then
+	update-command-not-found
+else
+	echo "WARNING: update-command-not-found not found"
+fi
