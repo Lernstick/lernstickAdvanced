@@ -3,6 +3,11 @@
 if command -v plymouth-set-default-theme > /dev/null
 then
 	plymouth-set-default-theme -R tribar
+	# The call to plymouth-set-default-theme above destroys the symlink
+	# placed by lernstick-config's config-package-dev configuration.
+	# Therefore we have to restore the symlink here.
+	cd /etc/plymouth/
+	ln -sf plymouthd.conf.lernstick plymouthd.conf
 else
 	echo "WARNING: plymouth-set-default-theme not found"
 fi
