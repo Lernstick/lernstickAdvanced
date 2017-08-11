@@ -4,3 +4,6 @@ cd live || exit 1
 
 mv vmlinuz-4.9.0-3-amd64 vmlinuz || true
 mv initrd.img-4.9.0-3-amd64 initrd.img || true
+
+mv vmlinuz-4.11.0-0.bpo.1-amd64 vmlinuz || true
+mv initrd.img-4.11.0-0.bpo.1-amd64 initrd.img || true
