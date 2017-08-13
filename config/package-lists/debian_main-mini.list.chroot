@@ -372,7 +372,6 @@ libreoffice-base
 libreoffice-calc
 libreoffice-draw
 libreoffice-gnome
-libreoffice-gtk
 libreoffice-gtk3
 libreoffice-help-de
 libreoffice-help-en-us
@@ -393,7 +392,6 @@ libreoffice-l10n-pt-br
 libreoffice-l10n-ru
 libreoffice-math
 libreoffice-ogltrans
-libreoffice-pdfimport
 libreoffice-report-builder
 libreoffice-sdbc-hsqldb
 libreoffice-style-breeze
@@ -486,7 +484,7 @@ network-manager-vpnc-gnome
 nmap
 ntfs-3g
 ntpdate
-octave
+#octave
 okteta
 okular
 okular-extra-backends
