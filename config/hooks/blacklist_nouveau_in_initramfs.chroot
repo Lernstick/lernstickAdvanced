@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Updating the alternatives creates the symlink
+# /etc/modprobe.d/nvidia-blacklists-nouveau.conf.
+# This will be checked and included in the initramfs via
+# /usr/share/initramfs-tools/hooks/zz_nvidia-blacklists-nouveau
+# which is part of the glx-alternative-nvidia package.
+
+update-alternatives --quiet --set glx /usr/lib/nvidia
