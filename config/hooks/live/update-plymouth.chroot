@@ -2,7 +2,7 @@
 
 if command -v plymouth-set-default-theme > /dev/null
 then
-	plymouth-set-default-theme -R tribar
+	plymouth-set-default-theme -R lines
 else
 	echo "WARNING: plymouth-set-default-theme not found"
 fi
