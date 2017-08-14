@@ -5,7 +5,7 @@ pbuilder --create --basetgz /var/cache/pbuilder/base-jessie32-bpo.tar.gz --distr
 pbuilder --create --basetgz /var/cache/pbuilder/base-jessie64-bpo.tar.gz --distribution jessie --architecture amd64 --othermirror "deb http://security.debian.org/ jessie/updates main|deb http://http.debian.net/debian jessie-backports main|deb file:///home/ronny/lernstick/backports/jessie/debs/unfinished ./|deb http://packages.lernstick.ch/lernstick lernstick-8-backports main contrib non-free" --bindmounts /home/ronny/lernstick/backports/jessie/debs --allow-untrusted
 
 # stretch:
-pbuilder --create --basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz --distribution stretch --othermirror "deb http://security.debian.org/ stretch/updates main|deb http://packages.lernstick.ch/lernstick lernstick-9-backports main contrib non-free" --bindmounts /home/lernstick_debian9/lernstick/backports/stretch/debs --allow-untrusted
+pbuilder --create --basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz --distribution stretch --othermirror "deb http://security.debian.org/ stretch/updates main|deb http://packages.lernstick.ch/lernstick lernstick-9-backports main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-9-backports-staging main contrib non-free" --bindmounts /home/lernstick_debian9/lernstick/backports/stretch/debs --allow-untrusted
 
 # Source-Paket der Software herunterladen
 cat <<EOF > /etc/apt/sources.list.d/wheezy-src.list
