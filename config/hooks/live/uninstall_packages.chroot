@@ -20,6 +20,7 @@ apt-get purge -y \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
+	gcc-5-base \
 	gnome-robots \
 	gnome-system-tools \
 	gucharmap \
