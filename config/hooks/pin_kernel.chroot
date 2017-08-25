@@ -26,7 +26,7 @@ Pin-Priority: 999" >> ${PIN_FILE}
 
 for i in /lib/modules/*
 do
-	pin_package "linux-image-$(echo ${i} | awk -F/ '{ print $4 }')-unsigned"
+	pin_package "linux-image-$(echo ${i} | awk -F/ '{ print $4 }')"
 done
 
 for i in /usr/src/linux-headers-*

@@ -1,0 +1,79 @@
+diff --git a/functions/apt-transport-https.sh b/functions/apt-transport-https.sh
+new file mode 100755
+index 0000000..fcd55da
+--- /dev/null
++++ b/functions/apt-transport-https.sh
+@@ -0,0 +1,38 @@
++#!/bin/sh
++
++## live-build(7) - System Build Scripts
++## Copyright (C) 2017 Ronny Standtke <ronny.standtke@gmx.net>
++##
++## This program comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
++## This is free software, and you are welcome to redistribute it
++## under certain conditions; see COPYING for details.
++
++
++Enable_apt_transport_https ()
++{
++	# Install apt-transport-https (if it is not installed yet) and we have repositories that use HTTPS
++	if [ ! -x "chroot/usr/lib/apt/methods/https" ]
++	then
++		for FILE in chroot/etc/apt/sources.list.d/*.list
++		do
++			# Check if repository contains HTTPS URLs
++			if grep -q "^deb https" "${FILE}"
++			then
++				# temporarily disable https repositories so that calling "apt-get update" doesn't fail before installing apt-transport-https
++				sed -i "s/^deb https/#bootstrapping deb https/" "${FILE}"
++				_APT_HTTPS="true"
++			fi
++		done
++		if [ "${_APT_HTTPS}" = "true" ]
++		then
++			Chroot chroot "apt-get ${APT_OPTIONS} update"
++			Chroot chroot "apt-get ${APT_OPTIONS} --force-yes install apt-transport-https"
++			# re-enable https repositories
++			for FILE in chroot/etc/apt/sources.list.d/*.list
++			do
++				sed -i "s/#bootstrapping deb https/deb https/" "${FILE}"
++			done
++			Chroot chroot "apt-get ${APT_OPTIONS} update"
++		fi
++	fi
++}
+diff --git a/scripts/build/bootstrap_archives b/scripts/build/bootstrap_archives
+index f7bf7d8..3314628 100755
+--- a/scripts/build/bootstrap_archives
++++ b/scripts/build/bootstrap_archives
+@@ -240,6 +240,8 @@ then
+ 	done
+ fi
+ 
++Enable_apt_transport_https
++
+ # Installing aptitude
+ if [ "${LB_APT}" = "aptitude" ] && [ ! -x chroot/usr/bin/aptitude ]
+ then
+diff --git a/scripts/build/chroot_archives b/scripts/build/chroot_archives
+index 85ad35b..ff46b5f 100755
+--- a/scripts/build/chroot_archives
++++ b/scripts/build/chroot_archives
+@@ -212,6 +212,8 @@ EOF
+ 			fi
+ 		done
+ 
++		Enable_apt_transport_https
++
+ 		# Configure local package repository
+ 		if Find_files config/packages.chroot/*.deb || Find_files config/packages/*.deb
+ 		then
+@@ -649,6 +651,8 @@ EOF
+ 			fi
+ 		done
+ 
++		Enable_apt_transport_https
++
+ 		# Updating indices
+ 		Apt chroot update
+ 

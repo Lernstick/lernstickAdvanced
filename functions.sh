@@ -95,8 +95,8 @@ build_image()
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
                 --distribution jessie \
-                --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--firmware-chroot false \
+                --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-flavours "686-pae 686" \
 		--linux-packages linux-image-4.9.0-0.bpo.3 \
                 --mirror-binary ${MIRROR_SYSTEM} \
