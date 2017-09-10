@@ -50,6 +50,7 @@ desktop-base
 dialog
 dkms
 eject
+eog-plugins
 epoptes-client
 exfat-fuse
 exfat-utils
@@ -97,6 +98,7 @@ gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
 gstreamer1.0-vaapi
+gthumb
 gutenprint-locales
 hicolor-icon-theme
 host
