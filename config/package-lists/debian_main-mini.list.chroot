@@ -384,7 +384,6 @@ libreoffice-help-it
 libreoffice-help-pt-br
 libreoffice-help-ru
 libreoffice-impress
-#libreoffice-kde
 libreoffice-l10n-de
 libreoffice-l10n-es
 libreoffice-l10n-fa
@@ -398,10 +397,8 @@ libreoffice-ogltrans
 libreoffice-report-builder
 libreoffice-sdbc-hsqldb
 libreoffice-style-breeze
-#libreoffice-style-crystal
 libreoffice-style-galaxy
 libreoffice-style-hicontrast
-libreoffice-style-oxygen
 libreoffice-style-sifr
 libreoffice-style-tango
 libreoffice-writer
