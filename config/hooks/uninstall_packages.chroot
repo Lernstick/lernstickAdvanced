@@ -28,6 +28,9 @@ apt-get purge -y \
 	exim4-daemon-light \
 	gimp \
 	gimp-data \
+	gnome-packagekit \
+	gnome-packagekit-data \
+	gnome-packagekit-session \
 	gnome-system-tools \
 	kde-wallpapers \
 	lilypond-doc \

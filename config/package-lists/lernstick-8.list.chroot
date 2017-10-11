@@ -64,7 +64,6 @@ lernstick-gnome-calculator
 lernstick-gnome-dictionary
 lernstick-gnome-font-viewer
 lernstick-gnome-mplayer
-lernstick-gnome-packagekit
 lernstick-gnome-screenshot
 lernstick-gnome-system-monitor
 lernstick-gnugo
@@ -77,6 +76,7 @@ lernstick-hplip-gui
 lernstick-htop
 lernstick-hugin
 lernstick-imagemagick
+lernstick-install-upgrades
 lernstick-jamendo
 lernstick-jfractionlab
 lernstick-kalgebra
