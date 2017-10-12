@@ -36,6 +36,9 @@ apt-get purge -y \
 	gedit-common \
 	gimp \
 	gimp-data \
+	gnome-packagekit \
+	gnome-packagekit-data \
+	gnome-packagekit-session \
 	hunspell-en-us \
 	libevolution \
 	libgimp2.0 \
