@@ -1,0 +1,11 @@
+Package: openttd*
+Pin: release o=Debian
+Pin-Priority: 999
+
+Package: wine*
+Pin: release o=Debian
+Pin-Priority: 999
+
+Package: shim
+Pin: version 0.7-0lernstick1
+Pin-Priority: 999

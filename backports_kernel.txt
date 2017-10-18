@@ -83,38 +83,30 @@ building test image with new kernel:
 mkdir config/apt
 vi config/apt/preferences
 
-Package: aufs-dkms
-Pin: release n=lernstick-8-backports-staging
+Package: linux-compiler-gcc-6-x86
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-compiler-gcc-4.9-x86
-Pin: release n=lernstick-8-backports-staging
+Package: linux-headers-4.12.0-0.bpo.2-amd64
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.9.0-0.bpo.3-686
-Pin: release n=lernstick-8-backports-staging
+Package: linux-headers-4.12.0-0.bpo.2-common
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.9.0-0.bpo.3-686-pae
-Pin: release n=lernstick-8-backports-staging
+Package: linux-headers-amd64
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.9.0-0.bpo.3-common
-Pin: release n=lernstick-8-backports-staging
+Package: linux-image-4.12.0-0.bpo.2-amd64
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.9.0-0.bpo.3-686
-Pin: release n=lernstick-8-backports-staging
-Pin-Priority: 999
-
-Package: linux-image-4.9.0-0.bpo.3-686-pae
-Pin: release n=lernstick-8-backports-staging
-Pin-Priority: 999
-
-Package: linux-kbuild-4.9
-Pin: release n=lernstick-8-backports-staging
+Package: linux-kbuild-4.12
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
 Package: linux-libc-dev
-Pin: release n=lernstick-8-backports-staging
+Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999

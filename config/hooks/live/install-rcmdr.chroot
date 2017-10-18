@@ -17,7 +17,7 @@ FILENAME="install"
 INSTALL_SCRIPT="/tmp/${FILENAME}.R"
 cat <<EOF > ${INSTALL_SCRIPT}
 options(repos = c(CRAN = "http://cran.rstudio.com"))
-install.packages(c("sem", "markdown", "leaps", "knitr", "aplpack"))
+install.packages(c("aplpack", "knitr", "leaps", "markdown", "nortest", "rmarkdown", "sem"))
 EOF
 R CMD BATCH ${INSTALL_SCRIPT}
 

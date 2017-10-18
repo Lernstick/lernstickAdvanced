@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# remove all grub files of live build
+# we have our own customized grub version, so we just don't need the other files
+
+rm -rf boot/grub/dejavu-bold-14.pf2
+rm -rf boot/grub/dejavu-bold-16.pf2
+rm -rf boot/grub/live-theme/
+rm -rf boot/grub/loopback.cfg
+rm -rf boot/grub/splash.png

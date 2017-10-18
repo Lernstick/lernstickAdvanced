@@ -1,8 +1,6 @@
 amd64-microcode
 atmel-firmware
 broadcom-sta-dkms
-#fglrx-control
-#fglrx-modules-dkms
 firmware-amd-graphics
 firmware-atheros
 firmware-bnx2
@@ -27,8 +25,6 @@ firmware-siano
 firmware-ti-connectivity
 firmware-zd1211
 intel-microcode
-#libfglrx-amdxvba1
-#libgl1-fglrx-glx
 libnvidia-encode1
 libnvidia-legacy-340xx-encode1
 nvidia-detect

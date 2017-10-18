@@ -1,6 +1,6 @@
 diff --git a/functions/apt-transport-https.sh b/functions/apt-transport-https.sh
 new file mode 100755
-index 0000000..fcd55da
+index 000000000..ac5d1fc01
 --- /dev/null
 +++ b/functions/apt-transport-https.sh
 @@ -0,0 +1,38 @@
@@ -32,7 +32,7 @@ index 0000000..fcd55da
 +		if [ "${_APT_HTTPS}" = "true" ]
 +		then
 +			Chroot chroot "apt-get ${APT_OPTIONS} update"
-+			Chroot chroot "apt-get ${APT_OPTIONS} --force-yes install apt-transport-https"
++			Chroot chroot "apt-get ${APT_OPTIONS} --force-yes -t stretch install apt-transport-https"
 +			# re-enable https repositories
 +			for FILE in chroot/etc/apt/sources.list.d/*.list
 +			do
@@ -43,7 +43,7 @@ index 0000000..fcd55da
 +	fi
 +}
 diff --git a/scripts/build/bootstrap_archives b/scripts/build/bootstrap_archives
-index f7bf7d8..3314628 100755
+index f7bf7d8c4..3314628c0 100755
 --- a/scripts/build/bootstrap_archives
 +++ b/scripts/build/bootstrap_archives
 @@ -240,6 +240,8 @@ then
@@ -56,7 +56,7 @@ index f7bf7d8..3314628 100755
  if [ "${LB_APT}" = "aptitude" ] && [ ! -x chroot/usr/bin/aptitude ]
  then
 diff --git a/scripts/build/chroot_archives b/scripts/build/chroot_archives
-index 85ad35b..ff46b5f 100755
+index 85ad35b0c..ff46b5ffb 100755
 --- a/scripts/build/chroot_archives
 +++ b/scripts/build/chroot_archives
 @@ -212,6 +212,8 @@ EOF

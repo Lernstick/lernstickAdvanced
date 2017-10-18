@@ -1,5 +1,8 @@
 #!/bin/sh
 
+set -e
+
+ISO_SUFFIX=""
 SOURCE="true"
 
 . ./functions.sh
@@ -16,6 +19,13 @@ else
 	then
 		exit 0
 	fi
+fi
+
+if [ ! -d "${BUILD_DIR}" ]
+then
+	echo "ERROR: build directory ${BUILD_DIR} doesn't exist."
+	echo "Please check the BUILD_DIR definition in your constants file."
+	exit 0
 fi
 
 init_build

@@ -2,6 +2,7 @@
 
 set -e
 
+ISO_SUFFIX=""
 SOURCE="false"
 
 . ./functions.sh
