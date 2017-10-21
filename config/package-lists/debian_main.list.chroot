@@ -33,6 +33,8 @@ aptitude
 apt-rdepends
 apt-transport-https
 apt-xapian-index
+aufs-dkms
+aufs-tools
 bash-completion
 browser-plugin-vlc
 bzip2
