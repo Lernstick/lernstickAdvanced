@@ -36,6 +36,7 @@ done
 
 pin_package $(dpkg -l "linux-kbuild*" | grep ^ii | awk '{print $2}')
 
+pin_package aufs-dkms
 pin_package linux-compiler-gcc-6-x86
 pin_package linux-headers-amd64
 pin_package linux-libc-dev

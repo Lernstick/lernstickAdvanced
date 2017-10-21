@@ -53,8 +53,8 @@ arduino
 ark
 armagetronad
 audacity
-#aufs-dkms
-#aufs-tools
+aufs-dkms
+aufs-tools
 avahi-autoipd
 avahi-daemon
 avahi-utils
