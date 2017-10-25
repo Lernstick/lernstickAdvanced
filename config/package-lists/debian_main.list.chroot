@@ -200,6 +200,11 @@ printer-driver-all-enforce
 printer-driver-cups-pdf
 print-manager
 pspp
+pulseaudio-module-gconf
+pulseaudio-module-jack
+pulseaudio-module-lirc
+pulseaudio-module-raop
+pulseaudio-module-zeroconf
 pv
 rfkill
 rsync
