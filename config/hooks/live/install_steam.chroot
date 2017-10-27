@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# steam is only available for the i386 architecture
-dpkg --add-architecture i386
-apt-get update
-apt-get install -y steam
