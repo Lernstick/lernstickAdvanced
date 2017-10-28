@@ -4,8 +4,11 @@ pbuilder --create --basetgz /var/cache/pbuilder/base-jessie32-bpo.tar.gz --distr
 # jessie64:
 pbuilder --create --basetgz /var/cache/pbuilder/base-jessie64-bpo.tar.gz --distribution jessie --architecture amd64 --othermirror "deb http://security.debian.org/ jessie/updates main|deb http://http.debian.net/debian jessie-backports main|deb file:///home/ronny/lernstick/backports/jessie/debs/unfinished ./|deb http://packages.lernstick.ch/lernstick lernstick-8-backports main contrib non-free" --bindmounts /home/ronny/lernstick/backports/jessie/debs --allow-untrusted
 
-# stretch:
+# stretch (64 Bit):
 pbuilder --create --basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz --distribution stretch --othermirror "deb http://security.debian.org/ stretch/updates main|deb http://packages.lernstick.ch/lernstick lernstick-9-backports main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-9-backports-staging main contrib non-free" --bindmounts /home/lernstick_debian9/lernstick/backports/stretch/debs --allow-untrusted
+
+# stretch (32 Bit)
+pbuilder --create --basetgz /var/cache/pbuilder/base-stretch32-bpo.tar.gz --distribution stretch --architecture i386 --othermirror "deb http://security.debian.org/ stretch/updates main|deb http://packages.lernstick.ch/lernstick lernstick-9-backports main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-9-backports-staging main contrib non-free" --bindmounts /home/lernstick_debian9/lernstick/backports/stretch/debs --allow-untrusted
 
 # Source-Paket der Software herunterladen
 cat <<EOF > /etc/apt/sources.list.d/wheezy-src.list
@@ -32,8 +35,11 @@ dch --bpo
 # jessie64:
 sudo pbuilder --login --basetgz /var/cache/pbuilder/base-jessie-bpo.tar.gz --bindmounts /home/ronny/lernstick/backports/jessie
 
-# stretch
+# stretch (64 Bit)
 sudo pbuilder --login --basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz --bindmounts /home/lernstick_debian9/lernstick/backports/stretch
+
+# stretch (32 Bit)
+sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-stretch32-bpo.tar.gz --bindmounts /home/lernstick_debian9/lernstick/backports/stretch
 
 cd /mnt/sda8/backports/$PACKAGE-*
 
@@ -44,3 +50,8 @@ cd /mnt/sda8/backports/$PACKAGE-*
 apt-get update; apt-get upgrade; apt-get --yes --force-yes install pbuilder; apt-get --yes --force-yes install sudo devscripts fakeroot; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
 dpkg-buildpackage -sa
+
+# Bei multiarch-Paketen (z.B. wine) muss das Paket sowohl in der 32-Bit als auch in der 64-Bit Version gebaut werden.
+# Bei der ersten Version vollständig bauen und mit dput hochladen.
+# Bei der zweiten Version nur noch das Binärpaket bauen:
+dpkg-buildpackage -b
