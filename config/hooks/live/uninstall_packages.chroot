@@ -25,6 +25,7 @@ apt-get purge -y \
 	gucharmap \
 	hexchat \
 	minidlna \
+	owncloud-client-doc \
 	plasma-discover \
 	plasma-discover-common \
 	prerex \
