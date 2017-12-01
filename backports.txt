@@ -55,3 +55,9 @@ dpkg-buildpackage -sa
 # Bei der ersten Version vollständig bauen und mit dput hochladen.
 # Bei der zweiten Version nur noch das Binärpaket bauen:
 dpkg-buildpackage -b
+
+offizielle Backports testen:
+Package: *
+Pin: release a=stretch-backports
+Pin-Priority: 999
+
