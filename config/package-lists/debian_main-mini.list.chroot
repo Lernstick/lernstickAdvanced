@@ -77,6 +77,7 @@ bovo
 brasero
 browser-plugin-vlc
 bzip2
+caja-gtkhash
 calendar-exchange-provider
 calendar-google-provider
 calibre
@@ -223,6 +224,7 @@ gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
 gstreamer1.0-vaapi
 gthumb
+gtkhash
 gutenprint-locales
 gwakeonlan
 gwenview
@@ -459,10 +461,12 @@ mythes-it
 mythes-ru
 nautilus
 nautilus-admin
+nautilus-gtkhash
 nautilus-owncloud
 nautilus-share
 nautilus-wipe
 ncdu
+nemo-gtkhash
 nemo-owncloud
 nethogs
 netpbm
@@ -615,6 +619,7 @@ tesseract-ocr-rus
 tesseract-ocr-spa
 testdisk
 thunar-archive-plugin
+thunar-gtkhash
 thunar-volman
 thunderbird
 thunderbird-l10n-de
