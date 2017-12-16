@@ -43,5 +43,11 @@ apt-get purge -y \
 	xsane \
 	xsane-common
 
+# for whatever reason apparmor prevents evince from starting
+# therefore we remove it here
+apt-get purge -y \
+	apparmor \
+	libapparmor-perl
+
 # clean up
 apt-get purge -y --auto-remove
