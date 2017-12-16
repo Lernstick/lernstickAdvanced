@@ -463,6 +463,7 @@ nautilus
 nautilus-admin
 nautilus-gtkhash
 nautilus-owncloud
+nautilus-sendto
 nautilus-share
 nautilus-wipe
 ncdu
@@ -572,6 +573,7 @@ sane
 sane-utils
 sddm
 seahorse
+seahorse-nautilus
 shutter
 smb4k
 smbclient
