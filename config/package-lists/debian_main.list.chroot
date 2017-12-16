@@ -210,6 +210,7 @@ pulseaudio-module-zeroconf
 pv
 rfkill
 rsync
+seahorse-nautilus
 shutter
 software-properties-gtk
 spice-vdagent
