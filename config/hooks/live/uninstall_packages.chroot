@@ -8,7 +8,9 @@
 #  subprocess installed post-installation script returned error exit status 127
 # ----------------------------------
 # Therefore we install octave not until this hook where libGL.so.1 is already correctly installed and configured
-apt-get install -y octave
+apt-get install -y \
+	octave \
+	octave-symbolic
 
 # Building the system with recommends enabled pulls in a lot of packages we
 # don't want to have. Unfortunately, we have no blacklist while building the
@@ -32,6 +34,7 @@ apt-get purge -y \
 	myspell-pt-br \
 	myspell-ru \
 	sane-utils \
+	texlive-fonts-extra-doc \
 	texlive-fonts-recommended-doc \
 	texlive-latex-base-doc \
 	texlive-latex-extra-doc \
