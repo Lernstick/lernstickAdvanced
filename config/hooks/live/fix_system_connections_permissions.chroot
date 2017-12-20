@@ -7,7 +7,7 @@
 # Therefore this script checks if there are NetworkManager system connections
 # and applies the correct permission mask.
 
-for i in /etc/NetworkManager/system-connections/*
+for i in $(find /etc/NetworkManager/system-connections/ -type f)
 do
 	chmod 600 "$i"
 done
