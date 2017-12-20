@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# NetworkManager system connection files need to have the permission mask 
+# NetworkManager system connection files need to have the permission mask
 # -rw------.
 # Unfortunately, we can not make sure that git keeps this permission mask when
 # pushing and pulling from different machines.
