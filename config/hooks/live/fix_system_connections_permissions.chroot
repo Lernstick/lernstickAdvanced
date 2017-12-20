@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# NetworkManager system connection files need to have the permission mask 
+# -rw------.
+# Unfortunately, we can not make sure that git keeps this permission mask when
+# pushing and pulling from different machines.
+# Therefore this script checks if there are NetworkManager system connections
+# and applies the correct permission mask.
+
+for i in $(find /etc/NetworkManager/system-connections/ -type f)
+do
+	chmod 600 "$i"
+done
