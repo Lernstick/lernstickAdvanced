@@ -186,8 +186,6 @@ gedit
 gedit-plugins
 genisoimage
 #geoclue-hostip
-geogebra-gnome
-geogebra-kde
 ghex
 gimagereader
 git
@@ -431,6 +429,7 @@ marble
 mate-desktop-environment
 mc
 mdadm
+mediathekview
 mesa-va-drivers
 mesa-vdpau-drivers
 mesa-vulkan-drivers
@@ -492,7 +491,6 @@ okular
 okular-extra-backends
 openbabel
 openprinting-ppds
-openshot-qt
 openssh-client
 openssh-server
 openttd

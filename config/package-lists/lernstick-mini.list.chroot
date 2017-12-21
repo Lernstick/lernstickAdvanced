@@ -60,7 +60,6 @@ lernstick-galculator
 lernstick-gdebi
 lernstick-gdebi-kde
 lernstick-gedit
-lernstick-geogebra
 lernstick-ghex
 lernstick-gksu
 lernstick-gnome-calculator
@@ -245,7 +244,7 @@ lernstick-xournal
 lernstick-xsane
 lernstick-xterm
 lernstick-zenmap
-#libreoffice-languagetool
+libreoffice-languagetool
 libreoffice-templatepack
 live-armagetronad
 live-enigma
@@ -258,7 +257,6 @@ master-pdf-editor
 pauker
 rscc
 rscc-defaults-lernstick
-#tigerjython
 tipp10
 #tuxedo-wmi-dkms
 vanished-root-handler
