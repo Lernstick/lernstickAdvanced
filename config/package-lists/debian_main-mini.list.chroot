@@ -48,7 +48,7 @@ apt-transport-https
 apt-xapian-index
 arandr
 #ardesia
-ardour3
+ardour
 arduino
 ark
 armagetronad
@@ -121,8 +121,6 @@ dia-gnome
 dialog
 dia-rib-network
 dia-shapes
-digikam
-digikam-doc
 dkms
 dmz-cursor-theme
 dolphin
@@ -142,6 +140,7 @@ enigmail
 eog-plugins
 epoptes
 epoptes-client
+exe-thumbnailer
 exfat-fuse
 exfat-utils
 fb-music-high
@@ -256,6 +255,7 @@ iftop
 ijsgutenprint
 imagemagick
 inkscape
+inkscape-open-symbols
 iotop
 iptraf
 jackd2
