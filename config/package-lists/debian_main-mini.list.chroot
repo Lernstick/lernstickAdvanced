@@ -492,8 +492,7 @@ okular
 okular-extra-backends
 openbabel
 openprinting-ppds
-openshot
-openshot-doc
+openshot-qt
 openssh-client
 openssh-server
 openttd
