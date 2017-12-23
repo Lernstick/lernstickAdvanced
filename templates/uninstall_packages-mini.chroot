@@ -5,7 +5,7 @@
 # system so we have to remove them here right afer installing them...
 
 # This is a special list for the "Lernstick mini" version:
-# - cinnamon-desktop-environmen recommends gimp
+# - cinnamon-desktop-environment recommends gimp
 
 apt-get purge -y \
 	gimp \
