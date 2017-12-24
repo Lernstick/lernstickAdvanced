@@ -240,6 +240,7 @@ hunspell-de-ch
 hunspell-de-de
 hunspell-en-us
 hunspell-fr-comprehensive
+hunspell-kmr
 hunspell-ru
 hyphen-de
 hyphen-en-us
@@ -255,7 +256,7 @@ imagemagick
 inkscape
 inkscape-open-symbols
 iotop
-iptraf
+iptraf-ng
 jackd2
 jfractionlab
 #jitsi
@@ -285,7 +286,6 @@ kde-config-cron
 kde-config-gtk-style
 kde-config-gtk-style-preview
 kde-config-systemd
-kde-config-touchpad
 kdegames-card-data
 kdegraphics-thumbnailers
 kde-l10n-de
@@ -300,7 +300,6 @@ kdenlive
 kdepasswd
 kde-style-qtcurve
 kdesudo
-kde-window-manager
 kdf
 kdiamond
 keepassx
@@ -311,7 +310,7 @@ kgeography
 kgeography-data
 kgoldrunner
 khangman
-khelpcenter4
+khelpcenter
 kig
 kigo
 kiki-the-nano-bot
@@ -361,11 +360,11 @@ kturtle
 kubrick
 kvkbd
 kwalletmanager
+kwin-x11
 ldap-utils
 less
 libcanberra-gtk-module
 libcups2-dev
-libegl1-mesa-drivers
 libgl1-mesa-dri
 libreoffice
 libreoffice-base
@@ -450,7 +449,6 @@ myspell-en-gb
 myspell-es
 myspell-fa
 myspell-it
-myspell-ku
 myspell-pt-br
 mythes-de
 mythes-de-ch
@@ -548,7 +546,7 @@ qjackctl
 #qreator
 qstopmotion
 qtqr
-quassel-kde4
+quassel
 qxw
 rawtherapee
 remmina
