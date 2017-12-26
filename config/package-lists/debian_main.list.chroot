@@ -122,7 +122,6 @@ less
 libcanberra-gtk0
 libcanberra-gtk-module
 libcups2-dev
-libegl1-mesa-drivers
 libgl1-mesa-dri
 libreoffice
 libreoffice-base

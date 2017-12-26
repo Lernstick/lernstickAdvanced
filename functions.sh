@@ -95,6 +95,7 @@ build_image()
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
 		--bootloaders syslinux \
+		--debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
                 --distribution stretch \
 		--firmware-chroot false \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
