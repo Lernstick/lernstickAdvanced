@@ -59,7 +59,7 @@ lernstick-fritzing
 lernstick-fslint
 lernstick-galculator
 lernstick-gdebi
-lernstick-gdebi-kde
+#lernstick-gdebi-kde
 lernstick-gedit
 lernstick-ghex
 lernstick-gksu

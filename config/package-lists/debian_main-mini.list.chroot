@@ -180,7 +180,7 @@ gbrainy
 gconf-editor
 gdb
 gdebi
-gdebi-kde
+#gdebi-kde
 gdm3
 gedit
 gedit-plugins
