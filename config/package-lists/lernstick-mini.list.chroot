@@ -1,4 +1,4 @@
-#aseba
+aseba
 basisschrift
 bluej
 cura
@@ -117,7 +117,6 @@ lernstick-kpat
 lernstick-krename
 lernstick-kreuzwortraetsel-generator
 lernstick-kreversi
-#lernstick-krita
 lernstick-ksudoku
 lernstick-ksysguard
 lernstick-ksystemlog
