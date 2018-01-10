@@ -19,7 +19,6 @@ lernstick-archive-keyring
 lernstick-ardour3
 lernstick-arduino
 lernstick-ark
-lernstick-atril
 lernstick-avidemux-qt
 lernstick-avogadro
 lernstick-baobab
@@ -42,9 +41,7 @@ lernstick-dia-common
 lernstick-dolphin
 lernstick-dossizola
 lernstick-energiespiel
-lernstick-engrampa
 lernstick-eog
-lernstick-eom
 lernstick-evince-common
 lernstick-execute-jar
 lernstick-filelight
@@ -143,8 +140,6 @@ lernstick-lxmusic
 lernstick-lxtask
 lernstick-lxterminal
 lernstick-marble
-lernstick-mate-calc
-lernstick-mate-terminal
 lernstick-mathe-im-netz
 lernstick-mathematik-primarstufe
 lernstick-mc
@@ -176,7 +171,6 @@ lernstick-phet
 lernstick-phoronix-test-suite
 lernstick-plasma-workspace
 lernstick-playonlinux
-lernstick-pluma
 lernstick-pymol
 lernstick-qelectrotech
 lernstick-qstopmotion
