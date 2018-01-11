@@ -1,4 +1,5 @@
-caja-gksu
+caja-admin
+caja-eiciel
 caja-gtkhash
 caja-image-converter
 caja-open-terminal
@@ -10,3 +11,6 @@ caja-wallpaper
 caja-xattr-tags
 mate-calc
 mate-desktop-environment
+mate-sensors-applet
+mate-sensors-applet-nvidia
+mate-tweak
