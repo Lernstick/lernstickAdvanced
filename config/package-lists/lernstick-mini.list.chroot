@@ -5,7 +5,6 @@ cura
 dlcopy
 domination
 filius
-gnome-shell-extension-sound-device-chooser
 greenfoot
 jbackpack-full
 lernstick-2048-qt
@@ -57,13 +56,10 @@ lernstick-fslint
 lernstick-galculator
 lernstick-gdebi
 #lernstick-gdebi-kde
-lernstick-gedit
 lernstick-ghex
 lernstick-gksu
-lernstick-gnome-calculator
 lernstick-gnome-characters
 lernstick-gnome-dictionary
-lernstick-gnome-font-viewer
 lernstick-gnome-logs
 lernstick-gnome-mahjongg
 lernstick-gnome-mines
@@ -73,7 +69,6 @@ lernstick-gnome-sudoku
 lernstick-gnome-system-monitor
 lernstick-gnugo
 lernstick-gparted
-lernstick-gpaste
 lernstick-gpicview
 lernstick-greenfoot
 lernstick-gwenview
@@ -151,7 +146,6 @@ lernstick-mousepad
 lernstick-musescore
 lernstick-musikwissenschaften
 lernstick-mypaint
-lernstick-nautilus
 lernstick-nemo
 lernstick-notenmax
 lernstick-obconf
@@ -204,7 +198,6 @@ lernstick-thunar-volman
 lernstick-tipp10
 lernstick-toporopa
 lernstick-totem
-lernstick-tracker-gui
 lernstick-transmission-gtk
 lernstick-tuxtype
 lernstick-unserkoerper
