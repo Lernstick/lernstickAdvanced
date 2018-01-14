@@ -8,6 +8,7 @@ caja-rename                             install
 calendar-exchange-provider              install
 colobot                                 install
 darktable                               install
+debhelper                               install
 denemo                                  install
 engrampa                                install
 eom                                     install
