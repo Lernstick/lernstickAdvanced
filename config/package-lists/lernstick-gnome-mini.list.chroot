@@ -1,0 +1,5 @@
+# This list of packages is installed in the mini and standard version but not
+# in the exam version.
+
+lernstick-gedit
+lernstick-tracker-gui

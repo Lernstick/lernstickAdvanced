@@ -1,3 +1,6 @@
+# This list of packages is installed in all Lernstick versions (mini, standard
+# and exam).
+
 clamtk-gnome
 eiciel
 gnome-core
@@ -7,11 +10,7 @@ gnome-shell-extensions-gpaste
 gnome-shell-extension-top-icons-plus
 gnome-tweak-tool
 nautilus
-nautilus-admin
 nautilus-gtkhash
-nautilus-owncloud
-nautilus-sendto
-nautilus-share
 nautilus-wipe
 network-manager-gnome
 network-manager-iodine-gnome
