@@ -7,3 +7,6 @@ mv initrd.img-4.13.0-0.bpo.1-amd64 initrd.img || true
 
 mv vmlinuz-4.14.0-0.bpo.2-amd64 vmlinuz || true
 mv initrd.img-4.14.0-0.bpo.2-amd64 initrd.img || true
+
+mv vmlinuz-4.14.0-0.bpo.3-amd64 vmlinuz || true
+mv initrd.img-4.14.0-0.bpo.3-amd64 initrd.img || true
