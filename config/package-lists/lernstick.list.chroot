@@ -1,6 +1,5 @@
 basisschrift
 dlcopy-exam
-gnome-shell-extension-sound-device-chooser
 jbackpack-restore
 jbackpack-restore-admin
 lernstick-archive-keyring
@@ -17,12 +16,9 @@ lernstick-fslint
 lernstick-gdebi
 lernstick-geogebra-exam
 lernstick-gksu
-lernstick-gnome-calculator
 lernstick-gnome-characters
-lernstick-gnome-font-viewer
 lernstick-gnome-software
 lernstick-gnome-system-monitor
-lernstick-gpaste
 lernstick-gucharmap
 lernstick-hplip-gui
 lernstick-htop
@@ -40,7 +36,6 @@ lernstick-menu
 lernstick-menu-xdg-exam
 lernstick-mount-exchange-exam
 lernstick-musescore
-lernstick-nautilus
 lernstick-openjdk-8-jre
 lernstick-r-base-core
 lernstick-shutter
