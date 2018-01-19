@@ -2,9 +2,11 @@ ark
 bluedevil
 filelight
 gwenview
+jovie
 k3b
 k3b-i18n
 kalarm
+kamera
 kate
 kblocks
 kcalc
@@ -15,6 +17,7 @@ kde-config-cron
 kde-config-gtk-style
 kde-config-gtk-style-preview
 kde-config-systemd
+kdegraphics-thumbnailers
 kdenetwork-filesharing
 kdepasswd
 kde-style-qtcurve
@@ -46,9 +49,12 @@ kwin-x11
 okteta
 partitionmanager
 pentobi-kde-thumbnailer
+phonon-backend-gstreamer
+phonon-backend-vlc
 plasma-desktop
 plasma-nm
 plasma-wallpapers-addons
 plasma-widgets-addons
 plasma-workspace-wallpapers
+print-manager
 systemsettings

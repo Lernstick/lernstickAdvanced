@@ -239,12 +239,10 @@ iptraf-ng
 jackd2
 jfractionlab
 jmtpfs
-jovie
 kaffeine
 kalgebra
 kalzium
 kalzium-data
-kamera
 kanagram
 katomic
 kblackbox
@@ -252,7 +250,6 @@ kbounce
 kbreakout
 kbruch
 kdegames-card-data
-kdegraphics-thumbnailers
 kde-l10n-de
 kde-l10n-es
 kde-l10n-fa
@@ -421,8 +418,6 @@ pavucontrol
 pciutils
 pdfshuffler
 pentobi
-phonon-backend-gstreamer
-phonon-backend-vlc
 photocollage
 photofilmstrip
 picmi
@@ -438,7 +433,6 @@ powertop
 ppp
 printer-driver-all-enforce
 printer-driver-cups-pdf
-print-manager
 pspp
 pulseaudio-module-bluetooth
 pulseaudio-module-gconf
