@@ -117,7 +117,6 @@ lernstick-menulibre
 lernstick-menu-xdg
 lernstick-morris
 lernstick-mount-exchange
-lernstick-mousepad
 lernstick-musescore
 lernstick-musikwissenschaften
 lernstick-mypaint
@@ -128,7 +127,6 @@ lernstick-openclipart
 lernstick-openjdk-8-jre
 lernstick-openstreetmap
 lernstick-openthesaurus
-lernstick-orage
 lernstick-orthografietrainer
 lernstick-pavucontrol
 lernstick-pcmanfm
@@ -143,7 +141,6 @@ lernstick-qtqr
 lernstick-quadrapassel
 lernstick-qxw
 lernstick-rawtherapee
-lernstick-ristretto
 lernstick-schatz-der-kulturen
 lernstick-scratch-online
 lernstick-seahorse
@@ -163,8 +160,6 @@ lernstick-system-config-printer
 lernstick-tali
 #lernstick-terminology
 lernstick-texlive-base
-lernstick-thunar
-lernstick-thunar-volman
 lernstick-tipp10
 lernstick-toporopa
 lernstick-totem
@@ -184,13 +179,6 @@ lernstick-winff
 lernstick-x11vnc
 lernstick-xarchiver
 lernstick-xdrawchem
-lernstick-xfce4-appfinder
-lernstick-xfce4-clipman
-#lernstick-xfce4-mixer
-lernstick-xfce4-notes
-lernstick-xfce4-sensors-plugin
-lernstick-xfce4-taskmanager
-lernstick-xfce4-terminal
 lernstick-xjadeo
 lernstick-xournal
 lernstick-xsane
