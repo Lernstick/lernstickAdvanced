@@ -21,8 +21,6 @@
 #
 # * kigo needs gnugo
 #
-# * enlightenment recommends terminology
-#
 # * qreator needs geoclue-hostip (upstream bug, see https://bugs.launchpad.net/qreator/+bug/1186224)
 #
 # * gimagereader needs the tesseract-ocr-* language files
@@ -123,7 +121,6 @@ dossizola
 dvdauthor
 dvd+rw-tools
 dvgrab
-e17
 ecryptfs-utils
 eject
 ekiga
@@ -518,7 +515,6 @@ telepathy-idle
 telepathy-rakia
 telepathy-salut
 telnet
-#terminology
 tesseract-ocr-deu
 tesseract-ocr-deu-frak
 tesseract-ocr-eng
