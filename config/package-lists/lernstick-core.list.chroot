@@ -6,7 +6,6 @@
 ################################################################################
 
 basisschrift
-dlcopy
 lernstick-archive-keyring
 lernstick-baobab
 lernstick-config
@@ -36,8 +35,6 @@ lernstick-libreoffice-writer
 lernstick-lshw-gtk
 lernstick-mc
 lernstick-menu
-lernstick-menu-xdg
-lernstick-mount-exchange
 lernstick-musescore
 lernstick-openjdk-8-jre
 lernstick-shutter
@@ -45,11 +42,9 @@ lernstick-software-properties-gtk
 lernstick-synaptic
 lernstick-system-config-printer
 lernstick-texlive-base
-lernstick-usertemplate
 lernstick-vim-common
 lernstick-virtualbox
 lernstick-vokoscreen
-lernstickwelcome
 lernstick-wine
 lernstick-x11vnc
 lernstick-xterm
