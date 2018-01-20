@@ -8,6 +8,7 @@
 aseba
 bluej
 cura
+dlcopy
 greenfoot
 jbackpack-full
 #lernstick-amarok
@@ -43,6 +44,8 @@ lernstick-kturtle
 lernstick-kvkbd
 lernstick-lmms
 lernstick-menulibre
+lernstick-menu-xdg
+lernstick-mount-exchange
 lernstick-mypaint
 lernstick-okular
 lernstick-openclipart
@@ -64,7 +67,9 @@ lernstick-strut
 #lernstick-terminology
 lernstick-totem
 lernstick-transmission-gtk
+lernstick-usertemplate
 lernstick-vmpk
+lernstickwelcome
 lernstick-winff
 lernstick-xjadeo
 lernstick-xournal
