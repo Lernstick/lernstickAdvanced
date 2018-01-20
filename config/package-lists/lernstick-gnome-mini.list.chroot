@@ -1,6 +1,12 @@
-# This list of packages is installed in the mini and standard version but not
+################################################################################
+#
+# This list of packages is installed in the mini and standard version but *NOT*
 # in the exam version.
+#
+################################################################################
 
 lernstick-gedit
+lernstick-gnome-calculator
+lernstick-gnome-font-viewer
 lernstick-hamster-applet
 lernstick-tracker-gui
