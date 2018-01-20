@@ -1,5 +1,8 @@
 # This is a list of more or less "pure" gaming related packages, without much
 # educational focus, available in Debian itself.
+#
+# Some notes:
+# * qxw needs wngerman, wamerican-huge, wbritish-huge
 
 2048-qt
 aisleriot
@@ -16,7 +19,6 @@ freeciv-server
 freeciv-sound-standard
 frozen-bubble
 gnuchess
-gnugo
 hex-a-hop
 katomic
 kblackbox
@@ -50,3 +52,6 @@ pokerth
 qxw
 tanglet
 toppler
+wamerican-huge
+wbritish-huge
+wngerman

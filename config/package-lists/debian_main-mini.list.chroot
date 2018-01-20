@@ -17,15 +17,9 @@
 #
 # * netbeans needs libsvn-java
 #
-# * qxw needs wngerman, wamerican-huge, wbritish-huge
-#
-# * kigo needs gnugo
-#
 # * qreator needs geoclue-hostip (upstream bug, see https://bugs.launchpad.net/qreator/+bug/1186224)
 #
 # * gimagereader needs the tesseract-ocr-* language files
-#
-# * kanagram complains when jovie is not installed (only in jessie, no longer the case in newer versions)
 #
 # * kdialog and java need libcanberra-gtk-module, otherwise they complain with the following error message:
 #   Failed to load module "canberra-gtk-module"
@@ -500,15 +494,12 @@ vorbis-tools
 vpnc
 vulkan-utils
 vym
-wamerican-huge
-wbritish-huge
 whois
 winff
 winff-doc
 wireless-tools
 wireshark
 wmctrl
-wngerman
 wodim
 wpasupplicant
 x11vnc
