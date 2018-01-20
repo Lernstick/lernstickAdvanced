@@ -1,32 +1,27 @@
-#################################################################################################
+################################################################################
+#
+# This is a list of packages that are installed in *ALL* Lernstick versions
+# (mini, standard and all exam versions).
+#
 # Some notes:
 # -----------
-#
-# * file-roller is needed for creating and opening encrypted files so that content can be included
-#   in the image by teachers but is not available to students until the exam actually takes place
-#
 # * hplip
-#	needs the avahi packages, otherwise we get communication errors with printers
-#	needs the libcups2-dev package, otherwise hp-check can not test for the cups version
-# 
-# * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not be compiled
-# 
-# * solfege
-#	temporarily disabled until https://code.google.com/p/solfege/issues/detail?id=279 gets fixed
-#	recommends:
-#		- csound
-#		- python-pyalsa
+#     - needs the avahi packages, otherwise we get communication errors with
+#       printers
+#     - needs the libcups2-dev package, otherwise hp-check can not test for the
+#       cups version
 #
-# * netbeans needs libsvn-java
+# * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not
+#   be compiled
 #
-# * when running Java programs we often get the message:
-#       Gtk-Message: Failed to load module "canberra-gtk-module"
-#   installing libcanberra-gtk0 fixes this issue
+# * synaptic needs apt-xapian-index for quicksearch
 #
-# * kdialog and java need libcanberra-gtk-module, otherwise they complain with the following error message:
+# * kdialog and java need libcanberra-gtk-module, otherwise they complain with
+#   the following error message:
 #   Failed to load module "canberra-gtk-module"
 #
-#################################################################################################
+################################################################################
+
 alsa-utils
 anacron
 aptitude
@@ -35,10 +30,14 @@ apt-transport-https
 apt-xapian-index
 aufs-dkms
 aufs-tools
+avahi-autoipd
+avahi-utils
 bash-completion
+bind9-host
 browser-plugin-vlc
 bzip2
 cifs-utils
+clamtk
 command-not-found
 console-setup
 cryptsetup
@@ -61,8 +60,6 @@ exfat-fuse
 exfat-utils
 fbset
 ffmpegthumbs
-file
-file-roller
 firefox-esr
 firefox-esr-l10n-de
 firefox-esr-l10n-en-gb
@@ -80,9 +77,11 @@ foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
 fslint
+gconf-editor
 gdebi
 gdm3
-geogebra-gnome
+gedit
+gedit-plugins
 gnome-clocks
 gnome-nettool
 gnome-software-plugin-flatpak
@@ -102,7 +101,6 @@ gthumb
 gtkhash
 gutenprint-locales
 hicolor-icon-theme
-host
 hpijs-ppds
 hplip-gui
 hp-ppd
@@ -110,8 +108,11 @@ htop
 i2c-tools
 i965-va-driver
 icedtea-8-plugin
+icnsutils
+iftop
 ijsgutenprint
 iotop
+iptraf-ng
 less
 libcanberra-gtk0
 libcanberra-gtk-module
@@ -161,18 +162,22 @@ manpages-fr
 manpages-it
 manpages-pt
 mc
-menu
+mdadm
 menulibre
 mesa-va-drivers
 mesa-vdpau-drivers
 mesa-vulkan-drivers
+modemmanager
 mtools
 musescore
 ncdu
 nethogs
+netpbm
+network-manager-iodine
 network-manager-openconnect
 network-manager-openvpn
 network-manager-pptp
+#network-manager-strongswan
 network-manager-vpnc
 ntfs-3g
 ntpdate
@@ -181,14 +186,17 @@ openssh-client
 openssh-server
 p7zip-full
 patch
+pavucontrol
 pciutils
+pdfshuffler
 plymouth
 plymouth-themes
 plymouth-x11
+powertop
+ppp
 printer-driver-all-enforce
 printer-driver-cups-pdf
-print-manager
-pspp
+pulseaudio-module-bluetooth
 pulseaudio-module-gconf
 pulseaudio-module-jack
 pulseaudio-module-lirc
@@ -197,7 +205,10 @@ pulseaudio-module-zeroconf
 pv
 rfkill
 rsync
+seahorse
 shutter
+smbclient
+smbios-utils
 software-properties-gtk
 spice-vdagent
 squashfs-tools
@@ -205,23 +216,31 @@ sshfs
 strace
 synaptic
 syslinux
+sysstat
 system-config-printer
 system-config-printer-udev
+tcpdump
 telnet
+testdisk
+timidity
 tofrodos
+tumbler
+tumbler-plugins-extra
 unzip
-upower
+usb-modeswitch
+usbutils
 user-setup
 vainfo
 vdpauinfo
 vim
+vlc
+vlc-plugin-fluidsynth
+vokoscreen
 vorbis-tools
 vpnc
 vulkan-utils
 whois
 wireless-tools
-wpasupplicant
-wxmaxima
 xinput
 xserver-xorg
 xserver-xorg-core
@@ -233,6 +252,7 @@ xserver-xorg-input-joystick
 xserver-xorg-input-kbd
 xserver-xorg-input-mouse
 xserver-xorg-input-mutouch
+#xserver-xorg-input-synaptics
 xserver-xorg-input-void
 xserver-xorg-input-wacom
 xserver-xorg-input-xwiimote
