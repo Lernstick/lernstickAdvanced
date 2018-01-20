@@ -210,6 +210,7 @@ shutter
 smbclient
 smbios-utils
 software-properties-gtk
+spectre-meltdown-checker
 spice-vdagent
 squashfs-tools
 sshfs
