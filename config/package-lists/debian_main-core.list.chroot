@@ -201,6 +201,7 @@ pulseaudio-module-jack
 pulseaudio-module-lirc
 pulseaudio-module-raop
 pulseaudio-module-zeroconf
+pulsemixer
 pv
 rfkill
 rsync
