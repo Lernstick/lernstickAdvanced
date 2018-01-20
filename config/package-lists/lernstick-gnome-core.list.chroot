@@ -1,9 +1,11 @@
-# This list of packages is installed in all Lernstick versions (mini, standard
+################################################################################
+#
+# This list of packages is installed in *ALL* Lernstick versions (mini, standard
 # and exam).
+#
+################################################################################
 
 gnome-shell-extension-sound-device-chooser
 lernstick-eiciel
-lernstick-gnome-calculator
-lernstick-gnome-font-viewer
 lernstick-gpaste
 lernstick-nautilus
