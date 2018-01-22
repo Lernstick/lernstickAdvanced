@@ -1,0 +1,27 @@
+################################################################################
+#
+# This is a list of useful commandline packages that are installed in *ALL*
+# Lernstick versions (mini, standard and all exam versions).
+#
+################################################################################
+
+aptitude
+apt-rdepends
+bash-completion
+bind9-host
+command-not-found
+deborphan
+debtree
+dialog
+htop
+iftop
+iotop
+less
+mc
+ncdu
+nethogs
+powertop
+pulsemixer
+pv
+spectre-meltdown-checker
+sysstat
