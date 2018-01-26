@@ -34,6 +34,8 @@ apt-get install -y \
 	libnvidia-ml1:i386 \
 	libnvidia-ptxjitcompiler1:i386 \
 	nvidia-driver-libs:i386 \
+	nvidia-legacy-304xx-driver-libs:i386 \
+	nvidia-legacy-340xx-driver-libs:i386 \
 	nvidia-vdpau-driver:i386
 
 # here is the list of actual applications we want to install
