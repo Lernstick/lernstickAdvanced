@@ -8,12 +8,6 @@
 #
 # * gimagereader needs the tesseract-ocr-* language files
 #
-# * solfege
-#	temporarily disabled until https://code.google.com/p/solfege/issues/detail?id=279 gets fixed
-#	recommends:
-#		- csound
-#		- python-pyalsa
-#
 # * qreator needs geoclue-hostip (upstream bug, see https://bugs.launchpad.net/qreator/+bug/1186224)
 #
 # * netbeans needs libsvn-java
@@ -185,8 +179,8 @@ smb4k
 smplayer
 smplayer-l10n
 smplayer-themes
-#solfege
-#solfege-doc
+solfege
+solfege-doc
 sonic-pi
 sozi
 spamassassin
