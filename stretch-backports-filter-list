@@ -70,6 +70,8 @@ musescore                               install
 nvidia-graphics-drivers                 install
 nvidia-graphics-drivers-legacy-304xx    install
 nvidia-graphics-drivers-legacy-340xx    install
+nvidia-modprobe                         install
+nvidia-settings                         install
 octave                                  install
 openjdk-9                               install
 owncloud-client                         install
