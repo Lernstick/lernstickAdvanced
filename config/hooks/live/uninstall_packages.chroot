@@ -25,6 +25,8 @@ apt-get purge -y \
 	gucharmap \
 	hexchat \
 	minidlna \
+	openjdk-9-jre \
+	openjdk-9-jre-headless \
 	owncloud-client-doc \
 	plasma-discover \
 	plasma-discover-common \
