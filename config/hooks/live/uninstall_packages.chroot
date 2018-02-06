@@ -33,6 +33,8 @@ apt-get purge -y \
 	myspell-it \
 	myspell-pt-br \
 	myspell-ru \
+	openjdk-9-jre \
+	openjdk-9-jre-headless \
 	sane-utils \
 	texlive-fonts-extra-doc \
 	texlive-fonts-recommended-doc \

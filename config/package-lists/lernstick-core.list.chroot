@@ -21,6 +21,7 @@ lernstick-gnome-software
 lernstick-gnome-system-monitor
 lernstick-hplip-gui
 lernstick-htop
+lernstick-icedtea-netx-common
 lernstick-imagemagick
 lernstick-install-upgrades
 lernstick-libreoffice-base
@@ -32,6 +33,7 @@ lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
 lernstick-lshw-gtk
+lernstick-master-pdf-editor
 lernstick-mc
 lernstick-menu
 lernstick-musescore
