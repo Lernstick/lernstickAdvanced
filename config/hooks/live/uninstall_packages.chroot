@@ -9,6 +9,7 @@
 # ----------------------------------
 # Therefore we install octave not until this hook where libGL.so.1 is already correctly installed and configured
 apt-get install -y \
+	lernstick-octave \
 	octave \
 	octave-symbolic
 
