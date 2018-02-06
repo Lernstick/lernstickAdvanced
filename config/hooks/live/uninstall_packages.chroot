@@ -8,7 +8,9 @@
 #  subprocess installed post-installation script returned error exit status 127
 # ----------------------------------
 # Therefore we install octave not until this hook where libGL.so.1 is already correctly installed and configured
-apt-get install -y octave
+apt-get install -y \
+	lernstick-octave \
+	octave
 
 # Building the system with recommends enabled pulls in a lot of packages we
 # don't want to have. Unfortunately, we have no blacklist while building the
