@@ -1,0 +1,24 @@
+From a7529288615f52986ea160dab8c6760bfccea023 Mon Sep 17 00:00:00 2001
+From: Ronny Standtke <ronny.standtke@gmx.net>
+Date: Sat, 10 Feb 2018 14:35:52 +0100
+Subject: [PATCH] enable virtualbox-guest-utils.service
+
+---
+ debian/rules | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/debian/rules b/debian/rules
+index ee8a6a8b3..ee4502f31 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -185,6 +185,7 @@ override_dh_installinit:
+ 
+ override_dh_systemd_enable:
+ 	dh_systemd_enable -p$(sname) --name vboxweb --no-enable debian/vboxweb.service
++	dh_systemd_enable debian/virtualbox-guest-utils.service
+ 
+ override_dh_dkms:
+ 	dh_dkms -V $(upstreamversion)
+-- 
+2.11.0
+
