@@ -80,8 +80,11 @@ hunspell-kmr
 hunspell-ru
 hyphen-de
 hyphen-en-us
+hyphen-es
 hyphen-fr
 hyphen-it
+hyphen-pt-br
+hyphen-ru
 inkscape
 inkscape-open-symbols
 jackd2
@@ -138,6 +141,7 @@ myspell-pt-br
 mythes-de
 mythes-de-ch
 mythes-en-us
+mythes-es
 mythes-fr
 mythes-it
 mythes-ru
