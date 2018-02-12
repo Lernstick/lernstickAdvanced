@@ -23,7 +23,9 @@ apt-get purge -y \
 	gimp-data \
 	gnome-contacts \
 	gucharmap \
+	hunspell-en-gb \
 	hunspell-en-us \
+	hunspell-it \
 	libgimp2.0 \
 	libsane-extras \
 	libsane-extras-common \
