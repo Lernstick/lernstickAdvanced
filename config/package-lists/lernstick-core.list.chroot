@@ -31,7 +31,6 @@ lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
 lernstick-lshw-gtk
-lernstick-master-pdf-editor
 lernstick-mc
 lernstick-menu
 lernstick-musescore
@@ -44,7 +43,6 @@ lernstick-texlive-base
 lernstick-vim-common
 lernstick-x11vnc
 lernstick-xterm
-master-pdf-editor
 rscc
 rscc-defaults-lernstick
 vanished-root-handler
