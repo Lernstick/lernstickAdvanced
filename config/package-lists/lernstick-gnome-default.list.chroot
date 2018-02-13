@@ -1,0 +1,9 @@
+################################################################################
+#
+# This is a list of GNOME related Lernstick packages that are installed per
+# default in the mini, standard and exam version, but are *NOT* needed in all
+# customized exam versions.
+#
+################################################################################
+
+lernstick-eiciel

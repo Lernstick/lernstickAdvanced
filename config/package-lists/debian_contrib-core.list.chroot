@@ -1,0 +1,15 @@
+################################################################################
+#
+# This is a list of packages that are installed in *ALL* Lernstick versions
+# (mini, standard, exam and all customized exam versions).
+#
+################################################################################
+
+firmware-b43-installer
+firmware-b43legacy-installer
+nvidia-settings
+nvidia-settings-legacy-304xx
+nvidia-settings-legacy-340xx
+virtualbox-guest-dkms
+virtualbox-guest-utils
+virtualbox-guest-x11

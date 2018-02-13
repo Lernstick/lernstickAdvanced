@@ -1,0 +1,14 @@
+################################################################################
+#
+# This is a list of Lernstick packages that are installed per default in the
+# mini, standard and exam version, but are *NOT* needed in all customized exam
+# versions.
+#
+################################################################################
+
+lernstick-fslint
+lernstick-menulibre
+lernstick-pdfshuffler
+lernstick-virtualbox
+lernstick-vokoscreen
+lernstick-wine

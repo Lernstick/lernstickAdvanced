@@ -1,7 +1,7 @@
 ################################################################################
 #
 # This is a list of packages that are installed in *ALL* Lernstick versions
-# (mini, standard and all exam versions).
+# (mini, standard, exam and all customized exam versions).
 #
 # Some notes:
 # -----------
@@ -10,9 +10,6 @@
 #       printers
 #     - needs the libcups2-dev package, otherwise hp-check can not test for the
 #       cups version
-#
-# * virtualbox needs linux-headers-*, otherwise the vbox kernel module can not
-#   be compiled
 #
 # * synaptic needs apt-xapian-index for quicksearch
 #
@@ -33,7 +30,6 @@ avahi-utils
 browser-plugin-vlc
 bzip2
 cifs-utils
-clamtk
 console-setup
 cryptsetup
 cups
@@ -68,8 +64,6 @@ fonts-liberation
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
-fslint
-gconf-editor
 gdebi
 gdm3
 gedit
@@ -89,8 +83,6 @@ gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
 gstreamer1.0-vaapi
-gthumb
-gtkhash
 gutenprint-locales
 hicolor-icon-theme
 hpijs-ppds
@@ -150,7 +142,6 @@ manpages-fr
 manpages-it
 manpages-pt
 mdadm
-menulibre
 mesa-va-drivers
 mesa-vdpau-drivers
 mesa-vulkan-drivers
@@ -171,14 +162,12 @@ openssh-client
 openssh-server
 p7zip-full
 pciutils
-pdfshuffler
 plymouth
 plymouth-themes
 plymouth-x11
 ppp
 printer-driver-all-enforce
 printer-driver-cups-pdf
-pulseaudio-module-bluetooth
 pulseaudio-module-gconf
 pulseaudio-module-jack
 pulseaudio-module-lirc
@@ -186,7 +175,6 @@ pulseaudio-module-raop
 pulseaudio-module-zeroconf
 rfkill
 rsync
-seahorse
 shutter
 smbclient
 smbios-utils
@@ -215,7 +203,6 @@ vdpauinfo
 vim
 vlc
 vlc-plugin-fluidsynth
-vokoscreen
 vorbis-tools
 vpnc
 vulkan-utils
