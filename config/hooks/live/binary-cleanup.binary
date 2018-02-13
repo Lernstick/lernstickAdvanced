@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# For whatever reasons, newer versions of live-build leave package directories
-# in our binary directory. We could not reproduce this behaviour with a plain
-# build configuration. Therefore we just remove these package directories with
-# this script.
-
-rm -rf dists/
-rm -rf pool/
