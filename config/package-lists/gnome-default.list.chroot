@@ -1,0 +1,13 @@
+################################################################################
+#
+# This is a list of GNOME packages that are installed per default in the mini,
+# standard and exam version, but are *NOT* needed in all customized exam
+# versions.
+#
+################################################################################
+
+clamtk-gnome
+eiciel
+gnome-tweak-tool
+nautilus-gtkhash
+seahorse-nautilus

@@ -1,0 +1,17 @@
+################################################################################
+#
+# This is a list of packages that are installed per default in the mini,
+# standard and exam version, but are *NOT* needed in all customized exam
+# versions.
+#
+################################################################################
+
+clamtk
+fslint
+gconf-editor
+gthumb
+gtkhash
+menulibre
+pdfshuffler
+seahorse
+vokoscreen

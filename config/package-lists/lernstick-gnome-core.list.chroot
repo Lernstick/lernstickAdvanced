@@ -1,11 +1,10 @@
 ################################################################################
 #
-# This list of packages is installed in *ALL* Lernstick versions (mini, standard
-# and exam).
+# This is a list of GNOME related Lernstick packages that are installed in *ALL*
+# Lernstick versions (mini, standard, exam and all customized exam versions).
 #
 ################################################################################
 
 gnome-shell-extension-sound-device-chooser
-lernstick-eiciel
 lernstick-gpaste
 lernstick-nautilus

@@ -1,16 +1,16 @@
-# This list of packages is installed in all Lernstick versions (mini, standard
-# and exam).
+################################################################################
+#
+# This is a list of GNOME packages that are installed in *ALL* Lernstick
+# versions (mini, standard, exam and all customized exam versions).
+#
+################################################################################
 
-clamtk-gnome
-eiciel
 gnome-core
 gnome-shell-extension-dashtodock
 gnome-shell-extensions
 gnome-shell-extensions-gpaste
 gnome-shell-extension-top-icons-plus
-gnome-tweak-tool
 nautilus
-nautilus-gtkhash
 nautilus-wipe
 network-manager-gnome
 network-manager-iodine-gnome
@@ -18,4 +18,3 @@ network-manager-openconnect-gnome
 network-manager-openvpn-gnome
 network-manager-pptp-gnome
 network-manager-vpnc-gnome
-seahorse-nautilus

@@ -1,7 +1,7 @@
 ################################################################################
 #
 # This is a list of Lernstick packages that are installed in *ALL* Lernstick
-# versions (mini, standard and all exam versions).
+# versions (mini, standard, exam and all customized exam versions).
 #
 ################################################################################
 
@@ -14,7 +14,6 @@ lernstick-evince-common
 lernstick-execute-jar
 lernstick-file-roller
 lernstick-firefox-esr
-lernstick-fslint
 lernstick-gdebi
 lernstick-gksu
 lernstick-gnome-software
@@ -44,9 +43,6 @@ lernstick-synaptic
 lernstick-system-config-printer
 lernstick-texlive-base
 lernstick-vim-common
-lernstick-virtualbox
-lernstick-vokoscreen
-lernstick-wine
 lernstick-x11vnc
 lernstick-xterm
 master-pdf-editor
