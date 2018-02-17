@@ -12,6 +12,8 @@ apt-get install -y \
 	lernstick-octave \
 	octave
 
+# Note: DON'T purge xscreensaver, without it the screensavers in MATE, LXDE and XFCE just crash (seen in Debian 9).
+
 # Building the system with recommends enabled pulls in a lot of packages we
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
@@ -40,8 +42,7 @@ apt-get purge -y \
 	texlive-latex-recommended-doc \
 	texlive-pictures-doc \
 	texlive-pstricks-doc \
-	vprerex \
-	xscreensaver
+	vprerex
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
