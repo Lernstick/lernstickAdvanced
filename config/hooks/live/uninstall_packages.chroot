@@ -13,6 +13,8 @@ apt-get install -y \
 	octave \
 	octave-symbolic
 
+# Note: DON'T purge xscreensaver, without it the screensavers in MATE, LXDE and XFCE just crash (seen in Debian 9).
+
 # Building the system with recommends enabled pulls in a lot of packages we
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
