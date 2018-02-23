@@ -59,5 +59,14 @@ apt-get purge -y \
 	apparmor \
 	libapparmor-perl
 
+# In the exam environment we have to disable bluetooth support to prevent
+# data exchange with smartphones, etc. Therefore we remove here the relevant
+# bluetooth packages.
+apt-get purge -y \
+	bluez \
+	bluez-obexd \
+	gnome-bluetooth \
+	pulseaudio-module-bluetooth
+
 # clean up
 apt-get purge -y --auto-remove
