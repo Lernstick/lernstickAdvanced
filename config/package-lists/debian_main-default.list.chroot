@@ -6,6 +6,7 @@
 #
 ################################################################################
 
+browser-plugin-vlc
 clamtk
 exe-thumbnailer
 fslint
@@ -19,4 +20,6 @@ menulibre
 musescore
 pdfshuffler
 seahorse
+vlc
+vlc-plugin-fluidsynth
 vokoscreen

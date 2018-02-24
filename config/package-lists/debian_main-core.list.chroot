@@ -27,7 +27,6 @@ aufs-dkms
 aufs-tools
 avahi-autoipd
 avahi-utils
-browser-plugin-vlc
 bzip2
 cifs-utils
 console-setup
@@ -194,8 +193,6 @@ user-setup
 vainfo
 vdpauinfo
 vim
-vlc
-vlc-plugin-fluidsynth
 vorbis-tools
 vpnc
 vulkan-utils
