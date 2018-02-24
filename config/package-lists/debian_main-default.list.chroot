@@ -11,6 +11,8 @@ exe-thumbnailer
 fslint
 gconf-editor
 gdebi
+gnome-software-plugin-flatpak
+gnome-software-plugin-limba
 gthumb
 gtkhash
 menulibre
