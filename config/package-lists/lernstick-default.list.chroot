@@ -11,6 +11,8 @@ lernstick-eog
 lernstick-fslint
 lernstick-gdebi
 lernstick-gnome-software
+lernstick-gnome-system-monitor
+lernstick-install-upgrades
 lernstick-lshw-gtk
 lernstick-master-pdf-editor
 lernstick-menulibre
@@ -22,3 +24,5 @@ lernstick-virtualbox
 lernstick-vokoscreen
 lernstick-wine
 master-pdf-editor
+rscc
+rscc-defaults-lernstick

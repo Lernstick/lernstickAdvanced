@@ -8,6 +8,7 @@
 #
 ################################################################################
 
+apt-xapian-index
 browser-plugin-vlc
 clamtk
 eog-plugins
@@ -15,8 +16,10 @@ exe-thumbnailer
 fslint
 gconf-editor
 gdebi
+gnome-nettool
 gnome-software-plugin-flatpak
 gnome-software-plugin-limba
+gnome-system-monitor
 gthumb
 gtkhash
 lshw-gtk
