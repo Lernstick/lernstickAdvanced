@@ -7,9 +7,7 @@
 
 basisschrift
 lernstick-archive-keyring
-lernstick-baobab
 lernstick-config
-lernstick-eog
 lernstick-evince-common
 lernstick-execute-jar
 lernstick-file-roller
@@ -29,13 +27,10 @@ lernstick-libreoffice-draw
 lernstick-libreoffice-impress
 lernstick-libreoffice-math
 lernstick-libreoffice-writer
-lernstick-lshw-gtk
 lernstick-mc
 lernstick-menu
 lernstick-openjdk-8-jre
-lernstick-shutter
 lernstick-software-properties-gtk
-lernstick-synaptic
 lernstick-system-config-printer
 lernstick-texlive-base
 lernstick-vim-common

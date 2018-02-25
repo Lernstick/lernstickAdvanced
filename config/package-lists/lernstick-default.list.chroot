@@ -6,13 +6,18 @@
 #
 ################################################################################
 
+lernstick-baobab
+lernstick-eog
 lernstick-fslint
 lernstick-gdebi
 lernstick-gnome-software
+lernstick-lshw-gtk
 lernstick-master-pdf-editor
 lernstick-menulibre
 lernstick-musescore
 lernstick-pdfshuffler
+lernstick-shutter
+lernstick-synaptic
 lernstick-virtualbox
 lernstick-vokoscreen
 lernstick-wine

@@ -11,8 +11,6 @@
 #     - needs the libcups2-dev package, otherwise hp-check can not test for the
 #       cups version
 #
-# * synaptic needs apt-xapian-index for quicksearch
-#
 # * kdialog and java need libcanberra-gtk-module, otherwise they complain with
 #   the following error message:
 #   Failed to load module "canberra-gtk-module"
@@ -40,7 +38,6 @@ dkms
 dosfstools
 ecryptfs-utils
 eject
-eog-plugins
 epoptes-client
 exfat-fuse
 exfat-utils
@@ -128,7 +125,6 @@ libreoffice-writer
 libva-egl1
 live-tools
 locales
-lshw-gtk
 lsof
 lvm2
 manpages-de
@@ -169,7 +165,6 @@ pulseaudio-module-raop
 pulseaudio-module-zeroconf
 rfkill
 rsync
-shutter
 smbclient
 smbios-utils
 software-properties-gtk
@@ -177,7 +172,6 @@ spice-vdagent
 squashfs-tools
 sshfs
 strace
-synaptic
 syslinux
 system-config-printer
 system-config-printer-udev
