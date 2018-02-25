@@ -4,10 +4,13 @@
 # standard and exam version, but are *NOT* needed in all customized exam
 # versions.
 #
+# * synaptic needs apt-xapian-index for quicksearch
+#
 ################################################################################
 
 browser-plugin-vlc
 clamtk
+eog-plugins
 exe-thumbnailer
 fslint
 gconf-editor
@@ -16,10 +19,13 @@ gnome-software-plugin-flatpak
 gnome-software-plugin-limba
 gthumb
 gtkhash
+lshw-gtk
 menulibre
 musescore
 pdfshuffler
 seahorse
+shutter
+synaptic
 vlc
 vlc-plugin-fluidsynth
 vokoscreen
