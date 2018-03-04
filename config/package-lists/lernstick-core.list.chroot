@@ -10,9 +10,7 @@ lernstick-archive-keyring
 lernstick-config
 lernstick-evince-common
 lernstick-execute-jar
-lernstick-file-roller
 lernstick-gksu
-lernstick-hplip-gui
 lernstick-htop
 lernstick-icedtea-netx-common
 lernstick-imagemagick
@@ -28,7 +26,6 @@ lernstick-mc
 lernstick-menu
 lernstick-openjdk-8-jre
 lernstick-software-properties-gtk
-lernstick-system-config-printer
 lernstick-texlive-base
 lernstick-vim-common
 lernstick-x11vnc

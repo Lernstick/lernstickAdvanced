@@ -8,11 +8,13 @@
 
 lernstick-baobab
 lernstick-eog
+lernstick-file-roller
 lernstick-firefox-esr
 lernstick-fslint
 lernstick-gdebi
 lernstick-gnome-software
 lernstick-gnome-system-monitor
+lernstick-hplip-gui
 lernstick-install-upgrades
 lernstick-lshw-gtk
 lernstick-master-pdf-editor
@@ -21,6 +23,7 @@ lernstick-musescore
 lernstick-pdfshuffler
 lernstick-shutter
 lernstick-synaptic
+lernstick-system-config-printer
 lernstick-virtualbox
 lernstick-vokoscreen
 lernstick-wine
