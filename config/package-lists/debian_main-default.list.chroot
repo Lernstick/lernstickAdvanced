@@ -13,6 +13,17 @@ browser-plugin-vlc
 clamtk
 eog-plugins
 exe-thumbnailer
+firefox-esr
+firefox-esr-l10n-de
+firefox-esr-l10n-en-gb
+firefox-esr-l10n-es-ar
+firefox-esr-l10n-es-es
+firefox-esr-l10n-fa
+firefox-esr-l10n-fr
+firefox-esr-l10n-it
+firefox-esr-l10n-pt-br
+firefox-esr-l10n-ru
+firefox-esr-l10n-sq
 fslint
 gconf-editor
 gdebi
