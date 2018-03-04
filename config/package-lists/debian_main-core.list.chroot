@@ -5,12 +5,6 @@
 #
 # Some notes:
 # -----------
-# * hplip
-#     - needs the avahi packages, otherwise we get communication errors with
-#       printers
-#     - needs the libcups2-dev package, otherwise hp-check can not test for the
-#       cups version
-#
 # * kdialog and java need libcanberra-gtk-module, otherwise they complain with
 #   the following error message:
 #   Failed to load module "canberra-gtk-module"
@@ -43,9 +37,6 @@ exfat-utils
 fbset
 firmware-linux-free
 fonts-liberation
-foomatic-db-compressed-ppds
-foomatic-db-engine
-foomatic-db-gutenprint
 gdm3
 gedit
 gedit-plugins
@@ -59,20 +50,14 @@ gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
 gstreamer1.0-vaapi
-gutenprint-locales
 hicolor-icon-theme
-hpijs-ppds
-hplip-gui
-hp-ppd
 i2c-tools
 i965-va-driver
 icedtea-8-plugin
 icnsutils
-ijsgutenprint
 iptraf-ng
 libcanberra-gtk0
 libcanberra-gtk-module
-libcups2-dev
 libgl1-mesa-dri
 libreoffice
 libreoffice-base
@@ -132,7 +117,6 @@ network-manager-pptp
 network-manager-vpnc
 ntfs-3g
 ntpdate
-openprinting-ppds
 openssh-client
 openssh-server
 p7zip-full
@@ -141,8 +125,6 @@ plymouth
 plymouth-themes
 plymouth-x11
 ppp
-printer-driver-all-enforce
-printer-driver-cups-pdf
 pulseaudio-module-gconf
 pulseaudio-module-jack
 pulseaudio-module-lirc
@@ -158,8 +140,6 @@ squashfs-tools
 sshfs
 strace
 syslinux
-system-config-printer
-system-config-printer-udev
 tcpdump
 telnet
 testdisk
