@@ -6,12 +6,6 @@
 #
 # * synaptic needs apt-xapian-index for quicksearch
 #
-# * hplip
-#     - needs the avahi packages, otherwise we get communication errors with
-#       printers
-#     - needs the libcups2-dev package, otherwise hp-check can not test for the
-#       cups version
-#
 ################################################################################
 
 apt-xapian-index
@@ -30,9 +24,6 @@ firefox-esr-l10n-it
 firefox-esr-l10n-pt-br
 firefox-esr-l10n-ru
 firefox-esr-l10n-sq
-foomatic-db-compressed-ppds
-foomatic-db-engine
-foomatic-db-gutenprint
 fslint
 gconf-editor
 gdebi
@@ -42,24 +33,13 @@ gnome-software-plugin-limba
 gnome-system-monitor
 gthumb
 gtkhash
-gutenprint-locales
-hpijs-ppds
-hplip-gui
-hp-ppd
-ijsgutenprint
-libcups2-dev
 lshw-gtk
 menulibre
 musescore
-openprinting-ppds
 pdfshuffler
-printer-driver-all-enforce
-printer-driver-cups-pdf
 seahorse
 shutter
 synaptic
-system-config-printer
-system-config-printer-udev
 vlc
 vlc-plugin-fluidsynth
 vokoscreen
