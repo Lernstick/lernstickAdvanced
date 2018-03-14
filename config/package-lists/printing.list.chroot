@@ -1,0 +1,30 @@
+################################################################################
+#
+# This is a list of packages that are needed when printing should be supported.
+# They are installed in the standard, mini and default exam version but are not
+#  needed for customized exam versions where printing is not allowed.
+#
+# * hplip
+#     - needs the avahi packages, otherwise we get communication errors with
+#       printers
+#     - needs the libcups2-dev package, otherwise hp-check can not test for the
+#       cups version
+#
+################################################################################
+
+foomatic-db-compressed-ppds
+foomatic-db-engine
+foomatic-db-gutenprint
+gutenprint-locales
+hpijs-ppds
+hplip-gui
+hp-ppd
+ijsgutenprint
+lernstick-hplip-gui
+lernstick-system-config-printer
+libcups2-dev
+openprinting-ppds
+printer-driver-all-enforce
+printer-driver-cups-pdf
+system-config-printer
+system-config-printer-udev
