@@ -23,6 +23,7 @@ apt-get install -y \
 	libgles2-nvidia-legacy-340xx:i386 \
 	libgles-nvidia1:i386 \
 	libgles-nvidia2:i386 \
+	libnss-mdns:i386 \
 	libnvidia-cfg1:i386 \
 	libnvidia-eglcore:i386 \
 	libnvidia-egl-wayland1:i386 \
