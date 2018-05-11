@@ -14,14 +14,6 @@ lernstick-gksu
 lernstick-htop
 lernstick-icedtea-netx-common
 lernstick-imagemagick
-lernstick-libreoffice-base
-lernstick-libreoffice-calc
-#lernstick-libreoffice-common
-lernstick-libreoffice-draw
-#lernstick-libreoffice-gtk
-lernstick-libreoffice-impress
-lernstick-libreoffice-math
-lernstick-libreoffice-writer
 lernstick-mc
 lernstick-menu
 lernstick-openjdk-8-jre
