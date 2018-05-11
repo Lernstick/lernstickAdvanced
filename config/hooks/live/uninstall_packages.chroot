@@ -50,5 +50,16 @@ apt-get purge -y \
 	apparmor \
 	libapparmor-perl
 
+# The default DHCP client in Debian 9 (isc-dhcp-client) has a horrible bug. It
+# breaks when doing time synchronization in combination with short DHCP leases,
+# see: https://bugs.isc.org/Public/Bug/Display.html?id=45540
+# This is a very common situation for our users. Therefore it is better to
+# remove this package. By doing so NetworkManager will fallback to it's
+# built-in DHCP client which is not currently as featureful but at least works
+# correctly in the scenario described in the bugreport above.
+apt-get purge -y \
+	isc-dhcp-client \
+	isc-dhcp-common
+
 # clean up
 apt-get purge -y --auto-remove
