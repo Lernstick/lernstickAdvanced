@@ -6,4 +6,4 @@
 # Therefore we have to remove the corresponding VirtualBox driver here.
 # (blacklisting didn't work like expected...)
 
-find /lib/modules -name vboxnetflt.ko | xargs rm
+find /lib/modules -name vboxnetflt.ko -delete
