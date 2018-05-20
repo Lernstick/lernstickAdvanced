@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# For some unknown reason(s) the memlockd maintainer(s) decided to not enable
+# memlockd. But we need memlockd to be enabled for our vanished root handler.
+# Therefore we enable memlockd via this hook.
+
+systemctl enable memlockd
