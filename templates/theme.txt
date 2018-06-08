@@ -13,7 +13,7 @@ desktop-image: "lernstick-splash-1280x800.png"
   icon_width = 16
   icon_height = 16
   icon_spacing = 20
-  selected_item_pixmap_style = "select_*.png"
+  selected_item_pixmap_style = "highlight_*.png"
 }
 
 + circular_progress {
