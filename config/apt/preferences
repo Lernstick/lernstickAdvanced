@@ -1,3 +1,44 @@
 Package: shim
 Pin: version 0.7-0lernstick1
 Pin-Priority: 999
+
+Package: squashfs-tools
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: libzstd1
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: aufs-dkms
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-compiler-gcc-6-x86
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-4.16.0-0.bpo.1-amd64
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-4.16.0-0.bpo.1-common
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-amd64
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-image-4.16.0-0.bpo.1-amd64
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-kbuild-4.16
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
+Package: linux-libc-dev
+Pin: release n=lernstick-9-backports-staging
+Pin-Priority: 999
+
