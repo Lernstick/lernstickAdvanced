@@ -106,6 +106,7 @@ spice-vdagent
 squashfs-tools
 sshfs
 strace
+swapspace
 syslinux
 tcpdump
 telnet
