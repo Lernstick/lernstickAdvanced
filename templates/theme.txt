@@ -24,7 +24,7 @@ desktop-image: "lernstick-splash-1280x800.png"
 
 + circular_progress {
   id = "__timeout__"
-  left = 22%-120
+  left = 19%-120
   top = 30%
   width = 95
   height = 95
