@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 11:23+0200\n"
+"POT-Creation-Date: 2018-06-10 14:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -249,43 +249,35 @@ msgstr "Partition d´échange    :"
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:150
 #: ../config/includes.binary/boot/grub/grub_main.cfg:161
-#: ../config/includes.binary/boot/grub/grub_main.cfg:172
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:13
-#: ../config/includes.binary/boot/grub/grub_swap_file.cfg:13
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:13
 msgid "enabled"
 msgstr "activé(e)"
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:152
 #: ../config/includes.binary/boot/grub/grub_main.cfg:163
-#: ../config/includes.binary/boot/grub/grub_main.cfg:174
 #: ../config/includes.binary/boot/grub/grub_quiet.cfg:25
-#: ../config/includes.binary/boot/grub/grub_swap_file.cfg:25
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:25
 msgid "disabled"
 msgstr "désactivé(e)"
 
 #: ../config/includes.binary/boot/grub/grub_main.cfg:158
-msgid "Swap file      :"
-msgstr "Fichier d´échange      :"
-
-#: ../config/includes.binary/boot/grub/grub_main.cfg:169
 msgid "Boot messages  :"
 msgstr "Messages de démarrage  :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:180
+#: ../config/includes.binary/boot/grub/grub_main.cfg:169
 msgid "Custom options :"
 msgstr "Options personnalisées :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:182
+#: ../config/includes.binary/boot/grub/grub_main.cfg:171
 msgid "Please type your custom options in one line:"
 msgstr "Tapez vos options personnalisées sur une seule ligne :"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:187
+#: ../config/includes.binary/boot/grub/grub_main.cfg:176
 msgid "Check integrity of boot medium"
 msgstr "Vérifier l'intégrité du média de démarrage"
 
-#: ../config/includes.binary/boot/grub/grub_main.cfg:188
+#: ../config/includes.binary/boot/grub/grub_main.cfg:177
 msgid "Checking integrity of boot medium..."
 msgstr "Vérification de l'intégrité du média de démarrage..."
 
@@ -301,10 +293,12 @@ msgstr "Choisissez un media de stockage :"
 msgid "Configure boot messages:"
 msgstr "Choisissez les messages de démarrage :"
 
-#: ../config/includes.binary/boot/grub/grub_swap_file.cfg:9
-msgid "Configure swap file:"
-msgstr "Choisissez un fichier d'échange :"
-
 #: ../config/includes.binary/boot/grub/grub_swap_partition.cfg:9
 msgid "Configure swap partition:"
 msgstr "Choisissez une partition d'échange :"
+
+#~ msgid "Swap file      :"
+#~ msgstr "Fichier d´échange      :"
+
+#~ msgid "Configure swap file:"
+#~ msgstr "Choisissez un fichier d'échange :"
