@@ -8,9 +8,7 @@
 #  subprocess installed post-installation script returned error exit status 127
 # ----------------------------------
 # Therefore we install octave not until this hook where libGL.so.1 is already correctly installed and configured
-apt-get install -y \
-	lernstick-octave \
-	octave
+apt-get install -y octave
 
 # Note: DON'T purge xscreensaver, without it the screensavers in MATE, LXDE and XFCE just crash (seen in Debian 9).
 
