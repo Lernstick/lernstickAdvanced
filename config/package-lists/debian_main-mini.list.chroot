@@ -75,8 +75,10 @@ hugin
 hunspell-de-at
 hunspell-de-ch
 hunspell-de-de
+hunspell-en-gb
 hunspell-en-us
 hunspell-fr-comprehensive
+hunspell-it
 hunspell-kmr
 hunspell-ru
 hyphen-de
@@ -134,10 +136,8 @@ mumble
 mypaint
 mypaint-data
 mypaint-data-extras
-myspell-en-gb
 myspell-es
 myspell-fa
-myspell-it
 myspell-pt-br
 mythes-de
 mythes-de-ch
