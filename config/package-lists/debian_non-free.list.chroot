@@ -18,6 +18,7 @@ firmware-linux
 firmware-linux-nonfree
 firmware-misc-nonfree
 firmware-myricom
+firmware-netronome
 firmware-netxen
 firmware-qlogic
 firmware-realtek

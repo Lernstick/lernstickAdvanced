@@ -7,19 +7,14 @@ apt-get update
 # The library packages are always needed. Otherwise we are missing libGL.so.1
 # and other libraries when running 32 bit programs (e.g. steam).
 apt-get install -y \
-	libegl1-glvnd-nvidia:i386 \
-	libegl1-mesa:i386 \
+	libegl1:i386 \
 	libegl1-nvidia-legacy-340xx:i386 \
 	libegl-nvidia0:i386 \
-	libgl1-glvnd-nvidia-glx:i386 \
-	libgl1-nvidia-glvnd-glx:i386 \
 	libgl1-nvidia-legacy-304xx-glx:i386 \
 	libgl1-nvidia-legacy-340xx-glx:i386 \
-	libgles1-glvnd-nvidia:i386 \
 	libgles1-mesa:i386 \
 	libgles1-nvidia-legacy-340xx:i386 \
-	libgles2-glvnd-nvidia:i386 \
-	libgles2-mesa:i386 \
+	libgles2:i386 \
 	libgles2-nvidia-legacy-340xx:i386 \
 	libgles-nvidia1:i386 \
 	libgles-nvidia2:i386 \

@@ -1,3 +1,4 @@
+amd64-microcode				install
 atril					install
 ayatana-ido				install
 bind9					install
@@ -10,6 +11,8 @@ caja					install
 caja-rename				install
 caja-seahorse				install
 calendar-exchange-provider		install
+calibre					install
+cmake					install
 colobot					install
 darktable				install
 debhelper				install
@@ -32,6 +35,7 @@ gramps					install
 graphite-web				install
 gthumb					install
 hedgewars				install
+html5-parser				install
 intel-microcode				install
 iproute2				install
 iptables				install
@@ -41,13 +45,18 @@ lazarus					install
 libayatana-appindicator 		install
 libayatana-indicator			install
 libdrm					install
+libglvnd				install
+libimobiledevice			install
 libmatekbd				install
 libmatemixer				install
 libmateweather				install
 libreoffice				install
+libzstd					install
 lilypond				install
 linux					install
 linux-latest				install
+llvm-toolchain-5.0			install
+lxml					install
 lyx					install
 manpages-de				install
 manpages-dev				install
@@ -80,6 +89,7 @@ mate-tweak				install
 mate-user-guide				install
 mate-user-share				install
 mate-utils				install
+mesa					install
 minetest				install
 mozo					install
 musescore				install
@@ -100,8 +110,12 @@ python-django-tagging			install
 python-scandir				install
 python-whisper				install
 qgis					install
+quilt					install
 remmina					install
 spectre-meltdown-checker		install
+stellarium				install
+tmux					install
 vulkan					install
+whois					install
 wine					install
 xdg-desktop-portal			install
