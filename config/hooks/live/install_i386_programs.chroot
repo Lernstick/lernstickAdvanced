@@ -12,7 +12,6 @@ apt-get install -y \
 	libegl-nvidia0:i386 \
 	libgl1-nvidia-legacy-304xx-glx:i386 \
 	libgl1-nvidia-legacy-340xx-glx:i386 \
-	libgles1-mesa:i386 \
 	libgles1-nvidia-legacy-340xx:i386 \
 	libgles2:i386 \
 	libgles2-nvidia-legacy-340xx:i386 \
