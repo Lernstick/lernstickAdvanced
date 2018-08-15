@@ -9,6 +9,5 @@ firmware-b43-installer
 firmware-b43legacy-installer
 nvidia-settings
 nvidia-settings-legacy-340xx
-virtualbox-guest-dkms
 virtualbox-guest-utils
 virtualbox-guest-x11
