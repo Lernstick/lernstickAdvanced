@@ -99,7 +99,7 @@ build_image()
                 --distribution stretch \
 		--firmware-chroot false \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-4.16.0-0.bpo.2 \
+		--linux-packages linux-image-4.17.0-0.bpo.1 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
