@@ -91,11 +91,11 @@ Package: linux-compiler-gcc-6-x86
 Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.14.0-0.bpo.3-amd64
+Package: linux-headers-4.17.0-0.bpo.3-amd64
 Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-4.14.0-0.bpo.3-common
+Package: linux-headers-4.17.0-0.bpo.3-common
 Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
@@ -103,11 +103,11 @@ Package: linux-headers-amd64
 Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-4.14.0-0.bpo.3-amd64
+Package: linux-image-4.17.0-0.bpo.3-amd64
 Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
-Package: linux-kbuild-4.14
+Package: linux-kbuild-4.17
 Pin: release n=lernstick-9-backports-staging
 Pin-Priority: 999
 
