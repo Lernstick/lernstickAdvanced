@@ -50,6 +50,7 @@ gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
 gstreamer1.0-vaapi
+haveged
 hicolor-icon-theme
 i2c-tools
 i965-va-driver
@@ -98,6 +99,7 @@ pulseaudio-module-lirc
 pulseaudio-module-raop
 pulseaudio-module-zeroconf
 rfkill
+rng-tools5
 rsync
 smbclient
 smbios-utils
