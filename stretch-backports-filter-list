@@ -12,6 +12,7 @@ caja-rename				install
 caja-seahorse				install
 calendar-exchange-provider		install
 calibre					install
+cmake-extras				install
 cmake					install
 colobot					install
 darktable				install
@@ -31,6 +32,8 @@ freerdp2				install
 geoip-database				install
 git					install
 glx-alternatives			install
+gnupg2					install
+googletest				install
 gramps					install
 graphite-web				install
 gthumb					install
@@ -42,10 +45,12 @@ iptables				install
 jmapviewer				install
 kicad					install
 lazarus					install
+libassuan				install
 libayatana-appindicator 		install
 libayatana-indicator			install
 libdrm					install
 libglvnd				install
+libidn2					install
 libimobiledevice			install
 libmatekbd				install
 libmatemixer				install
@@ -56,6 +61,7 @@ lilypond				install
 linux					install
 linux-latest				install
 llvm-toolchain-5.0			install
+llvm-toolchain-6.0			install
 lxml					install
 lyx					install
 manpages-de				install
@@ -115,7 +121,10 @@ remmina					install
 spectre-meltdown-checker		install
 stellarium				install
 tmux					install
+virtualbox				install
 vulkan					install
+wayland					install
+wesnoth-1.14				install
 whois					install
 wine					install
 xdg-desktop-portal			install
