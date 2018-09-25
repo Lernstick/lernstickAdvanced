@@ -22,4 +22,5 @@ lernstick-texlive-base
 lernstick-vim-common
 lernstick-x11vnc
 lernstick-xterm
+macbook12-spi-driver-dkms
 vanished-root-handler
