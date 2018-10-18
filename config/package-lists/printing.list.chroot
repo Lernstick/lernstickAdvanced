@@ -20,6 +20,7 @@ hpijs-ppds
 hplip-gui
 hp-ppd
 ijsgutenprint
+kyocera-ppds
 lernstick-hplip-gui
 lernstick-system-config-printer
 libcups2-dev
