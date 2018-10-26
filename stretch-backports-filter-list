@@ -1,5 +1,6 @@
 amd64-microcode				install
 atril					install
+at-spi2-core				install
 ayatana-ido				install
 bind9					install
 broadcom-sta				install
@@ -25,6 +26,7 @@ eom					install
 firmware-nonfree			install
 flatpak					install
 fluidr3mono-gm-soundfont		install
+fonts-noto-cjk				install
 fpc					install
 freeciv					install
 freeorion				install
@@ -45,6 +47,7 @@ iptables				install
 jmapviewer				install
 kicad					install
 lazarus					install
+ldc					install
 libassuan				install
 libayatana-appindicator 		install
 libayatana-indicator			install
@@ -99,6 +102,9 @@ mesa					install
 minetest				install
 mozo					install
 musescore				install
+network-manager-applet			install
+network-manager				install
+network-manager-openvpn			install
 nvidia-graphics-drivers			install
 nvidia-graphics-drivers-legacy-304xx	install
 nvidia-graphics-drivers-legacy-340xx	install
@@ -108,9 +114,11 @@ nvidia-settings				install
 octave					install
 openjdk-9				install
 openvpn					install
+orca					install
 ostree					install
 owncloud-client				install
 pluma					install
+pyatspi					install
 python-caja				install
 python-django-tagging			install
 python-scandir				install
@@ -120,7 +128,10 @@ quilt					install
 remmina					install
 spectre-meltdown-checker		install
 stellarium				install
+tesseract				install
+tesseract-lang				install
 tmux					install
+torbrowser-launcher			install
 virtualbox				install
 vulkan					install
 wayland					install
