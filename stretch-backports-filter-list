@@ -1,4 +1,5 @@
 amd64-microcode				install
+anbox					install
 atril					install
 at-spi2-core				install
 ayatana-ido				install
@@ -45,7 +46,12 @@ intel-microcode				install
 iproute2				install
 iptables				install
 jmapviewer				install
+keepassxc				install
+kicad-footprints			install
 kicad					install
+kicad-packages3d			install
+kicad-symbols				install
+kicad-templates				install
 lazarus					install
 ldc					install
 libassuan				install
@@ -105,6 +111,7 @@ musescore				install
 network-manager-applet			install
 network-manager				install
 network-manager-openvpn			install
+ngspice					install
 nvidia-graphics-drivers			install
 nvidia-graphics-drivers-legacy-304xx	install
 nvidia-graphics-drivers-legacy-340xx	install
@@ -123,6 +130,7 @@ python-caja				install
 python-django-tagging			install
 python-scandir				install
 python-whisper				install
+qelectrotech				install
 qgis					install
 quilt					install
 remmina					install
