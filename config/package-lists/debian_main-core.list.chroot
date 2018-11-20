@@ -57,6 +57,7 @@ i965-va-driver
 icedtea-8-plugin
 icnsutils
 iptraf-ng
+keyutils
 libcanberra-gtk0
 libcanberra-gtk-module
 libgl1-mesa-dri
