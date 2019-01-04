@@ -25,6 +25,7 @@ e2fsprogs				install
 engrampa				install
 eom					install
 firmware-nonfree			install
+flameshot				install
 flatpak					install
 fluidr3mono-gm-soundfont		install
 fonts-noto-cjk				install
@@ -37,10 +38,12 @@ git					install
 glx-alternatives			install
 gnupg2					install
 googletest				install
+gpgme1.0				install
 gramps					install
 graphite-web				install
 gthumb					install
 hedgewars				install
+hplip					install
 html5-parser				install
 intel-microcode				install
 iproute2				install
@@ -59,11 +62,13 @@ libayatana-appindicator 		install
 libayatana-indicator			install
 libdrm					install
 libglvnd				install
+libgpg-error				install
 libidn2					install
 libimobiledevice			install
 libmatekbd				install
 libmatemixer				install
 libmateweather				install
+libphysfs				install
 libreoffice				install
 libzstd					install
 lilypond				install
@@ -107,6 +112,8 @@ mate-utils				install
 mesa					install
 minetest				install
 mozo					install
+mumble					install
+musescore-general-soundfont		install
 musescore				install
 network-manager-applet			install
 network-manager				install
@@ -119,6 +126,7 @@ nvidia-modprobe				install
 nvidia-persistenced			install
 nvidia-settings				install
 octave					install
+openjdk-11				install
 openjdk-9				install
 openvpn					install
 orca					install
@@ -132,6 +140,7 @@ python-scandir				install
 python-whisper				install
 qelectrotech				install
 qgis					install
+quassel					install
 quilt					install
 remmina					install
 spectre-meltdown-checker		install
@@ -146,4 +155,5 @@ wayland					install
 wesnoth-1.14				install
 whois					install
 wine					install
+xdg-desktop-portal-gtk			install
 xdg-desktop-portal			install
