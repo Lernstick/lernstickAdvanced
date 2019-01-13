@@ -2,11 +2,11 @@
 
 cd live || exit 1
 
-mv vmlinuz-4.17.0-0.bpo.3-amd64 vmlinuz || true
-mv initrd.img-4.17.0-0.bpo.3-amd64 initrd.img || true
-
 mv vmlinuz-4.18.0-0.bpo.1-amd64 vmlinuz || true
 mv initrd.img-4.18.0-0.bpo.1-amd64 initrd.img || true
 
 mv vmlinuz-4.18.0-0.bpo.3-amd64 vmlinuz || true
 mv initrd.img-4.18.0-0.bpo.3-amd64 initrd.img || true
+
+mv vmlinuz-4.19.0-0.bpo.1-amd64 vmlinuz || true
+mv initrd.img-4.19.0-0.bpo.1-amd64 initrd.img || true
