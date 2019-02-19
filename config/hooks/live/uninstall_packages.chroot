@@ -24,15 +24,22 @@ apt-get purge -y \
 	gimp-data \
 	gnome-contacts \
 	gucharmap \
+	hunspell-de-de \
 	hunspell-en-gb \
 	hunspell-en-us \
+	hunspell-es \
+	hunspell-fr \
+	hunspell-fr-classical \
 	hunspell-it \
+	hunspell-pt-br \
+	hunspell-ru \
 	libgimp2.0 \
 	libsane-extras \
 	libsane-extras-common \
 	myspell-de-de \
 	myspell-en-gb \
 	myspell-es \
+	myspell-fa \
 	myspell-fr \
 	myspell-it \
 	myspell-pt-br \
