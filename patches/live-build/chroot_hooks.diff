@@ -1,0 +1,33 @@
+--- /usr/lib/live/build/chroot_hooks	2017-04-04 15:24:46.000000000 +0200
++++ chroot_hooks	2019-03-10 01:19:31.932935876 +0100
+@@ -78,12 +78,12 @@
+ fi
+ 
+ ## Processing local hooks
+-if ls config/hooks/normal/*.chroot config/hooks/live/*.chroot > /dev/null 2>&1
++if ls config/hooks/normal/*.chroot config/hooks/live/*.chroot config/hooks/live/*.container > /dev/null 2>&1
+ then
+ 	# Restoring cache
+ 	Restore_cache cache/packages.chroot
+ 
+-	for HOOK in config/hooks/normal/*.chroot config/hooks/live/*.chroot
++	for HOOK in config/hooks/normal/*.chroot config/hooks/live/*.chroot config/hooks/live/*.container
+ 	do
+ 		if [ ! -e "${HOOK}" ]
+ 		then
+@@ -100,7 +100,14 @@
+ 		fi
+ 
+ 		# Executing hook
+-		Chroot chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
++		case ${HOOK} in
++			*.container)
++				systemd-nspawn -D chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
++				;;
++			*)
++				Chroot chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
++				;;
++		esac
+ 
+ 		# Removing hook
+ 		rm -f chroot/root/"$(basename ${HOOK})"
