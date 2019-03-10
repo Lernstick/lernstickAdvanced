@@ -3,8 +3,26 @@
 echo "starting dbus..."
 /etc/init.d/dbus start
 
-echo "installing flatpak packages"
+echo "installing flatpak debian packages..."
 apt -y install gnome-software-plugin-flatpak
 
-echo "adding flathub..."
+echo "adding flathub remote repository..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# The order of hooks is more or less random. To ensure a before-after-relation
+# we have to install the flatpak applications here in this script. Otherwise
+# a hook with "flatpak install" might be executed before this hook and flathub
+# might not yet be added as a remote repository.
+#
+# Feel free to customize the following statement (which is just an example) in
+# all git branches.
+
+#echo "installing flatpak applications from flathub..."
+#flatpak -y install \
+#	net.minetest.Minetest \
+#	org.avidemux.Avidemux \
+#	org.gimp.GIMP \
+#	org.kde.kdenlive \
+#	org.kde.krita \
+#	org.speed_dreams.SpeedDreams \
+#	org.supertuxproject.SuperTux
