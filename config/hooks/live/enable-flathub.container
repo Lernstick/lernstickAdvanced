@@ -17,7 +17,16 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Feel free to customize the following statement (which is just an example) in
 # all git branches.
 
-#echo "installing flatpak applications from flathub..."
+# For flatpak applications that need GL extensions we need to add all nvidia
+# runtimes that correspond to the nvidia drivers we have installed natively on
+# our system. So please keep this list up to date!
+
+#echo "installing flatpak nvidia drivers..."
+#flatpak -y install \
+#	org.freedesktop.Platform.GL.nvidia-340-107 \
+#	org.freedesktop.Platform.GL.nvidia-390-87
+
+#echo "installing flatpak applications..."
 #flatpak -y install \
 #	net.minetest.Minetest \
 #	org.avidemux.Avidemux \
