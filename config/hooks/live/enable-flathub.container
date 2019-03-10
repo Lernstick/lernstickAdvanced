@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "starting dbus..."
+/etc/init.d/dbus start
+
+echo "installing flatpak packages"
+apt -y install gnome-software-plugin-flatpak
+
+echo "adding flathub..."
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
