@@ -1,5 +1,9 @@
 BUILD_DIR="/home/ronny/lernstick/build/"
-TMPFS="/mytmpfs/lernstick"
+TMPFS="/mytmpfs/"
+TMPFS_IMAGE="/mytmpfs/lernstick.img"
+# given in GB
+TMPFS_IMAGE_SIZE=50
+TMPFS_IMAGE_MOUNT="/mytmpfs/lernstick/"
 
 # these variables must be exported to make them available to
 # subcommands
