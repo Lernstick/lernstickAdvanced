@@ -16,6 +16,7 @@ if findmnt "${TMPFS}" > /dev/null
 then
 	if findmnt "${TMPFS_IMAGE_MOUNT}" > /dev/null
 	then
+		fuser -k -m "${TMPFS_IMAGE_MOUNT}"
 		umount "${TMPFS_IMAGE_MOUNT}"
 		rm -f "${TMPFS_IMAGE}"
 	fi
