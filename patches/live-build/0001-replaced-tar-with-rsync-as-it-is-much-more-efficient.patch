@@ -1,0 +1,32 @@
+From 1f865461d87f6bbdb85e5369ee35f7568f0435db Mon Sep 17 00:00:00 2001
+From: Ronny Standtke <ronny.standtke@gmx.net>
+Date: Sun, 17 Mar 2019 18:34:20 +0100
+Subject: [PATCH] replaced tar with rsync as it is much more efficient in both
+ space and time
+
+---
+ scripts/build/chroot_includes | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+diff --git a/scripts/build/chroot_includes b/scripts/build/chroot_includes
+index 6ab4e288d..98f521f61 100755
+--- a/scripts/build/chroot_includes
++++ b/scripts/build/chroot_includes
+@@ -41,13 +41,7 @@ Create_lockfile .lock
+ if Find_files config/includes.chroot/
+ then
+ 	# Copying includes
+-	cd config/includes.chroot
+-	Echo_message "Creating a tarball with files from includes.chroot..."
+-	tar cf "${OLDPWD}"/chroot/includes.chroot.tar .
+-	cd "${OLDPWD}"
+-	Echo_message "Extracting the tarball in the chroot..."
+-	Chroot chroot "tar -xvf includes.chroot.tar --no-same-owner --keep-directory-symlink --overwrite"
+-	rm chroot/includes.chroot.tar
++	rsync -Klrv --chown=0:0 config/includes.chroot/ chroot/
+ 
+ 	# Creating stage file
+ 	Create_stagefile .build/includes.chroot
+-- 
+2.11.0
+
