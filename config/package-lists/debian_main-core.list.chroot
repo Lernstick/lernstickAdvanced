@@ -27,7 +27,6 @@ dkms
 dosfstools
 ecryptfs-utils
 eject
-epoptes-client
 exfat-fuse
 exfat-utils
 fbset
