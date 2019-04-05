@@ -22,16 +22,11 @@ bzip2
 cifs-utils
 console-setup
 cryptsetup
-cups
-cups-backend-bjnp
-cups-browsed
-cups-bsd
 desktop-base
 dkms
 dosfstools
 ecryptfs-utils
 eject
-epoptes-client
 exfat-fuse
 exfat-utils
 fbset

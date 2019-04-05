@@ -28,7 +28,9 @@ firmware-zd1211
 intel-microcode
 libnvidia-encode1
 libnvidia-legacy-340xx-encode1
+libnvidia-legacy-390xx-encode1
 nvidia-detect
 nvidia-driver
 nvidia-legacy-340xx-driver
+nvidia-legacy-390xx-driver
 p7zip-rar

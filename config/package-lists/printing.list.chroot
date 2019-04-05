@@ -12,6 +12,10 @@
 #
 ################################################################################
 
+cups
+cups-backend-bjnp
+cups-browsed
+cups-bsd
 foomatic-db-compressed-ppds
 foomatic-db-engine
 foomatic-db-gutenprint
