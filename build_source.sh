@@ -8,11 +8,11 @@ SOURCE="true"
 . ./functions.sh
 check_and_source_constants
 
-if [ -d "${TMPFS}" ]
+if [ -d "${TMPFS_IMAGE_MOUNT}" ]
 then
-	cd "${TMPFS}"
+	cd "${TMPFS_IMAGE_MOUNT}"
 else
-	echo "The tmpfs directory \"${TMPFS}\" doesn't exist."
+	echo "The tmpfs directory \"${TMPFS_IMAGE_MOUNT}\" doesn't exist."
 	echo "Do you want to run the build without a tmpfs? (y/n)"
 	read answer
 	if [ "${answer}" != "y" ]
@@ -32,6 +32,7 @@ fi
 cp templates/debian_main-standard.list.chroot config/package-lists/
 cp templates/itch.list.chroot config/package-lists/
 cp templates/lernstick-standard.list.chroot config/package-lists/
+cp templates/signal.list.chroot config/package-lists/
 
 # remove uninstall hook of mini version
 rm -f config/hooks/live/uninstall_packages-mini.chroot
