@@ -24,4 +24,5 @@ lernstick-vim-common
 lernstick-x11vnc
 lernstick-xterm
 macbook12-spi-driver-dkms
+rtl8821ce-dkms
 vanished-root-handler
