@@ -8,11 +8,11 @@ SOURCE="true"
 . ./functions.sh
 check_and_source_constants
 
-if [ -d "${TMPFS}" ]
+if [ -d "${TMPFS_IMAGE_MOUNT}" ]
 then
-	cd "${TMPFS}"
+	cd "${TMPFS_IMAGE_MOUNT}"
 else
-	echo "The tmpfs directory \"${TMPFS}\" doesn't exist."
+	echo "The tmpfs directory \"${TMPFS_IMAGE_MOUNT}\" doesn't exist."
 	echo "Do you want to run the build without a tmpfs? (y/n)"
 	read answer
 	if [ "${answer}" != "y" ]
