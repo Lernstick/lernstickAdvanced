@@ -49,7 +49,7 @@ haveged
 hicolor-icon-theme
 i2c-tools
 i965-va-driver
-icedtea-8-plugin
+#icedtea-8-plugin
 icnsutils
 iptraf-ng
 keyutils
