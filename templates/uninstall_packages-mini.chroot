@@ -7,10 +7,13 @@
 # This is a special list for the "Lernstick mini" version:
 #
 # - cinnamon-desktop-environment recommends gimp
+# - vmpk recommends qsynth, qsynth recommends fluid-soundfont-gm
+#   but fluid-soundfont-gm is much too large for the mini version
 # - the texlive packages got pulled in by recommends but are not needed in the
 #   mini version as we don't install denemo there
 
 apt-get purge -y \
+	fluid-soundfont-gm \
 	gimp \
 	gimp-data \
 	texlive-base \
