@@ -12,6 +12,7 @@ pbuilder \
 	--create \
 	--basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz \
 	--bindmounts $BIND_MOUNT \
+	--debootstrapopts --include=apt-transport-https,ca-certificates,openssl \
 	--distribution stretch \
 	--keyring $LS_KEYRING \
 	--othermirror "$OTHER_MIRRORS"
@@ -22,6 +23,7 @@ pbuilder \
 	--architecture i386 \
 	--basetgz /var/cache/pbuilder/base-stretch32-bpo.tar.gz \
 	--bindmounts $BIND_MOUNT \
+	--debootstrapopts --include=apt-transport-https,ca-certificates,openssl \
 	--distribution stretch \
 	--keyring $LS_KEYRING \
 	--othermirror "$OTHER_MIRRORS"
