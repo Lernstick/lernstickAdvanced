@@ -21,10 +21,11 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # runtimes that correspond to the nvidia drivers we have installed natively on
 # our system. So please keep this list up to date!
 
-#echo "installing flatpak nvidia drivers..."
-#flatpak -y install \
-#	org.freedesktop.Platform.GL.nvidia-340-107 \
-#	org.freedesktop.Platform.GL.nvidia-390-87
+echo "installing flatpak nvidia drivers..."
+flatpak -y install \
+	org.freedesktop.Platform.GL.nvidia-340-107 \
+	org.freedesktop.Platform.GL.nvidia-390-116 \
+	org.freedesktop.Platform.GL.nvidia-418-74
 
 #echo "installing flatpak applications..."
 #flatpak -y install \
