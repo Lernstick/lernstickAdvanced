@@ -1,28 +1,70 @@
---- /usr/lib/live/build/chroot_hooks	2017-04-04 15:24:46.000000000 +0200
-+++ chroot_hooks	2019-03-10 01:19:31.932935876 +0100
-@@ -78,12 +78,12 @@
+diff --git a/scripts/build/chroot_hooks b/scripts/build/chroot_hooks
+index 4fbacdbf3..d012d7565 100755
+--- a/scripts/build/chroot_hooks
++++ b/scripts/build/chroot_hooks
+@@ -24,7 +24,7 @@ Arguments "${@}"
+ Read_conffiles config/all config/common config/bootstrap config/chroot config/binary config/source
+ Set_defaults
+ 
+-Echo_message "Begin executing hooks..."
++Echo_message "Begin executing hooks in chroot..."
+ 
+ # Requiring stage file
+ Require_stagefile .build/config .build/bootstrap
+@@ -50,6 +50,7 @@ mount -o bind config chroot/live-build/config
+ mount -o remount,ro,bind config chroot/live-build/config
+ 
+ # Copying hooks
++Echo_message "Copying hooks..."
+ for _HOOK in ${LB_CHROOT_HOOKS}
+ do
+ 	for LOCATION in "${LIVE_BUILD}/hooks" /usr/share/live/build/hooks
+@@ -66,6 +67,7 @@ do
+ done
+ 
+ # Running hooks
++Echo_message "Running hooks..."
+ if ls chroot/root/lb_chroot_hooks/* > /dev/null 2>&1
+ then
+ 	for _HOOK in chroot/root/lb_chroot_hooks/*
+@@ -78,29 +80,42 @@ then
  fi
  
  ## Processing local hooks
 -if ls config/hooks/normal/*.chroot config/hooks/live/*.chroot > /dev/null 2>&1
++Echo_message "Processing local hooks..."
 +if ls config/hooks/normal/*.chroot config/hooks/live/*.chroot config/hooks/live/*.container > /dev/null 2>&1
  then
  	# Restoring cache
++	Echo_message "Restoring cache..."
  	Restore_cache cache/packages.chroot
  
 -	for HOOK in config/hooks/normal/*.chroot config/hooks/live/*.chroot
 +	for HOOK in config/hooks/normal/*.chroot config/hooks/live/*.chroot config/hooks/live/*.container
  	do
++		Echo_message "Processing hook ${HOOK}..."
  		if [ ! -e "${HOOK}" ]
  		then
-@@ -100,7 +100,14 @@
+ 			continue
+ 		fi
+ 
+ 		# Copying hook
++		Echo_message "Copying hook ${HOOK}..."
+ 		cp "${HOOK}" chroot/root
+ 
+ 		# Making hook executable
++		Echo_message "Making hook ${HOOK} executable..."
+ 		if [ ! -x chroot/root/"$(basename ${HOOK})" ]
+ 		then
+ 			chmod +x chroot/root/"$(basename ${HOOK})"
  		fi
  
  		# Executing hook
 -		Chroot chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
++		Echo_message "Executing hook ${HOOK}..."
 +		case ${HOOK} in
 +			*.container)
-+				systemd-nspawn -D chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
++				systemd-nspawn --capability=all -D chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
 +				;;
 +			*)
 +				Chroot chroot "/root/$(basename ${HOOK})" || { Echo_error "${HOOK} failed (exit non-zero). You should check for errors."; exit 1 ;}
