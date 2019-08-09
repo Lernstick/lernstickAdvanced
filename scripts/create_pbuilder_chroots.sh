@@ -1,19 +1,20 @@
 #!/bin/sh
 
-BIND_MOUNT=/home/lernstick_debian9/lernstick/backports/stretch/
-LS_KEYRING=/tmp/lernstick-9.gpg
-OTHER_MIRRORS="deb http://security.debian.org/ stretch/updates main|deb http://packages.lernstick.ch/lernstick lernstick-9-backports main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-9-backports-staging main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-9-thirdparty-staging main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-9-staging main contrib non-free"
+BIND_MOUNT=/home/debian10/lernstick/backports/buster/
+LS_KEYRING=/tmp/lernstick-10.gpg
+#OTHER_MIRRORS="deb http://security.debian.org/ buster/updates main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-10-backports main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-10-backports-staging main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-10-thirdparty-staging main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-10-staging main contrib non-free"
+OTHER_MIRRORS="deb http://security.debian.org/ buster/updates main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-10-backports main contrib non-free|deb http://packages.lernstick.ch/lernstick lernstick-10-backports-staging main contrib non-free"
 
 # pbuilder needs the "dearmored" version of our keyfile
-gpg --yes --output $LS_KEYRING --dearmor $(dirname $0)/../config/archives/lernstick-9.key
+gpg --yes --output $LS_KEYRING --dearmor $(dirname $0)/../config/archives/lernstick-10.key
 
-# main version (Stretch 64 Bit)
+# main version (Buster 64 Bit)
 pbuilder \
 	--create \
-	--basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz \
+	--basetgz /var/cache/pbuilder/base-buster-bpo.tar.gz \
 	--bindmounts $BIND_MOUNT \
 	--debootstrapopts --include=apt-transport-https,ca-certificates,openssl \
-	--distribution stretch \
+	--distribution buster \
 	--keyring $LS_KEYRING \
 	--othermirror "$OTHER_MIRRORS"
 
@@ -21,9 +22,9 @@ pbuilder \
 pbuilder \
 	--create \
 	--architecture i386 \
-	--basetgz /var/cache/pbuilder/base-stretch32-bpo.tar.gz \
+	--basetgz /var/cache/pbuilder/base-buster32-bpo.tar.gz \
 	--bindmounts $BIND_MOUNT \
 	--debootstrapopts --include=apt-transport-https,ca-certificates,openssl \
-	--distribution stretch \
+	--distribution buster \
 	--keyring $LS_KEYRING \
 	--othermirror "$OTHER_MIRRORS"
