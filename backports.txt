@@ -4,11 +4,14 @@ sudo pbuilder --login --basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz --bi
 # stretch (32 Bit)
 sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-stretch32-bpo.tar.gz --bindmounts /home/lernstick_debian9/lernstick/backports/stretch
 
-# jessie
-#apt-get update; apt-get upgrade; apt-get -t jessie-backports --yes --force-yes install pbuilder; apt-get --yes --force-yes install sudo devscripts fakeroot; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail; export DEB_BUILD_OPTIONS=noddebs
+# buster (64 Bit)
+sudo pbuilder --login --basetgz /var/cache/pbuilder/base-buster-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
 
 # stretch
 apt update; apt --yes upgrade; apt --yes --allow-unauthenticated install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
+
+# buster
+apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
 dpkg-buildpackage -sa
 
