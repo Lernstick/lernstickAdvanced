@@ -8,5 +8,5 @@
 lernstick-gedit
 lernstick-gnome-calculator
 lernstick-gnome-font-viewer
-lernstick-hamster-applet
-lernstick-tracker-gui
+#lernstick-hamster-applet
+#lernstick-tracker-gui

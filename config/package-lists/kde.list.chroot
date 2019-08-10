@@ -3,7 +3,7 @@ bluedevil
 ffmpegthumbs
 filelight
 gwenview
-jovie
+#jovie
 k3b
 k3b-i18n
 kalarm
@@ -12,7 +12,6 @@ kate
 kblocks
 kcalc
 kcharselect
-kde-baseapps-bin
 kde-config-cddb
 kde-config-cron
 kde-config-gtk-style
@@ -20,14 +19,13 @@ kde-config-gtk-style-preview
 kde-config-systemd
 kdegraphics-thumbnailers
 kdenetwork-filesharing
-kdepasswd
 kde-style-qtcurve
 kdf
+kdialog
 kfourinline
 kgamma5
 khelpcenter
 kio-audiocd
-kio-mtp
 kiriki
 kleopatra
 klickety

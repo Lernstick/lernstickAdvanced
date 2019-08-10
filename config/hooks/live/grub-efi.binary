@@ -46,7 +46,7 @@ EOF
 	cp $CHROOT/tmp/$outfile $BINARY/$EFI/$outfile
 
 	# copy grub modules
-	cp $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
+	cp -r $CHROOT/$GRUBLIB/$platform/* $BINARY/$BOOT/grub/$platform
 
 
 	## Install MokManager for 64bit systems, the rest is handled by

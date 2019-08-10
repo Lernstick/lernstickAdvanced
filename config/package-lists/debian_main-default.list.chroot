@@ -27,7 +27,6 @@ fslint
 gconf-editor
 gdebi
 gnome-nettool
-gnome-software-plugin-limba
 gnome-system-monitor
 gthumb
 gtkhash
@@ -35,6 +34,6 @@ lshw-gtk
 menulibre
 pdfarranger
 seahorse
-shutter
+#shutter
 synaptic
 vokoscreen

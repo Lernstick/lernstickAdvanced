@@ -96,16 +96,16 @@ build_image()
                 --binary-images iso \
 		--bootloaders syslinux \
 		--debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
-                --distribution stretch \
+                --distribution buster \
 		--firmware-chroot false \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-flavours "amd64-unsigned" \
-		--linux-packages linux-image-4.19.0-0.bpo.5 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
                 --source ${SOURCE} \
                 --verbose
+#		--linux-flavours "amd64-unsigned" \
+#		--linux-packages linux-image-4.19.0-0.bpo.5 \
 
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
@@ -113,7 +113,7 @@ build_image()
 	ISO_FILE="live-image-amd64.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian9${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_debian10${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file

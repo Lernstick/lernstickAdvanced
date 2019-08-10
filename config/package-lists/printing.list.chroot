@@ -18,12 +18,10 @@ cups-browsed
 cups-bsd
 foomatic-db-compressed-ppds
 foomatic-db-engine
-foomatic-db-gutenprint
 gutenprint-locales
 hpijs-ppds
 hplip-gui
 hp-ppd
-ijsgutenprint
 kyocera-ppds
 lernstick-hplip-gui
 lernstick-system-config-printer

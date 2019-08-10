@@ -1,10 +1,10 @@
 # This list of packages is installed in the mini and standard version but not
 # in the exam version.
 
-hamster-applet
+#hamster-applet
 nautilus-admin
 nautilus-owncloud
 nautilus-sendto
 nautilus-share
-nitroshare-nautilus
+#nitroshare-nautilus
 simple-scan

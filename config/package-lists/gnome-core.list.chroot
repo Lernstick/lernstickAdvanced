@@ -13,7 +13,7 @@ gnome-shell-extension-top-icons-plus
 nautilus
 nautilus-wipe
 network-manager-gnome
-network-manager-iodine-gnome
+#network-manager-iodine-gnome
 network-manager-openconnect-gnome
 network-manager-openvpn-gnome
 network-manager-pptp-gnome

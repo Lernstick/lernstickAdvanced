@@ -15,8 +15,8 @@
 #################################################################################################
 
 akregator
-amarok
-amarok-doc
+#amarok
+#amarok-doc
 amsynth
 #apper
 arandr
@@ -47,7 +47,6 @@ dia-shapes
 dmz-cursor-theme
 dolphin
 dolphin-owncloud
-ekiga
 enigmail
 epoptes
 flac
@@ -102,21 +101,17 @@ kde-l10n-it
 kde-l10n-ptbr
 kde-l10n-ru
 kdenlive
-kdesudo
 keepassxc
 kfind
 kipi-plugins
 kmag
 kmousetool
-knode
 konq-plugins
 konqueror
-konqueror-nsplugins
 krename
 krita
 krita-l10n
-ktimetracker
-kvkbd
+#ktimetracker
 libsvn-java
 lightning
 lightning-l10n-de
@@ -153,7 +148,7 @@ owncloud-client
 pavucontrol
 photocollage
 photofilmstrip
-pinta
+#pinta
 pulseaudio-module-bluetooth
 qelectrotech
 qelectrotech-data
@@ -165,10 +160,11 @@ qtqr
 quassel
 rawtherapee
 remmina
+remmina-plugin-exec
 remmina-common
-remmina-plugin-gnome
+remmina-plugin-secret
 remmina-plugin-nx
-#remmina-plugin-rdp
+remmina-plugin-rdp
 remmina-plugin-spice
 remmina-plugin-telepathy
 remmina-plugin-vnc
@@ -197,7 +193,6 @@ telepathy-idle
 telepathy-rakia
 telepathy-salut
 tesseract-ocr-deu
-tesseract-ocr-deu-frak
 tesseract-ocr-eng
 tesseract-ocr-fra
 tesseract-ocr-ita

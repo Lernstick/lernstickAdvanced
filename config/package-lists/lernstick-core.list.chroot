@@ -9,14 +9,14 @@ basisschrift
 lernstick-archive-keyring
 lernstick-config
 lernstick-execute-jar
-lernstick-gksu
+#lernstick-gksu
 lernstick-htop
 lernstick-icedtea-netx-common
 lernstick-imagemagick
 lernstick-mc
 lernstick-menu
 lernstick-onboard
-lernstick-openjdk-8-jre
+#lernstick-openjdk-8-jre
 lernstick-ranger
 lernstick-software-properties-gtk
 lernstick-texlive-base

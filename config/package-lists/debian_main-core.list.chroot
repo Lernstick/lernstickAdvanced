@@ -25,7 +25,7 @@ cryptsetup
 desktop-base
 dkms
 dosfstools
-ecryptfs-utils
+#ecryptfs-utils
 eject
 exfat-fuse
 exfat-utils
@@ -38,7 +38,6 @@ gedit-plugins
 gnome-clocks
 gstreamer1.0-alsa
 gstreamer1.0-crystalhd
-gstreamer1.0-fluendo-mp3
 gstreamer1.0-libav
 gstreamer1.0-plugins-bad
 gstreamer1.0-plugins-base
@@ -56,14 +55,14 @@ keyutils
 libcanberra-gtk0
 libcanberra-gtk-module
 libgl1-mesa-dri
-libva-egl1
+#libva-egl1
 live-tools
 locales
 lsof
 lvm2
 manpages-de
 manpages-es
-manpages-fr
+#manpages-fr
 manpages-it
 manpages-pt
 mdadm
@@ -73,7 +72,7 @@ mesa-vulkan-drivers
 modemmanager
 mtools
 netpbm
-network-manager-iodine
+#network-manager-iodine
 network-manager-openconnect
 network-manager-openvpn
 network-manager-pptp
@@ -90,7 +89,7 @@ plymouth
 plymouth-themes
 plymouth-x11
 ppp
-pulseaudio-module-gconf
+pulseaudio-module-gsettings
 pulseaudio-module-jack
 pulseaudio-module-lirc
 pulseaudio-module-raop

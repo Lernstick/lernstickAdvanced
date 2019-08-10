@@ -20,7 +20,7 @@ lernstick-install-upgrades
 lernstick-lshw-gtk
 lernstick-master-pdf-editor
 lernstick-menulibre
-lernstick-shutter
+#lernstick-shutter
 lernstick-synaptic
 lernstick-virtualbox
 lernstick-vokoscreen
