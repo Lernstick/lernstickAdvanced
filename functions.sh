@@ -70,14 +70,14 @@ build_image()
 	BOOTLOGO="config/bootloaders/isolinux/bootlogo"
 	BOOTLOGO_DIR="${BOOTLOGO}.dir"
 	cp templates/xmlboot.config ${BOOTLOGO_DIR}
- 	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version ${TODAY})</version>|1" \
+	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version ${TODAY})</version>|1" \
 		${BOOTLOGO_DIR}/xmlboot.config
 	gfxboot --archive ${BOOTLOGO_DIR} --pack-archive ${BOOTLOGO}
 	cp ${BOOTLOGO} ${BOOTLOGO}.orig
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick Debian 9 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick Debian 10 (Version ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
