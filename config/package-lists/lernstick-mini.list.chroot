@@ -17,7 +17,7 @@ jbackpack-full
 lernstick-arandr
 lernstick-ardour
 lernstick-arduino
-#lernstick-avidemux-qt
+lernstick-avidemux-qt
 #lernstick-bluej
 lernstick-brasero
 lernstick-calibre
@@ -66,7 +66,7 @@ lernstick-snap
 lernstick-sonic-pi
 lernstick-sound-juicer
 lernstick-strut
-#lernstick-terminology
+lernstick-terminology
 lernstick-totem
 lernstick-transmission-gtk
 lernstick-usertemplate

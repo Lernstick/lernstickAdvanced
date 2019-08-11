@@ -3,7 +3,6 @@ bluedevil
 ffmpegthumbs
 filelight
 gwenview
-#jovie
 k3b
 k3b-i18n
 kalarm
@@ -12,6 +11,7 @@ kate
 kblocks
 kcalc
 kcharselect
+kdeaccessibility
 kde-config-cddb
 kde-config-cron
 kde-config-gtk-style

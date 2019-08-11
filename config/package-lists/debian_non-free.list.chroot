@@ -1,13 +1,3 @@
-#################################################################################################
-# Some notes:
-# -----------
-# 
-# * phoronix-test-suite needs:
-#	php5-curl
-#	php-fpdf
-#
-#################################################################################################
-
 amd64-microcode
 atmel-firmware
 bluez-firmware
@@ -44,6 +34,4 @@ nvidia-driver
 nvidia-legacy-340xx-driver
 nvidia-legacy-390xx-driver
 p7zip-rar
-#phoronix-test-suite
-#php5-curl
-#php-fpdf
+phoronix-test-suite
