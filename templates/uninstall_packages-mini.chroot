@@ -17,7 +17,8 @@ apt-get purge -y \
 	gimp \
 	gimp-data \
 	texlive-base \
-	texlive-binaries
+	texlive-binaries \
+	timidity
 
 # clean up
 apt-get purge -y --auto-remove

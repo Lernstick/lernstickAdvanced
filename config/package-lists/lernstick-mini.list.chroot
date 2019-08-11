@@ -6,10 +6,10 @@
 ################################################################################
 
 aseba
-#bluej
+bluej
 cura
 dlcopy
-#greenfoot
+greenfoot
 jbackpack-full
 #lernstick-amarok
 #lernstick-amarok-utils
@@ -18,7 +18,7 @@ lernstick-arandr
 lernstick-ardour
 lernstick-arduino
 lernstick-avidemux-qt
-#lernstick-bluej
+lernstick-bluej
 lernstick-brasero
 lernstick-calibre
 lernstick-compton
@@ -39,10 +39,9 @@ lernstick-gnome-dictionary
 lernstick-gnome-logs
 lernstick-gnome-screenshot
 lernstick-gparted
-#lernstick-greenfoot
-#lernstick-handbrake-gtk
+lernstick-greenfoot
+lernstick-handbrake-gtk
 lernstick-hugin
-lernstick-krename
 #lernstick-ktimetracker
 lernstick-kturtle
 lernstick-lmms
@@ -65,7 +64,7 @@ lernstick-shotwell-common
 lernstick-snap
 lernstick-sonic-pi
 lernstick-sound-juicer
-lernstick-strut
+#lernstick-strut
 lernstick-terminology
 lernstick-totem
 lernstick-transmission-gtk
