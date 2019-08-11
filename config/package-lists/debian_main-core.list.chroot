@@ -30,6 +30,7 @@ eject
 exfat-fuse
 exfat-utils
 fbset
+firmware-ath9k-htc
 firmware-linux-free
 fonts-liberation
 gdm3
@@ -55,7 +56,7 @@ keyutils
 libcanberra-gtk0
 libcanberra-gtk-module
 libgl1-mesa-dri
-#libva-egl1
+libva-glx2
 live-tools
 locales
 lsof
@@ -72,11 +73,14 @@ mesa-vulkan-drivers
 modemmanager
 mtools
 netpbm
+network-manager-fortisslvpn
 #network-manager-iodine
+network-manager-l2tp
 network-manager-openconnect
 network-manager-openvpn
 network-manager-pptp
-#network-manager-strongswan
+network-manager-ssh
+network-manager-strongswan
 network-manager-vpnc
 ntfs-3g
 ntpdate

@@ -46,7 +46,7 @@ lernstick-krename
 #lernstick-ktimetracker
 lernstick-kturtle
 lernstick-lmms
-#lernstick-menu-xdg2
+lernstick-menu-xdg
 lernstick-mount-exchange
 lernstick-mypaint
 #lernstick-nitroshare
@@ -69,7 +69,7 @@ lernstick-strut
 #lernstick-terminology
 lernstick-totem
 lernstick-transmission-gtk
-#lernstick-usertemplate
+lernstick-usertemplate
 lernstick-vmpk
 lernstickwelcome
 lernstick-winff

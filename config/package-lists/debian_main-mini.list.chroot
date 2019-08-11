@@ -54,7 +54,6 @@ focuswriter
 freeplane
 fritzing
 fritzing-parts
-#gdebi-kde
 #geoclue-hostip
 ghex
 gimagereader
@@ -68,7 +67,7 @@ gramps
 graphviz
 gstreamer1.0-packagekit
 gwakeonlan
-#handbrake
+handbrake-gtk
 hddtemp
 hugin
 hunspell-de-at
@@ -125,7 +124,6 @@ lightning-l10n-sq
 #lilypond
 lmms
 mediathekview
-#miro
 mixxx
 mumble
 mypaint
@@ -141,7 +139,7 @@ mythes-es
 mythes-fr
 mythes-it
 mythes-ru
-#octave
+octave
 okular
 okular-extra-backends
 owncloud-client
@@ -154,7 +152,7 @@ qelectrotech
 qelectrotech-data
 qelectrotech-examples
 qjackctl
-#qreator
+qreator
 qstopmotion
 qtqr
 quassel
