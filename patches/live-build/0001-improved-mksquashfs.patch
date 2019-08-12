@@ -1,17 +1,6 @@
-From 8c60df6998f3c3d17b3d9ecdab8828261145914c Mon Sep 17 00:00:00 2001
-From: Ronny Standtke <ronny.standtke@gmx.net>
-Date: Fri, 5 Jan 2018 16:22:12 +0100
-Subject: [PATCH] improved mksquashfs (use -Xbcj x86, show progress, be nice)
-
----
- scripts/build/binary_rootfs | 8 +++-----
- 1 file changed, 3 insertions(+), 5 deletions(-)
-
-diff --git a/scripts/build/binary_rootfs b/scripts/build/binary_rootfs
-index 6c797acb3..24f421878 100755
---- a/scripts/build/binary_rootfs
-+++ b/scripts/build/binary_rootfs
-@@ -318,8 +318,6 @@ case "${LB_CHROOT_FILESYSTEM}" in
+--- live-build-20190311.orig/scripts/build/binary_rootfs	2019-03-11 11:05:11.000000000 +0100
++++ live-build-20190311/scripts/build/binary_rootfs	2019-08-12 08:15:55.926804968 +0200
+@@ -318,8 +318,6 @@
  		# Remove stale squashfs image
  		rm -f chroot/filesystem.squashfs
  
@@ -20,7 +9,7 @@ index 6c797acb3..24f421878 100755
  		if [ "${_VERBOSE}" = "true" ]
  		then
  			MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -info"
-@@ -340,7 +338,7 @@ case "${LB_CHROOT_FILESYSTEM}" in
+@@ -340,7 +338,7 @@
  			esac
  		fi
  
@@ -29,24 +18,3 @@ index 6c797acb3..24f421878 100755
  
  		case "${LB_BUILD_WITH_CHROOT}" in
  			true)
-@@ -352,7 +350,7 @@ case "${LB_CHROOT_FILESYSTEM}" in
- 				fi
- 
- 				# Create image
--				Chroot chroot "mksquashfs chroot filesystem.squashfs ${MKSQUASHFS_OPTIONS}"
-+				Chroot chroot "nice -n 19 mksquashfs chroot filesystem.squashfs ${MKSQUASHFS_OPTIONS}"
- 
- 				rm -f chroot/chroot/excludes
- 
-@@ -413,7 +411,7 @@ case "${LB_CHROOT_FILESYSTEM}" in
- 					MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -wildcards -ef config/rootfs/excludes"
- 				fi
- 
--				mksquashfs chroot binary/${INITFS}/filesystem.squashfs ${MKSQUASHFS_OPTIONS}
-+				nice -n 19 mksquashfs chroot binary/${INITFS}/filesystem.squashfs ${MKSQUASHFS_OPTIONS}
- 
- 				du -B 1 -s chroot | cut -f1 > binary/${INITFS}/filesystem.size
- 				;;
--- 
-2.11.0
-
