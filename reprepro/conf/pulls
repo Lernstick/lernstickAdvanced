@@ -1,0 +1,56 @@
+Name: lernstick-8
+From: lernstick-8-staging
+
+Name: lernstick-8-backports
+From: lernstick-8-backports-staging
+
+Name: lernstick-8-staging-winterthur
+From: lernstick-8-experimental-winterthur
+
+Name: lernstick-8-thirdparty
+From: lernstick-8-thirdparty-staging
+
+Name: lernstick-8-thirdparty-staging-winterthur
+From: lernstick-8-thirdparty-experimental-winterthur
+
+Name: lernstick-8-thirdparty-winterthur
+From: lernstick-8-thirdparty-staging-winterthur
+
+Name: lernstick-8-winterthur
+From: lernstick-8-staging-winterthur
+
+Name: lernstick-9
+From: lernstick-9-staging
+
+Name: lernstick-9-backports
+From: lernstick-9-backports-staging
+
+Name: lernstick-9-backports-staging-winterthur
+From: lernstick-9-backports-experimental-winterthur
+
+Name: lernstick-9-backports-winterthur
+From: lernstick-9-backports-staging-winterthur
+
+Name: lernstick-9-staging-winterthur
+From: lernstick-9-experimental-winterthur
+
+Name: lernstick-9-thirdparty
+From: lernstick-9-thirdparty-staging
+
+Name: lernstick-9-thirdparty-staging-winterthur
+From: lernstick-9-thirdparty-experimental-winterthur
+
+Name: lernstick-9-thirdparty-winterthur
+From: lernstick-9-thirdparty-staging-winterthur
+
+Name: lernstick-9-winterthur
+From: lernstick-9-staging-winterthur
+
+Name: lernstick-10
+From: lernstick-10-staging
+
+Name: lernstick-10-backports
+From: lernstick-10-backports-staging
+
+Name: lernstick-10-thirdparty
+From: lernstick-10-thirdparty-staging

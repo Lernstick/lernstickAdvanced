@@ -1,0 +1,11 @@
+aften			install
+avidemux-dmo		install
+fdk-aac-dmo		install
+handbrake-dmo		install
+lame-dmo		install
+libass-dmo		install
+libdvdcss		install
+mfx-dispatch-dmo	install
+mp4v2-dmo		install
+x264-dmo		install
+x265-dmo		install

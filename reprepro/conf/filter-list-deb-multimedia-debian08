@@ -1,0 +1,9 @@
+aften install
+avidemux-dmo install
+fdk-aac-dmo install
+gst-plugins-really-bad install
+handbrake-dmo install
+lame-dmo install
+libdvdcss install
+x264-dmo install
+x265-dmo install

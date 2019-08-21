@@ -1,0 +1,448 @@
+Origin: Lernstick
+Label: lernstick-production
+Suite: stable
+Codename: lernstick-8
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Suite: stable-backports
+Codename: lernstick-8-backports
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (backports)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8-backports
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-8-backports-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (backports staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-8-backports-staging-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (backports staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Suite: stable-winterthur-backports
+Codename: lernstick-8-backports-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (backports)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-experimental
+Codename: lernstick-8-experimental-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (experimental)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-8-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-8-staging-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8-staging-winterthur
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Suite: stable-thirdparty
+Codename: lernstick-8-thirdparty
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (thirdparty packages)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8-thirdparty
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-experimental
+Codename: lernstick-8-thirdparty-experimental-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (thirdparty packages, experimental)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-8-thirdparty-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (thirdparty packages, staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-8-thirdparty-staging-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (thirdparty packages, staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8-thirdparty-staging-winterthur
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Suite: stable-winterthur-thirdparty
+Codename: lernstick-8-thirdparty-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages (thirdparty packages)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8-thirdparty-winterthur
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Suite: stable-winterthur
+Codename: lernstick-8-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 8 based packages
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-8-winterthur
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-9
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-9-backports
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (backports)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-backports
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-experimental
+Codename: lernstick-9-backports-experimental-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (backports experimental)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Update: backports-debian09
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-9-backports-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (backports staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-9-backports-staging-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (backports staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-backports-staging-winterthur
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-9-backports-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (backports)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-backports-winterthur
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-experimental
+Codename: lernstick-9-experimental-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (experimental)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-9-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-9-staging-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-staging-winterthur
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-9-thirdparty
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (thirdparty packages)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-thirdparty
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-experimental
+Codename: lernstick-9-thirdparty-experimental-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (thirdparty packages, experimental)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-9-thirdparty-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (thirdparty packages, staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Update: deb-multimedia-debian09 visual-studio-code riot itch-io-debian09 geogebra signal jitsi lateaching
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-9-thirdparty-staging-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (thirdparty packages, staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-thirdparty-staging-winterthur
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-9-thirdparty-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages (thirdparty packages)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-thirdparty-winterthur
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-9-winterthur
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 9 based packages
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-9-winterthur
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-10
+Architectures: amd64 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-10
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-10-staging
+Architectures: amd64 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-10-backports
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (backports)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-10-backports
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-10-backports-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (backports staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Update: backports-debian10
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-10-thirdparty
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (thirdparty packages)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-10-thirdparty
+NotAutomatic: no
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-10-thirdparty-staging
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (thirdparty packages, staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Update: deb-multimedia-debian10 visual-studio-code riot itch-io-debian09 geogebra signal jitsi lateaching
+NotAutomatic: yes
+ButAutomaticUpgrades: no

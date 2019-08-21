@@ -1,0 +1,105 @@
+Name: backports-debian09
+Method: http://ftp.ch.debian.org/debian/
+Suite: stretch-backports
+IgnoreRelease: No
+Components: main contrib non-free
+VerifyRelease: 7638D0442B90D010
+FilterSrcList: deinstall filter-list-backports-debian09
+DownloadListsAs: .gz
+
+Name: backports-debian10
+Method: http://ftp.ch.debian.org/debian/
+Suite: buster-backports
+IgnoreRelease: No
+Components: main contrib non-free
+VerifyRelease: 648ACFD622F3D138
+FilterSrcList: deinstall filter-list-backports-debian10
+DownloadListsAs: .gz .xz
+
+Name: deb-multimedia-debian09
+Method: http://www.deb-multimedia.org
+Suite: stretch
+IgnoreRelease: No
+Components: main non-free
+VerifyRelease: 5C808C2B65558117
+FilterSrcList: deinstall filter-list-deb-multimedia-debian09
+DownloadListsAs: .gz
+
+Name: deb-multimedia-debian10
+Method: http://www.deb-multimedia.org
+Suite: buster
+IgnoreRelease: No
+Components: main non-free
+VerifyRelease: 5C808C2B65558117
+FilterSrcList: deinstall filter-list-deb-multimedia-debian10
+DownloadListsAs: .gz
+
+Name: visual-studio-code
+Method: https://packages.microsoft.com/repos/vscode
+Architectures: amd64
+Suite: stable
+IgnoreRelease: No
+Components: main
+VerifyRelease: EB3E94ADBE1229CF
+FilterSrcList: deinstall filter-list-visual-studio
+DownloadListsAs: .gz
+
+Name: riot
+Method: https://packages.riot.im/debian/
+Architectures: amd64
+Suite: stretch
+IgnoreRelease: No
+Components: main
+VerifyRelease: C2850B265AC085BD
+FilterSrcList: deinstall filter-list-riot
+DownloadListsAs: .gz
+
+Name: itch-io-debian09
+Method: http://dl.bintray.com/itchio/deb
+Architectures: amd64
+Suite: stretch
+IgnoreRelease: No
+Components: main
+VerifyRelease: 3407E33E0949002B
+FilterSrcList: deinstall filter-list-itch-io-debian09
+DownloadListsAs: .gz
+
+Name: geogebra
+Method: http://www.geogebra.net/linux/
+Architectures: amd64
+Suite: stable
+IgnoreRelease: No
+Components: main
+VerifyRelease: C072A32983A736CF
+FilterSrcList: deinstall filter-list-geogebra
+DownloadListsAs: .gz
+
+Name: signal
+Method: https://updates.signal.org/desktop/apt
+Architectures: amd64
+Suite: xenial
+IgnoreRelease: No
+Components: main
+VerifyRelease: D980A17457F6FB06
+FilterSrcList: deinstall filter-list-signal
+DownloadListsAs: .gz
+
+Name: jitsi
+Method: https://download.jitsi.org
+Architectures: amd64
+Suite: stable/
+Flat: main
+IgnoreRelease: No
+VerifyRelease: EF8B479E2DC1389C
+FilterSrcList: deinstall filter-list-jitsi
+DownloadListsAs: .gz
+
+Name: lateaching
+Method: http://teachingsystem.kremszeile.at/binary/
+Architectures: amd64
+Suite: ./
+Flat: main
+IgnoreRelease: No
+VerifyRelease: 509FA938D173D198
+FilterSrcList: deinstall filter-list-lateaching
+DownloadListsAs: .gz
