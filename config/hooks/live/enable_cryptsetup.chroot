@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# stolen from:
+# https://gitlab.com/kalilinux/build-scripts/live-build-config/blob/master/kali-config/common/hooks/live/kali-hacks.chroot
+
+# Enable cryptsetup in the initramfs for later use if the user
+# adds an encrypted persistence partition.
+# This is until https://bugs.debian.org/908220 has a proper fix.
+if [ -e /etc/cryptsetup-initramfs/conf-hook ]; then
+    if grep -q '^#CRYPTSETUP=' /etc/cryptsetup-initramfs/conf-hook; then
+	sed -i -e 's/^#CRYPTSETUP=.*/CRYPTSETUP=y/' /etc/cryptsetup-initramfs/conf-hook
+    else
+	echo "CRYPTSETUP=y" >>/etc/cryptsetup-initramfs/conf-hook
+    fi
+fi
+
+update-initramfs -u
