@@ -26,6 +26,8 @@ desktop-base
 dkms
 dosfstools
 #ecryptfs-utils
+efitools
+efivar
 eject
 exfat-fuse
 exfat-utils
