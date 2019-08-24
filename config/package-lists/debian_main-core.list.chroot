@@ -71,6 +71,7 @@ mesa-va-drivers
 mesa-vdpau-drivers
 mesa-vulkan-drivers
 modemmanager
+mokutil
 mtools
 netpbm
 network-manager-fortisslvpn
