@@ -126,9 +126,14 @@ lmms
 mediathekview
 mixxx
 mumble
-mypaint
-mypaint-data
-mypaint-data-extras
+# mypaint is currently not co-installable with gimp, see
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894757
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=897909
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=906144
+# Therefore we can install mypaint only from flathub
+#mypaint
+#mypaint-data
+#mypaint-data-extras
 myspell-es
 myspell-fa
 myspell-pt-br
