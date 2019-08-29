@@ -31,6 +31,5 @@ apt-get install -y \
 
 # here is the list of actual applications we want to install
 apt-get install -y \
-	lernstick-steam \
 	steam \
 	wine32
