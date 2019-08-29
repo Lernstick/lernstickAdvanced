@@ -13,7 +13,6 @@
 
 alsa-utils
 anacron
-apt-transport-https
 aufs-dkms
 aufs-tools
 avahi-autoipd
@@ -21,7 +20,8 @@ avahi-utils
 bzip2
 cifs-utils
 console-setup
-cryptsetup
+cryptsetup-initramfs
+cryptsetup-run
 desktop-base
 dkms
 dosfstools
@@ -127,7 +127,7 @@ vdpauinfo
 vim
 vorbis-tools
 vpnc
-vulkan-utils
+vulkan-tools
 whois
 wireless-tools
 xinput

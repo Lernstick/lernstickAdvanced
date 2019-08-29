@@ -77,6 +77,7 @@ hunspell-en-us
 hunspell-fr-comprehensive
 hunspell-it
 hunspell-kmr
+hunspell-pt-br
 hunspell-ru
 hyphen-de
 hyphen-en-us
@@ -112,14 +113,6 @@ krita-l10n
 #ktimetracker
 libsvn-java
 lightning
-lightning-l10n-de
-lightning-l10n-es-ar
-lightning-l10n-es-es
-lightning-l10n-fr
-lightning-l10n-it
-lightning-l10n-pt-br
-lightning-l10n-ru
-lightning-l10n-sq
 #lilypond
 lmms
 mediathekview
@@ -135,7 +128,6 @@ mumble
 #mypaint-data-extras
 myspell-es
 myspell-fa
-myspell-pt-br
 mythes-de
 mythes-de-ch
 mythes-en-us

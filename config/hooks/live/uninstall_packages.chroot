@@ -6,9 +6,8 @@
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
-	alsamixergui \
+	apt-transport-https \
 	blueman \
-	bsd-mailx \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
@@ -16,27 +15,17 @@ apt-get purge -y \
 	gnome-system-tools \
 	gucharmap \
 	hexchat \
+	libgl1-mesa-glx \
 	minidlna \
-	openjdk-9-jre \
-	openjdk-9-jre-headless \
 	owncloud-client-doc \
 	plasma-discover \
 	plasma-discover-common \
-	prerex \
 	system-tools-backends \
-	texlive-fonts-recommended-doc \
-	texlive-latex-base-doc \
-	texlive-latex-extra-doc \
-	texlive-latex-recommended-doc \
-	texlive-pictures-doc \
-	texlive-pstricks-doc \
-	vprerex
+	xvnc4viewer
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
-apt-get purge -y \
-	apparmor \
-	libapparmor-perl
+apt-get purge -y apparmor
 
 # The default DHCP client in Debian 9 (isc-dhcp-client) has a horrible bug. It
 # breaks when doing time synchronization in combination with short DHCP leases,
