@@ -27,8 +27,10 @@ flatpak -y install \
 	org.freedesktop.Platform.GL.nvidia-390-116 \
 	org.freedesktop.Platform.GL.nvidia-418-74
 
-#echo "installing flatpak applications..."
-#flatpak -y install \
+echo "installing flatpak applications..."
+flatpak -y install \
+	ch.openboard.OpenBoard \
+	org.mypaint.MyPaint
 #	net.minetest.Minetest \
 #	org.avidemux.Avidemux \
 #	org.gimp.GIMP \

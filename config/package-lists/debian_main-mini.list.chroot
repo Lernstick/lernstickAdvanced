@@ -8,9 +8,9 @@
 #
 # * gimagereader needs the tesseract-ocr-* language files
 #
-# * qreator needs geoclue-hostip (upstream bug, see https://bugs.launchpad.net/qreator/+bug/1186224)
-#
 # * netbeans needs libsvn-java
+#
+# * kdenlive needs ffplay (separate package in deb-multimedia)
 #
 #################################################################################################
 
@@ -48,12 +48,12 @@ dolphin
 dolphin-owncloud
 enigmail
 epoptes
+ffplay
 flac
 focuswriter
 freeplane
 fritzing
 fritzing-parts
-#geoclue-hostip
 ghex
 gimagereader
 git

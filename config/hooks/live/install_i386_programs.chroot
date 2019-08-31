@@ -10,14 +10,15 @@ apt-get install -y \
 	libegl1:i386 \
 	libegl1-nvidia-legacy-340xx:i386 \
 	libegl-nvidia0:i386 \
+	libgl1-nvidia-glvnd-glx:i386 \
 	libgl1-nvidia-legacy-340xx-glx:i386 \
+	libgl1-nvidia-legacy-390xx-glvnd-glx:i386 \
 	libgles1-nvidia-legacy-340xx:i386 \
 	libgles2:i386 \
 	libgles2-nvidia-legacy-340xx:i386 \
 	libgles-nvidia1:i386 \
 	libgles-nvidia2:i386 \
 	libnss-mdns:i386 \
-	libnvidia-cfg1:i386 \
 	libnvidia-eglcore:i386 \
 	libnvidia-egl-wayland1:i386 \
 	libnvidia-fatbinaryloader:i386 \
