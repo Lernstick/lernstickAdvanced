@@ -34,7 +34,13 @@ exfat-utils
 fbset
 firmware-ath9k-htc
 firmware-linux-free
+fonts-comic-neue
+fonts-courier-prime
+fonts-gnutypewriter
 fonts-liberation
+fonts-roboto
+fonts-ubuntu
+fonts-ubuntu-console
 gdm3
 gedit
 gedit-plugins

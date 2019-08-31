@@ -68,6 +68,7 @@ gstreamer1.0-packagekit
 gwakeonlan
 handbrake-gtk
 hddtemp
+heif-thumbnailer
 hugin
 hunspell-de-at
 hunspell-de-ch
@@ -88,6 +89,7 @@ hyphen-pt-br
 hyphen-ru
 inkscape
 inkscape-open-symbols
+inkscape-tutorials
 jackd2
 jfractionlab
 jmtpfs

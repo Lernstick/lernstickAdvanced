@@ -7,8 +7,10 @@
 
 gnome-core
 gnome-shell-extension-dashtodock
+gnome-shell-extension-desktop-icons
 gnome-shell-extensions
 gnome-shell-extensions-gpaste
+gnome-shell-extension-suspend-button
 gnome-shell-extension-top-icons-plus
 nautilus
 nautilus-wipe

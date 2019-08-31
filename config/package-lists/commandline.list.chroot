@@ -13,6 +13,7 @@ command-not-found
 deborphan
 debtree
 dialog
+hexyl
 htop
 iftop
 iotop
@@ -20,6 +21,7 @@ less
 mc
 ncdu
 nethogs
+nvtop
 powertop
 pulsemixer
 pv
