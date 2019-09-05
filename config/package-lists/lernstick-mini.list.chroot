@@ -45,7 +45,9 @@ lernstick-konqueror
 #lernstick-ktimetracker
 lernstick-kturtle
 lernstick-lmms
+lernstick-mein-klett
 lernstick-menu-xdg
+lernstick-mille-feuilles
 lernstick-mount-exchange
 # mypaint is currently not co-installable with gimp, see
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894757
