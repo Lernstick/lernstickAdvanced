@@ -32,5 +32,5 @@ reprepro includedeb lernstick-9-backports-staging /tmp/libwine_x.y.z-1~bpo9+1_am
 
 offizielle Backports testen:
 Package: *
-Pin: release a=stretch-backports
+Pin: release a=buster-backports
 Pin-Priority: 999
