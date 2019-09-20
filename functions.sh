@@ -94,7 +94,7 @@ build_image()
                 --architectures amd64 \
                 --archive-areas "main contrib non-free" \
                 --binary-images iso \
-		--bootloaders syslinux \
+		--bootloaders "syslinux,grub-efi" \
 		--debootstrap-options "--include=ca-certificates,openssl" \
                 --distribution buster \
 		--firmware-chroot false \
