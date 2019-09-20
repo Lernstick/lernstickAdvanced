@@ -1,0 +1,27 @@
+From e2ebb24cf3d41473180e87866a8150ea08698da5 Mon Sep 17 00:00:00 2001
+From: Ronny Standtke <ronny.standtke@gmx.net>
+Date: Fri, 20 Sep 2019 19:12:28 +0200
+Subject: [PATCH] execute binary_hooks after binary_grub-efi so that it becomes
+ possible to customize grub-efi files
+
+---
+ scripts/build/binary | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/build/binary b/scripts/build/binary
+index 59d835b3c..bccdea62d 100755
+--- a/scripts/build/binary
++++ b/scripts/build/binary
+@@ -68,8 +68,8 @@ lb binary_disk ${@}
+ lb binary_loadlin ${@}
+ lb binary_win32-loader ${@}
+ lb binary_includes ${@}
+-lb binary_hooks ${@}
+ lb binary_grub-efi ${@}
++lb binary_hooks ${@}
+ lb binary_checksums ${@}
+ 
+ if [ "${LB_BUILD_WITH_CHROOT}" != "true" ]
+-- 
+2.20.1
+
