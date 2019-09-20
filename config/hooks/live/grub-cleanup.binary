@@ -2,9 +2,19 @@
 
 # remove all grub files of live build
 # we have our own customized grub version, so we just don't need the other files
-
 rm -rf boot/grub/dejavu-bold-14.pf2
 rm -rf boot/grub/dejavu-bold-16.pf2
 rm -rf boot/grub/live-theme/
 rm -rf boot/grub/loopback.cfg
 rm -rf boot/grub/splash.png
+
+# make a safety copy of the new shim and grub so that we can easily switch
+# between:
+# - the old version (no kernel lockdown but incompatible with newer devices)
+# - the new version (kernel lockdown but compatible with newer devices)
+cp EFI/boot/bootx64.efi EFI/boot/bootx64.efi.new
+cp EFI/boot/grubx64.efi EFI/boot/grubx64.efi.new
+
+# default to old version
+cp EFI/boot/bootx64.efi.old EFI/boot/bootx64.efi
+cp EFI/boot/grubx64.efi.old EFI/boot/grubx64.efi
