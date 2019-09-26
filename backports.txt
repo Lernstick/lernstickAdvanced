@@ -7,6 +7,9 @@ sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-str
 # buster (64 Bit)
 sudo pbuilder --login --basetgz /var/cache/pbuilder/base-buster-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
 
+# buster (32 Bit)
+sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-buster32-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
+
 # stretch
 apt update; apt --yes upgrade; apt --yes --allow-unauthenticated install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
