@@ -13,8 +13,6 @@
 
 alsa-utils
 anacron
-aufs-dkms
-aufs-tools
 avahi-autoipd
 avahi-utils
 bzip2
@@ -92,7 +90,6 @@ network-manager-ssh
 network-manager-strongswan
 network-manager-vpnc
 ntfs-3g
-ntpdate
 onboard
 openssh-client
 openssh-server
