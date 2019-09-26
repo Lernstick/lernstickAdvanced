@@ -17,6 +17,7 @@ lernstick-onboard
 #lernstick-openjdk-8-jre
 lernstick-ranger
 lernstick-software-properties-gtk
+lernstick-systemd
 lernstick-texlive-base
 lernstick-vim-common
 lernstick-x11vnc
