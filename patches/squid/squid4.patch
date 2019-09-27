@@ -1,0 +1,42 @@
+diff --git a/debian/changelog b/debian/changelog
+index 7c1c5cd..371de68 100644
+--- a/debian/changelog
++++ b/debian/changelog
+@@ -1,3 +1,9 @@
++squid (1:4.8-1+lernstick1) lernstick-10; urgency=medium
++
++  * rebuild with the additional options --with-openssl, --enable-ssl and --enable-ssl-crtd
++
++ -- Ronny Standtke <ronny.standtke@gmx.net>  Fri, 27 Sep 2019 21:14:44 +0200
++
+ squid (4.8-1) unstable; urgency=high
+ 
+   [ Amos Jeffries <amosjeffries@squid-cache.org> ]
+diff --git a/debian/control b/debian/control
+index 34d22f3..d845d43 100644
+--- a/debian/control
++++ b/debian/control
+@@ -26,6 +26,7 @@ Build-Depends: ed, libltdl-dev, pkg-config
+ 	, libsasl2-dev
+ 	, libxml2-dev
+ 	, nettle-dev
++	, libssl-dev
+ 
+ Package: squid3
+ Architecture: all
+diff --git a/debian/rules b/debian/rules
+index 1bf39d7..d69a4a6 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -62,7 +62,10 @@ DEB_CONFIGURE_EXTRA_FLAGS := BUILDCXXFLAGS="$(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)"
+ 		--with-filedescriptors=65536 \
+ 		--with-large-files \
+ 		--with-default-user=proxy \
+-		--with-gnutls
++		--with-gnutls \
++		--with-openssl \
++		--enable-ssl \
++		--enable-ssl-crtd
+ 
+ ifeq ($(DEB_HOST_ARCH_OS), kfreebsd)
+ 		DEB_CONFIGURE_EXTRA_FLAGS += --enable-kqueue
