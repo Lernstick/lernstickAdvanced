@@ -1,6 +1,5 @@
 amd64-microcode
 atmel-firmware
-bluez-firmware
 broadcom-sta-dkms
 firmware-amd-graphics
 firmware-atheros
@@ -34,4 +33,3 @@ nvidia-driver
 nvidia-legacy-340xx-driver
 nvidia-legacy-390xx-driver
 p7zip-rar
-phoronix-test-suite

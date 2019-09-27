@@ -1,0 +1,10 @@
+################################################################################
+#
+# This is a list of Lernstick packages that are installed in the default exam
+# version, but not in all customized exam versions.
+#
+################################################################################
+
+geogebra-gnome
+pspp
+wxmaxima

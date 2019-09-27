@@ -1,4 +1,4 @@
-title-text: "Lernstick Debian 9 (Version YYYY-MM-DD)"
+title-text: "Lernstick-Prüfungsumgebung Debian 10 (Version YYYY-MM-DD)"
 desktop-image: "lernstick-splash-1280x800.png"
 
 + boot_menu {

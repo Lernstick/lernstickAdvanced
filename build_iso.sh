@@ -2,7 +2,7 @@
 
 set -e
 
-ISO_SUFFIX="_mini"
+ISO_SUFFIX=""
 SOURCE="false"
 
 . ./functions.sh
@@ -27,14 +27,6 @@ then
 	echo "Please check the BUILD_DIR definition in your constants file."
 	exit 0
 fi
-
-# make sure that the additional package lists of the standard version are removed
-rm -f config/package-lists/debian_main-standard.list.chroot
-rm -f config/package-lists/itch.list.chroot
-rm -f config/package-lists/lernstick-standard.list.chroot
-
-# copy uninstall hook to right place
-cp templates/uninstall_packages-mini.chroot config/hooks/live/
 
 init_build
 configure

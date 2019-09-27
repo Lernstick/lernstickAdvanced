@@ -77,7 +77,7 @@ build_image()
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick Debian 10 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 10 (Version ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
@@ -114,7 +114,7 @@ build_image()
 	ISO_FILE="live-image-amd64.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian10${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_pruefungsumgebung_debian10${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file

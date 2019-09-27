@@ -11,16 +11,49 @@ apt-get purge -y \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
+	gedit \
+	gedit-common \
+	gimp \
+	gimp-data \
+	gnome-contacts \
 	gnome-robots \
 	gnome-system-tools \
 	gucharmap \
 	hexchat \
+	hunspell-de-de \
+	hunspell-en-gb \
+	hunspell-en-us \
+	hunspell-es \
+	hunspell-fr \
+	hunspell-fr-classical \
+	hunspell-it \
+	hunspell-pt-br \
+	hunspell-ru \
+	libgimp2.0 \
 	libgl1-mesa-glx \
 	minidlna \
+	myspell-de-de \
+	myspell-es \
+	myspell-fa \
+	myspell-fr \
+	myspell-pt-br \
+	myspell-ru \
 	owncloud-client-doc \
 	plasma-discover \
 	plasma-discover-common \
+	sane-utils \
 	system-tools-backends \
+	texlive-fonts-extra-doc \
+	texlive-fonts-recommended-doc \
+	texlive-latex-base-doc \
+	texlive-latex-extra-doc \
+	texlive-latex-recommended-doc \
+	texlive-pictures-doc \
+	texlive-pstricks-doc \
+	totem \
+	totem-plugins \
+	xsane \
+	xsane-common \
 	xvnc4viewer
 
 # for whatever reason apparmor prevents evince from starting
@@ -37,6 +70,15 @@ apt-get purge -y apparmor
 apt-get purge -y \
 	isc-dhcp-client \
 	isc-dhcp-common
+
+# In the exam environment we have to disable bluetooth support to prevent
+# data exchange with smartphones, etc. Therefore we remove here the relevant
+# bluetooth packages.
+apt-get purge -y \
+	bluez \
+	bluez-obexd \
+	gnome-bluetooth \
+	pulseaudio-module-bluetooth
 
 # clean up
 apt-get purge -y --auto-remove

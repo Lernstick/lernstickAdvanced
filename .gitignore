@@ -1,8 +1,4 @@
 config/bootloaders/isolinux/bootlogo.dir/xmlboot.config
-config/hooks/live/uninstall_packages-mini.chroot
 config/includes.binary/boot/grub/themes/lernstick/theme.txt
-config/package-lists/debian_main-standard.list.chroot
-config/package-lists/itch.list.chroot
-config/package-lists/lernstick-standard.list.chroot
 config/packages.chroot/
 constants

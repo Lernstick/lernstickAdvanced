@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# The package lists of many custom exam environments can be minimized even
+# further. If you are building such a minimized exam environment you can just
+# comment out the exit statement below.
+
+exit 0
+
+apt purge -y \
+	baobab \
+	firefox-esr \
+	gnome-calculator \
+	gnome-characters \
+	gnome-clocks \
+	gnome-disk-utility \
+	gnome-font-viewer \
+	gnome-logs \
+	gnome-software \
+	gnome-system-monitor \
+	gnome-tweak-tool \
+	tracker-gui

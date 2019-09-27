@@ -9,6 +9,7 @@
 lernstick-baobab
 lernstick-eog
 lernstick-evince
+lernstick-exam-client
 lernstick-file-roller
 lernstick-firefox-esr
 lernstick-fontmanager
@@ -20,7 +21,7 @@ lernstick-install-upgrades
 lernstick-lshw-gtk
 lernstick-master-pdf-editor
 lernstick-menulibre
-#lernstick-shutter
+lernstick-musescore
 lernstick-synaptic
 lernstick-virtualbox
 lernstick-vokoscreen

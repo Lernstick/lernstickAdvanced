@@ -1,0 +1,17 @@
+################################################################################
+#
+# This is a list of Lernstick packages that are installed in the default exam
+# version, but not in all customized exam versions.
+#
+################################################################################
+
+exe-thumbnailer
+jbackpack-restore
+jbackpack-restore-admin
+lernstick-geogebra-classic
+lernstick-geogebra-exam
+lernstick-r-base-core
+lernstick-wine
+processing
+rstudio
+wine-gecko
