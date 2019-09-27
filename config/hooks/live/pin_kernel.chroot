@@ -34,8 +34,8 @@ do
 	pin_package $(echo ${i} | awk -F/ '{ print $4 }')
 done
 
+pin_package $(dpkg -l "linux-compiler-gcc-*" | grep ^ii | awk '{print $2}')
 pin_package $(dpkg -l "linux-kbuild*" | grep ^ii | awk '{print $2}')
 
-pin_package linux-compiler-gcc-8-x86
 pin_package linux-headers-amd64
 pin_package linux-libc-dev
