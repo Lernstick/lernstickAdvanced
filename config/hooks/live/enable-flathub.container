@@ -25,7 +25,7 @@ echo "installing flatpak nvidia drivers..."
 flatpak -y install \
 	org.freedesktop.Platform.GL.nvidia-340-107 \
 	org.freedesktop.Platform.GL.nvidia-390-116 \
-	org.freedesktop.Platform.GL.nvidia-418-74
+	org.freedesktop.Platform.GL.nvidia-430-50
 
 echo "installing flatpak applications..."
 flatpak -y install \
