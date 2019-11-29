@@ -99,14 +99,13 @@ build_image()
                 --distribution buster \
 		--firmware-chroot false \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-5.2.0-0.bpo.3 \
+		--linux-packages linux-image-5.3.0-0.bpo.2 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \
                 --source ${SOURCE} \
                 --verbose
 #		--linux-flavours "amd64-unsigned" \
-#		--linux-packages linux-image-4.19.0-0.bpo.5 \
 
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
