@@ -7,21 +7,14 @@
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
 	apt-transport-https \
-	blueman \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
 	gedit \
 	gedit-common \
-	gimp \
 	gimp-data \
 	gnome-contacts \
-	gnome-robots \
-	gnome-system-tools \
-	gucharmap \
-	hexchat \
 	hunspell-de-de \
-	hunspell-en-gb \
 	hunspell-en-us \
 	hunspell-es \
 	hunspell-fr \
@@ -30,26 +23,8 @@ apt-get purge -y \
 	hunspell-pt-br \
 	hunspell-ru \
 	libgimp2.0 \
-	libgl1-mesa-glx \
-	minidlna \
-	myspell-de-de \
-	myspell-es \
 	myspell-fa \
-	myspell-fr \
-	myspell-pt-br \
-	myspell-ru \
-	owncloud-client-doc \
-	plasma-discover \
-	plasma-discover-common \
 	sane-utils \
-	system-tools-backends \
-	texlive-fonts-extra-doc \
-	texlive-fonts-recommended-doc \
-	texlive-latex-base-doc \
-	texlive-latex-extra-doc \
-	texlive-latex-recommended-doc \
-	texlive-pictures-doc \
-	texlive-pstricks-doc \
 	totem \
 	totem-plugins \
 	xsane \
