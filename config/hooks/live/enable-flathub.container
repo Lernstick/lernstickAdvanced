@@ -4,7 +4,10 @@ echo "starting dbus..."
 /etc/init.d/dbus start
 
 echo "installing flatpak debian packages..."
-apt -y install gnome-software-plugin-flatpak
+# Don't install gnome-software in exam environment as it asks for the admin
+# password at system startup.
+#apt -y install gnome-software-plugin-flatpak
+apt -y install flatpak
 
 echo "adding flathub remote repository..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
