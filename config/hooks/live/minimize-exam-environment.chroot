@@ -17,5 +17,4 @@ apt purge -y \
 	gnome-logs \
 	gnome-software \
 	gnome-system-monitor \
-	gnome-tweak-tool \
-	tracker-gui
+	gnome-tweaks
