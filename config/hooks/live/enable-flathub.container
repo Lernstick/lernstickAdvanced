@@ -26,8 +26,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 echo "installing flatpak nvidia drivers..."
 flatpak -y install \
-	org.freedesktop.Platform.GL.nvidia-340-107 \
-	org.freedesktop.Platform.GL.nvidia-390-129 \
+	org.freedesktop.Platform.GL.nvidia-340-108 \
+	org.freedesktop.Platform.GL.nvidia-390-132 \
 	org.freedesktop.Platform.GL.nvidia-430-64
 
 echo "installing flatpak applications..."
