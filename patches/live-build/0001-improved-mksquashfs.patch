@@ -1,6 +1,8 @@
---- live-build-20190311.orig/scripts/build/binary_rootfs	2019-03-11 11:05:11.000000000 +0100
-+++ live-build-20190311/scripts/build/binary_rootfs	2019-08-12 08:15:55.926804968 +0200
-@@ -318,8 +318,6 @@
+diff --git a/scripts/build/binary_rootfs b/scripts/build/binary_rootfs
+index d50cf3b43..2464ff3e4 100755
+--- a/scripts/build/binary_rootfs
++++ b/scripts/build/binary_rootfs
+@@ -318,8 +318,6 @@ case "${LB_CHROOT_FILESYSTEM}" in
  		# Remove stale squashfs image
  		rm -f chroot/filesystem.squashfs
  
@@ -9,12 +11,12 @@
  		if [ "${_VERBOSE}" = "true" ]
  		then
  			MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -info"
-@@ -340,7 +338,7 @@
+@@ -340,7 +338,7 @@ case "${LB_CHROOT_FILESYSTEM}" in
  			esac
  		fi
  
 -		MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -comp xz"
-+		MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -comp xz -Xbcj x86"
++		MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -comp zstd -Xcompression-level 22"
  
  		case "${LB_BUILD_WITH_CHROOT}" in
  			true)
