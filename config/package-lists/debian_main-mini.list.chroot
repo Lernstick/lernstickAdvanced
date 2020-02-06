@@ -99,7 +99,7 @@ kde-l10n-fr
 kde-l10n-it
 kde-l10n-ptbr
 kde-l10n-ru
-kdenlive
+#kdenlive
 keepassxc
 kfind
 kipi-plugins
