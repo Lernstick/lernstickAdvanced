@@ -44,6 +44,16 @@ VerifyRelease: EB3E94ADBE1229CF
 FilterSrcList: deinstall filter-list-visual-studio
 DownloadListsAs: .gz
 
+Name: teams
+Method: https://packages.microsoft.com/repos/ms-teams
+Architectures: amd64
+Suite: stable
+IgnoreRelease: No
+Components: main
+VerifyRelease: EB3E94ADBE1229CF
+FilterSrcList: deinstall filter-list-teams
+DownloadListsAs: .gz
+
 Name: riot
 Method: https://packages.riot.im/debian/
 Architectures: amd64

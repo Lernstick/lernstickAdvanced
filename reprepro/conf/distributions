@@ -327,7 +327,7 @@ Description: Lernstick Debian 9 based packages (thirdparty packages, staging)
 DebIndices: Packages Release .gz .bz2
 DscIndices: Sources Release .gz .bz2
 SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
-Update: deb-multimedia-debian09 visual-studio-code riot itch-io-debian09 geogebra signal jitsi lateaching
+Update: deb-multimedia-debian09 visual-studio-code riot itch-io-debian09 geogebra signal jitsi lateaching teams
 NotAutomatic: yes
 ButAutomaticUpgrades: no
 
@@ -443,6 +443,45 @@ Description: Lernstick Debian 10 based packages (thirdparty packages, staging)
 DebIndices: Packages Release .gz .bz2
 DscIndices: Sources Release .gz .bz2
 SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
-Update: deb-multimedia-debian10 visual-studio-code riot itch-io-debian09 geogebra signal jitsi lateaching
+Update: deb-multimedia-debian10 visual-studio-code riot itch-io-debian09 geogebra signal jitsi lateaching teams
 NotAutomatic: yes
 ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-experimental
+Codename: lernstick-10-experimental-bern
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (experimental)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-staging
+Codename: lernstick-10-staging-bern
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages (staging)
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-10-staging-bern
+NotAutomatic: yes
+ButAutomaticUpgrades: no
+
+Origin: Lernstick
+Label: lernstick-production
+Codename: lernstick-10-bern
+Architectures: amd64 i386 source
+Components: main contrib non-free
+Description: Lernstick Debian 10 based packages
+DebIndices: Packages Release .gz .bz2
+DscIndices: Sources Release .gz .bz2
+SignWith: BD7BA22C88D27DEFBA282C3CCAA3BB49BD2E1CAD
+Pull: lernstick-10-bern
+NotAutomatic: no
+ButAutomaticUpgrades: no
+

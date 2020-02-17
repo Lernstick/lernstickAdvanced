@@ -33,11 +33,11 @@ flatpak -y install \
 echo "installing flatpak applications..."
 #flatpak -y install \
 #	ch.openboard.OpenBoard \
-#	org.mypaint.MyPaint
 #	net.minetest.Minetest \
 #	org.avidemux.Avidemux \
 #	org.gimp.GIMP \
 #	org.kde.kdenlive \
 #	org.kde.krita \
+#	org.mypaint.MyPaint
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux

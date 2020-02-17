@@ -5,6 +5,7 @@ fdk-aac-dmo		install
 ffmpeg-dmo		install
 handbrake-dmo		install
 kvazaar-dmo		install
+lame-dmo		install
 libass-dmo		install
 libbluray-dmo		install
 libcdio-dmo		install
@@ -13,6 +14,7 @@ libdvdcss		install
 libilbc-dmo		install
 libvpx-dmo		install
 mfx-dispatch-dmo	install
+mp4v2-dmo		install
 openh264-dmo		install
 rubberband-dmo		install
 x264-dmo		install

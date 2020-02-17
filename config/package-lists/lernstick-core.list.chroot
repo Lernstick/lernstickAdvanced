@@ -20,6 +20,7 @@ lernstick-software-properties-gtk
 lernstick-systemd
 lernstick-texlive-base
 lernstick-vim-common
+lernstick-virtualbox-guest-utils
 lernstick-x11vnc
 lernstick-xterm
 macbook12-spi-driver-dkms
