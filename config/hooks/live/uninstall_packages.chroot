@@ -55,5 +55,9 @@ apt-get purge -y \
 	gnome-bluetooth \
 	pulseaudio-module-bluetooth
 
+# we don't want to have gnome-software in the exam environment
+# because it triggers a password prompt at every startup
+apt-get purge -y gnome-software
+
 # clean up
 apt-get purge -y --auto-remove
