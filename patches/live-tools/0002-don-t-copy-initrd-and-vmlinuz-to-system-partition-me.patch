@@ -1,0 +1,31 @@
+From 7985535523bf92e01bb5d41a14a948185e026d8f Mon Sep 17 00:00:00 2001
+From: Ronny Standtke <ronny.standtke@gmx.net>
+Date: Mon, 24 Feb 2020 13:33:04 +0100
+Subject: [PATCH 2/3] don't copy initrd and vmlinuz to system partition (messes
+ up GRUB)
+
+---
+ bin/live-update-initramfs | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/bin/live-update-initramfs b/bin/live-update-initramfs
+index 863c4a4..8b2ddd4 100755
+--- a/bin/live-update-initramfs
++++ b/bin/live-update-initramfs
+@@ -55,6 +55,13 @@ case "${_READ_WRITE}" in
+ 		# Updating initramfs
+ 		/usr/sbin/update-initramfs.orig.initramfs-tools "${@}"
+ 
++		# Copying initrd and vmlinuz to the live medium partition messes up GRUB.
++		# It detects these files there and then tries and fails to load its
++		# config files from there instead of the EFI partition.
++		# Therefore we stop here...
++		# TODO: copy initrd and vmlinuz to EFI partition?
++		exit 0
++
+ 		if [ "$(ls /boot/vmlinuz-* | wc -l)" -gt 1 ]
+ 		then
+ 			_NUMBER="1"
+-- 
+2.20.1
+
