@@ -30,6 +30,7 @@ flatpak -y install \
 echo "installing flatpak applications..."
 flatpak -y install \
 	ch.openboard.OpenBoard \
+	com.github.tchx84.Flatseal \
 	org.kde.kdenlive \
 	org.mypaint.MyPaint
 #	net.minetest.Minetest \
