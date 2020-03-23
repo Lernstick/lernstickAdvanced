@@ -29,9 +29,14 @@ then
 fi
 
 # make sure that the additional package lists of the standard version are removed
+rm -f config/package-lists/debian_contrib-default.list.chroot
 rm -f config/package-lists/debian_main-standard.list.chroot
-rm -f config/package-lists/itch.list.chroot
 rm -f config/package-lists/lernstick-standard.list.chroot
+rm -f config/package-lists/libreoffice-core.list.chroot
+
+# Enabling flatpak adds around 8 GB (uncompressed) data to the image.
+# Therefore we need to disable this hook for the mini version.
+rm -f config/hooks/live/enable-flathub.container
 
 # copy uninstall hook to right place
 cp templates/uninstall_packages-mini.chroot config/hooks/live/

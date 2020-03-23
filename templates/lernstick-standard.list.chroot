@@ -4,6 +4,7 @@ lernstick-digikam
 lernstick-geogebra
 lernstick-geogebra-classic
 lernstick-gimp-draw-arrow-plugin
+lernstick-greenfoot
 lernstick-kstars
 lernstick-minetest-game-carbone-ng
 lernstick-minetest-game-tutorial
@@ -13,7 +14,11 @@ lernstick-playonlinux
 lernstick-scribus
 lernstick-stellarium
 lernstick-tuxpaint
+lernstick-virtualbox
 lernstick-wine
+libreoffice-kf5
+libreoffice-languagetool
+libreoffice-plasma
 live-enigma
 omnitux
 #tigerjython

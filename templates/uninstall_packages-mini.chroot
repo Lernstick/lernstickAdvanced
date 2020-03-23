@@ -6,7 +6,7 @@
 
 # This is a special list for the "Lernstick mini" version:
 #
-# - cinnamon-desktop-environment recommends gimp
+# - cinnamon-desktop-environment recommends gimp, libreoffice and the noto fonts
 # - vmpk recommends qsynth, qsynth recommends fluid-soundfont-gm
 #   but fluid-soundfont-gm is much too large for the mini version
 # - the texlive packages got pulled in by recommends but are not needed in the
@@ -14,8 +14,38 @@
 
 apt-get purge -y \
 	fluid-soundfont-gm \
+	fonts-noto \
+	fonts-noto-cjk \
+	fonts-noto-cjk-extra \
+	fonts-noto-color-emoji \
+	fonts-noto-core \
+	fonts-noto-extra \
+	fonts-noto-hinted \
+	fonts-noto-mono \
+	fonts-noto-ui-core \
+	fonts-noto-ui-extra \
+	fonts-noto-unhinted \
 	gimp \
 	gimp-data \
+	libreoffice-base-core \
+	libreoffice-calc \
+	libreoffice-common \
+	libreoffice-core \
+	libreoffice-draw \
+	libreoffice-gnome \
+	libreoffice-gtk3 \
+	libreoffice-impress \
+	libreoffice-kde5 \
+	libreoffice-kf5 \
+	libreoffice-math \
+	libreoffice-plasma \
+	libreoffice-qt5 \
+	libreoffice-style-breeze \
+	libreoffice-style-colibre \
+	libreoffice-style-elementary \
+	libreoffice-style-tango \
+	libreoffice-writer \
+	python3-uno \
 	texlive-base \
 	texlive-binaries \
 	timidity

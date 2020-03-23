@@ -9,7 +9,6 @@ aseba
 bluej
 cura
 dlcopy
-greenfoot
 jbackpack-full
 #lernstick-amarok
 #lernstick-amarok-utils
@@ -39,7 +38,6 @@ lernstick-gnome-logs
 lernstick-gnome-screenshot
 lernstick-gnome-software
 lernstick-gparted
-lernstick-greenfoot
 lernstick-handbrake-gtk
 lernstick-hugin
 lernstick-konqueror
@@ -84,7 +82,5 @@ lernstick-xsane
 lernstick-xscreensaver
 lernstick-zenmap
 lernstick-zynaddsubfx
-libreoffice-kde5
-libreoffice-languagetool
 #tuxedo-wmi-dkms
 xlogo-ide
