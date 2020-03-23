@@ -1,13 +1,15 @@
 diff --git a/scripts/build/chroot_hooks b/scripts/build/chroot_hooks
-index 67d164bce..3111af916 100755
+index ff06eac3e..bbe286229 100755
 --- a/scripts/build/chroot_hooks
 +++ b/scripts/build/chroot_hooks
-@@ -72,12 +72,12 @@ rmdir chroot/root/lb_chroot_hooks
+@@ -72,12 +72,14 @@ rmdir chroot/root/lb_chroot_hooks
  rmdir --ignore-fail-on-non-empty chroot/root
  
  ## Processing local hooks
 -if ls config/hooks/normal/*.chroot config/hooks/live/*.chroot > /dev/null 2>&1
-+if ls config/hooks/normal/*.chroot config/hooks/live/*.chroot config/hooks/live/*.container > /dev/null 2>&1
++if ls config/hooks/normal/*.chroot > /dev/null 2>&1 ||
++   ls config/hooks/live/*.chroot > /dev/null 2>&1 ||
++   ls config/hooks/live/*.container > /dev/null 2>&1
  then
  	# Restoring cache
  	Restore_package_cache chroot
@@ -17,7 +19,7 @@ index 67d164bce..3111af916 100755
  	do
  		if [ ! -e "${HOOK}" ]
  		then
-@@ -94,7 +94,17 @@ then
+@@ -94,7 +96,17 @@ then
  		fi
  
  		# Executing hook
