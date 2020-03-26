@@ -42,6 +42,7 @@ fonts-ubuntu-console
 gdm3
 gedit
 gedit-plugins
+gedit-plugin-text-size
 gnome-clocks
 gstreamer1.0-alsa
 gstreamer1.0-crystalhd
