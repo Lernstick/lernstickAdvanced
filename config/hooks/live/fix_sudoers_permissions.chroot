@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Config files in /etc/sudoers.d/ should have the permission mask
+# -r--r-----.
+# Unfortunately, we can not make sure that git keeps this permission mask when
+# pushing and pulling from different machines.
+# Therefore this script applies the correct permission mask.
+
+find /etc/sudoers.d/ -type f -exec chmod 440 {} \;
