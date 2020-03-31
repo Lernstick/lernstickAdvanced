@@ -10,8 +10,6 @@ apt-get purge -y \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
-	gedit \
-	gedit-common \
 	gimp-data \
 	gnome-contacts \
 	hunspell-de-de \
