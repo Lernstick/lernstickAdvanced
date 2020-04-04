@@ -11,7 +11,8 @@ lernstick-eog
 lernstick-evince
 lernstick-file-roller
 lernstick-firefox-esr
-lernstick-fontmanager
+lernstick-font-manager
+lernstick-font-viewer
 lernstick-fslint
 lernstick-gdebi
 lernstick-gnome-system-monitor
