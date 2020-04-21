@@ -33,7 +33,7 @@ bogofilter
 bonnie++
 brasero
 calendar-exchange-provider
-calendar-google-provider
+#calendar-google-provider
 calibre
 caps
 cheese
@@ -48,7 +48,7 @@ dmz-cursor-theme
 dolphin
 dolphin-owncloud
 ekiga
-enigmail
+#enigmail
 epoptes
 flac
 focuswriter
