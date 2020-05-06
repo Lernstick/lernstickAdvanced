@@ -35,6 +35,7 @@ krita-l10n
 kstars
 kstars-data
 kstars-data-extra-tycho2
+lightning
 musescore3
 openshot-qt
 playonlinux
@@ -46,3 +47,15 @@ solfege-doc
 sweethome3d
 sweethome3d-furniture
 sweethome3d-furniture-nonfree
+thunderbird
+thunderbird-l10n-de
+thunderbird-l10n-es-ar
+thunderbird-l10n-es-es
+thunderbird-l10n-fr
+thunderbird-l10n-it
+thunderbird-l10n-pt-br
+thunderbird-l10n-ru
+thunderbird-l10n-sq
+vlc
+vlc-plugin-fluidsynth
+winetricks
