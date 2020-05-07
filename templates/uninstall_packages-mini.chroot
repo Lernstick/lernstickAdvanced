@@ -14,6 +14,7 @@
 
 apt-get purge -y \
 	fluid-soundfont-gm \
+	digikam-private-libs \
 	fonts-noto \
 	fonts-noto-cjk \
 	fonts-noto-cjk-extra \
