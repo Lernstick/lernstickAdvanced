@@ -110,6 +110,7 @@ konqueror
 krename
 #ktimetracker
 libsvn-java
+lightning
 #lilypond
 lmms
 mediathekview
@@ -191,6 +192,15 @@ tesseract-ocr-ita
 tesseract-ocr-por
 tesseract-ocr-rus
 tesseract-ocr-spa
+thunderbird
+thunderbird-l10n-de
+thunderbird-l10n-es-ar
+thunderbird-l10n-es-es
+thunderbird-l10n-fr
+thunderbird-l10n-it
+thunderbird-l10n-pt-br
+thunderbird-l10n-ru
+thunderbird-l10n-sq
 totem-plugins
 vim-gtk
 vinagre

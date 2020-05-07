@@ -46,11 +46,9 @@ apt-get purge -y \
 	libreoffice-style-elementary \
 	libreoffice-style-tango \
 	libreoffice-writer \
-	lightning \
 	python3-uno \
 	texlive-base \
 	texlive-binaries \
-	thunderbird \
 	timidity
 
 # clean up
