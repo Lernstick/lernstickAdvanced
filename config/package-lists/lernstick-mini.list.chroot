@@ -6,10 +6,10 @@
 ################################################################################
 
 aseba
-bluej
 cura
 dlcopy
 jbackpack-full
+jitsi-meet-electron
 #lernstick-amarok
 #lernstick-amarok-utils
 #lernstick-apper
@@ -17,7 +17,6 @@ lernstick-arandr
 lernstick-ardour
 lernstick-arduino
 lernstick-avidemux-qt
-lernstick-bluej
 lernstick-brasero
 lernstick-calibre
 lernstick-compton
