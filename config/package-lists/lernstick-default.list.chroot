@@ -6,6 +6,7 @@
 #
 ################################################################################
 
+jitsi-meet-electron
 lernstick-baobab
 lernstick-eog
 lernstick-evince
@@ -23,5 +24,3 @@ lernstick-menulibre
 lernstick-synaptic
 lernstick-vokoscreen-ng
 master-pdf-editor
-rscc
-rscc-defaults-lernstick
