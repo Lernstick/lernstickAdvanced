@@ -100,7 +100,7 @@ build_image()
 		--firmware-chroot false \
                 --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
 		--linux-flavours "amd64-unsigned" \
-		--linux-packages linux-image-4.19.0-0.bpo.8 \
+		--linux-packages linux-image-4.19.0-0.bpo.9 \
                 --mirror-binary ${MIRROR_SYSTEM} \
                 --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
                 --mirror-bootstrap ${MIRROR_BUILD} \

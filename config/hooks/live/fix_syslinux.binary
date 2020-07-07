@@ -2,8 +2,8 @@
 
 cd live || exit 1
 
-mv vmlinuz-4.19.0-0.bpo.5-amd64 vmlinuz || true
-mv initrd.img-4.19.0-0.bpo.5-amd64 initrd.img || true
-
 mv vmlinuz-4.19.0-0.bpo.8-amd64 vmlinuz || true
 mv initrd.img-4.19.0-0.bpo.8-amd64 initrd.img || true
+
+mv vmlinuz-4.19.0-0.bpo.9-amd64 vmlinuz || true
+mv initrd.img-4.19.0-0.bpo.9-amd64 initrd.img || true
