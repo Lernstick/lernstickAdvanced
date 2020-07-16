@@ -60,6 +60,7 @@ i965-va-driver
 icnsutils
 iptraf-ng
 keyutils
+libbluray-bdj
 libcanberra-gtk0
 libcanberra-gtk-module
 libgl1-mesa-dri
