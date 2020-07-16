@@ -8,6 +8,7 @@
 aseba
 cura
 dlcopy
+element-desktop
 jbackpack-full
 #lernstick-amarok
 #lernstick-amarok-utils
@@ -80,6 +81,5 @@ lernstick-xsane
 lernstick-xscreensaver
 lernstick-zenmap
 lernstick-zynaddsubfx
-riot-desktop
 #tuxedo-wmi-dkms
 xlogo-ide
