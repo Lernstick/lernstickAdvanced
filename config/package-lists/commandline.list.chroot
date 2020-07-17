@@ -8,6 +8,7 @@
 aptitude
 apt-rdepends
 bash-completion
+bashtop
 bind9-host
 command-not-found
 deborphan
