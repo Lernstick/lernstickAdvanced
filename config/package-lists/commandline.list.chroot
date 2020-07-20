@@ -8,6 +8,7 @@
 aptitude
 apt-rdepends
 bash-completion
+bashtop
 bind9-host
 command-not-found
 deborphan
@@ -20,13 +21,13 @@ iotop
 less
 mc
 ncdu
+neofetch
 nethogs
 nvtop
 powertop
 pulsemixer
 pv
 ranger
-screenfetch
 spectre-meltdown-checker
 sysstat
 tmux
