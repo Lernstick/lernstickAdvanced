@@ -51,7 +51,6 @@ focuswriter
 freeplane
 fritzing
 fritzing-parts
-ghex
 gimagereader
 git
 glabels
@@ -211,6 +210,7 @@ vym
 winff
 winff-doc
 wireshark
+wxhexeditor
 xournal
 xournalpp
 xsane
