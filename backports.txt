@@ -33,7 +33,15 @@ reprepro includedeb lernstick-9-backports-staging /tmp/libwine_x.y.z-1~bpo9+1_am
 (luckily, these packages are automatically included when calling "reprepro --restrict wine pull")
 
 
-offizielle Backports testen:
+special hints for firmware-nonfree backports:
+---------------------------------------------
+remove intentional failing in debian/rules
+adapt kernel version in debian/rules.defs
+apt install linux-support-a.b.c-x.bpo.y
+
+
+testing official backports:
+---------------------------
 Package: *
 Pin: release a=buster-backports
 Pin-Priority: 999
