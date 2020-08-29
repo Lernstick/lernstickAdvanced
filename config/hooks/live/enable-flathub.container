@@ -32,7 +32,7 @@ do
 	flatpak -y install org.freedesktop.Platform.GL.nvidia-$i
 done
 
-echo "installing flatpak applications..."
+#echo "installing flatpak applications..."
 #flatpak -y install \
 #	ch.openboard.OpenBoard \
 #	com.github.tchx84.Flatseal \
@@ -41,6 +41,7 @@ echo "installing flatpak applications..."
 #	org.gimp.GIMP \
 #	org.kde.kdenlive \
 #	org.kde.krita \
+#	org.mobsya.ThymioSuite \
 #	org.mypaint.MyPaint
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux
