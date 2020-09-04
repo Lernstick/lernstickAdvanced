@@ -51,7 +51,9 @@ gstreamer1.0-plugins-bad
 gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
-gstreamer1.0-vaapi
+# gstreamer1.0-vaapi crashes Xorg on a Lenovo Ideapad 3 14ARE05, see:
+# https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/1861609
+#gstreamer1.0-vaapi
 haveged
 hicolor-icon-theme
 i2c-tools
@@ -97,6 +99,7 @@ openssh-client
 openssh-server
 p7zip-full
 pciutils
+pipewire
 plymouth
 plymouth-themes
 plymouth-x11
