@@ -36,7 +36,8 @@ flatpak -y install \
 	org.kde.digikam \
 	org.kde.kdenlive \
 	org.mobsya.ThymioSuite \
-	org.mypaint.MyPaint
+	org.mypaint.MyPaint \
+	org.x.Warpinator
 #	net.minetest.Minetest \
 #	org.avidemux.Avidemux \
 #	org.gimp.GIMP \
