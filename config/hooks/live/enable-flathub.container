@@ -45,4 +45,5 @@ done
 #	org.mobsya.ThymioSuite \
 #	org.mypaint.MyPaint
 #	org.speed_dreams.SpeedDreams \
-#	org.supertuxproject.SuperTux
+#	org.supertuxproject.SuperTux \
+#	org.x.Warpinator
