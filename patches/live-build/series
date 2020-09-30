@@ -1,0 +1,5 @@
+0001-execute-binary_hooks-after-binary_grub-efi-so-that-i.patch
+0001-improved-mksquashfs.patch
+0001-chroot-hooks-for-sytemd-nspawn-containers.patch
+0002-chroot-includes.patch
+# no-compression.patch

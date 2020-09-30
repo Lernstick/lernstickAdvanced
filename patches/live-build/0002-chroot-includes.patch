@@ -1,0 +1,210 @@
+Index: live-build-20190311/scripts/build/chroot_includes
+===================================================================
+--- live-build-20190311.orig/scripts/build/chroot_includes
++++ /dev/null
+@@ -1,54 +0,0 @@
+-#!/bin/sh
+-
+-## live-build(7) - System Build Scripts
+-## Copyright (C) 2006-2015 Daniel Baumann <mail@daniel-baumann.ch>
+-##
+-## This program comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
+-## This is free software, and you are welcome to redistribute it
+-## under certain conditions; see COPYING for details.
+-
+-
+-set -e
+-
+-# Including common functions
+-[ -e "${LIVE_BUILD}/scripts/build.sh" ] && . "${LIVE_BUILD}/scripts/build.sh" || . /usr/lib/live/build.sh
+-
+-# Setting static variables
+-DESCRIPTION="$(Echo 'copy files into chroot')"
+-HELP=""
+-USAGE="${PROGRAM} [--force]"
+-
+-Arguments "${@}"
+-
+-# Reading configuration files
+-Read_conffiles config/all config/common config/bootstrap config/chroot config/binary config/source
+-Set_defaults
+-
+-Echo_message "Begin copying chroot includes..."
+-
+-# Requiring stage file
+-Require_stagefile .build/config .build/bootstrap
+-
+-# Checking stage file
+-Check_stagefile .build/includes.chroot
+-
+-# Checking lock file
+-Check_lockfile .lock
+-
+-# Creating lock file
+-Create_lockfile .lock
+-
+-if Find_files config/includes.chroot/
+-then
+-	# Copying includes
+-	cd config/includes.chroot
+-	Echo_message "Creating a tarball with files from includes.chroot..."
+-	tar cf "${OLDPWD}"/chroot/includes.chroot.tar .
+-	cd "${OLDPWD}"
+-	Echo_message "Extracting the tarball in the chroot..."
+-	Chroot chroot "tar -xvf includes.chroot.tar --no-same-owner --keep-directory-symlink --overwrite"
+-	rm chroot/includes.chroot.tar
+-
+-	# Creating stage file
+-	Create_stagefile .build/includes.chroot
+-fi
+Index: live-build-20190311/scripts/build/chroot
+===================================================================
+--- live-build-20190311.orig/scripts/build/chroot
++++ live-build-20190311/scripts/build/chroot
+@@ -54,6 +54,7 @@ lb chroot_archives chroot install ${@}
+ lb chroot_linux-image ${@}
+ lb chroot_firmware ${@}
+ lb chroot_preseed ${@}
++lb chroot_includes_before_packages ${@}
+ 
+ for _PASS in install live
+ do
+@@ -66,7 +67,7 @@ do
+ 	fi
+ done
+ 
+-lb chroot_includes ${@}
++lb chroot_includes_after_packages ${@}
+ lb chroot_hooks ${@}
+ lb chroot_hacks ${@}
+ lb chroot_interactive ${@}
+Index: live-build-20190311/scripts/build/chroot_includes_after_packages
+===================================================================
+--- /dev/null
++++ live-build-20190311/scripts/build/chroot_includes_after_packages
+@@ -0,0 +1,54 @@
++#!/bin/sh
++
++## live-build(7) - System Build Scripts
++## Copyright (C) 2006-2015 Daniel Baumann <mail@daniel-baumann.ch>
++##
++## This program comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
++## This is free software, and you are welcome to redistribute it
++## under certain conditions; see COPYING for details.
++
++
++set -e
++
++# Including common functions
++[ -e "${LIVE_BUILD}/scripts/build.sh" ] && . "${LIVE_BUILD}/scripts/build.sh" || . /usr/lib/live/build.sh
++
++# Setting static variables
++DESCRIPTION="$(Echo 'Copy files into chroot after packages have been installed')"
++HELP=""
++USAGE="${PROGRAM} [--force]"
++
++Arguments "${@}"
++
++# Reading configuration files
++Read_conffiles config/all config/common config/bootstrap config/chroot config/binary config/source
++Set_defaults
++
++Echo_message "Begin copying chroot includes after packages have been installed..."
++
++# Requiring stage file
++Require_stagefile .build/config .build/bootstrap
++
++# Checking stage file
++Check_stagefile .build/includes_after_packages.chroot
++
++# Checking lock file
++Check_lockfile .lock
++
++# Creating lock file
++Create_lockfile .lock
++
++if Find_files config/includes.chroot_after_packages/
++then
++	# Copying includes
++	cd config/includes.chroot_after_packages
++	Echo_message "Creating a tarball with files from includes.chroot..."
++	tar cf "${OLDPWD}"/chroot/includes.chroot.tar .
++	cd "${OLDPWD}"
++	Echo_message "Extracting the tarball in the chroot..."
++	Chroot chroot "tar -xvf includes.chroot.tar --no-same-owner --keep-directory-symlink --overwrite"
++	rm chroot/includes.chroot.tar
++
++	# Creating stage file
++	Create_stagefile .build/includes_after_packages.chroot
++fi
+Index: live-build-20190311/scripts/build/chroot_includes_before_packages
+===================================================================
+--- /dev/null
++++ live-build-20190311/scripts/build/chroot_includes_before_packages
+@@ -0,0 +1,54 @@
++#!/bin/sh
++
++## live-build(7) - System Build Scripts
++## Copyright (C) 2006-2015 Daniel Baumann <mail@daniel-baumann.ch>
++##
++## This program comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
++## This is free software, and you are welcome to redistribute it
++## under certain conditions; see COPYING for details.
++
++
++set -e
++
++# Including common functions
++[ -e "${LIVE_BUILD}/scripts/build.sh" ] && . "${LIVE_BUILD}/scripts/build.sh" || . /usr/lib/live/build.sh
++
++# Setting static variables
++DESCRIPTION="$(Echo 'Copy files into chroot before packages have been installed')"
++HELP=""
++USAGE="${PROGRAM} [--force]"
++
++Arguments "${@}"
++
++# Reading configuration files
++Read_conffiles config/all config/common config/bootstrap config/chroot config/binary config/source
++Set_defaults
++
++Echo_message "Begin copying chroot includes before packages have been installed..."
++
++# Requiring stage file
++Require_stagefile .build/config .build/bootstrap
++
++# Checking stage file
++Check_stagefile .build/includes_before_packages.chroot
++
++# Checking lock file
++Check_lockfile .lock
++
++# Creating lock file
++Create_lockfile .lock
++
++if Find_files config/includes.chroot_before_packages/
++then
++	# Copying includes
++	cd config/includes.chroot_before_packages
++	Echo_message "Creating a tarball with files from includes.chroot..."
++	tar cf "${OLDPWD}"/chroot/includes.chroot.tar .
++	cd "${OLDPWD}"
++	Echo_message "Extracting the tarball in the chroot..."
++	Chroot chroot "tar -xvf includes.chroot.tar --no-same-owner --keep-directory-symlink --overwrite"
++	rm chroot/includes.chroot.tar
++
++	# Creating stage file
++	Create_stagefile .build/includes_before_packages.chroot
++fi
+Index: live-build-20190311/Makefile
+===================================================================
+--- live-build-20190311.orig/Makefile
++++ live-build-20190311/Makefile
+@@ -49,6 +49,7 @@ install:
+ 	cp -a frontend/* $(DESTDIR)/usr/bin
+ 
+ 	mkdir -p $(DESTDIR)/usr/lib/live
++	chmod +x scripts/build/* # Workaround for quilt not setting executable bit
+ 	cp -a scripts/* $(DESTDIR)/usr/lib/live
+ 
+ 	# Installing documentation

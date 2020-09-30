@@ -1,0 +1,13 @@
+Index: live-build-20190311/scripts/build/binary_rootfs
+===================================================================
+--- live-build-20190311.orig/scripts/build/binary_rootfs
++++ live-build-20190311/scripts/build/binary_rootfs
+@@ -338,7 +338,7 @@ case "${LB_CHROOT_FILESYSTEM}" in
+ 			esac
+ 		fi
+ 
+-		MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -comp zstd -Xcompression-level 22"
++		MKSQUASHFS_OPTIONS="${MKSQUASHFS_OPTIONS} -comp zstd -Xcompression-level 1"
+ 
+ 		case "${LB_BUILD_WITH_CHROOT}" in
+ 			true)
