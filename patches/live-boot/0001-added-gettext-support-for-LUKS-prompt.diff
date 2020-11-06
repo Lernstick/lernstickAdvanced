@@ -1,0 +1,87 @@
+diff --git a/components/9990-misc-helpers.sh b/components/9990-misc-helpers.sh
+index 7994ecd..595c7f0 100755
+--- a/components/9990-misc-helpers.sh
++++ b/components/9990-misc-helpers.sh
+@@ -2,6 +2,10 @@
+ 
+ #set -e
+ 
++# gettext support
++. gettext.sh
++export TEXTDOMAIN=lernstick-luks-prompt
++
+ is_live_path()
+ {
+ 	DIRECTORY="${1}/${LIVE_MEDIA_PATH}"
+@@ -868,40 +872,58 @@ open_luks_device ()
+ 		_PLYMOUTH="true"
+ 	fi
+ 
++
++        vendor="$(cat /sys/block/$(basename ${dev%%[0-9]})/device/vendor | xargs)"
++        model="$(cat /sys/block/$(basename ${dev%%[0-9]})/device/model | xargs)"
++        partition="$(cat /sys/block/$(basename ${dev%%[0-9]})/$(basename ${dev})/partition)"
++
+ 	case "${_PLYMOUTH}" in
+ 		true)
+ 			plymouth --ping
+ 
+ 			cryptkeyscript="plymouth ask-for-password --prompt"
+ 			# Plymouth will add a : if it is a non-graphical prompt
+-			cryptkeyprompt="Please unlock disk ${dev}"
++			cryptkeyprompt="$(eval_gettext "Please unlock disk \$vendor \$model partition \$partition (\$dev)")"
+ 			;;
+ 
+ 		*)
+ 			cryptkeyscript="/lib/cryptsetup/askpass"
+-			cryptkeyprompt="Please unlock disk ${dev}: "
++			cryptkeyprompt="$(eval_gettext "Please unlock disk \$vendor \$model partition \$partition (\$dev): ")"
+ 			;;
+ 	esac
+ 
+ 	while true
+ 	do
++
++                case "${_PLYMOUTH}" in
++                        true)
++                                plymouth display-message --text "$(eval_gettext "The current keyboard layout is \$LAYOUT.")"
++                                ;;
++                esac
++
+ 		$cryptkeyscript "$cryptkeyprompt" | \
+ 			cryptsetup -T 1 luksOpen ${dev} ${name} ${opts}
+ 
+ 		if [ 0 -eq ${?} ]
+ 		then
++                        case "${_PLYMOUTH}" in
++                                true)
++                                        plymouth display-message --text "$(gettext "Disk successfully unlocked! Please wait ... ")"
++                                        ;;
++                        esac
++
+ 			luks_device="/dev/mapper/${name}"
+ 			echo ${luks_device}
+ 			return 0
+ 		fi
+ 
+ 		echo >&6
+-		retryprompt="There was an error decrypting ${dev} ... Retry? [Y/n]"
++		retryprompt="$(eval_gettext "There was an error decrypting \$vendor \$model partition \$partition (\$dev) ... Retry? [Y/n]")"
+ 
+ 		case "${_PLYMOUTH}" in
+ 			true)
+ 				plymouth display-message --text "${retryprompt}"
+-				answer=$(plymouth watch-keystroke --keys="YNyn")
++				answer=$(plymouth watch-keystroke --keys=$(gettext "YNyn"))
+ 				;;
+ 
+ 			*)
+@@ -910,7 +932,7 @@ open_luks_device ()
+ 				;;
+ 		esac
+ 
+-		if [ "$(echo "${answer}" | cut -b1 | tr A-Z a-z)" = "n" ]
++		if [ "$(echo "${answer}" | cut -b1 | tr A-Z a-z)" = $(gettext "n") ]
+ 		then
+ 			case "${_PLYMOUTH}" in
+ 				true)
