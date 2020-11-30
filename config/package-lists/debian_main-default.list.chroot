@@ -9,6 +9,7 @@
 ################################################################################
 
 apt-xapian-index
+chromium-l10n
 clamtk
 eog-plugins
 epoptes-client
