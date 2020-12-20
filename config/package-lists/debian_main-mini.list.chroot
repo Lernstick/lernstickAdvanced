@@ -8,10 +8,6 @@
 #
 # * gimagereader needs the tesseract-ocr-* language files
 #
-# * netbeans needs libsvn-java
-#
-# * kdenlive needs ffplay (separate package in deb-multimedia)
-#
 #################################################################################################
 
 akregator
@@ -97,7 +93,6 @@ kde-l10n-fr
 kde-l10n-it
 kde-l10n-ptbr
 kde-l10n-ru
-#kdenlive
 keepassxc
 kfind
 kipi-plugins
@@ -107,7 +102,6 @@ konq-plugins
 konqueror
 krename
 #ktimetracker
-libsvn-java
 #lilypond
 lmms
 mediathekview
@@ -212,4 +206,5 @@ xournalpp
 xsane
 youtube-dl
 zenmap
+zint-qt
 zsync
