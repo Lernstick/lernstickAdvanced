@@ -27,6 +27,10 @@ gnucash-docs
 hydrogen
 hydrogen-drumkits
 hydrogen-drumkits-effects
+inkscape
+inkscape-open-symbols
+inkscape-textext
+inkscape-tutorials
 krita
 krita-l10n
 kstars
@@ -41,6 +45,7 @@ scribus-doc
 scribus-template
 solfege
 solfege-doc
+sozi
 sweethome3d
 sweethome3d-furniture
 sweethome3d-furniture-nonfree
