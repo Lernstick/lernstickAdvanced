@@ -28,6 +28,7 @@ apt-get purge -y \
 	fonts-noto-unhinted \
 	gimp \
 	gimp-data \
+	inkscape \
 	libreoffice-base-core \
 	libreoffice-calc \
 	libreoffice-common \
