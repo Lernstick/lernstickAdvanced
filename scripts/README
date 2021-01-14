@@ -10,7 +10,7 @@ used with UEFI boot on 64bit UEFI systems.
 
 The scripts creates a signed version of GRUB in 
 config/includes.binary/efi/boot/grubx64.efi. This file should then
-be commited to the repository so that others can use it.
+be committed to the repository so that others can use it.
 
 The script requires the sbsigntool package currently not (yet) available
 in Debian. You can build it from https://github.com/imedias/sbsigntool.
