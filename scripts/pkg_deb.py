@@ -21,7 +21,7 @@ TreeNode = namedtuple('TreeNode', ('name', 'children'))
 
 
 class Error(Exception):
-    """Error ocurred."""
+    """Error occurred."""
 
 
 class DependencyTree(object):

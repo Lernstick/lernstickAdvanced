@@ -77,7 +77,7 @@
 - fix low-res icons:
 	- pathological
 
-- exam environment: automatic/interactive file sytem repair for damaged (read-only mounted) exchange paritition?
+- exam environment: automatic/interactive file system repair for damaged (read-only mounted) exchange partition?
 
 - MacBook@work:
 	- kdm timeout seems to be too small (starting with DVD)
@@ -100,7 +100,7 @@
 	- lernstick-kmix
 	- lernstick-plymouth
 
-- blender: activate add-on “Add Mesh Extra Objets”
+- blender: activate add-on “Add Mesh Extra Objects”
 
 - backports:
 	- backporting failed:
