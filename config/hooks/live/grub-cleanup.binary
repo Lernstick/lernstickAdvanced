@@ -18,3 +18,6 @@ cp EFI/boot/grubx64.efi EFI/boot/grubx64.efi.new
 # default to old version
 cp EFI/boot/bootx64.efi.old EFI/boot/bootx64.efi
 cp EFI/boot/grubx64.efi.old EFI/boot/grubx64.efi
+
+# use our customized efi.img with the old shim (used for hybrid ISOs)
+mv boot/grub/efi.img.lernstick boot/grub/efi.img

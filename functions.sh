@@ -19,8 +19,8 @@ configure_cd()
 {
 	ISO_SUFFIX="_bootcd"
 	SYSTEM_SUFFIX=" Boot-CD"
-#	mv config/chroot_local-packageslists/lernstick_squeeze.list config/chroot_local-packageslists/lernstick_squeeze
-#	mv config/chroot_local-packageslists/bootcd config/chroot_local-packageslists/bootcd.list
+	# mv config/chroot_local-packageslists/lernstick_squeeze.list config/chroot_local-packageslists/lernstick_squeeze
+	# mv config/chroot_local-packageslists/bootcd config/chroot_local-packageslists/bootcd.list
 }
 
 configure()
@@ -89,28 +89,30 @@ build_image()
 	rm -f config/source
 	lb clean
 	lb config \
-                --apt-indices false \
-                --apt-recommends true \
-                --architectures amd64 \
-                --archive-areas "main contrib non-free" \
-                --binary-images iso \
+		--apt-indices false \
+		--apt-recommends true \
+		--architectures amd64 \
+		--archive-areas "main contrib non-free" \
 		--bootloaders "syslinux,grub-efi" \
 		--debootstrap-options "--include=ca-certificates,openssl" \
-                --distribution buster \
+		--distribution buster \
 		--firmware-chroot false \
-                --iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-5.9.0-0.bpo.2 \
-                --mirror-binary ${MIRROR_SYSTEM} \
-                --mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
-                --mirror-bootstrap ${MIRROR_BUILD} \
-                --source ${SOURCE} \
-                --verbose
-#		--linux-flavours "amd64-unsigned" \
+		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
+		--linux-packages linux-image-5.9.0-0.bpo.5 \
+		--mirror-binary ${MIRROR_SYSTEM} \
+		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
+		--mirror-bootstrap ${MIRROR_BUILD} \
+		--source ${SOURCE} \
+		--verbose
+		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
+		# https://lists.debian.org/debian-live/2011/08/msg00144.html
+		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"
+		# --binary-images iso \
 
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
 
-	ISO_FILE="live-image-amd64.iso"
+	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
 		PREFIX="lernstick_pruefungsumgebung_debian10${ISO_SUFFIX}_${TODAY}"
@@ -161,4 +163,3 @@ build_image()
 	# hello, wake up!!! :-)
 	#eject
 }
-
