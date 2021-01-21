@@ -24,7 +24,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "installing flatpak nvidia drivers..."
 # install one package after the other so that an installation failure in one
 # package doesn't stop the installation of subsequent packages
-for i in "340-108" "390-141" "450-80-02"
+for i in "340-108" "390-141" "460-32-03"
 do
 	flatpak -y install org.freedesktop.Platform.GL.nvidia-$i
 done
