@@ -35,12 +35,12 @@ flatpak -y install \
 	com.github.tchx84.Flatseal \
 	org.kde.digikam \
 	org.kde.kdenlive \
+	org.kde.krita \
 	org.mobsya.ThymioSuite \
 	org.mypaint.MyPaint \
 	org.x.Warpinator
 #	net.minetest.Minetest \
 #	org.avidemux.Avidemux \
 #	org.gimp.GIMP \
-#	org.kde.krita \
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux
