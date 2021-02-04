@@ -15,13 +15,13 @@ echo "package,autoremove size,removed packages" > checksize.csv
 declare -A SIZE_CACHE
 
 PACKAGES="$(dpkg -l | grep ^ii | awk '{ print $2 }')"
-PACKAGE_COUNT="$(echo ${PACKAGES} | wc -w)"
+PACKAGE_COUNT="$(echo "${PACKAGES}" | wc -w)"
 COUNTER=1
 
 for i in ${PACKAGES}
 do
 	echo "$i (${COUNTER}/${PACKAGE_COUNT}): "
-        PRIORITY="$(apt-cache show --no-all-versions $i | grep ^Priority | awk '{ print $2 }')"
+        PRIORITY="$(apt-cache show --no-all-versions "$i" | grep ^Priority | awk '{ print $2 }')"
         echo "   priority: ${PRIORITY}"
         if [ "${PRIORITY}" = "required" ] || [ "${PRIORITY}" = "important" ]
         then
@@ -29,7 +29,7 @@ do
                 continue
         fi
 	AUTOREMOVE_SIZE=0
-	AUTOREMOVE_PACKAGES="$(apt-get -s autoremove $i | grep ^Remv | awk '{ print $2 }' | sort)"
+	AUTOREMOVE_PACKAGES="$(apt-get -s autoremove "$i" | grep ^Remv | awk '{ print $2 }' | sort)"
 	for j in ${AUTOREMOVE_PACKAGES}
 	do
 		if [ ${SIZE_CACHE[$j]+_} ]
@@ -37,11 +37,15 @@ do
 			SIZE=${SIZE_CACHE[$j]}
 			echo "   size of $j: ${SIZE} (cached)"
 		else
-			SIZE=$(apt-cache show --no-all-versions $j | grep ^Size | awk '{ print $2 }')
+			SIZE=$(apt-cache show --no-all-versions "$j" | grep ^Size | awk '{ print $2 }')
 			SIZE_CACHE[$j]=${SIZE}
 			echo "   size of $j: ${SIZE}"
+			if [ -z "${SIZE}" ]
+			then
+				SIZE=0
+			fi
 		fi
-		AUTOREMOVE_SIZE=$((${AUTOREMOVE_SIZE} + ${SIZE}))
+		AUTOREMOVE_SIZE=$((AUTOREMOVE_SIZE + SIZE))
 	done
 	echo "   ===> autoremove size of $i: ${AUTOREMOVE_SIZE}"
 	#echo "   ---> cache size: ${#SIZE_CACHE[@]}"
@@ -51,7 +55,7 @@ do
 		echo -n "$j " >> checksize.csv
 	done
 	echo "" >> checksize.csv
-	COUNTER=$((${COUNTER} + 1))
+	COUNTER=$((COUNTER + 1))
 done
 
 echo "Start: ${START}"
