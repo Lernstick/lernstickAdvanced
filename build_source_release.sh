@@ -1,5 +1,11 @@
 #/bin/sh
 
+if dialog --yesno "Shutdown system after building is complete?" 0 0
+then
+	SHUTDOWN_AFTER_BUILDING="true"
+fi
+clear
+
 # build mini and standard versions
 git checkout debian10
 ./build_tmpfs.sh
@@ -14,4 +20,9 @@ git checkout exam-debian10
 
 # cleanup
 git checkout debian10
-shutdown -h +5
+
+# final shutdown?
+if [ -n "$SHUTDOWN_AFTER_BUILDING" ]
+then
+	shutdown -h +5
+fi
