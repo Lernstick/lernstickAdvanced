@@ -37,6 +37,7 @@ flatpak -y install \
 	org.kde.kdenlive \
 	org.kde.krita \
 	org.mobsya.ThymioSuite \
+	org.musescore.MuseScore \
 	org.mypaint.MyPaint \
 	org.x.Warpinator
 #	net.minetest.Minetest \
