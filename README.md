@@ -2,6 +2,7 @@
 buildscripts for school centric Debian Live distributions
 
 packages needed on a Debian system to run this script:
-* live-build
+* dialog
 * gfxboot
+* live-build
 * zsync
