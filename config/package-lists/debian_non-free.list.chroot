@@ -23,6 +23,7 @@ firmware-netxen
 firmware-qlogic
 firmware-realtek
 firmware-siano
+firmware-sof-signed
 firmware-ti-connectivity
 firmware-zd1211
 intel-microcode
