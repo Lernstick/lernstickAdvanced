@@ -118,6 +118,7 @@ unzip
 usb-modeswitch
 usbutils
 user-setup
+v4l2loopback-dkms
 vainfo
 vdpauinfo
 vorbis-tools
