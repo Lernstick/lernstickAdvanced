@@ -119,6 +119,7 @@ usb-modeswitch
 usbutils
 user-setup
 v4l2loopback-dkms
+v4l2loopback-utils
 vainfo
 vdpauinfo
 vorbis-tools
