@@ -14,7 +14,7 @@ lernstick-file-roller
 lernstick-firefox-esr
 lernstick-font-manager
 lernstick-font-viewer
-lernstick-fslint
+#lernstick-fslint
 lernstick-gdebi
 lernstick-gnome-system-monitor
 lernstick-install-upgrades

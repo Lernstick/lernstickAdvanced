@@ -19,7 +19,7 @@ kde-config-gtk-style-preview
 kde-config-systemd
 kdegraphics-thumbnailers
 kdenetwork-filesharing
-kde-style-qtcurve
+kde-style-qtcurve-qt5
 kdf
 kdialog
 kfourinline
@@ -47,8 +47,8 @@ kwalletmanager
 kwin-x11
 partitionmanager
 pentobi-kde-thumbnailer
-phonon-backend-gstreamer
-phonon-backend-vlc
+phonon4qt5-backend-gstreamer
+phonon4qt5-backend-vlc
 plasma-desktop
 plasma-nm
 plasma-wallpapers-addons

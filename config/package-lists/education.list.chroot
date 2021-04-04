@@ -1,8 +1,7 @@
 # This is a list of educational packages, available in Debian itself.
 
 avogadro
-avogadro-data
-bkchem
+#bkchem
 blinken
 chemtool
 #childsplay

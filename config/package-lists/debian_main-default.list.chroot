@@ -24,8 +24,8 @@ firefox-esr-l10n-it
 firefox-esr-l10n-pt-br
 firefox-esr-l10n-ru
 firefox-esr-l10n-sq
-fslint
-gconf-editor
+#fslint
+#gconf-editor
 gdebi
 gnome-nettool
 gnome-system-monitor

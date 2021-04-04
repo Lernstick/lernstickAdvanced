@@ -39,9 +39,9 @@ dia-rib-network
 dia-shapes
 dmz-cursor-theme
 dolphin
-dolphin-owncloud
+dolphin-nextcloud
 epoptes
-ffplay
+#ffplay
 flac
 focuswriter
 freeplane
@@ -58,7 +58,7 @@ gparted
 gramps
 graphviz
 gstreamer1.0-packagekit
-gwakeonlan
+#gwakeonlan
 handbrake-gtk
 hddtemp
 heif-thumbnailer
@@ -83,13 +83,6 @@ hyphen-ru
 jackd2
 jmtpfs
 kaffeine
-kde-l10n-de
-kde-l10n-es
-kde-l10n-fa
-kde-l10n-fr
-kde-l10n-it
-kde-l10n-ptbr
-kde-l10n-ru
 keepassxc
 kfind
 kipi-plugins
@@ -126,7 +119,7 @@ obs-studio
 octave
 okular
 okular-extra-backends
-owncloud-client
+nextcloud-desktop
 pavucontrol
 photocollage
 photofilmstrip
@@ -170,7 +163,7 @@ spice-webdavd
 subversion
 swh-plugins
 synfigstudio
-telepathy-gabble
+#telepathy-gabble
 telepathy-haze
 telepathy-idle
 telepathy-rakia
@@ -202,6 +195,6 @@ xournal
 xournalpp
 xsane
 youtube-dl
-zenmap
+#zenmap
 zint-qt
 zsync

@@ -14,8 +14,8 @@ xfce4-cpugraph-plugin
 xfce4-datetime-plugin
 xfce4-indicator-plugin
 xfce4-mailwatch-plugin
-xfce4-notes
-xfce4-notes-plugin
+#xfce4-notes
+#xfce4-notes-plugin
 xfce4-notifyd
 xfce4-places-plugin
 xfce4-power-manager
