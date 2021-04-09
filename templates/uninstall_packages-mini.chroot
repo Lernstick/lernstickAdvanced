@@ -9,8 +9,6 @@
 # - cinnamon-desktop-environment recommends gimp, libreoffice and the noto fonts
 # - vmpk recommends qsynth, qsynth recommends fluid-soundfont-gm
 #   but fluid-soundfont-gm is much too large for the mini version
-# - the texlive packages got pulled in by recommends but are not needed in the
-#   mini version as we don't install denemo there
 
 apt-get purge -y \
 	fluid-soundfont-gm \
@@ -48,8 +46,6 @@ apt-get purge -y \
 	libreoffice-style-tango \
 	libreoffice-writer \
 	python3-uno \
-	texlive-base \
-	texlive-binaries \
 	timidity
 
 # clean up

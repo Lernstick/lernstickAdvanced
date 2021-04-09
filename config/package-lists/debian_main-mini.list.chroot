@@ -188,7 +188,7 @@ totem-plugins
 vim-gtk
 vinagre
 vmpk
-vym
+#vym
 wireshark
 wxhexeditor
 xournal
