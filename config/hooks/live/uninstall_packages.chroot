@@ -17,11 +17,10 @@ apt-get purge -y \
 	hexchat \
 	libgl1-mesa-glx \
 	minidlna \
-	owncloud-client-doc \
+	nextcloud-desktop-doc \
 	plasma-discover \
 	plasma-discover-common \
-	system-tools-backends \
-	xvnc4viewer
+	system-tools-backends
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
