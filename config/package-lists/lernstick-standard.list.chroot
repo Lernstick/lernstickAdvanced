@@ -1,12 +1,12 @@
 bluej
-element-desktop
+#element-desktop
 #gdevelop
 lernstick-bluej
 lernstick-colobot
 lernstick-flatpak-musescore
 lernstick-geogebra
 lernstick-geogebra-classic
-lernstick-gimp-draw-arrow-plugin
+#lernstick-gimp-draw-arrow-plugin
 lernstick-greenfoot
 lernstick-kstars
 #lernstick-minetest-game-carbone-ng
@@ -46,6 +46,6 @@ minetest-mod-unifieddyes
 minetest-mod-unified-inventory
 minetest-mod-worldedit
 #minetest-mod-xdecor
-omnitux
+#omnitux
 #tigerjython
 wine-gecko

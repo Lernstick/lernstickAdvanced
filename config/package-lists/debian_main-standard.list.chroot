@@ -20,7 +20,7 @@ gimp-help-fr
 gimp-help-it
 gimp-help-ru
 gimp-plugin-registry
-gimp-python
+#gimp-python
 gimp-texturize
 gnucash
 gnucash-docs
@@ -42,7 +42,7 @@ scribus-doc
 scribus-template
 solfege
 solfege-doc
-sozi
+#sozi
 sweethome3d
 sweethome3d-furniture
 sweethome3d-furniture-nonfree
