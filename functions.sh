@@ -95,6 +95,8 @@ build_image()
 		--architectures amd64 \
 		--archive-areas "main contrib non-free" \
 		--bootloaders "syslinux,grub-efi" \
+		--chroot-squashfs-compression-level 22 \
+		--chroot-squashfs-compression-type zstd \
 		--debootstrap-options "--include=ca-certificates,openssl" \
 		--distribution bullseye \
 		--firmware-chroot false \
