@@ -17,7 +17,7 @@ lernstick-arduino
 lernstick-avidemux-qt
 lernstick-brasero
 lernstick-calibre
-lernstick-darktable
+#lernstick-darktable
 lernstick-dconf-editor
 #lernstick-denemo
 lernstick-devede
@@ -39,7 +39,6 @@ lernstick-info
 lernstick-konqueror
 #lernstick-ktimetracker
 lernstick-kturtle
-lernstick-lmms
 lernstick-mein-klett
 lernstick-menu-xdg
 lernstick-mille-feuilles
