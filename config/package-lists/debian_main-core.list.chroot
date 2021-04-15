@@ -19,6 +19,7 @@ cifs-utils
 console-setup
 cryptsetup-initramfs
 cryptsetup-run
+davfs2
 #ecryptfs-utils
 efitools
 efivar
