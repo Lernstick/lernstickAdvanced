@@ -24,8 +24,7 @@ davfs2
 efitools
 efivar
 eject
-exfat-fuse
-exfat-utils
+exfatprogs
 fbset
 firmware-ath9k-htc
 firmware-linux-free
