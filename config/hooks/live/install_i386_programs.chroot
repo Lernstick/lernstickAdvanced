@@ -21,7 +21,6 @@ apt-get install -y \
 	libnss-mdns:i386 \
 	libnvidia-eglcore:i386 \
 	libnvidia-egl-wayland1:i386 \
-	libnvidia-fatbinaryloader:i386 \
 	libnvidia-legacy-340xx-cfg1:i386 \
 	libnvidia-legacy-340xx-ml1:i386 \
 	libnvidia-ml1:i386 \
