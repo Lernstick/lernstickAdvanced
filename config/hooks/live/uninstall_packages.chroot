@@ -6,16 +6,11 @@
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
-	apt-transport-https \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
 	gimp-data \
 	gnome-contacts \
-	gnome-robots \
-	gnome-system-tools \
-	gucharmap \
-	hexchat \
 	hunspell-de-de \
 	hunspell-en-us \
 	hunspell-es \
@@ -25,19 +20,13 @@ apt-get purge -y \
 	hunspell-pt-br \
 	hunspell-ru \
 	libgimp2.0 \
-	libgl1-mesa-glx \
-	minidlna \
 	myspell-fa \
-	nextcloud-desktop-doc \
-	plasma-discover \
-	plasma-discover-common \
 	sane-utils \
-	system-tools-backends \
+	termit \
 	totem \
 	totem-plugins \
 	xsane \
-	xsane-common \
-	xvnc4viewer
+	xsane-common
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
