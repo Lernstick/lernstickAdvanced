@@ -88,7 +88,6 @@ build_image()
 	rm -f config/common
 	rm -f config/source
 	lb clean
-	# keep --security false and --updates false only as long as bullseye is not yet released!
 	lb config \
 		--apt-indices false \
 		--apt-recommends true \
@@ -104,9 +103,9 @@ build_image()
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
-		--security false \
+		--security true \
 		--source ${SOURCE} \
-		--updates false \
+		--updates true \
 		--verbose
 		#--linux-packages linux-image-5.10.0-0.bpo.4 \
 		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
