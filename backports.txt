@@ -1,19 +1,16 @@
-# stretch (64 Bit)
-sudo pbuilder --login --basetgz /var/cache/pbuilder/base-stretch-bpo.tar.gz --bindmounts /home/lernstick_debian9/lernstick/backports/stretch
-
-# stretch (32 Bit)
-sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-stretch32-bpo.tar.gz --bindmounts /home/lernstick_debian9/lernstick/backports/stretch
-
 # buster (64 Bit)
 sudo pbuilder --login --basetgz /var/cache/pbuilder/base-buster-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
 
 # buster (32 Bit)
 sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-buster32-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
 
-# stretch
-apt update; apt --yes upgrade; apt --yes --allow-unauthenticated install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
-
 # buster
+apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
+
+# bullseye (64 Bit)
+sudo pbuilder --login --basetgz /var/cache/pbuilder/base-bullseye-bpo.tar.gz --bindmounts /home/debian11/lernstick/backports/bullseye
+
+# bullseye
 apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
 dpkg-buildpackage -sa

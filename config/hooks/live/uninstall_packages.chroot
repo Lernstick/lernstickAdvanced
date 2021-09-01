@@ -12,6 +12,10 @@ apt-get purge -y \
 	exim4-daemon-light \
 	gimp-data \
 	gnome-contacts \
+	gnome-robots \
+	gnome-system-tools \
+	gucharmap \
+	hexchat \
 	hunspell-de-de \
 	hunspell-en-us \
 	hunspell-es \
@@ -21,8 +25,14 @@ apt-get purge -y \
 	hunspell-pt-br \
 	hunspell-ru \
 	libgimp2.0 \
+	libgl1-mesa-glx \
+	minidlna \
 	myspell-fa \
+	nextcloud-desktop-doc \
+	plasma-discover \
+	plasma-discover-common \
 	sane-utils \
+	system-tools-backends \
 	totem \
 	totem-plugins \
 	xsane \

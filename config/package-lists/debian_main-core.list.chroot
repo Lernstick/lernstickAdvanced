@@ -24,8 +24,7 @@ davfs2
 efitools
 efivar
 eject
-exfat-fuse
-exfat-utils
+exfatprogs
 fbset
 firmware-ath9k-htc
 firmware-linux-free
@@ -45,7 +44,6 @@ gedit-plugins
 gedit-plugin-text-size
 gnome-clocks
 gstreamer1.0-alsa
-gstreamer1.0-crystalhd
 gstreamer1.0-libav
 gstreamer1.0-plugins-bad
 gstreamer1.0-plugins-base
@@ -140,12 +138,10 @@ xserver-xorg-input-kbd
 xserver-xorg-input-mouse
 xserver-xorg-input-mutouch
 #xserver-xorg-input-synaptics
-xserver-xorg-input-void
 xserver-xorg-input-wacom
 xserver-xorg-input-xwiimote
 xserver-xorg-video-all
 xserver-xorg-video-amdgpu
-xserver-xorg-video-ast
 xserver-xorg-video-cirrus
 xserver-xorg-video-dummy
 xserver-xorg-video-glide

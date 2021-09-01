@@ -6,12 +6,10 @@ then
 fi
 clear
 
-# build mini and standard versions
+# build edu version
 git checkout debian10
 ./build_tmpfs.sh
-./build_mini_iso.sh
-./build_tmpfs.sh
-./build_standard_iso.sh
+./build_iso.sh
 
 # build exam version
 git checkout exam-debian10

@@ -2,5 +2,5 @@
 
 cd live || exit 1
 
-mv vmlinuz-* vmlinuz || true
-mv initrd.img-* initrd.img || true
+rm -f vmlinuz-* || true
+rm -f initrd.img-* || true

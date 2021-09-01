@@ -38,4 +38,5 @@ pin_package $(dpkg -l "linux-compiler-gcc-*" | grep ^ii | awk '{print $2}')
 pin_package $(dpkg -l "linux-kbuild*" | grep ^ii | awk '{print $2}')
 
 pin_package linux-headers-amd64
+pin_package linux-image-amd64
 pin_package linux-libc-dev

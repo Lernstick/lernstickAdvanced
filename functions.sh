@@ -77,7 +77,7 @@ build_image()
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 10 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 11 (Version ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
@@ -88,22 +88,27 @@ build_image()
 	rm -f config/common
 	rm -f config/source
 	lb clean
+	# keep --security false and --updates false only as long as bullseye is not yet released!
 	lb config \
 		--apt-indices false \
 		--apt-recommends true \
 		--architectures amd64 \
 		--archive-areas "main contrib non-free" \
 		--bootloaders "syslinux,grub-efi" \
+		--chroot-squashfs-compression-level 22 \
+		--chroot-squashfs-compression-type zstd \
 		--debootstrap-options "--include=ca-certificates,openssl" \
-		--distribution buster \
+		--distribution bullseye \
 		--firmware-chroot false \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-5.10.0-0.bpo.8 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
+		--security false \
 		--source ${SOURCE} \
+		--updates false \
 		--verbose
+		#--linux-packages linux-image-5.10.0-0.bpo.4 \
 		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
 		# https://lists.debian.org/debian-live/2011/08/msg00144.html
 		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"
@@ -115,7 +120,7 @@ build_image()
 	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_pruefungsumgebung_debian10${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_pruefungsumgebung_debian11${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file
