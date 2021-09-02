@@ -20,6 +20,7 @@ apt-get purge -y \
 	hunspell-pt-br \
 	hunspell-ru \
 	libgimp2.0 \
+	malcontent-gui \
 	myspell-fa \
 	sane-utils \
 	termit \
