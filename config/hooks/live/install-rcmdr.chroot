@@ -23,7 +23,7 @@ FILENAME="install"
 INSTALL_SCRIPT="/tmp/${FILENAME}.R"
 cat <<EOF > ${INSTALL_SCRIPT}
 options(repos = c(CRAN = "http://cran.rstudio.com"))
-install.packages(c("aplpack", "boot", "glmnet", "knitr", "leaps", "lmtest", "markdown", "multcomp", "nortest", "randomForest", "read", "rgl", "rmarkdown", "sem", "tidyverse", "tree"))
+install.packages(c("aplpack", "boot", "elections", "evtree", "frontier", "glmnet", "knitr", "leaps", "lmtest", "markdown", "multcomp", "nortest", "randomForest", "read", "rgl", "rmarkdown", "sem", "tidyverse", "titanic", "tree"))
 EOF
 R CMD BATCH ${INSTALL_SCRIPT}
 
