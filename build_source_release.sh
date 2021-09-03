@@ -7,17 +7,17 @@ fi
 clear
 
 # build edu version
-git checkout debian10
+git checkout debian11
 ./build_tmpfs.sh
 ./build_source.sh
 
 # build exam version
-git checkout exam-debian10
+git checkout exam-debian11
 ./build_tmpfs.sh
 ./build_source.sh
 
 # cleanup
-git checkout debian10
+git checkout debian11
 
 # final shutdown?
 if [ -n "$SHUTDOWN_AFTER_BUILDING" ]
