@@ -32,7 +32,9 @@ done
 echo "installing flatpak applications..."
 flatpak -y install \
 	ch.openboard.OpenBoard \
+	com.github.geigi.cozy \
 	com.github.tchx84.Flatseal \
+	net.sf.nootka \
 	org.kde.digikam \
 	org.kde.kdenlive \
 	org.kde.krita \
