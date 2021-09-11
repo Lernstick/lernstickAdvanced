@@ -37,7 +37,9 @@ flatpak -y install \
 	com.github.tchx84.Flatseal \
 	org.musescore.MuseScore
 #	ch.openboard.OpenBoard \
+#	com.github.geigi.cozy \
 #	net.minetest.Minetest \
+#	net.sf.nootka \
 #	org.avidemux.Avidemux \
 #	org.gimp.GIMP \
 #	org.kde.digikam \

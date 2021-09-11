@@ -20,6 +20,7 @@ console-setup
 cryptsetup-initramfs
 cryptsetup-run
 davfs2
+dfrs
 #ecryptfs-utils
 efitools
 efivar
