@@ -100,6 +100,7 @@ build_image()
 		--distribution bullseye \
 		--firmware-chroot false \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
+		--linux-packages linux-image-5.14.0-0.bpo.2 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
@@ -107,7 +108,6 @@ build_image()
 		--source ${SOURCE} \
 		--updates true \
 		--verbose
-		#--linux-packages linux-image-5.10.0-0.bpo.4 \
 		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
 		# https://lists.debian.org/debian-live/2011/08/msg00144.html
 		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"
