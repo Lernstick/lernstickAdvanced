@@ -1,112 +1,33 @@
-patching in missing aufs parts:
--------------------------------
-- revert debian patches (most of the time not up-to-date and sometimes even incompatible with current upstream)
-	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-standalone.patch
-	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-mmap.patch
-	patch -R -p1 < debian/patches/features/all/aufs4/aufs4-base.patch
-- apply upstream patches
-	export AUFS_DIR=/home/ronny/Programme/aufs4-standalone/
-	patch -p1 < ${AUFS_DIR}/aufs4-base.patch
-	patch -p1 < ${AUFS_DIR}/aufs4-mmap.patch
-	patch -p1 < ${AUFS_DIR}/aufs4-standalone.patch
-	patch -p1 < ${AUFS_DIR}/aufs4-kbuild.patch
-- copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your  kernel source tree
-- add to debian/config/config to build module
-##
-## file: fs/aufs/Kconfig
-##
-CONFIG_AUFS_FS=m
-## choice: Maximum number of branches
-CONFIG_AUFS_BRANCH_MAX_127=y
-# CONFIG_AUFS_BRANCH_MAX_511 is not set
-# CONFIG_AUFS_BRANCH_MAX_1023 is not set
-# CONFIG_AUFS_BRANCH_MAX_32767 is not set
-## end choice
-# CONFIG_AUFS_HNOTIFY is not set
-CONFIG_AUFS_EXPORT=y
-# CONFIG_AUFS_FHSM is not set
-# CONFIG_AUFS_RDU is not set
-# CONFIG_AUFS_SHWH is not set
-# CONFIG_AUFS_BR_RAMFS is not set
-# CONFIG_AUFS_BR_FUSE is not set
-CONFIG_AUFS_BR_HFSPLUS=y
-# CONFIG_AUFS_DEBUG is not set
-
-
-building the new kernel:
-------------------------
-- apply own patches
-	- copy existing quilt patches to debian/patches
-	- patch -p1 < debian/patches/<name of quilt file>
-- change debian/config/defines e.g.:
-	- abiname: 1+lernstick.1
-- build with gcc-4.9, carefully replace gcc-5 references:
-	sed -i 's/gcc-5/gcc-4.9/g' \
-		debian/config/amd64/defines \
-		debian/config/defines \
-		debian/config/i386/defines \
-		debian/control \
-		debian/rules.gen \
-		debian/templates/control.extra.in
-- build all packages (in pbuilder chroot, see backports.txt):
-	make -f debian/rules clean
-	apt-get install vim
-	dch --local +lernstick.
-		(use "lernstick-8-backports-staging" as distribution)
-	make -f debian/rules clean
-
-	# new: all-in-one build?
-	fakeroot make -j$(nproc) -f debian/rules binary
-
-	# see https://lists.debian.org/debian-kernel/2016/09/msg00025.html
-	dpkg-buildpackage -d -b -us -uc -T binary-arch
-
-	fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae
-	fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep
-	fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686
-	fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep
-- build common headers:
-	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_real
-- build linux-compiler package:
-	- fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_extra
-- build libc-dev package:
-	- fakeroot make -j$(nproc) -f debian/rules.gen binary-libc-dev_i386
-
-all in one line (for easy copy&pasting):
-fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686-pae; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686-pae binary-indep; fakeroot make -j$(nproc) -f debian/rules.gen setup_i386_none_686; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_686 binary-indep DEBIAN_KERNEL_JOBS=8; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_none_real; fakeroot make -j$(nproc) -f debian/rules.gen binary-arch_i386_extra; fakeroot make -j$(nproc) -f debian/rules.gen binary-libc-dev_i386
-
-- until we find out how to build the linux-kbuild package ourself we add the version from the official debian backports into our repo
-
 building test image with new kernel:
 ------------------------------------
 
 mkdir config/apt
 vi config/apt/preferences
 
-Package: linux-compiler-gcc-8-x86
-Pin: release n=lernstick-10-backports-staging
+Package: linux-compiler-gcc-10-x86
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-5.5.0-0.bpo.2-amd64
-Pin: release n=lernstick-10-backports-staging
+Package: linux-headers-5.14.0-0.bpo.2-amd64
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999
 
-Package: linux-headers-5.5.0-0.bpo.2-common
-Pin: release n=lernstick-10-backports-staging
+Package: linux-headers-5.14.0-0.bpo.2-common
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999
 
 Package: linux-headers-amd64
-Pin: release n=lernstick-10-backports-staging
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999
 
-Package: linux-image-5.5.0-0.bpo.2-amd64
-Pin: release n=lernstick-10-backports-staging
+Package: linux-image-5.14.0-0.bpo.2-amd64
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999
 
-Package: linux-kbuild-5.5
-Pin: release n=lernstick-10-backports-staging
+Package: linux-kbuild-5.14
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999
 
 Package: linux-libc-dev
-Pin: release n=lernstick-10-backports-staging
+Pin: release n=lernstick-11-backports-staging
 Pin-Priority: 999

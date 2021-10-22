@@ -7,11 +7,16 @@ sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-bus
 # buster
 apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
+
 # bullseye (64 Bit)
 sudo pbuilder --login --basetgz /var/cache/pbuilder/base-bullseye-bpo.tar.gz --bindmounts /home/debian11/lernstick/backports/bullseye
 
+# bullseye (32 Bit)
+sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-bullseye32-bpo.tar.gz --bindmounts /home/debian11/lernstick/backports/bullseye
+
 # bullseye
 apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
+
 
 dpkg-buildpackage -sa
 
