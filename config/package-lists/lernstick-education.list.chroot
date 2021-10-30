@@ -1,10 +1,10 @@
 # This is a list of educational packages, *NOT* available in Debian itself.
 
-filius
 lernstick-avogadro
 #lernstick-bkchem
 lernstick-bodenlift
 #lernstick-childsplay
+lernstick-filius
 lernstick-jamendo
 lernstick-jfractionlab
 lernstick-kalgebra
