@@ -134,7 +134,7 @@ xserver-xorg-input-aiptek
 xserver-xorg-input-all
 xserver-xorg-input-elographics
 xserver-xorg-input-evdev
-xserver-xorg-input-joystick
+#xserver-xorg-input-joystick (DON'T install, it breaks gamepads!)
 xserver-xorg-input-kbd
 xserver-xorg-input-mouse
 xserver-xorg-input-mutouch
