@@ -20,6 +20,9 @@ apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder su
 
 dpkg-buildpackage -sa
 
+# if the package build takes too long or fails because of checks:
+DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -sa
+
 # Bei multiarch-Paketen (z.B. wine) muss das Paket sowohl in der 32-Bit als auch in der 64-Bit Version gebaut werden.
 # Bei der ersten Version vollständig bauen und mit dput hochladen.
 # Bei der zweiten Version nur noch das Binärpaket bauen:
