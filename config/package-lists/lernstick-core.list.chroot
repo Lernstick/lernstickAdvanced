@@ -26,4 +26,5 @@ lernstick-virtualbox-guest-utils
 lernstick-x11vnc
 lernstick-xterm
 macbook12-spi-driver-dkms
+rtl88x2bu-dkms
 vanished-root-handler
