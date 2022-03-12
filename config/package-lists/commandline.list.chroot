@@ -9,7 +9,7 @@ aptitude
 apt-rdepends
 bash-completion
 bind9-host
-bpytop
+btop
 command-not-found
 deborphan
 debtree
