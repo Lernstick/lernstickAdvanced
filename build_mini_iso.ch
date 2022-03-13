@@ -2,7 +2,7 @@
 
 set -e
 
-ISO_SUFFIX=""
+ISO_SUFFIX="_mini"
 SOURCE="false"
 
 . ./functions.sh
@@ -27,6 +27,10 @@ then
 	echo "Please check the BUILD_DIR definition in your constants file."
 	exit 0
 fi
+
+# don't enable flatpak support
+rm config/hooks/live/enable-flathub.container
+rm config/package-lists/lernstick-flatpak.list.chroot
 
 init_build
 configure
