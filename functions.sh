@@ -100,7 +100,7 @@ build_image()
 		--distribution bullseye \
 		--firmware-chroot false \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-5.16.0-0.bpo.3 \
+		--linux-packages linux-image-5.16.0-0.bpo.4 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
