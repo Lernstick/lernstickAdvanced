@@ -9,6 +9,8 @@ clear
 # build edu version
 git checkout debian11
 ./build_tmpfs.sh
+./build_mini_iso.sh
+./build_tmpfs.sh
 ./build_source.sh
 
 # build exam version
