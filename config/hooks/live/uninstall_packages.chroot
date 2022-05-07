@@ -22,6 +22,7 @@ apt-get purge -y \
 	libgimp2.0 \
 	malcontent-gui \
 	myspell-fa \
+	myspell-sq \
 	sane-utils \
 	termit \
 	totem \
