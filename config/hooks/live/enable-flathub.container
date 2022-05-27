@@ -38,6 +38,7 @@ flatpak -y install \
 	org.musescore.MuseScore
 #	ch.openboard.OpenBoard \
 #	com.github.geigi.cozy \
+#	com.ultimaker.cura \
 #	net.minetest.Minetest \
 #	net.sf.nootka \
 #	org.avidemux.Avidemux \
@@ -46,7 +47,7 @@ flatpak -y install \
 #	org.kde.kdenlive \
 #	org.kde.krita \
 #	org.mobsya.ThymioSuite \
-#	org.mypaint.MyPaint
+#	org.mypaint.MyPaint \
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux \
 #	org.x.Warpinator
