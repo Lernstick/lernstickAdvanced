@@ -15,7 +15,7 @@ lernstick-minetest-game-tutorial
 lernstick-playonlinux
 lernstick-stellarium
 lernstick-tuxpaint
-lernstick-virtualbox
+#lernstick-virtualbox
 lernstick-wine
 lernstick-winetricks
 libreoffice-kf5

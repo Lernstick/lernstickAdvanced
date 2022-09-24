@@ -1,7 +1,7 @@
 amd64-microcode
 atmel-firmware
 bluez-firmware
-broadcom-sta-dkms
+#broadcom-sta-dkms
 firmware-amd-graphics
 firmware-atheros
 firmware-bnx2

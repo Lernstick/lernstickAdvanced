@@ -1,0 +1,27 @@
+Package: linux-compiler-gcc-10-x86
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-5.18.0-0.bpo11.4-amd64
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-5.18.0-0.bpo11.4-common
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
+
+Package: linux-headers-amd64
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
+
+Package: linux-image-5.18.0-0.bpo11.4-amd64
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
+
+Package: linux-kbuild-5.18
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
+
+Package: linux-libc-dev
+Pin: release n=lernstick-11-backports-staging
+Pin-Priority: 999
