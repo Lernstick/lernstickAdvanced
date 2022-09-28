@@ -40,6 +40,7 @@ dia-shapes
 dmz-cursor-theme
 dolphin
 dolphin-nextcloud
+dolphin-owncloud
 epoptes
 #ffplay
 flac
@@ -122,6 +123,7 @@ octave
 okular
 okular-extra-backends
 onedrive
+owncloud-client
 pavucontrol
 photocollage
 photofilmstrip
