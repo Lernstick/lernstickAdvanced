@@ -5,7 +5,7 @@
 #
 ################################################################################
 
-apple-bce-drv-dkms
+#apple-bce-drv-dkms
 basisschrift
 lernstick-archive-keyring
 lernstick-btop
@@ -26,6 +26,6 @@ lernstick-vim-common
 lernstick-virtualbox-guest-utils
 lernstick-x11vnc
 lernstick-xterm
-macbook12-spi-driver-dkms
+#macbook12-spi-driver-dkms
 #rtl88x2bu-dkms
 vanished-root-handler
