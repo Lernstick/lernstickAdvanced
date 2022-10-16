@@ -142,13 +142,12 @@ remmina
 remmina-common
 remmina-plugin-exec
 remmina-plugin-kwallet
-remmina-plugin-nx
 remmina-plugin-rdp
 remmina-plugin-secret
 remmina-plugin-spice
 remmina-plugin-vnc
 remmina-plugin-www
-remmina-plugin-xdmcp
+remmina-plugin-x2go
 rhythmbox
 rhythmbox-plugins
 samba
