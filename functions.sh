@@ -100,7 +100,7 @@ build_image()
 		--distribution bullseye \
 		--firmware-chroot false \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-5.18.0-0.deb11.4 \
+		--linux-packages linux-image-5.19.0-0.deb11.2 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
