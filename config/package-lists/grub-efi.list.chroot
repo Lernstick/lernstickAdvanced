@@ -2,5 +2,5 @@ dosfstools
 grub-efi-amd64-bin
 grub-efi-ia32-bin
 mtools
-shim-helpers-amd64-signed
-shim-signed
+#shim-helpers-amd64-signed
+#shim-signed
