@@ -118,3 +118,7 @@ pin_package nvidia-legacy-390xx-smi
 pin_package nvidia-legacy-390xx-vdpau-driver:amd64
 pin_package nvidia-legacy-390xx-vulkan-icd:amd64
 pin_package xserver-xorg-video-nvidia-legacy-390xx
+
+# pin VirtualBox packages
+pin_package virtualbox
+pin_package virtualbox-qt
