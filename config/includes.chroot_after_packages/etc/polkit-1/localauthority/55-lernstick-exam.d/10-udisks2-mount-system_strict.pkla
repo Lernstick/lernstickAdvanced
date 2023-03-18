@@ -1,0 +1,6 @@
+[allow user mounting and unmounting of system devices with self authentication]
+Identity=unix-user:user
+Action=org.freedesktop.udisks2.filesystem-mount-system
+ResultAny=auth_self_keep
+ResultInactive=auth_self_keep
+ResultActive=auth_self_keep

@@ -1,0 +1,6 @@
+[enforce authentication before running the Lernstick storage media management application]
+Identity=unix-user:*
+Action=ch.lernstick.dlcopy
+ResultAny=auth_self_keep
+ResultInactive=auth_self_keep
+ResultActive=auth_self_keep

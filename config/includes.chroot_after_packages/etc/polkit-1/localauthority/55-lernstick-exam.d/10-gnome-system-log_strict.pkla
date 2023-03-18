@@ -1,0 +1,6 @@
+[allow user to run gnome system log]
+Identity=unix-user:user
+Action=org.debian.pkexec.gnome-system-log.run
+ResultAny=auth_self_keep
+ResultInactive=auth_self_keep
+ResultActive=auth_self_keep

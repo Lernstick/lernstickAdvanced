@@ -1,0 +1,88 @@
+#!/bin/bash
+
+## live-config(7) - System Configuration Components
+## Copyright (C) 2006-2015 Daniel Baumann <mail@daniel-baumann.ch>
+##
+## This program comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
+## This is free software, and you are welcome to redistribute it
+## under certain conditions; see COPYING for details.
+
+Cmdline ()
+{
+	LIVE_USERNAME="user"
+	LIVE_USER_FULLNAME="Debian Live user"
+	LIVE_USER_DEFAULT_GROUPS="audio cdrom dip floppy video plugdev netdev scanner bluetooth"
+
+        # Reading configuration files from filesystem and live-media
+        for _FILE in /etc/live/config.conf /etc/live/config.conf.d/* \
+                     /lib/live/mount/medium/live/config.conf /lib/live/mount/medium/live/config/*
+        do
+                if [ -e "${_FILE}" ]
+                then
+                        . "${_FILE}"
+                fi
+        done
+
+	# Reading kernel command line
+	for _PARAMETER in $(cat /proc/cmdline)
+	do
+		case "${_PARAMETER}" in
+			live-config.user-default-groups=*|user-default-groups=*)
+				LIVE_USER_DEFAULT_GROUPS="${_PARAMETER#*user-default-groups=}"
+				;;
+
+			live-config.user-fullname=*|user-fullname=*)
+				LIVE_USER_FULLNAME="${_PARAMETER#*user-fullname=}"
+				;;
+
+			live-config.username=*|username=*)
+				LIVE_USERNAME="${_PARAMETER#*username=}"
+				;;
+		esac
+	done
+}
+
+Config ()
+{
+	# Checking if package is already configured differently
+	if grep -q "^${LIVE_USERNAME}:" /etc/passwd
+	then
+		exit 0
+	fi
+
+	# Make sure user is not in sudo group if sudo is disabled
+	case "${LIVE_CONFIG_NOROOT}" in
+		true)
+			LIVE_USER_DEFAULT_GROUPS="$(echo ${LIVE_USER_DEFAULT_GROUPS} | sed -e 's|sudo||')"
+			;;
+	esac
+
+	# Default password is: live
+	# passwords can be generated with 'echo "live" | mkpasswd -s',
+	#   - "live" is           '8Ab05sVQ4LLps'
+	#   - a blank password is 'U6aMy0wojraho'
+	# Here we set the password for KSCS:
+	_PASSWORD="B94FndQ43bL9Y"
+
+	echo "adding user \"${LIVE_USERNAME}\""
+	useradd \
+		--comment "${LIVE_USER_FULLNAME}" \
+		--create-home \
+		--password ${_PASSWORD} \
+		--shell /bin/bash \
+		--uid 1000 \
+		${LIVE_USERNAME}
+	# useradd above just fails when we try to add the user to nonexisting groups
+	# therefore we do this here in a more robust loop
+	for _GROUP in ${LIVE_USER_DEFAULT_GROUPS}
+	do
+		echo "adding user \"${LIVE_USERNAME}\" to group \"${_GROUP}\""
+		usermod -a -G ${_GROUP} ${LIVE_USERNAME} || echo "adding user \"${LIVE_USERNAME}\" to group \"${_GROUP}\" failed."
+	done
+
+	# Creating state file (evaluated by systemd service file)
+	touch /var/lib/live/config/user-setup
+}
+
+Cmdline
+Config

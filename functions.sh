@@ -70,14 +70,14 @@ build_image()
 	BOOTLOGO="config/bootloaders/isolinux/bootlogo"
 	BOOTLOGO_DIR="${BOOTLOGO}.dir"
 	cp templates/xmlboot.config ${BOOTLOGO_DIR}
-	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version ${TODAY})</version>|1" \
+	sed -i "s|<version its:translate=\"no\">.*</version>|<version its:translate=\"no\">(Version KSCS ${TODAY})</version>|1" \
 		${BOOTLOGO_DIR}/xmlboot.config
 	gfxboot --archive ${BOOTLOGO_DIR} --pack-archive ${BOOTLOGO}
 	cp ${BOOTLOGO} ${BOOTLOGO}.orig
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 11 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 11 (Version KSCS ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
@@ -119,7 +119,7 @@ build_image()
 	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_pruefungsumgebung_debian11${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_pruefungsumgebung_debian11_kscs${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file

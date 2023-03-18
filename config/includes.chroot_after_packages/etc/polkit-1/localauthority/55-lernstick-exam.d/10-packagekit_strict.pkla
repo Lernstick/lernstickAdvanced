@@ -1,0 +1,6 @@
+[allow user to execute packagekit actions]
+Identity=unix-user:user
+Action=org.freedesktop.packagekit.*
+ResultAny=auth_self_keep
+ResultInactive=auth_self_keep
+ResultActive=auth_self_keep
