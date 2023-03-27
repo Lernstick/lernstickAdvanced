@@ -7,6 +7,8 @@
 # -----------
 #
 # * gimagereader needs the tesseract-ocr-* language files
+# * xournalpp needs texlive-latex-extra for adding/editing LaTeX
+#   (and it only suggests the dependency instead of recommending it...)
 #
 #################################################################################################
 
@@ -178,6 +180,7 @@ tesseract-ocr-ita
 tesseract-ocr-por
 tesseract-ocr-rus
 tesseract-ocr-spa
+texlive-latex-extra
 thunderbird
 thunderbird-l10n-de
 thunderbird-l10n-es-ar
