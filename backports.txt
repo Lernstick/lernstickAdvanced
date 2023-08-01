@@ -1,20 +1,10 @@
-# buster (64 Bit)
-sudo pbuilder --login --basetgz /var/cache/pbuilder/base-buster-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
+# bookworm (64 Bit)
+sudo pbuilder --login --basetgz /var/cache/pbuilder/base-bookworm-bpo.tar.gz --bindmounts /home/debian12/lernstick/backports/bookworm
 
-# buster (32 Bit)
-sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-buster32-bpo.tar.gz --bindmounts /home/debian10/lernstick/backports/buster
+# bookworm (32 Bit)
+sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-bookworm32-bpo.tar.gz --bindmounts /home/debian12/lernstick/backports/bookworm
 
-# buster
-apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
-
-
-# bullseye (64 Bit)
-sudo pbuilder --login --basetgz /var/cache/pbuilder/base-bullseye-bpo.tar.gz --bindmounts /home/debian11/lernstick/backports/bullseye
-
-# bullseye (32 Bit)
-sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-bullseye32-bpo.tar.gz --bindmounts /home/debian11/lernstick/backports/bullseye
-
-# bullseye
+# bookworm
 apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
 

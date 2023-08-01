@@ -77,7 +77,7 @@ build_image()
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick Debian 11 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick Debian 12 (Version ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
@@ -92,15 +92,14 @@ build_image()
 		--apt-indices false \
 		--apt-recommends true \
 		--architectures amd64 \
-		--archive-areas "main contrib non-free" \
+		--archive-areas "main contrib non-free non-free-firmware" \
 		--bootloaders "syslinux,grub-efi" \
 		--chroot-squashfs-compression-level 22 \
 		--chroot-squashfs-compression-type zstd \
 		--debootstrap-options "--include=ca-certificates,openssl" \
-		--distribution bullseye \
+		--distribution bookworm \
 		--firmware-chroot false \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-6.1.0-0.deb11.7 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
@@ -108,6 +107,7 @@ build_image()
 		--source ${SOURCE} \
 		--updates true \
 		--verbose
+		#--linux-packages linux-image-6.1.0-0.deb11.7 \
 		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
 		# https://lists.debian.org/debian-live/2011/08/msg00144.html
 		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"
@@ -119,7 +119,7 @@ build_image()
 	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian11${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_debian12${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file

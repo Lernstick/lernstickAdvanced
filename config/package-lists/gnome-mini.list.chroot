@@ -6,7 +6,7 @@ gnome-firmware
 nautilus-admin
 nautilus-nextcloud
 nautilus-owncloud
-nautilus-sendto
+#nautilus-sendto
 nautilus-share
 #nitroshare-nautilus
 simple-scan

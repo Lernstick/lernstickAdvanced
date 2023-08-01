@@ -62,8 +62,7 @@ gramps
 graphviz
 gstreamer1.0-packagekit
 gwakeonlan
-handbrake-gtk
-hddtemp
+#handbrake-gtk
 heif-thumbnailer
 hugin
 hunspell-de-at
@@ -130,7 +129,6 @@ pavucontrol
 photocollage
 photofilmstrip
 #pinta
-pulseaudio-module-bluetooth
 qelectrotech
 qelectrotech-data
 qelectrotech-examples
@@ -146,7 +144,7 @@ remmina-plugin-exec
 remmina-plugin-kwallet
 remmina-plugin-rdp
 remmina-plugin-secret
-remmina-plugin-spice
+#remmina-plugin-spice
 remmina-plugin-vnc
 remmina-plugin-www
 remmina-plugin-x2go
@@ -156,7 +154,7 @@ samba
 samplerate-programs
 sane
 sane-utils
-scrcpy
+#scrcpy
 sddm
 smb4k
 smplayer
@@ -168,11 +166,6 @@ spice-webdavd
 subversion
 swh-plugins
 synfigstudio
-#telepathy-gabble
-telepathy-haze
-telepathy-idle
-telepathy-rakia
-telepathy-salut
 tesseract-ocr-deu
 tesseract-ocr-eng
 tesseract-ocr-fra
@@ -191,7 +184,7 @@ thunderbird-l10n-pt-br
 thunderbird-l10n-ru
 thunderbird-l10n-sq
 totem-plugins
-vim-gtk
+vim-gtk3
 vinagre
 vmpk
 #vym

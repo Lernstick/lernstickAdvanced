@@ -12,7 +12,7 @@ geogebra-gnome
 gimp
 gimp-data
 gimp-data-extras
-gimp-gap
+#gimp-gap
 gimp-help-de
 gimp-help-en
 gimp-help-es

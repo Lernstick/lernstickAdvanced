@@ -98,11 +98,6 @@ plymouth-themes
 plymouth-x11
 ppp
 projecteur
-pulseaudio-module-gsettings
-pulseaudio-module-jack
-pulseaudio-module-lirc
-pulseaudio-module-raop
-pulseaudio-module-zeroconf
 rfkill
 rng-tools5
 rsync

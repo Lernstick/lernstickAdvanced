@@ -38,14 +38,13 @@ konsole
 kpat
 kreversi
 ksudoku
-ksysguard
-ksysguardd
+#ksysguard
+#ksysguardd
 ksystemlog
 ktorrent
 kwalletmanager
 kwin-x11
 partitionmanager
-pentobi-kde-thumbnailer
 phonon4qt5-backend-gstreamer
 phonon4qt5-backend-vlc
 plasma-desktop

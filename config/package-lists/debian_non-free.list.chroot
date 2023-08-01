@@ -9,7 +9,6 @@ firmware-bnx2x
 firmware-brcm80211
 firmware-cavium
 firmware-intel-sound
-firmware-intelwimax
 firmware-ipw2x00
 firmware-ivtv
 firmware-iwlwifi
@@ -28,9 +27,7 @@ firmware-ti-connectivity
 firmware-zd1211
 intel-microcode
 libnvidia-encode1
-libnvidia-legacy-390xx-encode1
 nvidia-detect
 nvidia-driver
-nvidia-legacy-390xx-driver
 p7zip-rar
 phoronix-test-suite

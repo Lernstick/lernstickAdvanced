@@ -1,6 +1,5 @@
-broadcom-sta-modules-6.1.0-0.deb11.7-amd64-signed
-nvidia-kernel-470.182.03-6.1.0-0.deb11.7-amd64-signed
-nvidia-legacy-390xx-kernel-390.157-6.1.0-0.deb11.7-amd64-signed
-rtl88x2bu-modules-6.1.0-0.deb11.7-amd64-signed
-v4l2loopback-modules-6.1.0-0.deb11.7-amd64-signed
-virtualbox-modules-6.1.0-0.deb11.7-amd64-signed
+#broadcom-sta-modules-6.1.0-0.deb11.7-amd64-signed
+#nvidia-kernel-470.182.03-6.1.0-0.deb11.7-amd64-signed
+#rtl88x2bu-modules-6.1.0-0.deb11.7-amd64-signed
+#v4l2loopback-modules-6.1.0-0.deb11.7-amd64-signed
+#virtualbox-modules-6.1.0-0.deb11.7-amd64-signed

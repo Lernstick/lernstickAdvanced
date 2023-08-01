@@ -13,7 +13,7 @@ jbackpack-full
 lernstick-arandr
 lernstick-ardour
 lernstick-arduino
-lernstick-avidemux-qt
+#lernstick-avidemux-qt
 lernstick-brasero
 lernstick-calibre
 #lernstick-darktable
@@ -32,7 +32,7 @@ lernstick-gnome-logs
 lernstick-gnome-screenshot
 lernstick-gnome-software
 lernstick-gparted
-lernstick-handbrake-gtk
+#lernstick-handbrake-gtk
 lernstick-hugin
 lernstick-info
 lernstick-konqueror
