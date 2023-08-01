@@ -48,8 +48,8 @@ epoptes
 flac
 focuswriter
 freeplane
-fritzing
-fritzing-parts
+#fritzing
+#fritzing-parts
 gimagereader
 git
 glabels

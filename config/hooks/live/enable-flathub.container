@@ -35,7 +35,9 @@ flatpak -y install \
 	com.github.geigi.cozy \
 	com.github.tchx84.Flatseal \
 	com.ultimaker.cura \
+	fr.handbrake.ghb \
 	net.sf.nootka \
+	org.avidemux.Avidemux \
 	org.kde.digikam \
 	org.kde.kdenlive \
 	org.kde.krita \
@@ -44,7 +46,6 @@ flatpak -y install \
 	org.mypaint.MyPaint \
 	org.x.Warpinator
 #	net.minetest.Minetest \
-#	org.avidemux.Avidemux \
 #	org.gimp.GIMP \
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux
