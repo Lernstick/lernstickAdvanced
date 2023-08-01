@@ -34,6 +34,7 @@ flatpak -y install \
 	ch.openboard.OpenBoard \
 	com.github.geigi.cozy \
 	com.github.tchx84.Flatseal \
+	com.heroicgameslauncher.hgl \
 	com.ultimaker.cura \
 	fr.handbrake.ghb \
 	net.sf.nootka \
