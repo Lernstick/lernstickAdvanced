@@ -9,6 +9,7 @@ lernstick-gimp
 #lernstick-gimp-draw-arrow-plugin
 lernstick-greenfoot
 lernstick-kstars
+lernstick-languagetool-server
 #lernstick-minetest-game-carbone-ng
 lernstick-minetest-game-tutorial
 #lernstick-minetest-mod-dreambuilder
@@ -19,7 +20,6 @@ lernstick-tuxpaint
 lernstick-wine
 lernstick-winetricks
 libreoffice-kf5
-libreoffice-languagetool
 libreoffice-plasma
 live-enigma
 minetest-mod-3d-armor
