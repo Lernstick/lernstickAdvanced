@@ -24,5 +24,4 @@ apt-get install -y \
 
 # here is the list of actual applications we want to install
 apt-get install -y \
-	steam \
 	wine32

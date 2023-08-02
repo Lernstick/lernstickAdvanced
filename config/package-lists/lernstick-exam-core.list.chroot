@@ -1,0 +1,12 @@
+################################################################################
+#
+# This is a list of Lernstick packages that are installed in *ALL* exam versions.
+#
+################################################################################
+
+dlcopy-exam
+lernstick-firewall
+lernstick-menu-xdg-exam
+lernstick-mount-exchange-exam
+lernstick-usertemplate-exam
+lernstickwelcome-exam

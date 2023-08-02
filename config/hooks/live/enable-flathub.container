@@ -4,7 +4,10 @@ echo "starting dbus..."
 /etc/init.d/dbus start
 
 echo "installing flatpak debian packages..."
-apt -y install gnome-software-plugin-flatpak
+# Don't install gnome-software in exam environment as it asks for the admin
+# password at system startup.
+#apt -y install gnome-software-plugin-flatpak
+apt -y install flatpak
 
 echo "adding flathub remote repository..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -31,22 +34,5 @@ done
 
 echo "installing flatpak applications..."
 flatpak -y install \
-	ch.openboard.OpenBoard \
-	com.github.geigi.cozy \
 	com.github.tchx84.Flatseal \
-	com.heroicgameslauncher.hgl \
-	com.ultimaker.cura \
-	fr.handbrake.ghb \
-	net.sf.nootka \
-	org.avidemux.Avidemux \
-	org.kde.digikam \
-	org.kde.kdenlive \
-	org.kde.krita \
-	org.mobsya.ThymioSuite \
-	org.musescore.MuseScore \
-	org.mypaint.MyPaint \
-	org.x.Warpinator
-#	net.minetest.Minetest \
-#	org.gimp.GIMP \
-#	org.speed_dreams.SpeedDreams \
-#	org.supertuxproject.SuperTux
+	org.musescore.MuseScore

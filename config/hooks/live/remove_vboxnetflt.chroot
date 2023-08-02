@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# In the Lernstick exam environment we want to control all network traffic via
+# our firewall. But VirtualBox allows users to change the networking of a guest
+# machine to "bridged networking" and thereby bypassing our firewall.
+# Therefore we have to remove the corresponding VirtualBox driver here.
+# (blacklisting didn't work like expected...)
+
+find /lib/modules -name vboxnetflt.ko -delete

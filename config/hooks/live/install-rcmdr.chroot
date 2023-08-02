@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# The dependencies for rcmdr are not in Debian
+# See https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=603409 for details.
+# Therefore we need this script to complete the installation of rcmdr
+
+# install all necessary debian packages
+# tidyverse (wanted by HSLU) needs libssl-dev
+# rcmdr needs rgl, rgl needs libfreetype6-dev, libglu1-mesa-dev and libx11-dev
+apt-get install -y \
+	ed \
+	g++ \
+	gfortran \
+	libfreetype6-dev \
+	libglu1-mesa-dev \
+	liblapack-dev \
+	libssl-dev \
+	libx11-dev \
+	r-cran-rcmdr
+
+# install CRAN packages
+FILENAME="install"
+INSTALL_SCRIPT="/tmp/${FILENAME}.R"
+cat <<EOF > ${INSTALL_SCRIPT}
+options(repos = c(CRAN = "http://cran.rstudio.com"))
+install.packages(c("aplpack", "boot", "elections", "evtree", "frontier", "glmnet", "knitr", "leaps", "lmtest", "markdown", "multcomp", "nortest", "randomForest", "read", "rgl", "rmarkdown", "sem", "tidyverse", "titanic", "tree"))
+EOF
+R CMD BATCH ${INSTALL_SCRIPT}
+
+# cleanup
+rm "${INSTALL_SCRIPT}"
+rm "${FILENAME}.Rout"

@@ -6,21 +6,29 @@
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
-	apt-transport-https \
-	blueman \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
-	gnome-robots \
-	gnome-system-tools \
-	gucharmap \
-	hexchat \
-	libgl1-mesa-glx \
-	minidlna \
-	nextcloud-desktop-doc \
-	plasma-discover \
-	plasma-discover-common \
-	system-tools-backends
+	gimp-data \
+	gnome-contacts \
+	hunspell-de-de \
+	hunspell-en-us \
+	hunspell-es \
+	hunspell-fr \
+	hunspell-fr-classical \
+	hunspell-it \
+	hunspell-pt-br \
+	hunspell-ru \
+	libgimp2.0 \
+	malcontent-gui \
+	myspell-fa \
+	myspell-sq \
+	sane-utils \
+	termit \
+	totem \
+	totem-plugins \
+	xsane \
+	xsane-common
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
@@ -36,6 +44,19 @@ apt-get purge -y apparmor
 apt-get purge -y \
 	isc-dhcp-client \
 	isc-dhcp-common
+
+# In the exam environment we have to disable bluetooth support to prevent
+# data exchange with smartphones, etc. Therefore we remove here the relevant
+# bluetooth packages.
+apt-get purge -y \
+	bluez \
+	bluez-obexd \
+	gnome-bluetooth \
+	pulseaudio-module-bluetooth
+
+# we don't want to have gnome-software in the exam environment
+# because it triggers a password prompt at every startup
+apt-get purge -y gnome-software
 
 # clean up
 apt-get purge -y --auto-remove

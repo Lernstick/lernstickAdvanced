@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# comment out the next line to enable this hook
+exit 0
+
+cat <<EOF > /etc/polkit-1/localauthority/50-local.d/51-disable-networkmanager-system-access.pkla
+[WLAN]
+Identity=unix-user:user
+Action=org.freedesktop.NetworkManager.settings.modify.system
+ResultAny=no
+ResultInactive=no
+ResultActive=no
+EOF

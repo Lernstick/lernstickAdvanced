@@ -1,5 +1,4 @@
 config/bootloaders/isolinux/bootlogo.dir/xmlboot.config
-config/hooks/live/uninstall_packages-mini.chroot
 config/includes.binary/boot/grub/themes/lernstick/theme.txt
 config/packages.chroot/
 constants
