@@ -1,3 +1,7 @@
 #!/bin/sh
 
+# manual installation of the dbus-x11 package is only necessary in the exam
+# version (in the other versions it is a dependency of mate-session-manager)
+apt install dbus-x11
+
 sudo -u Debian-gdm dbus-launch gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
