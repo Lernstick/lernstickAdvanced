@@ -21,7 +21,6 @@ lernstick-onboard
 lernstick-ranger
 lernstick-software-properties-gtk
 lernstick-speech-dispatcher
-lernstick-speech-dispatcher-voices
 lernstick-systemd
 lernstick-texlive-base
 lernstick-vim-common
