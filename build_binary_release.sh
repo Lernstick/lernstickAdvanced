@@ -7,19 +7,19 @@ fi
 clear
 
 # build edu version
-git checkout debian11
+git checkout debian12
 ./build_tmpfs.sh
 ./build_mini_iso.sh
 ./build_tmpfs.sh
 ./build_standard_iso.sh
 
 # build exam version
-git checkout exam-debian11
+git checkout exam-debian12
 ./build_tmpfs.sh
 ./build_iso.sh
 
 # checkout main repo
-git checkout debian11
+git checkout debian12
 
 # final shutdown?
 if [ -n "$SHUTDOWN_AFTER_BUILDING" ]
