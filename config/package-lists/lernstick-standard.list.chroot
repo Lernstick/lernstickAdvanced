@@ -33,6 +33,7 @@ minetest-mod-infinite-chest
 minetest-mod-lucky-block
 minetest-mod-maidroid
 minetest-mod-mesecons
+minetest-mod-meshport
 minetest-mod-moreblocks
 minetest-mod-moreores
 minetest-mod-nether
@@ -44,6 +45,7 @@ minetest-mod-throwing-arrows
 minetest-mod-unifieddyes
 minetest-mod-unified-inventory
 minetest-mod-worldedit
+#minetest-mod-xdecor in bookworm throws an error message: could not load image "xpanes_space.png"
 #minetest-mod-xdecor
 #omnitux
 #tigerjython
