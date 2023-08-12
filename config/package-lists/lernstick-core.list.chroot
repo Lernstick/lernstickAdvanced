@@ -13,6 +13,7 @@ lernstick-config
 lernstick-execute-jar
 lernstick-htop
 lernstick-imagemagick
+lernstick-libinput-quirks
 lernstick-mc
 lernstick-menu
 lernstick-nvtop
@@ -21,9 +22,9 @@ lernstick-onboard
 lernstick-ranger
 lernstick-software-properties-gtk
 lernstick-speech-dispatcher
-lernstick-speech-dispatcher-voices
 lernstick-systemd
 lernstick-texlive-base
+lernstick-theme
 lernstick-vim-common
 lernstick-virtualbox-guest-utils
 lernstick-x11vnc
