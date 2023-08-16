@@ -100,7 +100,7 @@ build_image()
 		--distribution bookworm \
 		--firmware-chroot false \
 		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-6.4.0-0.deb12.1 \
+		--linux-packages linux-image-6.4.0-0.deb12.2 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
