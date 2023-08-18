@@ -6,7 +6,6 @@
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
-	apt-transport-https \
 	blueman \
 	exim4-base \
 	exim4-config \
@@ -15,7 +14,6 @@ apt-get purge -y \
 	gnome-system-tools \
 	gucharmap \
 	hexchat \
-	libgl1-mesa-glx \
 	minidlna \
 	nextcloud-desktop-doc \
 	plasma-discover \
