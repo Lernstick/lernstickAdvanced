@@ -24,7 +24,6 @@ apt-get purge -y \
 	myspell-fa \
 	myspell-sq \
 	sane-utils \
-	termit \
 	totem \
 	totem-plugins \
 	xsane \
