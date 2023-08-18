@@ -28,7 +28,8 @@ apt-get purge -y \
 	totem \
 	totem-plugins \
 	xsane \
-	xsane-common
+	xsane-common \
+	zutty
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
