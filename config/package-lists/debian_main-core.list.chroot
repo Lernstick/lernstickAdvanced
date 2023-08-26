@@ -95,6 +95,7 @@ openssh-client
 openssh-server
 p7zip-full
 pipewire
+pipx
 plymouth
 plymouth-themes
 plymouth-x11
