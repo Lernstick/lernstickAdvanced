@@ -120,7 +120,7 @@ build_image()
 	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_pruefungsumgebung_debian12${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_debian12${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file

@@ -2,7 +2,7 @@
 
 set -e
 
-ISO_SUFFIX=""
+ISO_SUFFIX="_exam"
 SOURCE="false"
 
 . ./functions.sh
