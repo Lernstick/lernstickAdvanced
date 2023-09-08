@@ -2,7 +2,7 @@
 
 set -e
 
-ISO_SUFFIX="_mini"
+ISO_SUFFIX="_edu-mini"
 SOURCE="false"
 
 . ./functions.sh

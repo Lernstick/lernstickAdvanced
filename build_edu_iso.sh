@@ -2,7 +2,7 @@
 
 set -e
 
-ISO_SUFFIX="_standard"
+ISO_SUFFIX="_edu"
 SOURCE="false"
 
 . ./functions.sh
