@@ -9,7 +9,7 @@ clear
 # build edu version
 git checkout debian12
 ./build_tmpfs.sh
-./build_mini_iso.sh
+./build_edu-mini_iso.sh
 ./build_tmpfs.sh
 ./build_source.sh
 

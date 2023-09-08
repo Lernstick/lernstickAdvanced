@@ -9,14 +9,14 @@ clear
 # build edu version
 git checkout debian12
 ./build_tmpfs.sh
-./build_mini_iso.sh
+./build_edu-mini_iso.sh
 ./build_tmpfs.sh
-./build_standard_iso.sh
+./build_edu_iso.sh
 
 # build exam version
 git checkout exam-debian12
 ./build_tmpfs.sh
-./build_iso.sh
+./build_exam_iso.sh
 
 # checkout main repo
 git checkout debian12
