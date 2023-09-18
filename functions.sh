@@ -99,7 +99,7 @@ build_image()
 		--debootstrap-options "--include=ca-certificates,openssl" \
 		--distribution bookworm \
 		--firmware-chroot false \
-		--iso-volume "lernstick${SYSTEM_SUFFIX} ${TODAY}" \
+		--iso-volume "lernstick${ISO_SUFFIX} ${TODAY}" \
 		--linux-packages linux-image-6.4.0-0.deb12.2 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
