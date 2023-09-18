@@ -36,6 +36,7 @@ flatpak -y install \
 	com.github.tchx84.Flatseal \
 	com.heroicgameslauncher.hgl \
 	com.ultimaker.cura \
+	com.usebottles.bottles \
 	fr.handbrake.ghb \
 	net.sf.nootka \
 	org.avidemux.Avidemux \
