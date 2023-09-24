@@ -7,7 +7,7 @@
 ################################################################################
 
 clamtk-gnome
-eiciel
+#eiciel # breaks l10n in nautilus
 font-manager
 gnome-tweaks
 #nautilus-font-manager
