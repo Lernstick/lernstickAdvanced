@@ -41,7 +41,7 @@ dia-rib-network
 dia-shapes
 dmz-cursor-theme
 dolphin
-dolphin-nextcloud
+#dolphin-nextcloud
 dolphin-owncloud
 epoptes
 #ffplay
@@ -118,7 +118,7 @@ mythes-es
 mythes-fr
 mythes-it
 mythes-ru
-nextcloud-desktop
+#nextcloud-desktop
 obs-studio
 octave
 okular
