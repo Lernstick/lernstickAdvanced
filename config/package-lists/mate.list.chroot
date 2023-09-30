@@ -1,8 +1,8 @@
 caja-admin
-caja-eiciel
+#caja-eiciel # breaks l10n in nautilus
 caja-gtkhash
 caja-image-converter
-caja-nextcloud
+#caja-nextcloud
 caja-open-terminal
 caja-owncloud
 caja-rename
