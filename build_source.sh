@@ -2,7 +2,7 @@
 
 set -e
 
-ISO_SUFFIX=""
+ISO_SUFFIX="_edu"
 SOURCE="true"
 
 . ./functions.sh
