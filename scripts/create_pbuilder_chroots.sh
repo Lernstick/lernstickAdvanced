@@ -13,6 +13,7 @@ pbuilder create \
 	--bindmounts $BIND_MOUNT \
 	--components "main contrib non-free non-free-firmware" \
 	--distribution bookworm \
+	--extrapackages ca-certificates \
 	--keyring $LS_KEYRING \
 	--othermirror "$OTHER_MIRRORS"
 
@@ -23,5 +24,6 @@ pbuilder create \
 	--bindmounts $BIND_MOUNT \
 	--components "main contrib non-free non-free-firmware" \
 	--distribution bookworm \
+	--extrapackages ca-certificates \
 	--keyring $LS_KEYRING \
 	--othermirror "$OTHER_MIRRORS"
