@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Unfortunately, we can not make sure that git keeps users and permissions when
+# pushing and pulling from different machines.
+# Therefore this script makes sure that certain users and permissions are set
+# correctly.
+
+# Config files in /etc/sudoers.d/ should have the permission mask
+# -r--r-----.
+find /etc/sudoers.d/ -type f -exec chmod 440 {} \;
+
+# correct user, group and permissions for /etc/polkit-1/localauthority/
+if [ -d /etc/polkit-1/localauthority/ ]
+then
+	chown root:polkitd /etc/polkit-1/localauthority
+	chmod 750 /etc/polkit-1/localauthority
+fi
