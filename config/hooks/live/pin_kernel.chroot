@@ -42,6 +42,7 @@ pin_package linux-image-amd64
 pin_package linux-libc-dev
 
 # pin nvidia packages
+pin_package firmware-nvidia-gsp
 pin_package libcuda1:amd64
 pin_package libcuda1:i386
 pin_package libegl-nvidia0:amd64
@@ -56,6 +57,7 @@ pin_package libglx-nvidia0:amd64
 pin_package libglx-nvidia0:i386
 pin_package libnvcuvid1:amd64
 pin_package libnvcuvid1:i386
+pin_package libnvidia-allocator1:amd64
 pin_package libnvidia-cbl:amd64
 pin_package libnvidia-cfg1:amd64
 pin_package libnvidia-eglcore:amd64
@@ -81,6 +83,7 @@ pin_package nvidia-driver-libs:i386
 pin_package nvidia-egl-common
 pin_package nvidia-egl-icd:amd64
 pin_package nvidia-egl-icd:i386
+pin_package nvidia-kernel-support
 pin_package nvidia-legacy-check
 pin_package nvidia-settings
 pin_package nvidia-smi
@@ -90,6 +93,7 @@ pin_package nvidia-vulkan-common
 pin_package nvidia-vulkan-icd:amd64
 pin_package nvidia-vulkan-icd:i386
 pin_package xserver-xorg-video-nvidia
+
 
 # pin nvidia legacy packages
 pin_package libegl-nvidia-legacy-390xx0:amd64

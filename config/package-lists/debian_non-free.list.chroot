@@ -27,4 +27,5 @@ intel-microcode
 libnvidia-encode1
 nvidia-detect
 nvidia-driver
+nvidia-kernel-support
 p7zip-rar
