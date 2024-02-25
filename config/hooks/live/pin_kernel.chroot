@@ -58,6 +58,7 @@ pin_package libglx-nvidia0:i386
 pin_package libnvcuvid1:amd64
 pin_package libnvcuvid1:i386
 pin_package libnvidia-allocator1:amd64
+pin_package libnvidia-allocator1:i386
 pin_package libnvidia-cbl:amd64
 pin_package libnvidia-cfg1:amd64
 pin_package libnvidia-eglcore:amd64
