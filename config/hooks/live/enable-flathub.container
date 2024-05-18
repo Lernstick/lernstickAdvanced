@@ -37,15 +37,25 @@ flatpak -y install \
 	com.heroicgameslauncher.hgl \
 	com.ultimaker.cura \
 	com.usebottles.bottles \
+	de.mediathekview.MediathekView \
 	fr.handbrake.ghb \
+	im.riot.Riot \
 	net.sf.nootka \
+	org.audacityteam.Audacity \
 	org.avidemux.Avidemux \
+	org.freeplane.App \
+	org.gnucash.GnuCash \
+	org.gottcode.FocusWriter \
+	org.gottcode.Peg-E \
+	org.gottcode.Tanglet \
+	org.gramps_project.Gramps \
 	org.kde.digikam \
 	org.kde.kdenlive \
 	org.kde.krita \
 	org.mobsya.ThymioSuite \
 	org.musescore.MuseScore \
 	org.mypaint.MyPaint \
+	org.signal.Signal \
 	org.x.Warpinator
 #	net.minetest.Minetest \
 #	org.gimp.GIMP \

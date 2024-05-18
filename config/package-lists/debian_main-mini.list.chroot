@@ -21,7 +21,6 @@ arandr
 #ardesia
 ardour
 arduino
-audacity
 blop
 bluetooth
 bluez-cups
@@ -46,8 +45,6 @@ dolphin-owncloud
 epoptes
 #ffplay
 flac
-focuswriter
-freeplane
 fritzing
 fritzing-parts
 gimagereader
@@ -58,7 +55,6 @@ gnome-maps
 gnome-sound-recorder
 godot3
 gparted
-gramps
 graphviz
 gstreamer1.0-packagekit
 gwakeonlan
@@ -97,7 +93,6 @@ krename
 #ktimetracker
 #lilypond
 lmms
-mediathekview
 mixxx
 mumble
 # mypaint is currently not co-installable with gimp, see
