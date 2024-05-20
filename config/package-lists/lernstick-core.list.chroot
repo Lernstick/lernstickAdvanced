@@ -12,6 +12,7 @@ lernstick-archive-keyring
 lernstick-base-files
 lernstick-btop
 lernstick-config
+lernstick-distro-info-data
 lernstick-execute-jar
 lernstick-htop
 lernstick-imagemagick
@@ -21,6 +22,7 @@ lernstick-menu
 lernstick-nvtop
 lernstick-onboard
 #lernstick-openjdk-8-jre
+lernstick-python-apt-common
 lernstick-ranger
 lernstick-software-properties-gtk
 lernstick-speech-dispatcher
