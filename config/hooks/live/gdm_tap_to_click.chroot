@@ -1,3 +1,0 @@
-#!/bin/sh
-
-sudo -u Debian-gdm dbus-launch gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
