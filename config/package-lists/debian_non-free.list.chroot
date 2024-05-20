@@ -17,6 +17,7 @@ firmware-misc-nonfree
 firmware-myricom
 firmware-netronome
 firmware-netxen
+firmware-nvidia-gsp
 firmware-qlogic
 firmware-realtek
 firmware-siano
