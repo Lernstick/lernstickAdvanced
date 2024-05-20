@@ -29,6 +29,14 @@ do
 	flatpak -y install org.freedesktop.Platform.GL.nvidia-$i
 done
 
+# some flatpak packages are difficult to install
+# (no idea why...)
+while ! flatpak -y install com.ultimaker.cura
+do
+	echo "UltiMaker Cura failed to install, trying again in 5 seconds..."
+	sleep 5
+done
+
 echo "installing flatpak applications..."
 flatpak -y install \
 	ch.openboard.OpenBoard \
@@ -114,7 +122,6 @@ flatpak -y install \
 	org.signal.Signal \
 	org.wxhexeditor.wxHexEditor \
 	org.x.Warpinator
-#	com.ultimaker.cura \
 #	net.minetest.Minetest \
 #	org.gimp.GIMP \
 #	org.speed_dreams.SpeedDreams \
