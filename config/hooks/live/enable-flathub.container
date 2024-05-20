@@ -52,16 +52,15 @@ flatpak -y install \
 	im.riot.Riot \
 	info.smplayer.SMPlayer \
 	io.github.adrienverge.PhotoCollage \
-	io.lmms.LMMS \
 	io.sourceforge.pentobi \
 	net.lutris.Lutris \
+	net.nokyan.Resources \
 	net.pokerth.PokerTH \
 	net.sf.nootka \
 	org.ardour.Ardour \
 	org.audacityteam.Audacity \
 	org.avidemux.Avidemux \
 	org.darktable.Darktable \
-	org.denemo.Denemo \
 	org.freeplane.App \
 	org.gnome.gbrainy \
 	org.gnome.glabels-3 \
@@ -120,9 +119,13 @@ flatpak -y install \
 	org.remmina.Remmina \
 	org.rncbc.qpwgraph \
 	org.signal.Signal \
+	org.torproject.torbrowser-launcher \
 	org.wxhexeditor.wxHexEditor \
 	org.x.Warpinator
+#	io.lmms.LMMS \
 #	net.minetest.Minetest \
+#	org.denemo.Denemo \
 #	org.gimp.GIMP \
 #	org.speed_dreams.SpeedDreams \
-#	org.supertuxproject.SuperTux
+#	org.supertuxproject.SuperTux \
+#	xyz.ketok.Speedtest
