@@ -24,7 +24,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "installing flatpak nvidia drivers..."
 # install one package after the other so that an installation failure in one
 # package doesn't stop the installation of subsequent packages
-for i in "525.125.06"
+for i in "525.147.05"
 do
 	flatpak -y install org.freedesktop.Platform.GL.nvidia-$i
 done
@@ -33,30 +33,88 @@ echo "installing flatpak applications..."
 flatpak -y install \
 	ch.openboard.OpenBoard \
 	com.github.geigi.cozy \
+	com.github.jeromerobert.pdfarranger \
 	com.github.tchx84.Flatseal \
+	com.github.vkohaupt.vokoscreenNG \
+	com.github.wwmm.easyeffects \
 	com.heroicgameslauncher.hgl \
-	com.ultimaker.cura \
 	com.usebottles.bottles \
 	de.mediathekview.MediathekView \
 	fr.handbrake.ghb \
 	im.riot.Riot \
+	info.smplayer.SMPlayer \
+	io.github.adrienverge.PhotoCollage \
+	io.lmms.LMMS \
+	io.sourceforge.pentobi \
+	net.lutris.Lutris \
+	net.pokerth.PokerTH \
 	net.sf.nootka \
+	org.ardour.Ardour \
 	org.audacityteam.Audacity \
 	org.avidemux.Avidemux \
+	org.darktable.Darktable \
+	org.denemo.Denemo \
 	org.freeplane.App \
+	org.gnome.gbrainy \
+	org.gnome.glabels-3 \
+	org.gnome.gThumb \
+	org.gnome.Maps \
+	org.gnome.Rhythmbox3 \
 	org.gnucash.GnuCash \
+	org.godotengine.Godot3 \
+	org.gottcode.Connectagram \
 	org.gottcode.FocusWriter \
 	org.gottcode.Peg-E \
 	org.gottcode.Tanglet \
 	org.gramps_project.Gramps \
+	org.inkscape.Inkscape \
+	org.kde.akregator \
+	org.kde.blinken \
+	org.kde.bovo \
 	org.kde.digikam \
+	org.kde.kaffeine \
+	org.kde.kalzium \
+	org.kde.kanagram \
+	org.kde.katomic \
+	org.kde.kblackbox \
+	org.kde.kbounce \
+	org.kde.kbreakout \
+	org.kde.kbruch \
 	org.kde.kdenlive \
+	org.kde.kdiamond \
+	org.kde.kgoldrunner \
+	org.kde.khangman \
+	org.kde.kig \
+	org.kde.kigo \
+	org.kde.killbots \
+	org.kde.kiten \
+	org.kde.kmplot \
+	org.kde.knavalbattle \
+	org.kde.knetwalk \
+	org.kde.kollision \
 	org.kde.krita \
+	org.kde.kshisen \
+	org.kde.ksquares \
+	org.kde.ktuberling \
+	org.kde.kubrick \
+	org.kde.lskat \
+	org.kde.minuet \
+	org.kde.palapeli \
+	org.kde.parley \
+	org.kde.picmi \
+	org.ksnip.ksnip \
+	org.mixxx.Mixxx \
 	org.mobsya.ThymioSuite \
 	org.musescore.MuseScore \
 	org.mypaint.MyPaint \
+	org.octave.Octave \
+	org.openttd.OpenTTD \
+	org.remmina.Remmina \
+	org.rncbc.qpwgraph \
 	org.signal.Signal \
+	org.wxhexeditor.wxHexEditor \
 	org.x.Warpinator
+#	com.ultimaker.cura \
 #	net.minetest.Minetest \
 #	org.gimp.GIMP \
 #	org.speed_dreams.SpeedDreams \
