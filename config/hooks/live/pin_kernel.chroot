@@ -34,11 +34,11 @@ do
 	pin_package $(echo ${i} | awk -F/ '{ print $4 }')
 done
 
-pin_package $(dpkg -l "linux-compiler-gcc-*" | grep ^ii | awk '{print $2}')
+#pin_package $(dpkg -l "linux-compiler-gcc-*" | grep ^ii | awk '{print $2}')
 pin_package $(dpkg -l "linux-kbuild*" | grep ^ii | awk '{print $2}')
 
-pin_package linux-headers-amd64
-pin_package linux-image-amd64
+#pin_package linux-headers-amd64
+#pin_package linux-image-amd64
 pin_package linux-libc-dev
 
 # pin nvidia packages
@@ -59,7 +59,6 @@ pin_package libnvcuvid1:amd64
 pin_package libnvcuvid1:i386
 pin_package libnvidia-allocator1:amd64
 pin_package libnvidia-allocator1:i386
-pin_package libnvidia-cbl:amd64
 pin_package libnvidia-cfg1:amd64
 pin_package libnvidia-eglcore:amd64
 pin_package libnvidia-eglcore:i386
@@ -94,35 +93,6 @@ pin_package nvidia-vulkan-common
 pin_package nvidia-vulkan-icd:amd64
 pin_package nvidia-vulkan-icd:i386
 pin_package xserver-xorg-video-nvidia
-
-
-# pin nvidia legacy packages
-pin_package libegl-nvidia-legacy-390xx0:amd64
-pin_package libgl1-nvidia-legacy-390xx-glvnd-glx:amd64
-pin_package libgl1-nvidia-legacy-390xx-glvnd-glx:i386
-pin_package libgles-nvidia-legacy-390xx1:amd64
-pin_package libgles-nvidia-legacy-390xx2:amd64
-pin_package libglx-nvidia-legacy-390xx0:amd64
-pin_package libglx-nvidia-legacy-390xx0:i386
-pin_package libnvidia-legacy-390xx-cfg1:amd64
-pin_package libnvidia-legacy-390xx-cuda1:amd64
-pin_package libnvidia-legacy-390xx-eglcore:amd64
-pin_package libnvidia-legacy-390xx-encode1:amd64
-pin_package libnvidia-legacy-390xx-fatbinaryloader:amd64
-pin_package libnvidia-legacy-390xx-glcore:amd64
-pin_package libnvidia-legacy-390xx-glcore:i386
-pin_package libnvidia-legacy-390xx-ml1:amd64
-pin_package libnvidia-legacy-390xx-nvcuvid1:amd64
-pin_package libnvidia-legacy-390xx-ptxjitcompiler1:amd64
-pin_package nvidia-legacy-390xx-alternative
-pin_package nvidia-legacy-390xx-driver
-pin_package nvidia-legacy-390xx-driver-bin
-pin_package nvidia-legacy-390xx-driver-libs:amd64
-pin_package nvidia-legacy-390xx-egl-icd:amd64
-pin_package nvidia-legacy-390xx-smi
-pin_package nvidia-legacy-390xx-vdpau-driver:amd64
-pin_package nvidia-legacy-390xx-vulkan-icd:amd64
-pin_package xserver-xorg-video-nvidia-legacy-390xx
 
 # pin VirtualBox packages
 pin_package virtualbox
