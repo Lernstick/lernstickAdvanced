@@ -46,6 +46,7 @@ flatpak -y install \
 	com.github.vkohaupt.vokoscreenNG \
 	com.github.wwmm.easyeffects \
 	com.heroicgameslauncher.hgl \
+	com.jgraph.drawio.desktop \
 	com.usebottles.bottles \
 	de.mediathekview.MediathekView \
 	fr.handbrake.ghb \
