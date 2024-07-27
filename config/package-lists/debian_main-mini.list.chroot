@@ -7,7 +7,6 @@
 # -----------
 #
 # * gimagereader needs the tesseract-ocr-* language files
-# * xournalpp needs texlive-latex-extra for adding/editing LaTeX
 #   (and it only suggests the dependency instead of recommending it...)
 #
 #################################################################################################
@@ -18,7 +17,6 @@ amsynth
 #apper
 arandr
 #ardesia
-arduino
 blop
 bluetooth
 bluez-cups
@@ -85,7 +83,6 @@ konqueror
 krename
 #ktimetracker
 #lilypond
-mumble
 # mypaint is currently not co-installable with gimp, see
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894757
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=897909
@@ -135,7 +132,6 @@ qjackctl
 qreator
 qstopmotion
 qtqr
-quassel
 rawtherapee
 samba
 samplerate-programs
@@ -157,7 +153,6 @@ tesseract-ocr-ita
 tesseract-ocr-por
 tesseract-ocr-rus
 tesseract-ocr-spa
-texlive-latex-extra
 thunderbird
 thunderbird-l10n-de
 thunderbird-l10n-es-ar
@@ -174,7 +169,6 @@ vmpk
 #vym
 wireshark
 xournal
-xournalpp
 xsane
 youtube-dl
 #zenmap

@@ -39,18 +39,22 @@ done
 
 echo "installing flatpak applications..."
 flatpak -y install \
+	ar.com.tuxguitar.TuxGuitar \
+	cc.arduino.IDE2 \
 	ch.openboard.OpenBoard \
 	com.github.geigi.cozy \
 	com.github.jeromerobert.pdfarranger \
 	com.github.tchx84.Flatseal \
 	com.github.vkohaupt.vokoscreenNG \
 	com.github.wwmm.easyeffects \
+	com.github.xournalpp.xournalpp \
 	com.heroicgameslauncher.hgl \
 	com.jgraph.drawio.desktop \
 	com.usebottles.bottles \
 	de.mediathekview.MediathekView \
 	fr.handbrake.ghb \
 	im.riot.Riot \
+	info.mumble.Mumble
 	info.smplayer.SMPlayer \
 	io.github.adrienverge.PhotoCollage \
 	io.sourceforge.pentobi \
@@ -61,6 +65,7 @@ flatpak -y install \
 	org.ardour.Ardour \
 	org.audacityteam.Audacity \
 	org.avidemux.Avidemux \
+	org.chromium.Chromium \
 	org.darktable.Darktable \
 	org.freeplane.App \
 	org.gnome.gbrainy \
@@ -117,6 +122,7 @@ flatpak -y install \
 	org.mypaint.MyPaint \
 	org.octave.Octave \
 	org.openttd.OpenTTD \
+	org.quassel_irc.QuasselClient \
 	org.remmina.Remmina \
 	org.rncbc.qpwgraph \
 	org.signal.Signal \
