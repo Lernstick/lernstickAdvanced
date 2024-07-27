@@ -54,7 +54,7 @@ flatpak -y install \
 	de.mediathekview.MediathekView \
 	fr.handbrake.ghb \
 	im.riot.Riot \
-	info.mumble.Mumble
+	info.mumble.Mumble \
 	info.smplayer.SMPlayer \
 	io.github.adrienverge.PhotoCollage \
 	io.sourceforge.pentobi \
