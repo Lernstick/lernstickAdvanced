@@ -18,7 +18,8 @@ apt-get purge -y \
 	nextcloud-desktop-doc \
 	plasma-discover \
 	plasma-discover-common \
-	system-tools-backends
+	system-tools-backends \
+	xserver-xorg-video-intel
 
 # for whatever reason apparmor prevents evince from starting
 # therefore we remove it here
