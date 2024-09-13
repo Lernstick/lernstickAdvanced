@@ -30,6 +30,7 @@ intel-microcode
 libnvidia-encode1
 libnvoptix1
 nvidia-container-toolkit
+nvidia-cuda-mps
 nvidia-detect
 nvidia-driver
 nvidia-kernel-support
