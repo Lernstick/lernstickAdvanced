@@ -28,6 +28,7 @@ apt-get purge -y \
 	totem-plugins \
 	xsane \
 	xsane-common \
+	xserver-xorg-video-intel \
 	zutty
 
 # for whatever reason apparmor prevents evince from starting
