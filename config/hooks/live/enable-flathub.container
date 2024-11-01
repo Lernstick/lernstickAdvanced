@@ -6,8 +6,9 @@ echo "starting dbus..."
 echo "installing flatpak debian packages..."
 apt -y install gnome-software-plugin-flatpak
 
-echo "adding flathub remote repository..."
+echo "adding flathub remote repositories..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 
 # The order of hooks is more or less random. To ensure a before-after-relation
 # we have to install the flatpak applications here in this script. Otherwise

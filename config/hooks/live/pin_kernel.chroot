@@ -70,11 +70,14 @@ pin_package libnvidia-glvkspirv:amd64
 pin_package libnvidia-glvkspirv:i386
 pin_package libnvidia-ml1:amd64
 pin_package libnvidia-ml1:i386
+pin_package libnvidia-pkcs11-openssl3
 pin_package libnvidia-ptxjitcompiler1:amd64
 pin_package libnvidia-ptxjitcompiler1:i386
 pin_package libnvidia-rtcore:amd64
+pin_package libnvoptix1
 pin_package libxnvctrl0:amd64
 pin_package nvidia-alternative
+pin_package nvidia-cuda-mps
 pin_package nvidia-detect
 pin_package nvidia-driver
 pin_package nvidia-driver-bin
@@ -87,6 +90,7 @@ pin_package nvidia-kernel-support
 pin_package nvidia-legacy-check
 pin_package nvidia-settings
 pin_package nvidia-smi
+pin_package nvidia-suspend-common
 pin_package nvidia-vdpau-driver:amd64
 pin_package nvidia-vdpau-driver:i386
 pin_package nvidia-vulkan-common
