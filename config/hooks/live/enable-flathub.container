@@ -9,8 +9,9 @@ echo "installing flatpak debian packages..."
 #apt -y install gnome-software-plugin-flatpak
 apt -y install flatpak
 
-echo "adding flathub remote repository..."
+echo "adding flathub remote repositories..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 
 # The order of hooks is more or less random. To ensure a before-after-relation
 # we have to install the flatpak applications here in this script. Otherwise
@@ -27,7 +28,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "installing flatpak nvidia drivers..."
 # install one package after the other so that an installation failure in one
 # package doesn't stop the installation of subsequent packages
-for i in "535-183-01"
+for i in "535-183-06"
 do
 	flatpak -y install org.freedesktop.Platform.GL.nvidia-$i
 done
