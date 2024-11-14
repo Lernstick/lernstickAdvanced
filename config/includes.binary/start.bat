@@ -1,4 +1,25 @@
 @echo off
+for /f "delims=" %%a in ('powershell -NoProfile -Command "Switch ((Get-CimInstance -ClassName Win32_Processor).Architecture){ 0 {'x86'}; 1 {'MIPS'}; 2 {'Alpha'}; 3 {'PowerPC'}; 5 {'ARM'}; 6 {'Itanium'}; 9 {'x64'} }"') do (
+  SET arch=%%a
+)
+if /i "%arch%"=="ARM" echo "[91mARM-Architecture detected: [93mLernstick does not support Snapdragon or CoPilot+ Processors yet![0m" & pause & exit /b
+
+for /f "tokens=* USEBACKQ" %%a in (`powershell -NoProfile -Command "(Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer"`) do (
+  SET manufacturer=%%a
+)
+
+if /i "%manufacturer%"=="LENOVO" GOTO init
+if /i "%manufacturer%"=="Microsoft Corporation" GOTO init
+if /i "%manufacturer%"=="HP" GOTO init
+if /i "%manufacturer%"=="Acer" GOTO init
+if /i "%manufacturer%"=="Dell Inc." GOTO init
+goto no_device
+
+:no_device
+echo "[93mAutomatic detection of external start device was not possible:[0m"
+echo "[92mPlease press any key for restart and manual selection of USB drive/Lernstick...[0m"
+pause
+shutdown /r /o /f /t 00
 
 :init
  setlocal DisableDelayedExpansion
@@ -39,11 +60,6 @@
  if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 
 @echo off
-:: Get Manufaturer
-for /f "tokens=2 delims='='" %%a in ('wmic ComputerSystem Get Manufacturer /value') do (
-  SET manufacturer=%%a
-)
-
 if /i "%manufacturer%"=="LENOVO" GOTO start_lenovo
 if /i "%manufacturer%"=="Microsoft Corporation" GOTO start_microsoft
 if /i "%manufacturer%"=="HP" GOTO start_hp
@@ -136,15 +152,8 @@ echo !startId! | findstr /r "{[a-f0-9\-]*}" > NUL
 if errorlevel 1 (
    GOTO no_device
 ) else (
-   echo "Start device found"
+   echo "[92mStart device found[0m"
    bcdedit /set {fwbootmgr} bootsequence !startId!
    shutdown -r -t 0
 )
 goto:eof
-
-:no_device
-echo "No start device found"
-echo "Press Enter for manual USB drive selection"
-pause
-shutdown /r /o /f /t 00
-
