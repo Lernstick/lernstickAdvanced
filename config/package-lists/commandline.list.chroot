@@ -36,6 +36,7 @@ powertop
 prettyping
 pv
 ranger
+shellcheck
 spectre-meltdown-checker
 strace
 sysstat

@@ -39,6 +39,7 @@ flatpak -y install \
 	com.github.tchx84.Flatseal \
 	com.github.vkohaupt.vokoscreenNG \
 	com.github.wwmm.easyeffects \
+	io.github.pwr_solaar.solaar \
 	net.nokyan.Resources \
 	org.gnome.gThumb \
 	org.ksnip.ksnip \
