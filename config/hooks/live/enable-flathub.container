@@ -58,6 +58,7 @@ flatpak -y install \
 	info.mumble.Mumble \
 	info.smplayer.SMPlayer \
 	io.github.adrienverge.PhotoCollage \
+	io.github.pwr_solaar.solaar \
 	io.sourceforge.pentobi \
 	net.lutris.Lutris \
 	net.nokyan.Resources \
