@@ -37,9 +37,9 @@ echo "installing flatpak applications..."
 flatpak -y install \
 	com.github.jeromerobert.pdfarranger \
 	com.github.tchx84.Flatseal \
-	com.github.vkohaupt.vokoscreenNG \
 	com.github.wwmm.easyeffects \
-	io.github.pwr_solaar.solaar \
+	com.usebottles.bottles \
+	io.github.flattool.Warehouse \
 	net.nokyan.Resources \
 	org.gnome.gThumb \
 	org.ksnip.ksnip \
