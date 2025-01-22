@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Version=1.0
+Name=Firewall Restart
+Icon=system-reboot-symbolic
+Exec=/usr/bin/systemctl restart lernstick-firewall
+Terminal=true

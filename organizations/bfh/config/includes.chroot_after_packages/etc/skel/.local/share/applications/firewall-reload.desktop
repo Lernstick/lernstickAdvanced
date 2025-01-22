@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Version=1.0
+Name=Firewall Reload
+Icon=reload
+Exec=/usr/bin/systemctl reload lernstick-firewall
+Terminal=true
