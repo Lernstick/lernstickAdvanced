@@ -1,8 +1,9 @@
 @echo off
-for /f "delims=" %%a in ('powershell -NoProfile -Command "Switch ((Get-CimInstance -ClassName Win32_Processor).Architecture){ 0 {'x86'}; 1 {'MIPS'}; 2 {'Alpha'}; 3 {'PowerPC'}; 5 {'ARM'}; 6 {'Itanium'}; 9 {'x64'} }"') do (
+for /f "delims=" %%a in ('powershell -NoProfile -Command "Switch ((Get-CimInstance -ClassName Win32_Processor).Architecture){ 0 {'x86'}; 1 {'MIPS'}; 2 {'Alpha'}; 3 {'PowerPC'}; 5 {'ARM'}; 6 {'Itanium'}; 9 {'x64'}; 12 {'ARM64'} }"') do (
   SET arch=%%a
 )
-if /i "%arch%"=="ARM" echo "[91mARM-Architecture detected: [93mLernstick does not support Snapdragon or CoPilot+ Processors yet![0m" & pause & exit /b
+if /i "%arch%"=="ARM" echo "[91mARM-Architecture detected: [93mLernstick does not support old-fashioned ARM 32-bit processors yet![0m" & pause & exit /b
+if /i "%arch%"=="ARM64" echo "[91mARM64-Architecture detected: [93mLernstick does not support Snapdragon or CoPilot+ processors yet![0m" & pause & exit /b
 
 for /f "tokens=* USEBACKQ" %%a in (`powershell -NoProfile -Command "(Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer"`) do (
   SET manufacturer=%%a
