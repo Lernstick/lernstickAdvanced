@@ -43,5 +43,9 @@ for /f "tokens=* USEBACKQ" %%a in (`powershell -NoProfile -Command "Get-CimInsta
   manage-bde -protectors %%a -get
 )
 
-echo "[93mPlease take a photo with a smartphone, if 40-character key(s) for Bitlocker are shown above: [91mYou might have to enter it/them, after changing UEFI Firmware Settings[0m"
+echo [93mPlease take a photo with a smartphone, if 40-character key(s) for Bitlocker devices are shown above:
+echo [91mYou might have to enter it/them, after changing UEFI Firmware Settings!
+echo:
+echo Notice: [93mIn few cases [91m- before being able to login to Windows! -[93m you can be asked to reset your PIN (Windows Hello)
+echo         using a second factor (i.e. e-mail to personal Microsoft account or SMS to your mobile phone)![0m
 pause
