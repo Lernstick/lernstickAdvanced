@@ -1,3 +1,10 @@
 AutoStartInstaller=true
+BackupDirectoryEnabled=true
+BackupDirectory=/exchange/partition/datensicherung
+BackupFrequency=5
+BackupSource=/home/user/
+Backup=true
 ShowNotUsedInfo=true
+ShowPasswordDialog=false
 ShowReadOnlyInfo=true
+ShowWelcome=false

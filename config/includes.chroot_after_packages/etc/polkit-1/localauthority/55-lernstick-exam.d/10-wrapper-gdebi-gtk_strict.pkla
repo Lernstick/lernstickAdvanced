@@ -1,0 +1,6 @@
+[enforce authentication before running the gdebi-gtk wrapper script]
+Identity=unix-user:*
+Action=ch.lernstick.wrapper-gdebi-gtk
+ResultAny=auth_self_keep
+ResultInactive=auth_self_keep
+ResultActive=auth_self_keep

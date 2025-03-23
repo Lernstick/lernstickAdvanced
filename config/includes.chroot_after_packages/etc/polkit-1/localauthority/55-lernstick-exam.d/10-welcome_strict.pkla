@@ -1,0 +1,6 @@
+[enforce authentication before running the Lernstick Welcome application]
+Identity=unix-user:*
+Action=ch.lernstick.welcome
+ResultAny=auth_self_keep
+ResultInactive=auth_self_keep
+ResultActive=auth_self_keep

@@ -11,18 +11,8 @@ apt-get purge -y \
 	exim4-daemon-light \
 	gimp-data \
 	gnome-contacts \
-	hunspell-de-de \
-	hunspell-en-us \
-	hunspell-es \
-	hunspell-fr \
-	hunspell-fr-classical \
-	hunspell-it \
-	hunspell-pt-br \
-	hunspell-ru \
 	libgimp2.0 \
 	malcontent-gui \
-	myspell-fa \
-	myspell-sq \
 	sane-utils \
 	totem \
 	totem-plugins \
