@@ -53,7 +53,6 @@ gstreamer1.0-plugins-ugly
 # gstreamer1.0-vaapi crashes Xorg on a Lenovo Ideapad 3 14ARE05, see:
 # https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/1861609
 #gstreamer1.0-vaapi
-gtkman
 haveged
 i2c-tools
 i965-va-driver
