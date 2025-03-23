@@ -3,5 +3,5 @@ Type=Application
 Encoding=UTF-8
 Version=1.0
 Name=Aufsatz
-Exec=lowriter "/home/user/Schreibtisch/Pruefung.odt"
+Exec=lernstick-libreoffice --writer "/home/user/Schreibtisch/Pruefung.odt"
 X-GNOME-Autostart-enabled=true
