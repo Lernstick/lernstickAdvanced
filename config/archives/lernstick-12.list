@@ -1,23 +1,23 @@
 # Lernstick specific packages
-deb http://packages.lernstick.ch/lernstick lernstick-12 main contrib non-free
+deb [arch=amd64,arm64] http://packages.lernstick.ch/lernstick lernstick-12 main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-12 main contrib non-free
 
 # Backports done by the Lernstick team of other packages
-deb http://packages.lernstick.ch/lernstick lernstick-12-backports main contrib non-free non-free-firmware
+deb [arch=amd64] http://packages.lernstick.ch/lernstick lernstick-12-backports main contrib non-free non-free-firmware
 deb-src http://packages.lernstick.ch/lernstick lernstick-12-backports main contrib non-free non-free-firmware
 
 # Third party packages
-deb http://packages.lernstick.ch/lernstick lernstick-12-thirdparty main contrib non-free
+deb [arch=amd64] http://packages.lernstick.ch/lernstick lernstick-12-thirdparty main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-12-thirdparty main contrib non-free
 
 # Staging packages (distribution set to "not automatic")
-deb http://packages.lernstick.ch/lernstick lernstick-12-staging main contrib non-free
+deb [arch=amd64,arm64] http://packages.lernstick.ch/lernstick lernstick-12-staging main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-12-staging main contrib non-free
 
 # Staging distribution for backports (set to "not automatic")
-deb http://packages.lernstick.ch/lernstick lernstick-12-backports-staging main contrib non-free non-free-firmware
+deb [arch=amd64] http://packages.lernstick.ch/lernstick lernstick-12-backports-staging main contrib non-free non-free-firmware
 deb-src http://packages.lernstick.ch/lernstick lernstick-12-backports-staging main contrib non-free non-free-firmware
 
 # Staging distribution for third party packages (distribution set to "not automatic")
-deb http://packages.lernstick.ch/lernstick lernstick-12-thirdparty-staging main contrib non-free
+deb [arch=amd64] http://packages.lernstick.ch/lernstick lernstick-12-thirdparty-staging main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-12-thirdparty-staging main contrib non-free
