@@ -61,6 +61,7 @@ flatpak -y install \
 	io.github.flattool.Warehouse \
 	io.github.pwr_solaar.solaar \
 	io.sourceforge.pentobi \
+	net.code_industry.MasterPDFEditor \
 	net.lutris.Lutris \
 	net.nokyan.Resources \
 	net.pokerth.PokerTH \
