@@ -66,6 +66,7 @@ flatpak -y install \
 	net.nokyan.Resources \
 	net.pokerth.PokerTH \
 	net.sf.nootka \
+	net.sourceforge.VMPK \
 	org.ardour.Ardour \
 	org.audacityteam.Audacity \
 	org.avidemux.Avidemux \
