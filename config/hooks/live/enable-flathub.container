@@ -70,6 +70,7 @@ flatpak -y install \
 	org.audacityteam.Audacity \
 	org.avidemux.Avidemux \
 	org.chromium.Chromium \
+	org.cryptomator.Cryptomator \
 	org.darktable.Darktable \
 	org.freeplane.App \
 	org.gnome.gbrainy \
