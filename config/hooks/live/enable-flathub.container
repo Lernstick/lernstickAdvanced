@@ -132,7 +132,8 @@ flatpak -y install \
 	org.signal.Signal \
 	org.torproject.torbrowser-launcher \
 	org.wxhexeditor.wxHexEditor \
-	org.x.Warpinator
+	org.x.Warpinator \
+	xyz.ketok.Speedtest
 #	io.lmms.LMMS \
 #	net.minetest.Minetest \
 #	org.denemo.Denemo \
