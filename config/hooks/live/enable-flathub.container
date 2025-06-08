@@ -45,6 +45,7 @@ flatpak -y install \
 	ch.openboard.OpenBoard \
 	com.github.geigi.cozy \
 	com.github.jeromerobert.pdfarranger \
+	com.github.k4zmu2a.spacecadetpinball \
 	com.github.tchx84.Flatseal \
 	com.github.vkohaupt.vokoscreenNG \
 	com.github.wwmm.easyeffects \
@@ -61,6 +62,7 @@ flatpak -y install \
 	io.github.flattool.Warehouse \
 	io.github.pwr_solaar.solaar \
 	io.sourceforge.pentobi \
+	net.hhoney.rota \
 	net.lutris.Lutris \
 	net.nokyan.Resources \
 	net.pokerth.PokerTH \
