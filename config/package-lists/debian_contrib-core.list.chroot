@@ -5,8 +5,7 @@
 #
 ################################################################################
 
-# removed until https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1109025 is fixed...
-#firmware-b43-installer
+firmware-b43-installer
 firmware-b43legacy-installer
 virtualbox-guest-utils
 virtualbox-guest-x11
