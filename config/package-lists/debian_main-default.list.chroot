@@ -9,6 +9,7 @@
 ################################################################################
 
 apt-xapian-index
+clamtk
 eog-plugins
 epoptes-client
 firefox-esr

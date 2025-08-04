@@ -136,7 +136,6 @@ flatpak -y install \
 	org.torproject.torbrowser-launcher \
 	org.wxhexeditor.wxHexEditor \
 	org.x.Warpinator \
-	page.codeberg.zynequ.Kapitano \
 	xyz.ketok.Speedtest
 #	io.lmms.LMMS \
 #	net.minetest.Minetest \
