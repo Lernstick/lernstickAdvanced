@@ -1,6 +1,6 @@
-commit 2660e77f5e78e284852e84e57d4cc065b96ec2c1
+commit e66c2aa3857cce7cbb6612d54389e2f4d225b59c
 Author: Ronny Standtke <ronny.standtke@gmx.net>
-Date:   Tue Aug 5 20:54:26 2025 +0200
+Date:   Tue Aug 5 21:56:16 2025 +0200
 
     command line support for livefs on non-removable usb
 
@@ -163,3 +163,26 @@ index 0a7bf24..fb364db 100755
  }
  
  link_files ()
+diff --git a/components/9990-overlay.sh b/components/9990-overlay.sh
+index b02c0a3..eaf7fd0 100755
+--- a/components/9990-overlay.sh
++++ b/components/9990-overlay.sh
+@@ -234,12 +234,16 @@ setup_unionfs ()
+ 		if [ -n "${PERSISTENCE_MEDIA}" ]
+ 		then
+ 			case "${PERSISTENCE_MEDIA}" in
++				usb)
++					whitelistdev="$(block_dev "true" "")"
++					;;
++
+ 				removable)
+-					whitelistdev="$(removable_dev)"
++					whitelistdev="$(block_dev "" "true")"
+ 					;;
+ 
+ 				removable-usb)
+-					whitelistdev="$(removable_usb_dev)"
++					whitelistdev="$(block_dev "true" "true")"
+ 					;;
+ 			esac
+ 			if [ -z "${whitelistdev}" ]
