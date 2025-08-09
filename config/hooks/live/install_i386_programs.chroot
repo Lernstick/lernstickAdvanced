@@ -19,7 +19,7 @@ apt-get install -y \
 	libnvidia-ml1:i386=535.216.01-1~deb12u1 \
 	libnvidia-ptxjitcompiler1:i386=535.216.01-1~deb12u1 \
 	nvidia-driver-libs:i386=535.216.01-1~deb12u1 \
-	nvidia-vdpau-driver:i38=535.216.01-1~deb12u16
+	nvidia-vdpau-driver:i386=535.216.01-1~deb12u16
 	#libgl1-nvidia-legacy-390xx-glvnd-glx:i386 \
 
 # here is the list of actual applications we want to install
