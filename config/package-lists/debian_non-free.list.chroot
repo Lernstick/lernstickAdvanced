@@ -17,7 +17,7 @@ firmware-misc-nonfree
 firmware-myricom
 firmware-netronome
 firmware-netxen
-firmware-nvidia-gsp
+firmware-nvidia-gsp=535.216.01-1~deb12u1
 firmware-qlogic
 firmware-realtek
 firmware-siano
@@ -35,6 +35,7 @@ libnvidia-eglcore=535.216.01-1~deb12u1
 libnvidia-encode1=535.216.01-1~deb12u1
 libnvidia-glcore=535.216.01-1~deb12u1
 libnvidia-glvkspirv=535.216.01-1~deb12u1
+libnvidia-ml1=535.216.01-1~deb12u1
 libnvidia-pkcs11-openssl3=535.216.01-1~deb12u1
 libnvidia-ptxjitcompiler1=535.216.01-1~deb12u1
 libnvoptix1=535.216.01-1~deb12u1
@@ -45,8 +46,11 @@ nvidia-detect=535.216.01-1~deb12u1
 nvidia-driver=535.216.01-1~deb12u1
 nvidia-driver-bin=535.216.01-1~deb12u1
 nvidia-driver-libs=535.216.01-1~deb12u1
+nvidia-egl-common=535.216.01-1~deb12u1
 nvidia-egl-icd=535.216.01-1~deb12u1
 nvidia-kernel-support=535.216.01-1~deb12u1
+nvidia-legacy-check=535.216.01-1~deb12u1
+nvidia-suspend-common=535.216.01-1~deb12u1
 nvidia-vdpau-driver=535.216.01-1~deb12u1
 p7zip-rar
 xserver-xorg-video-nvidia=535.216.01-1~deb12u1
