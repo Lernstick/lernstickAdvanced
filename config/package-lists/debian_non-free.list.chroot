@@ -30,8 +30,11 @@ intel-microcode
 libcuda1=535.216.01-1~deb12u1
 libegl-nvidia0=535.216.01-1~deb12u1
 libgl1-nvidia-glvnd-glx=535.216.01-1~deb12u1
+libgles-nvidia1=535.216.01-1~deb12u1
+libgles-nvidia2=535.216.01-1~deb12u1
 libglx-nvidia0=535.216.01-1~deb12u1
 libnvcuvid1=535.216.01-1~deb12u1
+libnvidia-allocator1=535.216.01-1~deb12u1
 libnvidia-cfg1=535.216.01-1~deb12u1
 libnvidia-eglcore=535.216.01-1~deb12u1
 libnvidia-encode1=535.216.01-1~deb12u1
@@ -40,6 +43,7 @@ libnvidia-glvkspirv=535.216.01-1~deb12u1
 libnvidia-ml1=535.216.01-1~deb12u1
 libnvidia-pkcs11-openssl3=535.216.01-1~deb12u1
 libnvidia-ptxjitcompiler1=535.216.01-1~deb12u1
+libnvidia-rtcore=535.216.01-1~deb12u1
 libnvoptix1=535.216.01-1~deb12u1
 nvidia-alternative=535.216.01-1~deb12u1
 nvidia-container-toolkit
@@ -52,8 +56,10 @@ nvidia-egl-common=535.216.01-1~deb12u1
 nvidia-egl-icd=535.216.01-1~deb12u1
 nvidia-kernel-support=535.216.01-1~deb12u1
 nvidia-legacy-check=535.216.01-1~deb12u1
+nvidia-smi=535.216.01-1~deb12u1
 nvidia-suspend-common=535.216.01-1~deb12u1
 nvidia-vdpau-driver=535.216.01-1~deb12u1
+nvidia-vulkan-common=535.216.01-1~deb12u1
 p7zip-rar
 phoronix-test-suite
 xserver-xorg-video-nvidia=535.216.01-1~deb12u1
