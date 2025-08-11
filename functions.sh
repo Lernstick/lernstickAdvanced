@@ -117,6 +117,8 @@ build_image()
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
 
+	check_nvidia_versions_match
+
 	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
@@ -167,4 +169,68 @@ build_image()
 
 	# hello, wake up!!! :-)
 	#eject
+}
+
+check_nvidia_versions_match() {
+  echo "Checking nvidia kernel module and flatpak version compatibility..."
+
+  # Path to build chroot (same one you pass to `chroot`)
+  CHROOT_PATH="$(pwd)/chroot"
+
+  # Track what we mounted so we can clean up
+  mounted_proc=0; mounted_sys=0; mounted_dev=0; mounted_devpts=0
+
+  if ! mountpoint -q "$CHROOT_PATH/proc"; then
+    sudo mount -t proc proc "$CHROOT_PATH/proc" || { echo "mount proc failed"; exit 1; }
+    mounted_proc=1
+  fi
+  if ! mountpoint -q "$CHROOT_PATH/sys"; then
+    sudo mount -t sysfs sysfs "$CHROOT_PATH/sys" || { echo "mount sys failed"; exit 1; }
+    mounted_sys=1
+  fi
+  if ! mountpoint -q "$CHROOT_PATH/dev"; then
+    sudo mount --bind /dev "$CHROOT_PATH/dev" || { echo "mount dev failed"; exit 1; }
+    mounted_dev=1
+  fi
+  if ! mountpoint -q "$CHROOT_PATH/dev/pts"; then
+    sudo mount --bind /dev/pts "$CHROOT_PATH/dev/pts" || { echo "mount dev/pts failed"; exit 1; }
+    mounted_devpts=1
+  fi
+
+  # Cleanup function runs when we leave this function
+  cleanup_mounts() {
+    [[ $mounted_devpts -eq 1 ]] && sudo umount "$CHROOT_PATH/dev/pts"
+    [[ $mounted_dev    -eq 1 ]] && sudo umount "$CHROOT_PATH/dev"
+    [[ $mounted_sys    -eq 1 ]] && sudo umount "$CHROOT_PATH/sys"
+    [[ $mounted_proc   -eq 1 ]] && sudo umount "$CHROOT_PATH/proc"
+  }
+  trap cleanup_mounts RETURN
+
+  # Get kernel module version
+  NVIDIA_KERNEL_VERSION=$(chroot "$CHROOT_PATH" dpkg -l | sed -n "s/.*nvidia-kernel-\([0-9.]*\)-.*/\1/p")
+
+  # Get Flatpak driver version
+  FLATPAK_DRIVER_VERSION_RAW=$(chroot "$CHROOT_PATH" flatpak list --columns=application \
+    | sed -n 's/.*\.nvidia-\(.*\)/\1/p')
+
+  # Normalize: change dashes to dots
+  FLATPAK_DRIVER_VERSION=$(printf '%s' "$FLATPAK_DRIVER_VERSION_RAW" | sed 's/-/./g')
+
+  echo "Kernel module version: $NVIDIA_KERNEL_VERSION"
+  echo "Flatpak driver version (raw): $FLATPAK_DRIVER_VERSION_RAW"
+  echo "Flatpak driver version (dots): $FLATPAK_DRIVER_VERSION"
+
+  if [[ -z $NVIDIA_KERNEL_VERSION || -z $FLATPAK_DRIVER_VERSION ]]; then
+    echo "ERROR: Could not determine NVIDIA versions correctly."
+    exit 1
+  fi
+
+  if [[ "$FLATPAK_DRIVER_VERSION" != "$NVIDIA_KERNEL_VERSION" ]]; then
+    echo "ERROR: Versions do not match!"
+    echo "       Kernel module: $NVIDIA_KERNEL_VERSION"
+    echo "       Flatpak      : $FLATPAK_DRIVER_VERSION"
+    exit 1
+  fi
+
+  echo "OK: NVIDIA versions match."
 }
