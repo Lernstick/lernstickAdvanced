@@ -15,7 +15,7 @@ lernstick-config
 lernstick-distro-info-data
 lernstick-execute-jar
 lernstick-htop
-lernstick-imagemagick
+#lernstick-imagemagick
 lernstick-libinput-quirks
 lernstick-mc
 lernstick-menu
@@ -24,9 +24,9 @@ lernstick-onboard
 #lernstick-openjdk-8-jre
 lernstick-python-apt-common
 lernstick-ranger
-lernstick-software-properties-gtk
+#lernstick-software-properties-gtk
 lernstick-speech-dispatcher
-lernstick-systemd
+#lernstick-systemd
 lernstick-texlive-base
 lernstick-theme
 lernstick-vim-common

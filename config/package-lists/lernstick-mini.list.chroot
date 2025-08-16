@@ -5,7 +5,7 @@
 #
 ################################################################################
 
-dlcopy
+#dlcopy
 jbackpack-full
 #lernstick-amarok
 #lernstick-amarok-utils
@@ -21,7 +21,6 @@ lernstick-fritzing
 lernstick-fsview
 #lernstick-gdebi-kde
 lernstick-gnome-characters
-lernstick-gnome-dictionary
 lernstick-gnome-logs
 lernstick-gnome-screenshot
 lernstick-gnome-software
@@ -61,7 +60,7 @@ lernstick-terminology
 lernstick-totem
 lernstick-transmission-gtk
 lernstick-usertemplate
-lernstickwelcome
+#lernstickwelcome
 lernstick-xjadeo
 lernstick-xlogo-online
 lernstick-xsane

@@ -5,7 +5,7 @@ lernstick-gpicview
 lernstick-lxtask
 lernstick-lxterminal
 lernstick-obconf
-lernstick-parcellite
+#lernstick-parcellite
 lernstick-pcmanfm
 lernstick-usermode
 lernstick-xarchiver

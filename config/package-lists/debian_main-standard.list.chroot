@@ -3,7 +3,7 @@ colobot
 enigma
 exe-thumbnailer
 extremetuxracer
-geogebra-classic
+#geogebra-classic
 geogebra-gnome
 gimp
 gimp-data
@@ -15,8 +15,7 @@ gimp-help-es
 gimp-help-fr
 gimp-help-it
 gimp-help-ru
-gimp-plugin-registry
-#gimp-python
+#gimp-plugin-registry
 gimp-texturize
 kstars
 kstars-data

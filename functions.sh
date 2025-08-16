@@ -97,10 +97,9 @@ build_image()
 		--chroot-squashfs-compression-level 22 \
 		--chroot-squashfs-compression-type zstd \
 		--debootstrap-options "--include=ca-certificates,openssl" \
-		--distribution bookworm \
+		--distribution trixie \
 		--firmware-chroot false \
 		--iso-volume "lernstick${ISO_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-6.12.9+bpo \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
@@ -108,7 +107,7 @@ build_image()
 		--source ${SOURCE} \
 		--updates true \
 		--verbose
-		#--linux-packages linux-image-6.1.0-0.deb11.7 \
+		#--linux-packages linux-image-6.12.9+bpo \
 		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
 		# https://lists.debian.org/debian-live/2011/08/msg00144.html
 		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"

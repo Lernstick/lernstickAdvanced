@@ -37,7 +37,7 @@ dmz-cursor-theme
 dolphin
 #dolphin-nextcloud
 dolphin-owncloud
-epoptes
+#epoptes
 #ffplay
 flac
 fritzing
@@ -75,7 +75,7 @@ jmtpfs
 jstest-gtk
 keepassxc
 kfind
-kipi-plugins
+#kipi-plugins
 kmag
 kmousetool
 konq-plugins
@@ -135,7 +135,7 @@ qtqr
 rawtherapee
 samba
 samplerate-programs
-sane
+#sane
 sane-utils
 #scrcpy
 sddm
@@ -145,7 +145,7 @@ sonic-pi
 spice-webdavd
 subversion
 swh-plugins
-synfigstudio
+#synfigstudio
 tesseract-ocr-deu
 tesseract-ocr-eng
 tesseract-ocr-fra
@@ -164,12 +164,11 @@ thunderbird-l10n-ru
 thunderbird-l10n-sq
 totem-plugins
 vim-gtk3
-vinagre
 #vym
 wireshark
 xournal
 xsane
-youtube-dl
+yt-dlp
 zenmap
 zint-qt
 zsync

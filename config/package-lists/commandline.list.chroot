@@ -11,10 +11,11 @@ bash-completion
 bind9-host
 btop
 command-not-found
-deborphan
+#deborphan
 debtree
 dialog
 duf
+fastfetch
 hexyl
 htop
 icnsutils
@@ -27,7 +28,6 @@ less
 mc
 mtools
 ncdu
-neofetch
 nethogs
 netpbm
 nvitop

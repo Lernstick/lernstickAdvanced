@@ -3,7 +3,7 @@ bluej
 lernstick-bluej
 lernstick-colobot
 lernstick-geogebra
-lernstick-geogebra-classic
+#lernstick-geogebra-classic
 lernstick-gimp
 #lernstick-gimp-draw-arrow-plugin
 lernstick-greenfoot
@@ -18,7 +18,7 @@ lernstick-tuxpaint
 #lernstick-virtualbox
 lernstick-wine
 lernstick-winetricks
-libreoffice-kf5
+libreoffice-kf6
 libreoffice-plasma
 live-enigma
 minetest-mod-3d-armor
