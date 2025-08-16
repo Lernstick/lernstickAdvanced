@@ -122,7 +122,7 @@ obs-transition-table
 obs-vintage-filter
 okular
 okular-extra-backends
-onedrive
+#onedrive disabled because of https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1101407
 owncloud-client
 photofilmstrip
 qelectrotech
