@@ -53,6 +53,7 @@ flatpak -y install \
 	com.jgraph.drawio.desktop \
 	com.usebottles.bottles \
 	de.mediathekview.MediathekView \
+	dev.ters.LocalTranslate \
 	fr.handbrake.ghb \
 	im.riot.Riot \
 	info.mumble.Mumble \
