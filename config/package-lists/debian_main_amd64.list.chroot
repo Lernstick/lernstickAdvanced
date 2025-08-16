@@ -1,8 +1,0 @@
-################################################################################
-#
-# * virtualbox and other dkms based modules needs linux-headers-*, otherwise
-#   these kernel modules can not be compiled
-#
-################################################################################
-
-linux-headers-6.12.9+bpo-amd64

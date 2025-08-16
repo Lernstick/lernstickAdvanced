@@ -124,7 +124,7 @@ build_image()
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file
 		echo "Updating zsync file..." | tee -a logfile.txt
-		rm *.zsync
+		rm -f *.zsync
 		zsyncmake -C ${IMAGE} -u ${IMAGE}
 		echo "Creating MD5 for iso..." | tee -a logfile.txt
 		md5sum ${IMAGE} > ${IMAGE}.md5
