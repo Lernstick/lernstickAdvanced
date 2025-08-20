@@ -43,6 +43,11 @@ cache_cleanup()
 		do
 			BASE_NAME=$(basename ${FILE})
 			PACKAGE_NAME=$(echo ${BASE_NAME} | sed 's/_.*//')
+			if ! ls ${DIR}/${PACKAGE_NAME}_* > /dev/null 2>&1
+			then
+				echo "package $PACKAGE_NAME not found"
+				break
+			fi
 			VERSIONS=$(ls ${DIR}/${PACKAGE_NAME}_*)
 			COUNTER=$(echo ${VERSIONS} | wc -w)
 			if [ ${COUNTER} -gt 1 ]
