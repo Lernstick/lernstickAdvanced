@@ -7,6 +7,7 @@
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
 	blueman \
+	eog \
 	gnome-robots \
 	gnome-system-tools \
 	gucharmap \
