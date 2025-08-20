@@ -10,6 +10,6 @@ clamtk-gnome
 #eiciel # breaks l10n in nautilus
 font-manager
 gnome-tweaks
-#nautilus-font-manager
+nautilus-font-manager
 #nautilus-gtkhash
 seahorse-nautilus

@@ -11,7 +11,6 @@ jbackpack-full
 #lernstick-amarok-utils
 #lernstick-apper
 lernstick-arandr
-#lernstick-avidemux-qt
 lernstick-brasero
 lernstick-calibre
 lernstick-dconf-editor
@@ -25,7 +24,6 @@ lernstick-gnome-logs
 lernstick-gnome-screenshot
 lernstick-gnome-software
 lernstick-gparted
-#lernstick-handbrake-gtk
 lernstick-hugin
 lernstick-info
 lernstick-konqueror
@@ -35,12 +33,6 @@ lernstick-mein-klett
 lernstick-menu-xdg
 lernstick-mille-feuilles
 lernstick-mount-exchange
-# mypaint is currently not co-installable with gimp, see
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894757
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=897909
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=906144
-# Therefore we can install mypaint only from flathub
-#lernstick-mypaint
 #lernstick-nitroshare
 lernstick-okular
 lernstick-openclipart
@@ -68,4 +60,3 @@ lernstick-xscreensaver
 #lernstick-zenmap
 lernstick-zynaddsubfx
 #tuxedo-wmi-dkms
-#xlogo-ide

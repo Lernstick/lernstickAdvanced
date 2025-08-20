@@ -16,7 +16,6 @@
 amsynth
 #apper
 arandr
-#ardesia
 blop
 bluetooth
 bluez-cups
@@ -38,7 +37,6 @@ dolphin
 #dolphin-nextcloud
 dolphin-owncloud
 #epoptes
-#ffplay
 flac
 fritzing
 fritzing-parts
@@ -50,7 +48,6 @@ gparted
 graphviz
 gstreamer1.0-packagekit
 gwakeonlan
-#handbrake-gtk
 heif-thumbnailer
 hugin
 hunspell-de-at
@@ -83,14 +80,6 @@ konqueror
 krename
 #ktimetracker
 #lilypond
-# mypaint is currently not co-installable with gimp, see
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894757
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=897909
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=906144
-# Therefore we can install mypaint only from flathub
-#mypaint
-#mypaint-data
-#mypaint-data-extras
 myspell-es
 myspell-fa
 mystiq
@@ -141,7 +130,6 @@ sane-utils
 sddm
 smb4k
 sonic-pi
-#spamassassin
 spice-webdavd
 subversion
 swh-plugins
@@ -164,7 +152,6 @@ thunderbird-l10n-ru
 thunderbird-l10n-sq
 totem-plugins
 vim-gtk3
-#vym
 wireshark
 xournal
 xsane

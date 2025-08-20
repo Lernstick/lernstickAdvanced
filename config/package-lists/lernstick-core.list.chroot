@@ -15,7 +15,7 @@ lernstick-config
 lernstick-distro-info-data
 lernstick-execute-jar
 lernstick-htop
-#lernstick-imagemagick
+lernstick-imagemagick
 lernstick-libinput-quirks
 lernstick-mc
 lernstick-menu
