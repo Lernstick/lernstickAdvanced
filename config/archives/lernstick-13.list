@@ -1,4 +1,8 @@
 # Lernstick specific packages
+deb [arch=amd64,arm64] http://packages.lernstick.ch/lernstick lernstick-13 main contrib non-free
+deb-src http://packages.lernstick.ch/lernstick lernstick-13 main contrib non-free
+
+# Lernstick specific packages
 deb [arch=amd64,arm64] http://packages.lernstick.ch/lernstick lernstick-12 main contrib non-free
 deb-src http://packages.lernstick.ch/lernstick lernstick-12 main contrib non-free
 
