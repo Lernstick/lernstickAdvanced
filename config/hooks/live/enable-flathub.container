@@ -124,6 +124,7 @@ flatpak -y install \
 	org.kde.parley \
 	org.kde.picmi \
 	org.ksnip.ksnip \
+	org.luanti.luanti \
 	org.mixxx.Mixxx \
 	org.mobsya.ThymioSuite \
 	org.musescore.MuseScore \
