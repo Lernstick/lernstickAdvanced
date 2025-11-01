@@ -7,6 +7,6 @@
 
 firmware-b43-installer
 firmware-b43legacy-installer
-nvidia-settings=535.216.01-1~bpo12+1
+nvidia-settings=550.163.01-1
 virtualbox-guest-utils
 virtualbox-guest-x11

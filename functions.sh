@@ -105,6 +105,7 @@ build_image()
 		--distribution trixie \
 		--firmware-chroot false \
 		--iso-volume "lernstick${ISO_SUFFIX} ${TODAY}" \
+		--linux-packages linux-image-6.16.3+deb13 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
@@ -112,11 +113,6 @@ build_image()
 		--source ${SOURCE} \
 		--updates true \
 		--verbose
-		#--linux-packages linux-image-6.12.9+bpo \
-		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
-		# https://lists.debian.org/debian-live/2011/08/msg00144.html
-		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"
-		# --binary-images iso \
 
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
@@ -168,7 +164,4 @@ build_image()
 	then
 		mv logfile.txt "${BUILD_DIR}"
 	fi
-
-	# hello, wake up!!! :-)
-	#eject
 }
