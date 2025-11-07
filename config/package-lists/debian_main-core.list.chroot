@@ -98,7 +98,9 @@ ppp
 projecteur
 rfkill
 rng-tools5
+rocminfo
 rsync
+screenkey
 smbclient
 #software-properties-gtk
 spice-vdagent
