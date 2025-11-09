@@ -1,5 +1,5 @@
-broadcom-sta-modules-6.12.9+bpo-amd64-signed
-nvidia-kernel-535.216.01-6.12.9+bpo-amd64-signed
-rtl88x2bu-modules-6.12.9+bpo-amd64-signed
-v4l2loopback-modules-6.12.9+bpo-amd64-signed
-virtualbox-modules-6.12.9+bpo-amd64-signed
+broadcom-sta-modules-6.16.3+deb13-amd64-signed
+nvidia-kernel-550.163.01-6.16.3+deb13-amd64-signed
+rtl88x2bu-modules-6.16.3+deb13-amd64-signed
+v4l2loopback-modules-6.16.3+deb13-amd64-signed
+virtualbox-modules-6.16.3+deb13-amd64-signed

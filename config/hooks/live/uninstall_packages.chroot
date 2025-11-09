@@ -6,11 +6,17 @@
 # don't want to have. Unfortunately, we have no blacklist while building the
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
+	blueman \
+	eog \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
 	gimp-data \
 	gnome-contacts \
+	gnome-robots \
+	gnome-system-tools \
+	gucharmap \
+	hexchat \
 	hunspell-de-de \
 	hunspell-en-us \
 	hunspell-es \
@@ -23,7 +29,10 @@ apt-get purge -y \
 	malcontent-gui \
 	myspell-fa \
 	myspell-sq \
+	plasma-discover \
+	plasma-discover-common \
 	sane-utils \
+	system-tools-backends \
 	totem \
 	totem-plugins \
 	xsane \

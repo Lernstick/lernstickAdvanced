@@ -43,6 +43,11 @@ cache_cleanup()
 		do
 			BASE_NAME=$(basename ${FILE})
 			PACKAGE_NAME=$(echo ${BASE_NAME} | sed 's/_.*//')
+			if ! ls ${DIR}/${PACKAGE_NAME}_* > /dev/null 2>&1
+			then
+				echo "package $PACKAGE_NAME not found"
+				break
+			fi
 			VERSIONS=$(ls ${DIR}/${PACKAGE_NAME}_*)
 			COUNTER=$(echo ${VERSIONS} | wc -w)
 			if [ ${COUNTER} -gt 1 ]
@@ -77,7 +82,7 @@ build_image()
 	# GRUB
 	GRUB_THEME_DIR="config/includes.binary/boot/grub/themes/lernstick"
 	cp templates/theme.txt ${GRUB_THEME_DIR}
-	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 12 (Version ${TODAY})\"|1" \
+	sed -i "s|title-text.*|title-text: \"Lernstick-Prüfungsumgebung Debian 13 (Version ${TODAY})\"|1" \
 		${GRUB_THEME_DIR}/theme.txt
 
 	# update configuration
@@ -97,10 +102,10 @@ build_image()
 		--chroot-squashfs-compression-level 22 \
 		--chroot-squashfs-compression-type zstd \
 		--debootstrap-options "--include=ca-certificates,openssl" \
-		--distribution bookworm \
+		--distribution trixie \
 		--firmware-chroot false \
 		--iso-volume "lernstick${ISO_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-6.12.9+bpo \
+		--linux-packages linux-image-6.16.3+deb13 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
@@ -108,11 +113,6 @@ build_image()
 		--source ${SOURCE} \
 		--updates true \
 		--verbose
-		#--linux-packages linux-image-6.1.0-0.deb11.7 \
-		# let's hope that we are no longer encountering machines that just freeze with isohybrid images:
-		# https://lists.debian.org/debian-live/2011/08/msg00144.html
-		# if this is still a problem we need to change back from the default of "iso-hybrid" to plain "iso"
-		# --binary-images iso \
 
 	# build image (and produce a log file)
 	lb build 2>&1 | tee logfile.txt
@@ -120,12 +120,12 @@ build_image()
 	ISO_FILE="live-image-amd64.hybrid.iso"
 	if [ -f ${ISO_FILE} ]
 	then
-		PREFIX="lernstick_debian12${ISO_SUFFIX}_${TODAY}"
+		PREFIX="lernstick_debian13${ISO_SUFFIX}_${TODAY}"
 		IMAGE="${PREFIX}.iso"
 		mv ${ISO_FILE} ${IMAGE}
 		# we must update the zsync file because we renamed the iso file
 		echo "Updating zsync file..." | tee -a logfile.txt
-		rm *.zsync
+		rm -f *.zsync
 		zsyncmake -C ${IMAGE} -u ${IMAGE}
 		echo "Creating MD5 for iso..." | tee -a logfile.txt
 		md5sum ${IMAGE} > ${IMAGE}.md5
@@ -164,7 +164,4 @@ build_image()
 	then
 		mv logfile.txt "${BUILD_DIR}"
 	fi
-
-	# hello, wake up!!! :-)
-	#eject
 }

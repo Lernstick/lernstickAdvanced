@@ -4,14 +4,10 @@
 # standard and exam version, but are *NOT* needed in all customized exam
 # versions.
 #
-# * synaptic needs apt-xapian-index for quicksearch
-#
 ################################################################################
 
-apt-xapian-index
 clamtk
-eog-plugins
-epoptes-client
+#epoptes-client
 firefox-esr
 firefox-esr-l10n-de
 firefox-esr-l10n-en-gb
@@ -32,6 +28,5 @@ gtkhash
 lshw-gtk
 menulibre
 seahorse
-#shutter
 synaptic
 virt-manager

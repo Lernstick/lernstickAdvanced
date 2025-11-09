@@ -6,16 +6,17 @@
 ################################################################################
 
 gnome-core
+gnome-shell-extension-appindicator
 gnome-shell-extension-dashtodock
 gnome-shell-extension-dash-to-panel
 gnome-shell-extension-desktop-icons-ng
 #gnome-shell-extension-draw-on-your-screen
 gnome-shell-extension-gpaste
 gnome-shell-extensions
-gnome-shell-extension-top-icons-plus
+gnome-shell-extension-workspace-indicator
 nautilus
 #nautilus-wipe
-network-manager-fortisslvpn-gnome
+#network-manager-fortisslvpn-gnome
 network-manager-gnome
 #network-manager-iodine-gnome
 network-manager-l2tp-gnome
