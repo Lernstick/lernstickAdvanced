@@ -11,6 +11,7 @@ apt-get purge -y \
 	exim4-base \
 	exim4-config \
 	exim4-daemon-light \
+	firmware-marvell-prestera \
 	gimp-data \
 	gnome-contacts \
 	gnome-robots \
