@@ -8,6 +8,7 @@
 apt-get purge -y \
 	blueman \
 	eog \
+	firmware-marvell-prestera \
 	gnome-robots \
 	gnome-system-tools \
 	gucharmap \
