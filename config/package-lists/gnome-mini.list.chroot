@@ -2,6 +2,8 @@
 # in the exam version.
 
 gnome-firmware
+gnome-shell-extension-gsconnect
+gnome-shell-extension-gsconnect-browsers
 #hamster-applet
 nautilus-admin
 #nautilus-nextcloud
