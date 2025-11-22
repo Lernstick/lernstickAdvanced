@@ -61,6 +61,7 @@ flatpak -y install \
 	io.github.adrienverge.PhotoCollage \
 	io.github.flattool.Warehouse \
 	io.github.pwr_solaar.solaar \
+	io.github.yairm210.unciv \
 	io.sourceforge.pentobi \
 	net.hhoney.rota \
 	net.lutris.Lutris \
@@ -140,9 +141,7 @@ flatpak -y install \
 	org.x.Warpinator \
 	xyz.ketok.Speedtest
 #	io.lmms.LMMS \
-#	net.minetest.Minetest \
 #	org.denemo.Denemo \
 #	org.gimp.GIMP \
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux \
-#	xyz.ketok.Speedtest
