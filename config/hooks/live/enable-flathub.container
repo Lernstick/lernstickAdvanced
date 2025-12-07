@@ -40,6 +40,7 @@ flatpak -y install \
 	com.github.wwmm.easyeffects \
 	com.usebottles.bottles \
 	io.github.flattool.Warehouse \
+	io.github.pwr_solaar.solaar \
 	net.nokyan.Resources \
 	org.gnome.gThumb \
 	org.ksnip.ksnip \

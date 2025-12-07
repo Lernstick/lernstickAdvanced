@@ -105,7 +105,7 @@ build_image()
 		--distribution trixie \
 		--firmware-chroot false \
 		--iso-volume "lernstick${ISO_SUFFIX} ${TODAY}" \
-		--linux-packages linux-image-6.16.3+deb13 \
+		--linux-packages linux-image-6.17.8+deb13 \
 		--mirror-binary ${MIRROR_SYSTEM} \
 		--mirror-binary-security ${MIRROR_SECURITY_SYSTEM} \
 		--mirror-bootstrap ${MIRROR_BUILD} \
