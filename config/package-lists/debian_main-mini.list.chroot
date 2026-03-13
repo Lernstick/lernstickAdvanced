@@ -126,7 +126,7 @@ samba
 samplerate-programs
 #sane
 sane-utils
-#scrcpy
+scrcpy
 sddm
 smb4k
 sonic-pi
