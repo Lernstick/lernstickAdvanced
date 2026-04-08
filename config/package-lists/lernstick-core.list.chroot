@@ -26,7 +26,7 @@ lernstick-python-apt-common
 lernstick-ranger
 #lernstick-software-properties-gtk
 lernstick-speech-dispatcher
-#lernstick-systemd
+lernstick-systemd
 lernstick-texlive-base
 lernstick-theme
 lernstick-vim-common
