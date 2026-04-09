@@ -1,0 +1,52 @@
+#!/bin/sh
+# Install proxam-exam-client from the latest GitHub Release.
+# Runs inside the chroot during ISO build.
+set -e
+
+GITHUB_REPO="Wojtasik-Lang-Consulting/proxam-exam-client"
+DEB_NAME="proxam-exam-client"
+TMPDIR="/tmp/proxam-exam-client-install"
+
+echo "==> Installing ${DEB_NAME} from GitHub Releases ..."
+
+# Fetch the download URL of the latest .deb release asset
+LATEST_URL=$(wget -qO- "https://api.github.com/repos/${GITHUB_REPO}/releases/latest" \
+    | grep "browser_download_url" \
+    | grep "\.deb" \
+    | head -1 \
+    | cut -d '"' -f 4)
+
+if [ -z "${LATEST_URL}" ]; then
+    echo "ERROR: Could not find a .deb release for ${GITHUB_REPO}." >&2
+    echo "       Make sure at least one tagged release with a .deb asset exists." >&2
+    exit 1
+fi
+
+echo "==> Downloading: ${LATEST_URL}"
+mkdir -p "${TMPDIR}"
+wget -q -O "${TMPDIR}/${DEB_NAME}.deb" "${LATEST_URL}"
+
+echo "==> Installing dependencies ..."
+apt-get install -y --no-install-recommends \
+    wget \
+    python3 \
+    zenity \
+    coreutils \
+    iptables \
+    ffmpeg \
+    logkeys \
+    screen \
+    xdotool \
+    python3-wxgtk-webview4.0 \
+    python3-packaging \
+    python3-requests \
+    avahi-utils \
+    rdiff-backup
+
+echo "==> Installing ${DEB_NAME}.deb ..."
+dpkg -i "${TMPDIR}/${DEB_NAME}.deb" || apt-get install -f -y
+
+echo "==> Cleaning up ..."
+rm -rf "${TMPDIR}"
+
+echo "==> ${DEB_NAME} installed successfully."

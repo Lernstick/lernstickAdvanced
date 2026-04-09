@@ -1,0 +1,83 @@
+name: Build ProXam Exam ISO
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'false'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:trixie
+      options: --privileged  # required for live-build chroot operations
+
+    steps:
+      - name: Install live-build and dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            live-build \
+            rsync \
+            zsync \
+            gfxboot \
+            libhtml-parser-perl \
+            wget \
+            ca-certificates \
+            git \
+            debootstrap \
+            squashfs-tools \
+            xorriso \
+            isolinux \
+            syslinux \
+            syslinux-common \
+            grub-efi-amd64-bin \
+            grub-pc-bin \
+            mtools \
+            dosfstools
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create constants file
+        run: |
+          cat > constants <<EOF
+          BUILD_DIR=""
+          TMPFS=""
+          TMPFS_IMAGE=""
+          TMPFS_IMAGE_SIZE=0
+          TMPFS_IMAGE_MOUNT=""
+          MIRROR_BUILD="http://deb.debian.org/debian"
+          MIRROR_SYSTEM="http://deb.debian.org/debian"
+          MIRROR_SECURITY_SYSTEM="http://security.debian.org/"
+          SOURCE="false"
+          EOF
+
+      - name: Build ISO
+        run: |
+          chmod +x build_proxam_exam_iso.sh
+          ./build_proxam_exam_iso.sh
+
+      - name: Upload ISO artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxam-exam-iso
+          path: |
+            proxam-exam_debian13_proxam_exam_*.iso
+            proxam-exam_debian13_proxam_exam_*.md5
+          retention-days: 14
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            proxam-exam_debian13_proxam_exam_*.iso
+            proxam-exam_debian13_proxam_exam_*.md5
+          generate_release_notes: true
