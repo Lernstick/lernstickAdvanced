@@ -14,15 +14,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: debian:trixie
-      options: --privileged  # required for live-build chroot operations
 
     steps:
       - name: Install live-build and dependencies
         run: |
-          apt-get update
-          apt-get install -y --no-install-recommends \
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
             live-build \
             systemd-container \
             rsync \
@@ -63,7 +60,7 @@ jobs:
       - name: Build ISO
         run: |
           chmod +x build_proxam_exam_iso.sh
-          ./build_proxam_exam_iso.sh
+          sudo ./build_proxam_exam_iso.sh
 
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
