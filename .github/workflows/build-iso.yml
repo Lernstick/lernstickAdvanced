@@ -16,36 +16,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install live-build and dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            live-build \
-            systemd-container \
-            rsync \
-            zsync \
-            gfxboot \
-            libhtml-parser-perl \
-            wget \
-            ca-certificates \
-            git \
-            debootstrap \
-            squashfs-tools \
-            xorriso \
-            isolinux \
-            syslinux \
-            syslinux-common \
-            grub-efi-amd64-bin \
-            grub-pc-bin \
-            mtools \
-            dosfstools
-
-      - name: Checkout
+      - name: Checkout proxam-lernstick
         uses: actions/checkout@v4
+
+      - name: Checkout proxam-exam-client
+        uses: actions/checkout@v4
+        with:
+          repository: Wojtasik-Lang-Consulting/proxam-exam-client
+          path: proxam-exam-client-src
 
       - name: Create constants file
         run: |
-          cat > constants <<EOF
+          cat > constants <<'EOF'
           BUILD_DIR=""
           TMPFS=""
           TMPFS_IMAGE=""
@@ -57,10 +39,71 @@ jobs:
           SOURCE="false"
           EOF
 
-      - name: Build ISO
+      - name: Build proxam-exam-client .deb and place in packages.chroot
+        # Build the .deb from source inside a Trixie container so the package
+        # is available to live-build via config/packages.chroot/ — no GitHub
+        # Release required and no network access needed inside the chroot.
         run: |
-          chmod +x build_proxam_exam_iso.sh
-          sudo ./build_proxam_exam_iso.sh
+          mkdir -p config/packages.chroot
+          docker run --rm \
+            -v "${{ github.workspace }}/proxam-exam-client-src:/src" \
+            -v "${{ github.workspace }}/config/packages.chroot:/out" \
+            debian:trixie \
+            bash -c "
+              set -e
+              apt-get update -qq
+              apt-get install -y --no-install-recommends \
+                build-essential \
+                devscripts \
+                debhelper \
+                config-package-dev \
+                gettext \
+                fakeroot \
+                dpkg-dev
+              cp -r /src /build
+              cd /build
+              dpkg-buildpackage -us -uc -b
+              cp /proxam-exam-client_*.deb /out/
+              ls -la /out/
+            "
+
+      - name: Build ISO (privileged Debian container)
+        # live-build uses systemd-nspawn to run chroot hooks.
+        # systemd-nspawn requires kernel namespaces → must run in a
+        # --privileged container so it has full access to host kernel features.
+        # Using docker run directly (instead of GitHub Actions container: block)
+        # lets us pass --privileged and --cgroupns=host which the container: block omits.
+        run: |
+          docker run --privileged --cgroupns=host \
+            -v "${{ github.workspace }}:/build" \
+            -w /build \
+            debian:trixie \
+            bash -c "
+              set -e
+              apt-get update -qq
+              apt-get install -y --no-install-recommends \
+                live-build \
+                systemd-container \
+                rsync \
+                zsync \
+                gfxboot \
+                libhtml-parser-perl \
+                wget \
+                ca-certificates \
+                git \
+                debootstrap \
+                squashfs-tools \
+                xorriso \
+                isolinux \
+                syslinux \
+                syslinux-common \
+                grub-efi-amd64-bin \
+                grub-pc-bin \
+                mtools \
+                dosfstools
+              chmod +x build_proxam_exam_iso.sh
+              ./build_proxam_exam_iso.sh
+            "
 
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
