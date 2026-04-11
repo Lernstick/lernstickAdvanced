@@ -16,6 +16,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Free up disk space
+        # GitHub Actions runners come with ~14 GB total but only ~3–4 GB free after
+        # preinstalled software. The ISO build needs ~10+ GB. We remove toolchains
+        # and SDKs we don't need to reclaim ~25 GB of space.
+        run: |
+          echo "==> Disk space before cleanup:"
+          df -h /
+          sudo rm -rf \
+            /usr/share/dotnet \
+            /usr/local/lib/android \
+            /opt/ghc \
+            /opt/hostedtoolcache \
+            /usr/local/share/powershell \
+            /usr/share/swift \
+            /usr/local/.ghcup \
+            /usr/lib/jvm \
+            /usr/local/graalvm \
+            /usr/local/share/chromium \
+            /usr/local/share/edge_driver \
+            /usr/local/share/gecko_driver \
+            /usr/local/share/vcpkg \
+            /usr/share/miniconda \
+            /usr/local/aws-cli \
+            /usr/local/aws-sam-cli \
+            /opt/az \
+            "$AGENT_TOOLSDIRECTORY" || true
+          sudo apt-get clean
+          docker image prune -af || true
+          echo "==> Disk space after cleanup:"
+          df -h /
+
       - name: Checkout proxam-lernstick
         uses: actions/checkout@v4
 
