@@ -104,6 +104,7 @@ jobs:
               dpkg-buildpackage -us -uc -b
               cp /proxam-exam-client_*.deb /out/
               ls -la /out/
+            "
 
       - name: Select ISO variant
         run: |
@@ -131,7 +132,6 @@ jobs:
               exit 1
               ;;
           esac
-            "
 
       - name: Build ISO (privileged Debian container)
         # live-build uses systemd-nspawn to run chroot hooks.
