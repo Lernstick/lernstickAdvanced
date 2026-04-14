@@ -6,6 +6,14 @@ on:
       - 'v*'
   workflow_dispatch:
     inputs:
+      iso_variant:
+        description: 'ISO variant to build'
+        required: true
+        default: 'proxam-exam'
+        type: choice
+        options:
+          - proxam-exam
+          - moodle-rdp
       debug:
         description: 'Enable debug output'
         required: false
@@ -96,6 +104,33 @@ jobs:
               dpkg-buildpackage -us -uc -b
               cp /proxam-exam-client_*.deb /out/
               ls -la /out/
+
+      - name: Select ISO variant
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ISO_VARIANT="${{ github.event.inputs.iso_variant }}"
+          else
+            ISO_VARIANT="proxam-exam"
+          fi
+
+          case "${ISO_VARIANT}" in
+            proxam-exam)
+              echo "ISO_VARIANT=${ISO_VARIANT}" >> "$GITHUB_ENV"
+              echo "ISO_BUILD_SCRIPT=build_proxam_exam_iso.sh" >> "$GITHUB_ENV"
+              echo "ISO_ARTIFACT_NAME=proxam-exam-iso" >> "$GITHUB_ENV"
+              echo "ISO_FILE_GLOB=proxam-exam_debian13_proxam_exam_*" >> "$GITHUB_ENV"
+              ;;
+            moodle-rdp)
+              echo "ISO_VARIANT=${ISO_VARIANT}" >> "$GITHUB_ENV"
+              echo "ISO_BUILD_SCRIPT=build_proxam_moodle_rdp_iso.sh" >> "$GITHUB_ENV"
+              echo "ISO_ARTIFACT_NAME=proxam-moodle-rdp-iso" >> "$GITHUB_ENV"
+              echo "ISO_FILE_GLOB=lernstick_debian13_moodle_rdp_*" >> "$GITHUB_ENV"
+              ;;
+            *)
+              echo "Unsupported ISO variant: ${ISO_VARIANT}" >&2
+              exit 1
+              ;;
+          esac
             "
 
       - name: Build ISO (privileged Debian container)
@@ -132,17 +167,17 @@ jobs:
                 grub-pc-bin \
                 mtools \
                 dosfstools
-              chmod +x build_proxam_exam_iso.sh
-              ./build_proxam_exam_iso.sh
+              chmod +x "${ISO_BUILD_SCRIPT}"
+              ./${ISO_BUILD_SCRIPT}
             "
 
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
         with:
-          name: proxam-exam-iso
+          name: ${{ env.ISO_ARTIFACT_NAME }}
           path: |
-            proxam-exam_debian13_proxam_exam_*.iso
-            proxam-exam_debian13_proxam_exam_*.md5
+            ${{ env.ISO_FILE_GLOB }}.iso
+            ${{ env.ISO_FILE_GLOB }}.md5
           retention-days: 14
 
       - name: Create GitHub Release
@@ -150,6 +185,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            proxam-exam_debian13_proxam_exam_*.iso
-            proxam-exam_debian13_proxam_exam_*.md5
+            ${{ env.ISO_FILE_GLOB }}.iso
+            ${{ env.ISO_FILE_GLOB }}.md5
           generate_release_notes: true

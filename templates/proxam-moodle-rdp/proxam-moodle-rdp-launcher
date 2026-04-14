@@ -1,0 +1,66 @@
+#!/bin/bash
+
+set -e
+
+CONFIG_FILE="/etc/proxam-moodle-rdp.conf"
+MOODLE_URL=""
+REMMINA_PROFILE=""
+
+if [ -f "${CONFIG_FILE}" ]
+then
+	. "${CONFIG_FILE}"
+fi
+
+open_moodle()
+{
+	if [ -z "${MOODLE_URL}" ]
+	then
+		zenity --error \
+			--title="Moodle URL missing" \
+			--text="Set MOODLE_URL in /etc/proxam-moodle-rdp.conf before starting the exam browser."
+		return
+	fi
+
+	firefox-esr --kiosk "${MOODLE_URL}" &
+	wait $! || true
+}
+
+open_remote_desktop()
+{
+	if [ -n "${REMMINA_PROFILE}" ] && [ -f "${REMMINA_PROFILE}" ]
+	then
+		remmina -c "${REMMINA_PROFILE}" &
+	else
+		remmina &
+	fi
+
+	wait $! || true
+}
+
+while true
+do
+	CHOICE="$(zenity --list \
+		--title="Exam Launcher" \
+		--text="Select the application you want to use." \
+		--column="Application" \
+		"Moodle Exam" \
+		"Windows Remote Desktop" \
+		"Quit" \
+		--height=260 \
+		--width=420)" || exit 0
+
+	case "${CHOICE}" in
+		"Moodle Exam")
+			open_moodle
+			;;
+		"Windows Remote Desktop")
+			open_remote_desktop
+			;;
+		"Quit")
+			exit 0
+			;;
+		*)
+			exit 0
+			;;
+	esac
+done
