@@ -50,10 +50,35 @@ prepare_moodle_rdp_profile()
 firefox-esr
 firefox-esr-l10n-de
 firefox-esr-l10n-en-gb
+lernstick-firewall
 remmina
 remmina-plugin-rdp
 zenity
 EOF
+
+	# Enable the firewall on boot so the Squid whitelist is enforced
+	# before the user can open a browser.
+	# Also allow outbound RDP (TCP 3389) which bypasses Squid (not HTTP).
+	cat > config/hooks/live/enable-proxam-firewall.chroot <<'HOOK'
+#!/bin/sh
+set -e
+systemctl enable lernstick-firewall || true
+
+# Allow outbound RDP connections through the firewall.
+# lernstick-firewall only handles HTTP/HTTPS via Squid; RDP needs a
+# direct iptables exception applied at boot.
+mkdir -p /etc/NetworkManager/dispatcher.d
+cat > /etc/NetworkManager/dispatcher.d/90-proxam-rdp-allow <<'DISPATCH'
+#!/bin/sh
+# Allow outbound RDP (TCP 3389) — applied on every interface up event.
+if [ "$2" = "up" ]; then
+    iptables -C OUTPUT -p tcp --dport 3389 -m comment --comment "proxam-moodle-rdp" -j ACCEPT 2>/dev/null \
+        || iptables -I OUTPUT -p tcp --dport 3389 -m comment --comment "proxam-moodle-rdp" -j ACCEPT
+fi
+DISPATCH
+chmod +x /etc/NetworkManager/dispatcher.d/90-proxam-rdp-allow
+HOOK
+	chmod +x config/hooks/live/enable-proxam-firewall.chroot
 
 	mkdir -p config/includes.chroot_after_packages/etc/xdg/autostart
 	mkdir -p config/includes.chroot_after_packages/etc
