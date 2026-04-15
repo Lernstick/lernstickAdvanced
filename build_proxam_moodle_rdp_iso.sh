@@ -80,6 +80,26 @@ chmod +x /etc/NetworkManager/dispatcher.d/90-proxam-rdp-allow
 HOOK
 	chmod +x config/hooks/live/enable-proxam-firewall.chroot
 
+	# Disable GNOME initial setup ("Preview Linux System" dialog) and tour.
+	# gnome-initial-setup is pulled in by gnome-core and shows a wizard on
+	# first login that lets users explore the desktop — unwanted in exam mode.
+	cat > config/hooks/live/disable-gnome-initial-setup.chroot <<'HOOK'
+#!/bin/sh
+set -e
+# Remove gnome-initial-setup if installed (pulled by gnome-core)
+apt-get remove --purge -y gnome-initial-setup gnome-tour 2>/dev/null || true
+# Also disable via XDG autostart override in case it gets reinstalled
+mkdir -p /etc/xdg/autostart
+for DESKTOP in gnome-initial-setup-copy-worker.desktop gnome-initial-setup-first-login.desktop gnome-tour.desktop; do
+    if [ -f "/etc/xdg/autostart/${DESKTOP}" ]; then
+        printf '[Desktop Entry]\nHidden=true\n' > "/etc/xdg/autostart/${DESKTOP}"
+    else
+        printf '[Desktop Entry]\nType=Application\nName=Disabled\nHidden=true\n' > "/etc/xdg/autostart/${DESKTOP}"
+    fi
+done
+HOOK
+	chmod +x config/hooks/live/disable-gnome-initial-setup.chroot
+
 	mkdir -p config/includes.chroot_after_packages/etc/xdg/autostart
 	mkdir -p config/includes.chroot_after_packages/etc
 	mkdir -p config/includes.chroot_after_packages/etc/lernstick-firewall/proxy.d

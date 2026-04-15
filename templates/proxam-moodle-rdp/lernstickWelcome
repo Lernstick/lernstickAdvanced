@@ -1,4 +1,4 @@
 AutoStartInstaller=false
 ShowNotUsedInfo=false
-ShowReadOnlyInfo=true
+ShowReadOnlyInfo=false
 SearchExamServer=false
