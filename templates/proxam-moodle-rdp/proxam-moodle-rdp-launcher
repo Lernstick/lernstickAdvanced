@@ -13,12 +13,17 @@ fi
 
 DOWNLOAD_DIR="${HOME}/Desktop/Exam-Files"
 
-ask_token()
+ask_moodle_credentials()
 {
-	zenity --entry \
-		--title="Ticket Token" \
-		--text="Enter your exam ticket token:" \
-		--width=420 || true
+	# Returns "username|password" or empty on cancel.
+	CREDENTIALS="$(zenity --forms \
+		--title="Moodle Login" \
+		--text="Enter your Moodle credentials to download exam files." \
+		--add-entry="Username" \
+		--add-password="Password" \
+		--separator="|" \
+		--width=420)" || true
+	echo "${CREDENTIALS}"
 }
 
 open_moodle()
@@ -49,14 +54,25 @@ open_remote_desktop()
 
 download_files()
 {
-	TOKEN="$(ask_token)"
-	if [ -z "${TOKEN}" ]
+	CREDENTIALS="$(ask_moodle_credentials)"
+	if [ -z "${CREDENTIALS}" ]
 	then
 		return
 	fi
 
-	# Run download in a terminal so the student sees progress.
-	OUTPUT="$(proxam-download-files "${TOKEN}" 2>&1)" || true
+	USERNAME="$(echo "${CREDENTIALS}" | cut -d'|' -f1)"
+	PASSWORD="$(echo "${CREDENTIALS}" | cut -d'|' -f2)"
+
+	if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]
+	then
+		zenity --error \
+			--title="Login Error" \
+			--text="Username and password are required." \
+			--width=380
+		return
+	fi
+
+	OUTPUT="$(proxam-download-files "${USERNAME}" "${PASSWORD}" 2>&1)" || true
 
 	if [ -d "${DOWNLOAD_DIR}" ] && [ "$(ls -A "${DOWNLOAD_DIR}" 2>/dev/null)" ]
 	then

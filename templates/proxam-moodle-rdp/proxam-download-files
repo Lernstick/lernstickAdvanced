@@ -1,11 +1,14 @@
 #!/bin/bash
 # Download approved student files from the ProXam backend to ~/Desktop/Exam-Files/.
-# Usage: proxam-download-files <token>
+# Authenticates via Moodle credentials through the student portal API.
+#
+# Usage: proxam-download-files <username> <password>
 #
 # Requires: curl, jq
 # API:
-#   GET /proxam/ticket/student-files/:token       → [{id, filename, size, mimeType}]
-#   GET /proxam/ticket/student-files/:token/:fileId → file download
+#   POST /student/auth                             → {token (JWT), tickets[{token, exam}]}
+#   GET  /proxam/ticket/student-files/:token       → [{id, filename, size, mimeType}]
+#   GET  /proxam/ticket/student-files/:token/:fileId → file download
 
 set -e
 
@@ -16,58 +19,90 @@ if [ -f "${CONFIG_FILE}" ]; then
 	. "${CONFIG_FILE}"
 fi
 
-# Fall back to default API URL if not set in config.
 : "${API_URL:=https://api.proxam.at}"
 
-TOKEN="${1}"
+USERNAME="${1}"
+PASSWORD="${2}"
 DEST_DIR="${HOME}/Desktop/Exam-Files"
 
-if [ -z "${TOKEN}" ]; then
-	echo "Usage: proxam-download-files <token>" >&2
+if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]; then
+	echo "Usage: proxam-download-files <username> <password>" >&2
 	exit 1
 fi
 
-# Fetch file list (JSON array).
-FILE_LIST="$(curl -sf --max-time 15 \
-	"${API_URL}/proxam/ticket/student-files/${TOKEN}")" || {
-	echo "ERROR: Could not reach the ProXam server or token is invalid." >&2
+# Authenticate with Moodle credentials via ProXam student portal.
+AUTH_RESPONSE="$(curl -sf --max-time 15 \
+	-X POST \
+	-H "Content-Type: application/json" \
+	-d "$(jq -n --arg u "${USERNAME}" --arg p "${PASSWORD}" \
+		'{username: $u, password: $p}')" \
+	"${API_URL}/student/auth")" || {
+	echo "ERROR: Authentication failed. Check your Moodle username and password." >&2
 	exit 1
 }
 
-COUNT="$(echo "${FILE_LIST}" | jq 'length')"
-if [ "${COUNT}" -eq 0 ]; then
-	echo "No approved files found for this ticket."
+# Check for error in response.
+AUTH_ERROR="$(echo "${AUTH_RESPONSE}" | jq -r '.message // empty')"
+if [ -n "${AUTH_ERROR}" ]; then
+	echo "ERROR: ${AUTH_ERROR}" >&2
+	exit 1
+fi
+
+FULLNAME="$(echo "${AUTH_RESPONSE}" | jq -r '.fullname // "Student"')"
+echo "Logged in as: ${FULLNAME}"
+
+# Extract all ticket tokens.
+TICKETS="$(echo "${AUTH_RESPONSE}" | jq -c '.tickets[]')"
+if [ -z "${TICKETS}" ]; then
+	echo "No exam tickets found for your account."
 	exit 0
 fi
 
 mkdir -p "${DEST_DIR}"
+TOTAL_DOWNLOADED=0
 
-echo "Downloading ${COUNT} file(s) to ${DEST_DIR} ..."
+# For each ticket, download approved files into an exam subfolder.
+echo "${TICKETS}" | while IFS= read -r TICKET; do
+	TICKET_TOKEN="$(echo "${TICKET}" | jq -r '.token')"
+	EXAM_NAME="$(echo "${TICKET}" | jq -r '.exam.name // "Exam"')"
 
-DOWNLOADED=0
-FAILED=0
+	# Fetch file list for this ticket.
+	FILE_LIST="$(curl -sf --max-time 15 \
+		"${API_URL}/proxam/ticket/student-files/${TICKET_TOKEN}")" || continue
 
-echo "${FILE_LIST}" | jq -c '.[]' | while IFS= read -r ENTRY; do
-	FILE_ID="$(echo "${ENTRY}" | jq -r '.id')"
-	FILENAME="$(echo "${ENTRY}" | jq -r '.filename')"
-	SIZE="$(echo "${ENTRY}" | jq -r '.size')"
-
-	# Sanitize filename — remove path separators to prevent directory traversal.
-	SAFE_NAME="$(basename "${FILENAME}")"
-	if [ -z "${SAFE_NAME}" ] || [ "${SAFE_NAME}" = "." ] || [ "${SAFE_NAME}" = ".." ]; then
-		SAFE_NAME="file_${FILE_ID}"
+	COUNT="$(echo "${FILE_LIST}" | jq 'length')"
+	if [ "${COUNT}" -eq 0 ]; then
+		continue
 	fi
 
-	echo "  → ${SAFE_NAME} (${SIZE} bytes)"
+	# Sanitize exam name for directory.
+	SAFE_EXAM="$(echo "${EXAM_NAME}" | tr -cs '[:alnum:] ._-' '_' | head -c 100)"
+	EXAM_DIR="${DEST_DIR}/${SAFE_EXAM}"
+	mkdir -p "${EXAM_DIR}"
 
-	if curl -sf --max-time 120 \
-		-o "${DEST_DIR}/${SAFE_NAME}" \
-		"${API_URL}/proxam/ticket/student-files/${TOKEN}/${FILE_ID}"; then
-		DOWNLOADED=$((DOWNLOADED + 1))
-	else
-		echo "    FAILED to download ${SAFE_NAME}" >&2
-		FAILED=$((FAILED + 1))
-	fi
+	echo "Exam: ${EXAM_NAME} — ${COUNT} file(s)"
+
+	echo "${FILE_LIST}" | jq -c '.[]' | while IFS= read -r ENTRY; do
+		FILE_ID="$(echo "${ENTRY}" | jq -r '.id')"
+		FILENAME="$(echo "${ENTRY}" | jq -r '.filename')"
+		SIZE="$(echo "${ENTRY}" | jq -r '.size')"
+
+		# Sanitize filename to prevent directory traversal.
+		SAFE_NAME="$(basename "${FILENAME}")"
+		if [ -z "${SAFE_NAME}" ] || [ "${SAFE_NAME}" = "." ] || [ "${SAFE_NAME}" = ".." ]; then
+			SAFE_NAME="file_${FILE_ID}"
+		fi
+
+		echo "  → ${SAFE_NAME} (${SIZE} bytes)"
+
+		if curl -sf --max-time 120 \
+			-o "${EXAM_DIR}/${SAFE_NAME}" \
+			"${API_URL}/proxam/ticket/student-files/${TICKET_TOKEN}/${FILE_ID}"; then
+			TOTAL_DOWNLOADED=$((TOTAL_DOWNLOADED + 1))
+		else
+			echo "    FAILED to download ${SAFE_NAME}" >&2
+		fi
+	done
 done
 
 echo "Done. Files saved to ${DEST_DIR}"
