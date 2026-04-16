@@ -48,11 +48,17 @@ prepare_moodle_rdp_profile()
 
 	cat > config/package-lists/proxam-moodle-rdp.list.chroot <<'EOF'
 curl
+eog
+evince
 firefox-esr
 firefox-esr-l10n-de
 firefox-esr-l10n-en-gb
 jq
 lernstick-firewall
+libreoffice-calc
+libreoffice-impress
+libreoffice-writer
+libreoffice-l10n-de
 nautilus
 remmina
 remmina-plugin-rdp
@@ -102,6 +108,19 @@ for DESKTOP in gnome-initial-setup-copy-worker.desktop gnome-initial-setup-first
 done
 HOOK
 	chmod +x config/hooks/live/disable-gnome-initial-setup.chroot
+
+	# Pre-build MIME database, desktop file cache, and icon cache so that
+	# file type associations (open .png with eog, .pdf with evince, .docx
+	# with LibreOffice) work immediately on first boot without a restart.
+	cat > config/hooks/live/rebuild-mime-caches.chroot <<'HOOK'
+#!/bin/sh
+set -e
+update-mime-database /usr/share/mime 2>/dev/null || true
+update-desktop-database /usr/share/applications 2>/dev/null || true
+gtk-update-icon-cache -f /usr/share/icons/hicolor 2>/dev/null || true
+glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null || true
+HOOK
+	chmod +x config/hooks/live/rebuild-mime-caches.chroot
 
 	mkdir -p config/includes.chroot_after_packages/etc/xdg/autostart
 	mkdir -p config/includes.chroot_after_packages/etc
