@@ -47,10 +47,13 @@ prepare_moodle_rdp_profile()
 		config/includes.chroot_after_packages/etc/lernstick-firewall/proxy.d/proxam.conf
 
 	cat > config/package-lists/proxam-moodle-rdp.list.chroot <<'EOF'
+curl
 firefox-esr
 firefox-esr-l10n-de
 firefox-esr-l10n-en-gb
+jq
 lernstick-firewall
+nautilus
 remmina
 remmina-plugin-rdp
 zenity
@@ -114,6 +117,8 @@ HOOK
 		config/includes.chroot_after_packages/etc/proxam-moodle-rdp.conf
 	install -m 0755 templates/proxam-moodle-rdp/proxam-moodle-rdp-launcher \
 		config/includes.chroot_after_packages/usr/local/bin/proxam-moodle-rdp-launcher
+	install -m 0755 templates/proxam-moodle-rdp/proxam-download-files \
+		config/includes.chroot_after_packages/usr/local/bin/proxam-download-files
 	install -m 0644 templates/proxam-moodle-rdp/proxam-moodle-rdp.desktop \
 		config/includes.chroot_after_packages/etc/xdg/autostart/proxam-moodle-rdp.desktop
 	install -m 0644 templates/proxam-moodle-rdp/proxam-moodle-rdp.desktop \

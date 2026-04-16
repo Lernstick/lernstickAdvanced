@@ -1,0 +1,73 @@
+#!/bin/bash
+# Download approved student files from the ProXam backend to ~/Desktop/Exam-Files/.
+# Usage: proxam-download-files <token>
+#
+# Requires: curl, jq
+# API:
+#   GET /proxam/ticket/student-files/:token       → [{id, filename, size, mimeType}]
+#   GET /proxam/ticket/student-files/:token/:fileId → file download
+
+set -e
+
+CONFIG_FILE="/etc/proxam-moodle-rdp.conf"
+API_URL=""
+
+if [ -f "${CONFIG_FILE}" ]; then
+	. "${CONFIG_FILE}"
+fi
+
+# Fall back to default API URL if not set in config.
+: "${API_URL:=https://api.proxam.at}"
+
+TOKEN="${1}"
+DEST_DIR="${HOME}/Desktop/Exam-Files"
+
+if [ -z "${TOKEN}" ]; then
+	echo "Usage: proxam-download-files <token>" >&2
+	exit 1
+fi
+
+# Fetch file list (JSON array).
+FILE_LIST="$(curl -sf --max-time 15 \
+	"${API_URL}/proxam/ticket/student-files/${TOKEN}")" || {
+	echo "ERROR: Could not reach the ProXam server or token is invalid." >&2
+	exit 1
+}
+
+COUNT="$(echo "${FILE_LIST}" | jq 'length')"
+if [ "${COUNT}" -eq 0 ]; then
+	echo "No approved files found for this ticket."
+	exit 0
+fi
+
+mkdir -p "${DEST_DIR}"
+
+echo "Downloading ${COUNT} file(s) to ${DEST_DIR} ..."
+
+DOWNLOADED=0
+FAILED=0
+
+echo "${FILE_LIST}" | jq -c '.[]' | while IFS= read -r ENTRY; do
+	FILE_ID="$(echo "${ENTRY}" | jq -r '.id')"
+	FILENAME="$(echo "${ENTRY}" | jq -r '.filename')"
+	SIZE="$(echo "${ENTRY}" | jq -r '.size')"
+
+	# Sanitize filename — remove path separators to prevent directory traversal.
+	SAFE_NAME="$(basename "${FILENAME}")"
+	if [ -z "${SAFE_NAME}" ] || [ "${SAFE_NAME}" = "." ] || [ "${SAFE_NAME}" = ".." ]; then
+		SAFE_NAME="file_${FILE_ID}"
+	fi
+
+	echo "  → ${SAFE_NAME} (${SIZE} bytes)"
+
+	if curl -sf --max-time 120 \
+		-o "${DEST_DIR}/${SAFE_NAME}" \
+		"${API_URL}/proxam/ticket/student-files/${TOKEN}/${FILE_ID}"; then
+		DOWNLOADED=$((DOWNLOADED + 1))
+	else
+		echo "    FAILED to download ${SAFE_NAME}" >&2
+		FAILED=$((FAILED + 1))
+	fi
+done
+
+echo "Done. Files saved to ${DEST_DIR}"

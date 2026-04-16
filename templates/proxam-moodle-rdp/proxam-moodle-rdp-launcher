@@ -11,6 +11,16 @@ then
 	. "${CONFIG_FILE}"
 fi
 
+DOWNLOAD_DIR="${HOME}/Desktop/Exam-Files"
+
+ask_token()
+{
+	zenity --entry \
+		--title="Ticket Token" \
+		--text="Enter your exam ticket token:" \
+		--width=420 || true
+}
+
 open_moodle()
 {
 	if [ -z "${MOODLE_URL}" ]
@@ -37,6 +47,43 @@ open_remote_desktop()
 	wait $! || true
 }
 
+download_files()
+{
+	TOKEN="$(ask_token)"
+	if [ -z "${TOKEN}" ]
+	then
+		return
+	fi
+
+	# Run download in a terminal so the student sees progress.
+	OUTPUT="$(proxam-download-files "${TOKEN}" 2>&1)" || true
+
+	if [ -d "${DOWNLOAD_DIR}" ] && [ "$(ls -A "${DOWNLOAD_DIR}" 2>/dev/null)" ]
+	then
+		zenity --info \
+			--title="Download Complete" \
+			--text="Files saved to:\n${DOWNLOAD_DIR}\n\n${OUTPUT}" \
+			--width=480
+		# Open the file manager at the download directory.
+		nautilus "${DOWNLOAD_DIR}" &
+	else
+		zenity --warning \
+			--title="No Files" \
+			--text="${OUTPUT:-No approved files found or download failed.}" \
+			--width=480
+	fi
+}
+
+open_file_manager()
+{
+	if [ -d "${DOWNLOAD_DIR}" ]
+	then
+		nautilus "${DOWNLOAD_DIR}" &
+	else
+		nautilus "${HOME}/Desktop" &
+	fi
+}
+
 while true
 do
 	CHOICE="$(zenity --list \
@@ -44,14 +91,22 @@ do
 		--text="Select the application you want to use." \
 		--column="Application" \
 		"Moodle Exam" \
+		"Download Exam Files" \
+		"Open Files" \
 		"Windows Remote Desktop" \
 		"Quit" \
-		--height=260 \
+		--height=340 \
 		--width=420)" || exit 0
 
 	case "${CHOICE}" in
 		"Moodle Exam")
 			open_moodle
+			;;
+		"Download Exam Files")
+			download_files
+			;;
+		"Open Files")
+			open_file_manager
 			;;
 		"Windows Remote Desktop")
 			open_remote_desktop
