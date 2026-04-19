@@ -1,12 +1,14 @@
 #!/bin/bash
 # Download approved student files from the ProXam backend to ~/Desktop/Exam-Files/.
-# Authenticates via Moodle credentials through the student portal API.
+# Authenticates via Moodle credentials OR email+token through the student portal API.
 #
-# Usage: proxam-download-files <username> <password>
+# Usage: proxam-download-files --moodle <username> <password>
+#        proxam-download-files --token <email> <token>
 #
 # Requires: curl, jq
 # API:
 #   POST /student/auth                             → {token (JWT), tickets[{token, exam}]}
+#   POST /student/auth/token                       → {token (JWT), tickets[{token, exam}]}
 #   GET  /proxam/ticket/student-files/:token       → [{id, filename, size, mimeType}]
 #   GET  /proxam/ticket/student-files/:token/:fileId → file download
 
@@ -21,25 +23,62 @@ fi
 
 : "${API_URL:=https://api.proxam.at}"
 
-USERNAME="${1}"
-PASSWORD="${2}"
+MODE="${1}"
+ARG1="${2}"
+ARG2="${3}"
 DEST_DIR="${HOME}/Desktop/Exam-Files"
 
-if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]; then
-	echo "Usage: proxam-download-files <username> <password>" >&2
-	exit 1
-fi
-
-# Authenticate with Moodle credentials via ProXam student portal.
-AUTH_RESPONSE="$(curl -sf --max-time 15 \
-	-X POST \
-	-H "Content-Type: application/json" \
-	-d "$(jq -n --arg u "${USERNAME}" --arg p "${PASSWORD}" \
-		'{username: $u, password: $p}')" \
-	"${API_URL}/student/auth")" || {
-	echo "ERROR: Authentication failed. Check your Moodle username and password." >&2
-	exit 1
-}
+case "${MODE}" in
+	--moodle)
+		if [ -z "${ARG1}" ] || [ -z "${ARG2}" ]; then
+			echo "Usage: proxam-download-files --moodle <username> <password>" >&2
+			exit 1
+		fi
+		AUTH_RESPONSE="$(curl -sf --max-time 15 \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d "$(jq -n --arg u "${ARG1}" --arg p "${ARG2}" \
+				'{username: $u, password: $p}')" \
+			"${API_URL}/student/auth")" || {
+			echo "ERROR: Authentication failed. Check your Moodle username and password." >&2
+			exit 1
+		}
+		;;
+	--token)
+		if [ -z "${ARG1}" ] || [ -z "${ARG2}" ]; then
+			echo "Usage: proxam-download-files --token <email> <token>" >&2
+			exit 1
+		fi
+		AUTH_RESPONSE="$(curl -sf --max-time 15 \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d "$(jq -n --arg e "${ARG1}" --arg t "${ARG2}" \
+				'{email: $e, token: $t}')" \
+			"${API_URL}/student/auth/token")" || {
+			echo "ERROR: Authentication failed. Check your email and token." >&2
+			exit 1
+		}
+		;;
+	*)
+		# Legacy: positional args = Moodle mode
+		USERNAME="${MODE}"
+		PASSWORD="${ARG1}"
+		if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]; then
+			echo "Usage: proxam-download-files --moodle <username> <password>" >&2
+			echo "       proxam-download-files --token <email> <token>" >&2
+			exit 1
+		fi
+		AUTH_RESPONSE="$(curl -sf --max-time 15 \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d "$(jq -n --arg u "${USERNAME}" --arg p "${PASSWORD}" \
+				'{username: $u, password: $p}')" \
+			"${API_URL}/student/auth")" || {
+			echo "ERROR: Authentication failed. Check your Moodle username and password." >&2
+			exit 1
+		}
+		;;
+esac
 
 # Check for error in response.
 AUTH_ERROR="$(echo "${AUTH_RESPONSE}" | jq -r '.message // empty')"

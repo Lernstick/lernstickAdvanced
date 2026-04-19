@@ -26,6 +26,19 @@ ask_moodle_credentials()
 	echo "${CREDENTIALS}"
 }
 
+ask_token_credentials()
+{
+	# Returns "email|token" or empty on cancel.
+	CREDENTIALS="$(zenity --forms \
+		--title="Token Login" \
+		--text="Enter your email and exam token." \
+		--add-entry="E-Mail" \
+		--add-entry="Token" \
+		--separator="|" \
+		--width=420)" || true
+	echo "${CREDENTIALS}"
+}
+
 open_moodle()
 {
 	if [ -z "${MOODLE_URL}" ]
@@ -54,25 +67,42 @@ open_remote_desktop()
 
 download_files()
 {
-	CREDENTIALS="$(ask_moodle_credentials)"
-	if [ -z "${CREDENTIALS}" ]
-	then
-		return
-	fi
+	AUTH_MODE="$(zenity --list \
+		--title="Download Exam Files" \
+		--text="How do you want to log in?" \
+		--column="Method" \
+		"Moodle Login" \
+		"Email + Token" \
+		--height=220 \
+		--width=380)" || return
 
-	USERNAME="$(echo "${CREDENTIALS}" | cut -d'|' -f1)"
-	PASSWORD="$(echo "${CREDENTIALS}" | cut -d'|' -f2)"
-
-	if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]
-	then
-		zenity --error \
-			--title="Login Error" \
-			--text="Username and password are required." \
-			--width=380
-		return
-	fi
-
-	OUTPUT="$(proxam-download-files "${USERNAME}" "${PASSWORD}" 2>&1)" || true
+	case "${AUTH_MODE}" in
+		"Moodle Login")
+			CREDENTIALS="$(ask_moodle_credentials)"
+			if [ -z "${CREDENTIALS}" ]; then return; fi
+			USERNAME="$(echo "${CREDENTIALS}" | cut -d'|' -f1)"
+			PASSWORD="$(echo "${CREDENTIALS}" | cut -d'|' -f2)"
+			if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]; then
+				zenity --error --title="Login Error" --text="Username and password are required." --width=380
+				return
+			fi
+			OUTPUT="$(proxam-download-files --moodle "${USERNAME}" "${PASSWORD}" 2>&1)" || true
+			;;
+		"Email + Token")
+			CREDENTIALS="$(ask_token_credentials)"
+			if [ -z "${CREDENTIALS}" ]; then return; fi
+			EMAIL="$(echo "${CREDENTIALS}" | cut -d'|' -f1)"
+			TOKEN="$(echo "${CREDENTIALS}" | cut -d'|' -f2)"
+			if [ -z "${EMAIL}" ] || [ -z "${TOKEN}" ]; then
+				zenity --error --title="Login Error" --text="Email and token are required." --width=380
+				return
+			fi
+			OUTPUT="$(proxam-download-files --token "${EMAIL}" "${TOKEN}" 2>&1)" || true
+			;;
+		*)
+			return
+			;;
+	esac
 
 	if [ -d "${DOWNLOAD_DIR}" ] && [ "$(ls -A "${DOWNLOAD_DIR}" 2>/dev/null)" ]
 	then
