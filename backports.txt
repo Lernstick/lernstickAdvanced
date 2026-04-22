@@ -1,10 +1,10 @@
-# bookworm (64 Bit)
-sudo pbuilder --login --basetgz /var/cache/pbuilder/base-bookworm-bpo.tar.gz --bindmounts /home/debian12/lernstick/backports/bookworm
+# trixie (64 Bit)
+sudo pbuilder --login --basetgz /var/cache/pbuilder/base-trixie-bpo.tar.gz --bindmounts /home/debian13/lernstick/backports/trixie
 
-# bookworm (32 Bit)
-sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-bookworm32-bpo.tar.gz --bindmounts /home/debian12/lernstick/backports/bookworm
+# trixie (32 Bit)
+sudo pbuilder --login --architecture i386 --basetgz /var/cache/pbuilder/base-trixie32-bpo.tar.gz --bindmounts /home/debian13/lernstick/backports/trixie
 
-# bookworm
+# trixie
 apt update; apt --yes upgrade; apt --yes install devscripts fakeroot pbuilder sudo; /usr/lib/pbuilder/pbuilder-satisfydepends --continue-fail
 
 

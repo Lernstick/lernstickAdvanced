@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# If we install packages with uv, we will have many files in the uv cache.
+# This can be huge, just clean the cache.
+
+if [ -e /usr/local/bin/uv ]
+then
+	/usr/local/bin/uv cache clean
+else
+	echo "WARNING: command uv not found"
+fi

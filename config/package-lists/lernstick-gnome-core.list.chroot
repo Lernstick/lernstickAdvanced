@@ -5,8 +5,9 @@
 #
 ################################################################################
 
-gnome-shell-extension-draw-on-your-screen2
-#gnome-shell-extension-unblank
-#gnome-shell-extension-unlock-dialog-background
+gnome-shell-extension-draw-on-gnome
+gnome-shell-extension-gjs-osk
+gnome-shell-extension-unblank
+gnome-shell-extension-unlock-dialog-background
 lernstick-gpaste-2
 lernstick-nautilus

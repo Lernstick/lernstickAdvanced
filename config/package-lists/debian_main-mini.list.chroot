@@ -16,7 +16,6 @@
 amsynth
 #apper
 arandr
-#ardesia
 blop
 bluetooth
 bluez-cups
@@ -37,8 +36,7 @@ dmz-cursor-theme
 dolphin
 #dolphin-nextcloud
 dolphin-owncloud
-epoptes
-#ffplay
+#epoptes
 flac
 fritzing
 fritzing-parts
@@ -50,7 +48,6 @@ gparted
 graphviz
 gstreamer1.0-packagekit
 gwakeonlan
-#handbrake-gtk
 heif-thumbnailer
 hugin
 hunspell-de-at
@@ -75,7 +72,7 @@ jmtpfs
 jstest-gtk
 keepassxc
 kfind
-kipi-plugins
+#kipi-plugins
 kmag
 kmousetool
 konq-plugins
@@ -83,14 +80,6 @@ konqueror
 krename
 #ktimetracker
 #lilypond
-# mypaint is currently not co-installable with gimp, see
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894757
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=897909
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=906144
-# Therefore we can install mypaint only from flathub
-#mypaint
-#mypaint-data
-#mypaint-data-extras
 myspell-es
 myspell-fa
 mystiq
@@ -122,7 +111,7 @@ obs-transition-table
 obs-vintage-filter
 okular
 okular-extra-backends
-onedrive
+#onedrive disabled because of https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1101407
 owncloud-client
 photofilmstrip
 qelectrotech
@@ -135,17 +124,16 @@ qtqr
 rawtherapee
 samba
 samplerate-programs
-sane
+#sane
 sane-utils
-#scrcpy
+scrcpy
 sddm
 smb4k
 sonic-pi
-#spamassassin
 spice-webdavd
 subversion
 swh-plugins
-synfigstudio
+#synfigstudio
 tesseract-ocr-deu
 tesseract-ocr-eng
 tesseract-ocr-fra
@@ -164,12 +152,10 @@ thunderbird-l10n-ru
 thunderbird-l10n-sq
 totem-plugins
 vim-gtk3
-vinagre
-#vym
 wireshark
 xournal
 xsane
-youtube-dl
+yt-dlp
 zenmap
 zint-qt
 zsync

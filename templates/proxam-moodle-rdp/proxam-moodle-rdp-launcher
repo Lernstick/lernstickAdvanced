@@ -1,0 +1,167 @@
+#!/bin/bash
+
+set -e
+
+CONFIG_FILE="/etc/proxam-moodle-rdp.conf"
+MOODLE_URL=""
+REMMINA_PROFILE=""
+
+if [ -f "${CONFIG_FILE}" ]
+then
+	. "${CONFIG_FILE}"
+fi
+
+DOWNLOAD_DIR="${HOME}/Desktop/Exam-Files"
+
+ask_moodle_credentials()
+{
+	# Returns "username|password" or empty on cancel.
+	CREDENTIALS="$(zenity --forms \
+		--title="Moodle Login" \
+		--text="Enter your Moodle credentials to download exam files." \
+		--add-entry="Username" \
+		--add-password="Password" \
+		--separator="|" \
+		--width=420)" || true
+	echo "${CREDENTIALS}"
+}
+
+ask_token_credentials()
+{
+	# Returns "email|token" or empty on cancel.
+	CREDENTIALS="$(zenity --forms \
+		--title="Token Login" \
+		--text="Enter your email and exam token." \
+		--add-entry="E-Mail" \
+		--add-entry="Token" \
+		--separator="|" \
+		--width=420)" || true
+	echo "${CREDENTIALS}"
+}
+
+open_moodle()
+{
+	if [ -z "${MOODLE_URL}" ]
+	then
+		zenity --error \
+			--title="Moodle URL missing" \
+			--text="Set MOODLE_URL in /etc/proxam-moodle-rdp.conf before starting the exam browser."
+		return
+	fi
+
+	firefox-esr --kiosk "${MOODLE_URL}" &
+	wait $! || true
+}
+
+open_remote_desktop()
+{
+	if [ -n "${REMMINA_PROFILE}" ] && [ -f "${REMMINA_PROFILE}" ]
+	then
+		remmina -c "${REMMINA_PROFILE}" &
+	else
+		remmina &
+	fi
+
+	wait $! || true
+}
+
+download_files()
+{
+	AUTH_MODE="$(zenity --list \
+		--title="Download Exam Files" \
+		--text="How do you want to log in?" \
+		--column="Method" \
+		"Moodle Login" \
+		"Email + Token" \
+		--height=220 \
+		--width=380)" || return
+
+	case "${AUTH_MODE}" in
+		"Moodle Login")
+			CREDENTIALS="$(ask_moodle_credentials)"
+			if [ -z "${CREDENTIALS}" ]; then return; fi
+			USERNAME="$(echo "${CREDENTIALS}" | cut -d'|' -f1)"
+			PASSWORD="$(echo "${CREDENTIALS}" | cut -d'|' -f2)"
+			if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]; then
+				zenity --error --title="Login Error" --text="Username and password are required." --width=380
+				return
+			fi
+			OUTPUT="$(proxam-download-files --moodle "${USERNAME}" "${PASSWORD}" 2>&1)" || true
+			;;
+		"Email + Token")
+			CREDENTIALS="$(ask_token_credentials)"
+			if [ -z "${CREDENTIALS}" ]; then return; fi
+			EMAIL="$(echo "${CREDENTIALS}" | cut -d'|' -f1)"
+			TOKEN="$(echo "${CREDENTIALS}" | cut -d'|' -f2)"
+			if [ -z "${EMAIL}" ] || [ -z "${TOKEN}" ]; then
+				zenity --error --title="Login Error" --text="Email and token are required." --width=380
+				return
+			fi
+			OUTPUT="$(proxam-download-files --token "${EMAIL}" "${TOKEN}" 2>&1)" || true
+			;;
+		*)
+			return
+			;;
+	esac
+
+	if [ -d "${DOWNLOAD_DIR}" ] && [ "$(ls -A "${DOWNLOAD_DIR}" 2>/dev/null)" ]
+	then
+		zenity --info \
+			--title="Download Complete" \
+			--text="Files saved to:\n${DOWNLOAD_DIR}\n\n${OUTPUT}" \
+			--width=480
+		# Open the file manager at the download directory.
+		nautilus "${DOWNLOAD_DIR}" &
+	else
+		zenity --warning \
+			--title="No Files" \
+			--text="${OUTPUT:-No approved files found or download failed.}" \
+			--width=480
+	fi
+}
+
+open_file_manager()
+{
+	if [ -d "${DOWNLOAD_DIR}" ]
+	then
+		nautilus "${DOWNLOAD_DIR}" &
+	else
+		nautilus "${HOME}/Desktop" &
+	fi
+}
+
+while true
+do
+	CHOICE="$(zenity --list \
+		--title="Exam Launcher" \
+		--text="Select the application you want to use." \
+		--column="Application" \
+		"Moodle Exam" \
+		"Download Exam Files" \
+		"Open Files" \
+		"Windows Remote Desktop" \
+		"Quit" \
+		--height=340 \
+		--width=420)" || exit 0
+
+	case "${CHOICE}" in
+		"Moodle Exam")
+			open_moodle
+			;;
+		"Download Exam Files")
+			download_files
+			;;
+		"Open Files")
+			open_file_manager
+			;;
+		"Windows Remote Desktop")
+			open_remote_desktop
+			;;
+		"Quit")
+			exit 0
+			;;
+		*)
+			exit 0
+			;;
+	esac
+done

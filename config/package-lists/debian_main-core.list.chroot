@@ -18,7 +18,7 @@ avahi-utils
 cifs-utils
 console-setup
 cryptsetup-initramfs
-cryptsetup-run
+cryptsetup
 davfs2
 dfrs
 #ecryptfs-utils
@@ -40,9 +40,6 @@ fonts-roboto
 fonts-ubuntu
 fonts-ubuntu-console
 gdm3
-gedit
-gedit-plugins
-gedit-plugin-text-size
 gnome-clocks
 gstreamer1.0-alsa
 gstreamer1.0-libav
@@ -50,9 +47,7 @@ gstreamer1.0-plugins-bad
 gstreamer1.0-plugins-base
 gstreamer1.0-plugins-good
 gstreamer1.0-plugins-ugly
-# gstreamer1.0-vaapi crashes Xorg on a Lenovo Ideapad 3 14ARE05, see:
-# https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/1861609
-#gstreamer1.0-vaapi
+gstreamer1.0-vaapi
 gtkman
 haveged
 i2c-tools
@@ -60,8 +55,8 @@ i965-va-driver
 #icedtea-8-plugin
 keyutils
 libbluray-bdj
-libcanberra-gtk0
-libcanberra-gtk-module
+libcanberra-gtk3-0
+libcanberra-gtk3-module
 libgl1-mesa-dri
 libva-glx2
 live-tools
@@ -80,7 +75,7 @@ mesa-vulkan-drivers
 modemmanager
 mokutil
 nala
-network-manager-fortisslvpn
+#network-manager-fortisslvpn
 #network-manager-iodine
 network-manager-l2tp
 network-manager-openconnect
@@ -103,10 +98,11 @@ ppp
 projecteur
 rfkill
 rng-tools5
+rocminfo
 rsync
+screenkey
 smbclient
-smbios-utils
-software-properties-gtk
+#software-properties-gtk
 spice-vdagent
 squashfs-tools
 sshfs
@@ -136,7 +132,7 @@ xserver-xorg-input-evdev
 #xserver-xorg-input-joystick (DON'T install, it breaks gamepads!)
 xserver-xorg-input-kbd
 xserver-xorg-input-mouse
-xserver-xorg-input-mutouch
+#xserver-xorg-input-mutouch
 #xserver-xorg-input-synaptics
 xserver-xorg-input-wacom
 xserver-xorg-input-xwiimote
@@ -145,11 +141,11 @@ xserver-xorg-video-amdgpu
 xserver-xorg-video-cirrus
 xserver-xorg-video-dummy
 xserver-xorg-video-glide
-xserver-xorg-video-ivtv
+#xserver-xorg-video-ivtv
 xserver-xorg-video-mach64
 xserver-xorg-video-mga
 xserver-xorg-video-neomagic
-xserver-xorg-video-openchrome
+#xserver-xorg-video-openchrome
 xserver-xorg-video-qxl
 xserver-xorg-video-r128
 xserver-xorg-video-savage

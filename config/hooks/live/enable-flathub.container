@@ -25,7 +25,7 @@ flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/fl
 echo "installing flatpak nvidia drivers..."
 # install one package after the other so that an installation failure in one
 # package doesn't stop the installation of subsequent packages
-for i in "535-216-01"
+for i in "550-163-01"
 do
 	flatpak -y install org.freedesktop.Platform.GL.nvidia-$i
 done
@@ -61,6 +61,7 @@ flatpak -y install \
 	io.github.adrienverge.PhotoCollage \
 	io.github.flattool.Warehouse \
 	io.github.pwr_solaar.solaar \
+	io.github.yairm210.unciv \
 	io.sourceforge.pentobi \
 	net.hhoney.rota \
 	net.lutris.Lutris \
@@ -124,6 +125,7 @@ flatpak -y install \
 	org.kde.parley \
 	org.kde.picmi \
 	org.ksnip.ksnip \
+	org.luanti.luanti \
 	org.mixxx.Mixxx \
 	org.mobsya.ThymioSuite \
 	org.musescore.MuseScore \
@@ -139,9 +141,7 @@ flatpak -y install \
 	org.x.Warpinator \
 	xyz.ketok.Speedtest
 #	io.lmms.LMMS \
-#	net.minetest.Minetest \
 #	org.denemo.Denemo \
 #	org.gimp.GIMP \
 #	org.speed_dreams.SpeedDreams \
 #	org.supertuxproject.SuperTux \
-#	xyz.ketok.Speedtest

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# disabled nmbd in Debian 13 because of a timeout
+# https://bugs-devel.debian.org/cgi-bin/bugreport.cgi?bug=1090974
+systemctl disable nmbd

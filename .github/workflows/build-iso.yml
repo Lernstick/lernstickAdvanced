@@ -1,0 +1,190 @@
+name: Build ProXam Exam ISO
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      iso_variant:
+        description: 'ISO variant to build'
+        required: true
+        default: 'proxam-exam'
+        type: choice
+        options:
+          - proxam-exam
+          - moodle-rdp
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'false'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Free up disk space
+        # GitHub Actions runners come with ~14 GB total but only ~3–4 GB free after
+        # preinstalled software. The ISO build needs ~10+ GB. We remove toolchains
+        # and SDKs we don't need to reclaim ~25 GB of space.
+        run: |
+          echo "==> Disk space before cleanup:"
+          df -h /
+          sudo rm -rf \
+            /usr/share/dotnet \
+            /usr/local/lib/android \
+            /opt/ghc \
+            /opt/hostedtoolcache \
+            /usr/local/share/powershell \
+            /usr/share/swift \
+            /usr/local/.ghcup \
+            /usr/lib/jvm \
+            /usr/local/graalvm \
+            /usr/local/share/chromium \
+            /usr/local/share/edge_driver \
+            /usr/local/share/gecko_driver \
+            /usr/local/share/vcpkg \
+            /usr/share/miniconda \
+            /usr/local/aws-cli \
+            /usr/local/aws-sam-cli \
+            /opt/az \
+            "$AGENT_TOOLSDIRECTORY" || true
+          sudo apt-get clean
+          docker image prune -af || true
+          echo "==> Disk space after cleanup:"
+          df -h /
+
+      - name: Checkout proxam-lernstick
+        uses: actions/checkout@v4
+
+      - name: Checkout proxam-exam-client
+        uses: actions/checkout@v4
+        with:
+          repository: Wojtasik-Lang-Consulting/proxam-exam-client
+          path: proxam-exam-client-src
+
+      - name: Create constants file
+        run: |
+          cat > constants <<'EOF'
+          BUILD_DIR=""
+          TMPFS=""
+          TMPFS_IMAGE=""
+          TMPFS_IMAGE_SIZE=0
+          TMPFS_IMAGE_MOUNT=""
+          MIRROR_BUILD="http://deb.debian.org/debian"
+          MIRROR_SYSTEM="http://deb.debian.org/debian"
+          MIRROR_SECURITY_SYSTEM="http://security.debian.org/"
+          SOURCE="false"
+          EOF
+
+      - name: Build proxam-exam-client .deb and place in packages.chroot
+        # Build the .deb from source inside a Trixie container so the package
+        # is available to live-build via config/packages.chroot/ — no GitHub
+        # Release required and no network access needed inside the chroot.
+        run: |
+          mkdir -p config/packages.chroot
+          docker run --rm \
+            -v "${{ github.workspace }}/proxam-exam-client-src:/src" \
+            -v "${{ github.workspace }}/config/packages.chroot:/out" \
+            debian:trixie \
+            bash -c "
+              set -e
+              apt-get update -qq
+              apt-get install -y --no-install-recommends \
+                build-essential \
+                devscripts \
+                debhelper \
+                config-package-dev \
+                gettext \
+                fakeroot \
+                dpkg-dev
+              cp -r /src /build
+              cd /build
+              dpkg-buildpackage -us -uc -b
+              cp /proxam-exam-client_*.deb /out/
+              ls -la /out/
+            "
+
+      - name: Select ISO variant
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ISO_VARIANT="${{ github.event.inputs.iso_variant }}"
+          else
+            ISO_VARIANT="proxam-exam"
+          fi
+
+          case "${ISO_VARIANT}" in
+            proxam-exam)
+              echo "ISO_VARIANT=${ISO_VARIANT}" >> "$GITHUB_ENV"
+              echo "ISO_BUILD_SCRIPT=build_proxam_exam_iso.sh" >> "$GITHUB_ENV"
+              echo "ISO_ARTIFACT_NAME=proxam-exam-iso" >> "$GITHUB_ENV"
+              echo "ISO_FILE_GLOB=proxam-exam_debian13_proxam_exam_*" >> "$GITHUB_ENV"
+              ;;
+            moodle-rdp)
+              echo "ISO_VARIANT=${ISO_VARIANT}" >> "$GITHUB_ENV"
+              echo "ISO_BUILD_SCRIPT=build_proxam_moodle_rdp_iso.sh" >> "$GITHUB_ENV"
+              echo "ISO_ARTIFACT_NAME=proxam-moodle-rdp-iso" >> "$GITHUB_ENV"
+              echo "ISO_FILE_GLOB=lernstick_debian13_moodle_rdp_*" >> "$GITHUB_ENV"
+              ;;
+            *)
+              echo "Unsupported ISO variant: ${ISO_VARIANT}" >&2
+              exit 1
+              ;;
+          esac
+
+      - name: Build ISO (privileged Debian container)
+        # live-build uses systemd-nspawn to run chroot hooks.
+        # systemd-nspawn requires kernel namespaces → must run in a
+        # --privileged container so it has full access to host kernel features.
+        # Using docker run directly (instead of GitHub Actions container: block)
+        # lets us pass --privileged and --cgroupns=host which the container: block omits.
+        run: |
+          docker run --privileged --cgroupns=host \
+            -v "${{ github.workspace }}:/build" \
+            -w /build \
+            debian:trixie \
+            bash -c "
+              set -e
+              apt-get update -qq
+              apt-get install -y --no-install-recommends \
+                live-build \
+                systemd-container \
+                rsync \
+                zsync \
+                gfxboot \
+                libhtml-parser-perl \
+                wget \
+                ca-certificates \
+                git \
+                debootstrap \
+                squashfs-tools \
+                xorriso \
+                isolinux \
+                syslinux \
+                syslinux-common \
+                grub-efi-amd64-bin \
+                grub-pc-bin \
+                mtools \
+                dosfstools
+              chmod +x "${ISO_BUILD_SCRIPT}"
+              ./${ISO_BUILD_SCRIPT}
+            "
+
+      - name: Upload ISO artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ISO_ARTIFACT_NAME }}
+          path: |
+            ${{ env.ISO_FILE_GLOB }}.iso
+            ${{ env.ISO_FILE_GLOB }}.md5
+          retention-days: 14
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            ${{ env.ISO_FILE_GLOB }}.iso
+            ${{ env.ISO_FILE_GLOB }}.md5
+          generate_release_notes: true

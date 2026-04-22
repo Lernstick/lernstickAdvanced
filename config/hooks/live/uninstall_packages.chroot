@@ -7,15 +7,13 @@
 # system so we have to remove them here right afer installing them...
 apt-get purge -y \
 	blueman \
-	exim4-base \
-	exim4-config \
-	exim4-daemon-light \
+	eog \
+	firmware-marvell-prestera \
 	gnome-robots \
 	gnome-system-tools \
 	gucharmap \
 	hexchat \
-	minidlna \
-	nextcloud-desktop-doc \
+	malcontent-gui \
 	plasma-discover \
 	plasma-discover-common \
 	system-tools-backends \

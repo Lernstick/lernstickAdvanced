@@ -1,0 +1,59 @@
+#!/bin/sh
+# Install proxam-exam-client during ISO build.
+# If the package was already installed by live-build from config/packages.chroot/,
+# this hook only installs any extra runtime dependencies not declared in the .deb.
+# As a fallback it downloads the latest release from GitHub.
+set -e
+
+GITHUB_REPO="Wojtasik-Lang-Consulting/proxam-exam-client"
+DEB_NAME="proxam-exam-client"
+TMPDIR="/tmp/proxam-exam-client-install"
+
+# If already installed (e.g. via config/packages.chroot/), skip download
+if dpkg -l "${DEB_NAME}" 2>/dev/null | grep -q "^ii"; then
+    echo "==> ${DEB_NAME} already installed, skipping download."
+else
+    echo "==> Installing ${DEB_NAME} from GitHub Releases ..."
+
+    LATEST_URL=$(wget -qO- "https://api.github.com/repos/${GITHUB_REPO}/releases/latest" \
+        | grep "browser_download_url" \
+        | grep "\.deb" \
+        | head -1 \
+        | cut -d '"' -f 4)
+
+    if [ -z "${LATEST_URL}" ]; then
+        echo "ERROR: Could not find a .deb release for ${GITHUB_REPO}." >&2
+        echo "       Either push a tagged release or place the .deb in config/packages.chroot/." >&2
+        exit 1
+    fi
+
+    echo "==> Downloading: ${LATEST_URL}"
+    mkdir -p "${TMPDIR}"
+    wget -q -O "${TMPDIR}/${DEB_NAME}.deb" "${LATEST_URL}"
+
+    echo "==> Installing ${DEB_NAME}.deb ..."
+    apt-get install -y --no-install-recommends \
+        wget \
+        python3 \
+        zenity \
+        coreutils \
+        iptables \
+        ffmpeg \
+        screen \
+        xdotool \
+        python3-wxgtk-webview4.0 \
+        python3-packaging \
+        python3-requests \
+        avahi-utils \
+        rdiff-backup
+    dpkg -i "${TMPDIR}/${DEB_NAME}.deb" || apt-get install -f -y
+
+    rm -rf "${TMPDIR}"
+fi
+
+# Install extra runtime deps not in the .deb's Depends (avahi-utils, rdiff-backup)
+apt-get install -y --no-install-recommends \
+    avahi-utils \
+    rdiff-backup
+
+echo "==> ${DEB_NAME} installed successfully."

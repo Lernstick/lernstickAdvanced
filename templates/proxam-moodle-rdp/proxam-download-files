@@ -1,0 +1,147 @@
+#!/bin/bash
+# Download approved student files from the ProXam backend to ~/Desktop/Exam-Files/.
+# Authenticates via Moodle credentials OR email+token through the student portal API.
+#
+# Usage: proxam-download-files --moodle <username> <password>
+#        proxam-download-files --token <email> <token>
+#
+# Requires: curl, jq
+# API:
+#   POST /student/auth                             → {token (JWT), tickets[{token, exam}]}
+#   POST /student/auth/token                       → {token (JWT), tickets[{token, exam}]}
+#   GET  /proxam/ticket/student-files/:token       → [{id, filename, size, mimeType}]
+#   GET  /proxam/ticket/student-files/:token/:fileId → file download
+
+set -e
+
+CONFIG_FILE="/etc/proxam-moodle-rdp.conf"
+API_URL=""
+
+if [ -f "${CONFIG_FILE}" ]; then
+	. "${CONFIG_FILE}"
+fi
+
+: "${API_URL:=https://api.proxam.at}"
+
+MODE="${1}"
+ARG1="${2}"
+ARG2="${3}"
+DEST_DIR="${HOME}/Desktop/Exam-Files"
+
+case "${MODE}" in
+	--moodle)
+		if [ -z "${ARG1}" ] || [ -z "${ARG2}" ]; then
+			echo "Usage: proxam-download-files --moodle <username> <password>" >&2
+			exit 1
+		fi
+		AUTH_RESPONSE="$(curl -sf --max-time 15 \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d "$(jq -n --arg u "${ARG1}" --arg p "${ARG2}" \
+				'{username: $u, password: $p}')" \
+			"${API_URL}/student/auth")" || {
+			echo "ERROR: Authentication failed. Check your Moodle username and password." >&2
+			exit 1
+		}
+		;;
+	--token)
+		if [ -z "${ARG1}" ] || [ -z "${ARG2}" ]; then
+			echo "Usage: proxam-download-files --token <email> <token>" >&2
+			exit 1
+		fi
+		AUTH_RESPONSE="$(curl -sf --max-time 15 \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d "$(jq -n --arg e "${ARG1}" --arg t "${ARG2}" \
+				'{email: $e, token: $t}')" \
+			"${API_URL}/student/auth/token")" || {
+			echo "ERROR: Authentication failed. Check your email and token." >&2
+			exit 1
+		}
+		;;
+	*)
+		# Legacy: positional args = Moodle mode
+		USERNAME="${MODE}"
+		PASSWORD="${ARG1}"
+		if [ -z "${USERNAME}" ] || [ -z "${PASSWORD}" ]; then
+			echo "Usage: proxam-download-files --moodle <username> <password>" >&2
+			echo "       proxam-download-files --token <email> <token>" >&2
+			exit 1
+		fi
+		AUTH_RESPONSE="$(curl -sf --max-time 15 \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d "$(jq -n --arg u "${USERNAME}" --arg p "${PASSWORD}" \
+				'{username: $u, password: $p}')" \
+			"${API_URL}/student/auth")" || {
+			echo "ERROR: Authentication failed. Check your Moodle username and password." >&2
+			exit 1
+		}
+		;;
+esac
+
+# Check for error in response.
+AUTH_ERROR="$(echo "${AUTH_RESPONSE}" | jq -r '.message // empty')"
+if [ -n "${AUTH_ERROR}" ]; then
+	echo "ERROR: ${AUTH_ERROR}" >&2
+	exit 1
+fi
+
+FULLNAME="$(echo "${AUTH_RESPONSE}" | jq -r '.fullname // "Student"')"
+echo "Logged in as: ${FULLNAME}"
+
+# Extract all ticket tokens.
+TICKETS="$(echo "${AUTH_RESPONSE}" | jq -c '.tickets[]')"
+if [ -z "${TICKETS}" ]; then
+	echo "No exam tickets found for your account."
+	exit 0
+fi
+
+mkdir -p "${DEST_DIR}"
+TOTAL_DOWNLOADED=0
+
+# For each ticket, download approved files into an exam subfolder.
+echo "${TICKETS}" | while IFS= read -r TICKET; do
+	TICKET_TOKEN="$(echo "${TICKET}" | jq -r '.token')"
+	EXAM_NAME="$(echo "${TICKET}" | jq -r '.exam.name // "Exam"')"
+
+	# Fetch file list for this ticket.
+	FILE_LIST="$(curl -sf --max-time 15 \
+		"${API_URL}/proxam/ticket/student-files/${TICKET_TOKEN}")" || continue
+
+	COUNT="$(echo "${FILE_LIST}" | jq 'length')"
+	if [ "${COUNT}" -eq 0 ]; then
+		continue
+	fi
+
+	# Sanitize exam name for directory.
+	SAFE_EXAM="$(echo "${EXAM_NAME}" | tr -cs '[:alnum:] ._-' '_' | head -c 100)"
+	EXAM_DIR="${DEST_DIR}/${SAFE_EXAM}"
+	mkdir -p "${EXAM_DIR}"
+
+	echo "Exam: ${EXAM_NAME} — ${COUNT} file(s)"
+
+	echo "${FILE_LIST}" | jq -c '.[]' | while IFS= read -r ENTRY; do
+		FILE_ID="$(echo "${ENTRY}" | jq -r '.id')"
+		FILENAME="$(echo "${ENTRY}" | jq -r '.filename')"
+		SIZE="$(echo "${ENTRY}" | jq -r '.size')"
+
+		# Sanitize filename to prevent directory traversal.
+		SAFE_NAME="$(basename "${FILENAME}")"
+		if [ -z "${SAFE_NAME}" ] || [ "${SAFE_NAME}" = "." ] || [ "${SAFE_NAME}" = ".." ]; then
+			SAFE_NAME="file_${FILE_ID}"
+		fi
+
+		echo "  → ${SAFE_NAME} (${SIZE} bytes)"
+
+		if curl -sf --max-time 120 \
+			-o "${EXAM_DIR}/${SAFE_NAME}" \
+			"${API_URL}/proxam/ticket/student-files/${TICKET_TOKEN}/${FILE_ID}"; then
+			TOTAL_DOWNLOADED=$((TOTAL_DOWNLOADED + 1))
+		else
+			echo "    FAILED to download ${SAFE_NAME}" >&2
+		fi
+	done
+done
+
+echo "Done. Files saved to ${DEST_DIR}"

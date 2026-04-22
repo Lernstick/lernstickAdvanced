@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Exam Launcher
+Comment=Open Moodle in kiosk mode or start Windows Remote Desktop
+Exec=/usr/local/bin/proxam-moodle-rdp-launcher
+Terminal=false
+Categories=Education;Network;
+X-GNOME-Autostart-enabled=true
