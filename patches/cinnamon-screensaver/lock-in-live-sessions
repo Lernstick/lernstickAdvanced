@@ -1,0 +1,44 @@
+Description: lock in live sessions
+ Live sessions today support persistency where users can set up their personal
+ passwords. Therefore locking must be supported in live sessions.
+ .
+ cinnamon-screensaver (6.4.0-1) unstable; urgency=medium
+ .
+   * New upstream version 6.4.0
+   * d/patches: remove 2 patches applied upstream and refresh other
+Author: Fabio Fantoni <fantonifabio@tiscali.it>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout https://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: (upstream|backport|vendor|other), (<patch-url>|commit:<commit-id>)
+Bug: <upstream-bugtracker-url>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: (no|not-needed|<patch-forwarded-url>)
+Applied-Upstream: <version>, (<commit-url>|commit:<commid-id>)
+Reviewed-By: <name and email of someone who approved/reviewed the patch>
+Last-Update: 2026-05-10
+
+--- cinnamon-screensaver-6.4.0.orig/src/util/utils.py
++++ cinnamon-screensaver-6.4.0/src/util/utils.py
+@@ -69,8 +69,8 @@ def user_can_lock():
+     except KeyError:
+         pass
+ 
+-    # Don't lock the screensaver in guest or live sessions
+-    if xapp.os.is_live_session() or xapp.os.is_guest_session():
++    # Don't lock the screensaver in guest sessions
++    if xapp.os.is_guest_session():
+         return False
+ 
+     return True
+@@ -157,4 +157,4 @@ def do_quit():
+ 
+ def DEBUG(message):
+     if status.Debug:
+-        print(message, flush=True)
+\ No newline at end of file
++        print(message, flush=True)
