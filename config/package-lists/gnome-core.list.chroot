@@ -15,6 +15,9 @@ gnome-shell-extension-gpaste
 gnome-shell-extensions
 gnome-shell-extension-tiling-assistant
 gnome-shell-extension-workspace-indicator
+# malcontent is needed for GNOME settings -> Apps, see:
+# https://www.reddit.com/r/gnome/comments/1b9oihr/gnome_settings_apps_nothing_there/
+malcontent
 nautilus
 #nautilus-wipe
 #network-manager-fortisslvpn-gnome
