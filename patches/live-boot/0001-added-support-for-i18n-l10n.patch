@@ -1,0 +1,334 @@
+From f697697637133b13b3ac08a38aab9c963e5f2b57 Mon Sep 17 00:00:00 2001
+From: Ronny Standtke <ronny.standtke@gmx.net>
+Date: Sun, 16 Aug 2026 01:19:01 +0200
+Subject: [PATCH] added support for i18n & l10n
+
+---
+ Makefile                          |  7 +++-
+ backend/initramfs-tools/live.hook | 56 ++++++++++++++++++++++++++++++
+ components/9990-misc-helpers.sh   | 31 ++++++++++++++---
+ debian/control                    |  3 ++
+ debian/rules                      | 13 +++++++
+ po/de.po                          | 57 +++++++++++++++++++++++++++++++
+ update_po.sh                      | 22 ++++++++++++
+ 7 files changed, 183 insertions(+), 6 deletions(-)
+ create mode 100644 po/de.po
+ create mode 100755 update_po.sh
+
+diff --git a/Makefile b/Makefile
+index 8f1595e..48814b3 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,6 +4,8 @@ SHELL := sh -e
+ 
+ LANGUAGES = $(shell cd manpages/po && ls)
+ 
++MO_FILES = $(patsubst po/%.po,po/%.mo,$(wildcard po/*.po))
++
+ SCRIPTS = backend/*/* frontend/* components/*
+ 
+ all: build
+@@ -37,9 +39,12 @@ test:
+ 		echo "I:   apt-get install devscripts"; \
+ 	fi
+ 
+-build:
++build: $(MO_FILES)
+ 	$(MAKE) -C $(CURDIR)/manpages
+ 
++po/%.mo: po/%.po
++	msgfmt $< -o $@
++
+ install:
+ 	# Installing components
+ 	mkdir -p $(DESTDIR)/usr/lib/live/boot
+diff --git a/backend/initramfs-tools/live.hook b/backend/initramfs-tools/live.hook
+index 3693a4b..7b96434 100755
+--- a/backend/initramfs-tools/live.hook
++++ b/backend/initramfs-tools/live.hook
+@@ -218,6 +218,62 @@ then
+ 	copy_exec /sbin/blockdev
+ fi
+ 
++# Program: gettext
++if [ -x /usr/bin/gettext ]
++then
++	[ "${QUIET}" ] || echo -n " gettext"
++	copy_exec /usr/bin/gettext
++fi
++
++# Message catalogs
++for _MO in /usr/share/locale/*/LC_MESSAGES/live-boot.mo
++do
++	[ -f "${_MO}" ] || continue
++
++	_RELATIVE="${_MO#/usr/share/locale/}"
++
++	mkdir -p "${DESTDIR}/usr/share/locale/$(dirname "${_RELATIVE}")"
++
++	cp -p "${_MO}" \
++		"${DESTDIR}/usr/share/locale/${_RELATIVE}"
++done
++
++# Locale data
++for _MO in /usr/share/locale/*/LC_MESSAGES/live-boot.mo
++do
++	[ -f "${_MO}" ] || continue
++
++	# Extract language from /usr/share/locale/<language>/...
++	_LANG="${_MO#/usr/share/locale/}"
++	_LANG="${_LANG%%/*}"
++
++	# Include all locale variants for this language.
++	for _LOCALE in /usr/lib/locale/"${_LANG}"*
++	do
++		[ -d "${_LOCALE}" ] || continue
++
++		_LOCALE="${_LOCALE##*/}"
++
++		# Copy the locale directory, preserving symbolic links.
++		mkdir -p "${DESTDIR}/usr/lib/locale"
++		cp -a "/usr/lib/locale/${_LOCALE}" \
++			"${DESTDIR}/usr/lib/locale/"
++
++		# Copy targets of symbolic links.
++		find "/usr/lib/locale/${_LOCALE}" -type l |
++		while read -r _LINK
++		do
++			_TARGET="$(readlink -f "${_LINK}")"
++
++			[ -e "${_TARGET}" ] || continue
++			[ -e "${DESTDIR}${_TARGET}" ] && continue
++
++			mkdir -p "${DESTDIR}$(dirname "${_TARGET}")"
++			cp -a "${_TARGET}" "${DESTDIR}${_TARGET}"
++                done
++        done
++done
++
+ # FUSE kernel module
+ if [ "${DISABLE_FUSE:-n}" != "true" ] && [ "${DISABLE_FUSE:-n}" != "yes" ]
+ then
+diff --git a/components/9990-misc-helpers.sh b/components/9990-misc-helpers.sh
+index 0a7bf24..1920ecc 100755
+--- a/components/9990-misc-helpers.sh
++++ b/components/9990-misc-helpers.sh
+@@ -2,6 +2,10 @@
+ 
+ #set -e
+ 
++# gettext support
++. gettext.sh
++export TEXTDOMAIN=live-boot
++
+ is_live_path()
+ {
+ 	DIRECTORY="${1}/${LIVE_MEDIA_PATH}"
+@@ -910,40 +914,57 @@ open_luks_device ()
+ 		_PLYMOUTH="true"
+ 	fi
+ 
++	vendor="$(cat /sys/block/$(basename ${dev%%[0-9]})/device/vendor | xargs)"
++	model="$(cat /sys/block/$(basename ${dev%%[0-9]})/device/model | xargs)"
++	partition="$(cat /sys/block/$(basename ${dev%%[0-9]})/$(basename ${dev})/partition)"
++
+ 	case "${_PLYMOUTH}" in
+ 		true)
+ 			plymouth --ping
+ 
+ 			cryptkeyscript="plymouth ask-for-password --prompt"
+ 			# Plymouth will add a : if it is a non-graphical prompt
+-			cryptkeyprompt="Please unlock disk ${dev}"
++			cryptkeyprompt="$(eval_gettext "Please unlock disk \$vendor \$model partition \$partition (\$dev)")"
+ 			;;
+ 
+ 		*)
+ 			cryptkeyscript="/lib/cryptsetup/askpass"
+-			cryptkeyprompt="Please unlock disk ${dev}: "
++			cryptkeyprompt="$(eval_gettext "Please unlock disk \$vendor \$model partition \$partition (\$dev): ")"
+ 			;;
+ 	esac
+ 
+ 	while true
+ 	do
++
++                case "${_PLYMOUTH}" in
++                        true)
++                                plymouth display-message --text "$(eval_gettext "The current keyboard layout is \$LAYOUT.")"
++                                ;;
++                esac
++
+ 		$cryptkeyscript "$cryptkeyprompt" | \
+ 			cryptsetup -T 1 luksOpen ${dev} ${name} ${opts}
+ 
+ 		if [ 0 -eq ${?} ]
+ 		then
++                        case "${_PLYMOUTH}" in
++                                true)
++                                        plymouth display-message --text "$(gettext "Disk successfully unlocked! Please wait ... ")"
++                                        ;;
++                        esac
++
+ 			luks_device="/dev/mapper/${name}"
+ 			echo ${luks_device}
+ 			return 0
+ 		fi
+ 
+ 		echo >&6
+-		retryprompt="There was an error decrypting ${dev} ... Retry? [Y/n]"
++		retryprompt="$(eval_gettext "There was an error decrypting \$vendor \$model partition \$partition (\$dev) ... Retry? [Y/n]")"
+ 
+ 		case "${_PLYMOUTH}" in
+ 			true)
+ 				plymouth display-message --text "${retryprompt}"
+-				answer=$(plymouth watch-keystroke --keys="YNyn")
++				answer=$(plymouth watch-keystroke --keys=$(gettext "YNyn"))
+ 				;;
+ 
+ 			*)
+@@ -952,7 +973,7 @@ open_luks_device ()
+ 				;;
+ 		esac
+ 
+-		if [ "$(echo "${answer}" | cut -b1 | tr A-Z a-z)" = "n" ]
++		if [ "$(echo "${answer}" | cut -b1 | tr A-Z a-z)" = $(gettext "n") ]
+ 		then
+ 			case "${_PLYMOUTH}" in
+ 				true)
+diff --git a/debian/control b/debian/control
+index 5eed3bb..af3d373 100644
+--- a/debian/control
++++ b/debian/control
+@@ -6,6 +6,7 @@ Uploaders: Raphaël Hertzog <raphael@offensive-security.com>,
+  Luca Boccassi <bluca@debian.org>
+ Build-Depends:
+  debhelper-compat (= 13),
++ gettext,
+  po4a,
+ Standards-Version: 4.7.0
+ Rules-Requires-Root: no
+@@ -58,7 +59,9 @@ Package: live-boot-initramfs-tools
+ Architecture: all
+ Depends:
+  busybox | busybox-initramfs,
++ gettext,
+  initramfs-tools,
++ locales-all,
+  udev,
+  ${misc:Depends},
+ Conflicts:
+diff --git a/debian/rules b/debian/rules
+index 468f508..7740899 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -12,3 +12,16 @@ override_dh_auto_install:
+ 	# live-boot-initramfs-tools
+ 	mkdir -p debian/live-boot-initramfs-tools/usr/share
+ 	mv debian/tmp/usr/share/initramfs-tools debian/live-boot-initramfs-tools/usr/share
++
++	# gettext message catalogs
++	for mo in po/*.mo; do \
++		[ -f "$$mo" ] || continue; \
++		lang="$$(basename "$$mo" .mo)"; \
++		install -D -m 0644 \
++			"$$mo" \
++			"debian/live-boot-initramfs-tools/usr/share/locale/$$lang/LC_MESSAGES/live-boot.mo"; \
++	done
++
++override_dh_auto_clean:
++	dh_auto_clean
++	rm -f po/*.mo
+diff --git a/po/de.po b/po/de.po
+new file mode 100644
+index 0000000..b86f7aa
+--- /dev/null
++++ b/po/de.po
+@@ -0,0 +1,57 @@
++# Translations for the luks password prompt during bootup.
++# Copyright (C) 2026
++# This file is distributed under the same license as the live-boot package.
++# Ronny Standtke <ronny.standtke@gmx.net>, 2026.
++#
++msgid ""
++msgstr ""
++"Project-Id-Version: live-boot\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2026-08-15 18:18+0200\n"
++"PO-Revision-Date: 2026-08-15 17:02+0200\n"
++"Last-Translator: Ronny Standtke <ronny.standtke@gmx.net>\n"
++"Language-Team: DE <de@li.org>\n"
++"Language: \n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=UTF-8\n"
++"Content-Transfer-Encoding: 8bit\n"
++
++#: components/9990-misc-helpers.sh:928
++#, sh-format
++msgid "Please unlock disk $vendor $model partition $partition ($dev)"
++msgstr ""
++"Bitte entsperren Sie die Festplatte $vendor $model Partition $partition "
++"($dev)"
++
++#: components/9990-misc-helpers.sh:933
++#, sh-format
++msgid "Please unlock disk $vendor $model partition $partition ($dev): "
++msgstr ""
++"Bitte entsperren Sie die Festplatte $vendor $model Partition $partition "
++"($dev): "
++
++#: components/9990-misc-helpers.sh:942
++#, sh-format
++msgid "The current keyboard layout is $LAYOUT."
++msgstr "Das derzeitige Tastaturlayout ist $LAYOUT."
++
++#: components/9990-misc-helpers.sh:953
++msgid "Disk successfully unlocked! Please wait ... "
++msgstr "Partition erfolgreich entsperrt! Bitte warten ... "
++
++#: components/9990-misc-helpers.sh:963
++#, sh-format
++msgid ""
++"There was an error decrypting $vendor $model partition $partition ($dev) ... "
++"Retry? [Y/n]"
++msgstr ""
++"Ein Fehler beim Entschlüsseln $vendor $model Partition $partition ($dev) ... "
++"Erneut probieren? [J/n]"
++
++#: components/9990-misc-helpers.sh:968
++msgid "YNyn"
++msgstr "JNjn"
++
++#: components/9990-misc-helpers.sh:977
++msgid "n"
++msgstr "n"
+diff --git a/update_po.sh b/update_po.sh
+new file mode 100755
+index 0000000..7bda4ff
+--- /dev/null
++++ b/update_po.sh
+@@ -0,0 +1,22 @@
++#!/bin/sh
++
++# make sure to be in the correct directory
++SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
++cd "$SCRIPT_DIR" || exit 1
++
++# get all internationalized strings
++xgettext -L Shell --from-code UTF-8 --add-comments=## components/*
++sed -i "s/charset=CHARSET/charset=UTF-8/g" messages.po
++
++# merge update into all language specific po files
++cd "po" || exit 1
++for LANG in *
++do
++	cd "$LANG" || exit 1
++	msgmerge -U live-boot.po ../../messages.po
++	cd ..
++done
++cd ..
++
++# manually edit/update po files
++vi po/*/live-boot.po
+-- 
+2.47.3
+
