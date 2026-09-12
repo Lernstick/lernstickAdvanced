@@ -1,0 +1,195 @@
+From eb12ad1326fd42aceef0d414109038de6d1e81b6 Mon Sep 17 00:00:00 2001
+From: Ronny Standtke <ronny.standtke@gmx.net>
+Date: Sat, 12 Sep 2026 13:04:32 +0200
+Subject: [PATCH] command line support for livefs on non-removable usb
+
+---
+ components/9990-misc-helpers.sh | 112 ++++++++++++++------------------
+ components/9990-overlay.sh      |   8 ++-
+ 2 files changed, 53 insertions(+), 67 deletions(-)
+
+diff --git a/components/9990-misc-helpers.sh b/components/9990-misc-helpers.sh
+index 7260bde..cb1c3a1 100755
+--- a/components/9990-misc-helpers.sh
++++ b/components/9990-misc-helpers.sh
+@@ -378,8 +378,22 @@ find_livefs ()
+ 
+ 	# first look at the one specified in the command line
+ 	case "${LIVE_MEDIA}" in
++		usb)
++			for sysblock in $(block_dev "true" "" "sys")
++			do
++				for dev in $(subdevices "${sysblock}")
++				do
++					if check_dev "${dev}"
++					then
++						return 0
++					fi
++				done
++			done
++			return 1
++			;;
++
+ 		removable-usb)
+-			for sysblock in $(removable_usb_dev "sys")
++			for sysblock in $(block_dev "true" "true" "sys")
+ 			do
+ 				for dev in $(subdevices "${sysblock}")
+ 				do
+@@ -393,7 +407,7 @@ find_livefs ()
+ 			;;
+ 
+ 		removable)
+-			for sysblock in $(removable_dev "sys")
++			for sysblock in $(block_dev "" "true" "sys")
+ 			do
+ 				for dev in $(subdevices "${sysblock}")
+ 				do
+@@ -419,7 +433,7 @@ find_livefs ()
+ 
+ 	# or do the scan of block devices
+ 	# prefer removable devices over non-removable devices, so scan them first
+-	devices_to_scan="$(removable_dev 'sys') $(non_removable_dev 'sys')"
++	devices_to_scan="$(block_dev "" "true" "sys") $(block_dev "" "false" "sys")"
+ 
+ 	for sysblock in $devices_to_scan
+ 	do
+@@ -1359,82 +1373,50 @@ get_luks_label ()
+ 		awk '{if ($1 == "Label:") print $2}'
+ }
+ 
+-removable_dev ()
++block_dev ()
+ {
+-	output_format="${1}"
+-	want_usb="${2}"
+-	ret=
++	want_usb="$1"
++	want_removable="$2"
++	output_format="$3"
++
++	ret=""
+ 
+-	for sysblock in $(echo /sys/block/* | tr ' ' '\n' | grep -vE "/(loop|ram|dm-|fd)")
++	for sysblock in $(find /sys/block -maxdepth 1 -type l | grep -vE '/(loop|ram|dm-|fd)')
+ 	do
+-		if [ ! -d "${sysblock}" ]; then
++		if [ ! -d "$sysblock" ]; then
+ 			continue
+ 		fi
+ 
+-		dev_ok=
+-		if [ "$(cat ${sysblock}/removable)" = "1" ]
+-		then
+-			if [ -z "${want_usb}" ]
+-			then
+-				dev_ok="true"
+-			else
+-				if readlink ${sysblock} | grep -q usb
+-				then
+-					dev_ok="true"
+-				fi
+-			fi
+-		fi
++		if [ -n "$want_usb" ]; then
++			# we have to test for usb
++			readlink "$sysblock" | grep -q usb
++			is_usb=$?
+ 
+-		if [ "${dev_ok}" = "true" ]
+-		then
+-			case "${output_format}" in
+-				sys)
+-					ret="${ret} ${sysblock}"
+-					;;
+-				*)
+-					devname=$(sys2dev "${sysblock}")
+-					ret="${ret} ${devname}"
+-					;;
+-			esac
++			if [ "$want_usb" = "true"  ] && [ $is_usb -ne 0 ]; then continue; fi
++			if [ "$want_usb" = "false" ] && [ $is_usb -eq 0 ]; then continue; fi
+ 		fi
+-	done
+-
+-	echo "${ret}"
+-}
+ 
+-removable_usb_dev ()
+-{
+-	output_format="${1}"
+-
+-	removable_dev "${output_format}" "want_usb"
+-}
+-
+-non_removable_dev ()
+-{
+-	output_format="${1}"
+-	ret=
++		if [ -n "$want_removable" ]; then
++			# we have to test for removability
++			test "$(cat "$sysblock/removable")" = "1"
++			is_removable=$?
+ 
+-	for sysblock in $(echo /sys/block/* | tr ' ' '\n' | grep -vE "/(loop|ram|dm-|fd)")
+-	do
+-		if [ ! -d "${sysblock}" ]; then
+-			continue
++			if [ "$want_removable" = "true"  ] && [ $is_removable -ne 0 ]; then continue; fi
++			if [ "$want_removable" = "false" ] && [ $is_removable -eq 0 ]; then continue; fi
+ 		fi
+ 
+-		if [ "$(cat ${sysblock}/removable)" = "0" ]
+-		then
+-			case "${output_format}" in
+-				sys)
+-					ret="${ret} ${sysblock}"
+-					;;
+-				*)
+-					devname=$(sys2dev "${sysblock}")
+-					ret="${ret} ${devname}"
+-					;;
+-			esac
+-		fi
++		case "$output_format" in
++			sys)
++				ret="$ret $sysblock"
++				;;
++			*)
++				devname=$(sys2dev "$sysblock")
++				ret="$ret $devname"
++				;;
++		esac
+ 	done
+ 
+-	echo "${ret}"
++	echo "$ret"
+ }
+ 
+ link_files ()
+diff --git a/components/9990-overlay.sh b/components/9990-overlay.sh
+index b02c0a3..eaf7fd0 100755
+--- a/components/9990-overlay.sh
++++ b/components/9990-overlay.sh
+@@ -234,12 +234,16 @@ setup_unionfs ()
+ 		if [ -n "${PERSISTENCE_MEDIA}" ]
+ 		then
+ 			case "${PERSISTENCE_MEDIA}" in
++				usb)
++					whitelistdev="$(block_dev "true" "")"
++					;;
++
+ 				removable)
+-					whitelistdev="$(removable_dev)"
++					whitelistdev="$(block_dev "" "true")"
+ 					;;
+ 
+ 				removable-usb)
+-					whitelistdev="$(removable_usb_dev)"
++					whitelistdev="$(block_dev "true" "true")"
+ 					;;
+ 			esac
+ 			if [ -z "${whitelistdev}" ]
+-- 
+2.47.3
+
